@@ -1,7 +1,7 @@
 <?php
-
-// IPplan v4.92b
-// Aug 24, 2001
+// IPplan-NG <% :version %>
+//
+// Original IPplan source (c) 2001-2011 Richard Ellerbrock (ipplan at gmail.com)
 //
 // Modified by Tony D. Koehn Feburary 2003
 //

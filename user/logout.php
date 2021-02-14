@@ -1,7 +1,7 @@
 <?php
-
-// IPplan v4.92b
-// Nov 20, 2004
+// IPplan-NG <% :version %> 
+//
+// Original IPplan source (c) 2001-2011 Richard Ellerbrock (ipplan at gmail.com)
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
