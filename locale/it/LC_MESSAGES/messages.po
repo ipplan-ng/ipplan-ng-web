@@ -1,0 +1,4467 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-04-25 11:20+1000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Italian <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: class.dbflib.php:290
+#, fuzzy, php-format
+msgid "User %s modified ip details %s index %u"
+msgstr "Indice %u di modifica dei dettagli %s IP dell'utente %s"
+
+#: class.dbflib.php:1119 user/displayswip.php:88 user/modifybase.php:283
+msgid "Invalid IP address!"
+msgstr "IP ADDRESS non valido!"
+
+#: class.dnslib.php:151
+#, php-format
+msgid "Zone transfer for domain %s failed - using defaults: %s"
+msgstr "Trasferimento di zona per il dominio %s fallito - usare il default: %s"
+
+#: class.dnslib.php:202
+msgid "Cannot delete domain zone - there are still DNS records\n"
+msgstr "Impossibile eliminare il dominio della zona - ci sono ancora record DNS\n"
+
+#: class.dnslib.php:316 class.dnslib.php:843 user/modifydns.php:333
+#: user/modifydnsrecord.php:82 user/modifydnsrecord.php:328
+#: user/modifyzone.php:286
+#, fuzzy
+msgid "Could not find the zone - possibly deleted by another user"
+msgstr "Impossibile trovare la zona - possibile eliminazione da parte di un altro utente"
+
+#: class.dnslib.php:332
+msgid ""
+"You are changing this zone to a slave only zone, but there are zone records\n"
+msgstr "Si sta cambiando questa zona in slave only zone, ma ci sono record di zona\n"
+
+#: class.dnslib.php:468 class.dnslib.php:508 class.dnslib.php:956
+#: class.dnslib.php:982
+#, fuzzy, php-format
+msgid "DNS Domain %s could not be created - possibly duplicate zone"
+msgstr "Il dominio DNS potrebbe non essere generato - potrebbe esserci un duplicato di zona"
+
+#: class.dnslib.php:550 class.dnslib.php:1022 user/exportdhcp.php:123
+msgid "Could not create temporary file!"
+msgstr "Impossibile creare il file temporaneo"
+
+#: class.dnslib.php:626 class.dnslib.php:1086
+msgid "Invalid zone - zone should have at least two name servers defined"
+msgstr "Zona non valida - potrebbe aver definiti almeno due name servers"
+
+#: class.dnslib.php:735 schema.php:39 schema.php:67 user/createarea.php:53
+#: user/createrange.php:96 user/createsubnetform.php:62
+#: user/createsubnet.php:67 user/deletearea.php:47 user/deletecustomer.php:51
+#: user/deleterange.php:46 user/displaybaseform.php:54 user/displaybase.php:58
+#: user/displaycustomerform.php:50 user/displayoverlapform.php:57
+#: user/displayoverlap.php:227 user/displayrouterform.php:51
+#: user/displayrouter.php:124 user/displayswipform.php:57
+#: user/displayswip.php:60 user/emailswip.php:63 user/exportdhcp.php:57
+#: user/findfreeform.php:62 user/findfree.php:62
+#: user/modifyarearangeform.php:49 user/modifyarearange.php:56
+#: user/modifybaseform.php:55 user/modifybase.php:75
+#: user/modifycustomer.php:62 user/modifydnsform.php:70 user/modifydns.php:71
+#: user/modifydnsrecordform.php:64 user/modifydnsrecord.php:73
+#: user/modifyipformmul.php:56 user/modifyipform.php:106
+#: user/modifysubnet.php:61 user/modifyzoneform.php:64 user/modifyzone.php:67
+#: user/requestip.php:56 user/searchallform.php:61 user/searchall.php:91
+#: user/treeview.php:69 admin/changepassword.php:47 admin/deletebounds.php:53
+#: admin/displayauditlog.php:48 admin/displayboundsform.php:50
+#: admin/exportbaseform.php:49 admin/exportbase.php:44
+#: admin/exportipform.php:53 admin/exportip.php:45 admin/importbaseform.php:53
+#: admin/importbase.php:109 admin/importipform.php:58 admin/importip.php:73
+#: admin/maintenance.php:49 admin/usermanager.php:66
+msgid "Could not connect to database"
+msgstr "Impossibile collegarsi al database"
+
+#: class.dnslib.php:755
+#, fuzzy, php-format
+msgid "Invalid address %s"
+msgstr "IP ADDRESS non valido %u"
+
+#: class.dnslib.php:776
+#, php-format
+msgid "No subnet found for address %s"
+msgstr "Nessuna sottorete trovata per l'indirizzo %s"
+
+#: class.dnslib.php:1109
+#, php-format
+msgid "Invalid record - ignored: %s %s"
+msgstr "Record non valido - ignorato: %s %s"
+
+#: ipplanlib.php:268
+msgid "Customer/autonomous system"
+msgstr "Customer/sistema autonomo"
+
+#: ipplanlib.php:335
+msgid "Area (optional)"
+msgstr "Area (facoltativa)"
+
+#: ipplanlib.php:337
+msgid "No area selected"
+msgstr "Nessuna zona selezionata"
+
+#: ipplanlib.php:339 user/treeview.php:95
+#, fuzzy
+msgid "All subnets not part of range"
+msgstr "Tutte le sottoreti non fanno parte del range"
+
+#: ipplanlib.php:368 user/searchallform.php:251
+msgid "Range (optional)"
+msgstr "Range (facoltativo)"
+
+#: ipplanlib.php:370 user/searchallform.php:253
+msgid "No range selected"
+msgstr "Nessun range selezionato"
+
+#: ipplanlib.php:595
+#, fuzzy
+msgid "IPPlan - IP Address Management and Tracking"
+msgstr "IPPlan - Gestione e monitoraggio degli indirizzi IP"
+
+#: ipplanlib.php:613
+#, php-format
+msgid "Logged in as %s"
+msgstr "Loggato come %s"
+
+#: ipplanlib.php:652
+msgid "Refine Search"
+msgstr "Ricerca dettagliata"
+
+#: ipplanlib.php:671
+msgid "Starts with"
+msgstr "Inizia con"
+
+#: ipplanlib.php:672
+msgid "Ends with"
+msgstr "Finisci con"
+
+#: ipplanlib.php:673
+msgid "Contains"
+msgstr "Contiene"
+
+#: ipplanlib.php:674
+msgid "Does not contain"
+msgstr "Non contiene"
+
+#: ipplanlib.php:675
+msgid "Equal to"
+msgstr "Uguale a"
+
+#: ipplanlib.php:677
+msgid "Regex contains"
+msgstr "Regex contiene"
+
+#: ipplanlib.php:681
+msgid "Does not regex contain"
+msgstr "Regex non contiene"
+
+#: ipplanlib.php:696 user/changesettings.php:140 user/createarea.php:163
+#: user/createrange.php:306 user/createsubnetform.php:181
+#: user/displaybaseform.php:144 user/displayoverlapform.php:126
+#: user/displayrouterform.php:82 user/displaysubnet.php:453
+#: user/displayswipform.php:120 user/displayswip.php:185
+#: user/findfreeform.php:126 user/modifyarearangeform.php:62
+#: user/modifybaseform.php:99 user/modifycustomer.php:324
+#: user/modifycustomer.php:818 user/modifyipformmul.php:119
+#: user/modifyipform.php:642 user/modifysubnet.php:414 user/requestip.php:309
+#: user/searchallform.php:230 admin/changepassword.php:120
+#: admin/exportbaseform.php:58 admin/exportipform.php:62
+#: admin/importbaseform.php:85 admin/importipform.php:80
+msgid "Submit"
+msgstr "Inoltra"
+
+#: menudefs.php:22
+msgid "Main"
+msgstr ""
+
+#: menudefs.php:23
+#, fuzzy
+msgid "Customers"
+msgstr "Cliente"
+
+#: menudefs.php:24
+#, fuzzy
+msgid "Create a New Customer/Autonomous System"
+msgstr "Crea un nuovo Customer/Sistema Autonomo"
+
+#: menudefs.php:25
+#, fuzzy
+msgid "Edit Existing Customer/Autonomous System"
+msgstr "Modifica un esistente Customer/Sistema Autonomo"
+
+#: menudefs.php:26
+#, fuzzy
+msgid "Network"
+msgstr "Rete"
+
+#: menudefs.php:27
+msgid "Hierarchy"
+msgstr "Gerarchia"
+
+#: menudefs.php:28
+#, fuzzy
+msgid "Create a new Network Area"
+msgstr "Crea una nuova Network Area"
+
+#: menudefs.php:29
+#, fuzzy
+msgid "Create a new Network Range/Supernet"
+msgstr "Crea una nuova Network Range/Supernet"
+
+#: menudefs.php:30
+#, fuzzy
+msgid "Display/Modify/Delete Ranges/Supernets"
+msgstr "Visualizza/Modifica/Elimina Ranges Supernets"
+
+#: menudefs.php:35
+msgid "Registrar"
+msgstr ""
+
+#: menudefs.php:36
+#, fuzzy
+msgid "Display Registrar Information"
+msgstr "Visualizza Registrar Information"
+
+#: menudefs.php:40
+#, fuzzy
+msgid "Subnets"
+msgstr "Sottorete:"
+
+#: menudefs.php:41
+#, fuzzy
+msgid "Create Subnet"
+msgstr "Crea Sottorete"
+
+#: menudefs.php:42
+#, fuzzy
+msgid "Create from Routing Table"
+msgstr "Genera da Routing Table"
+
+#: menudefs.php:43
+msgid "Delete/Edit/Modify/Split/Join Subnet"
+msgstr "Elimina/Modifica/Dividi/Unisci Sottoreti"
+
+#: menudefs.php:44
+#, fuzzy
+msgid "Display Subnet Information"
+msgstr "Visualizza le informazioni della Sottorete"
+
+#: menudefs.php:45
+#, fuzzy
+msgid "Display Subnet Information - Tree"
+msgstr "Visualizza le informazioni della Sottorete - Albero"
+
+#: menudefs.php:46
+#, fuzzy
+msgid "Search All Subnets"
+msgstr "Cerca tutte le sottoreti"
+
+#: menudefs.php:47
+#, fuzzy
+msgid "Find Free Space"
+msgstr "Trova spazio libero"
+
+#: menudefs.php:48
+#, fuzzy
+msgid "Display Subnet Overlap"
+msgstr "Visualizza sovrapposizione di Sottoreti"
+
+#: menudefs.php:49 user/requestip.php:51
+#, fuzzy
+msgid "Request an IP address"
+msgstr "Richiesto un indirizzo IP"
+
+#: menudefs.php:53 user/modifyipform.php:438
+msgid "DNS"
+msgstr "Dns"
+
+#: menudefs.php:54
+msgid "Create/Modify/Export Zone Domains"
+msgstr "Crea/Modifica/Esporta Zone Domains"
+
+#: menudefs.php:55
+msgid "Create/Modify Zone DNS Records"
+msgstr "Crea/Modifica Record DNS di Zona"
+
+#: menudefs.php:56
+msgid "Create/Modify Reverse DNS Records"
+msgstr "Crea/Modifica Reverse Record DNS"
+
+#: menudefs.php:60
+#, fuzzy
+msgid "Options"
+msgstr "Opzioni"
+
+#: menudefs.php:61
+#, fuzzy
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: menudefs.php:62
+#, fuzzy
+msgid "Change my Password"
+msgstr "Cambia la Password"
+
+#: menudefs.php:63
+#, fuzzy
+msgid "Admin"
+msgstr ""
+
+#: menudefs.php:64
+#, fuzzy
+msgid "Users"
+msgstr "Utente"
+
+#: menudefs.php:65
+#, fuzzy
+msgid "Create a new User"
+msgstr "Crea un nuovo utente"
+
+#: menudefs.php:66
+#, fuzzy
+msgid "Add a user to Group"
+msgstr "Aggiungi un utente al Gruppo"
+
+#: menudefs.php:67
+#, fuzzy
+msgid "Display/Edit Users"
+msgstr "Visualizza/Modifica Utente"
+
+#: menudefs.php:68 admin/usermanager.php:350
+#, fuzzy
+msgid "Groups"
+msgstr "Gruppo"
+
+#: menudefs.php:69
+#, fuzzy
+msgid "Create a new Group"
+msgstr "Genera un nuovo gruppo"
+
+#: menudefs.php:70
+#, fuzzy
+msgid "Add Authority Bounderies to Group"
+msgstr "Aggiungi Authortiy Boundaries al Gruppo"
+
+#: menudefs.php:71
+#, fuzzy
+msgid "Display/Modify Authority Boundary Info"
+msgstr "Visualizza/Modifica le informazioni di Authority Boundary"
+
+#: menudefs.php:72
+#, fuzzy
+msgid "Import"
+msgstr "Importa"
+
+#: menudefs.php:73
+#, fuzzy
+msgid "Import Subnet Descriptions"
+msgstr "Importa la Descrizione della Sottorete"
+
+#: menudefs.php:74
+#, fuzzy
+msgid "Import IP Address Detail Records"
+msgstr ""
+"Importa i Record dei dettagli degli indirizzi IP"
+
+#: menudefs.php:75
+msgid "Export"
+msgstr "Esporta"
+
+#: menudefs.php:76
+#, fuzzy
+msgid "Export Subnet Descriptions"
+msgstr "Esporta Descrizione della Sottorete"
+
+#: menudefs.php:77
+#, fuzzy
+msgid "Export IP Address Detail Records"
+msgstr ""
+"Esporta i Record dei dettagli degli indirizzi IP"
+
+#: menudefs.php:78
+msgid "Maintenance"
+msgstr "Manutenzione"
+
+#: menudefs.php:79 admin/displayauditlog.php:41
+msgid "Display Audit Log"
+msgstr "Visualizza il Registro di Controllo"
+
+#: menudefs.php:80
+msgid "Help"
+msgstr "Aiuto"
+
+#: menudefs.php:81
+msgid "Online Manual"
+msgstr "Manuale in Linea"
+
+#: menudefs.php:82
+msgid "Support Groups"
+msgstr "Gruppi di Supporto"
+
+#: menudefs.php:83
+#, fuzzy
+msgid "Home Page"
+msgstr "Pagina Principale"
+
+#: menudefs.php:84
+msgid "License"
+msgstr "Licenza"
+
+#: menudefs.php:93
+msgid "Logout"
+msgstr ""
+
+#: schema.php:66
+msgid ""
+"Problem with database permission or database tables - have installation "
+"instructions been followed?"
+msgstr ""
+"Problemi con i permessi del database o con le tabelle - richiesta l'installazione"
+"Sono state seguite le istruzioni?"
+
+#: schema.php:77
+msgid "You are trying to downgrade IPplan - impossible"
+msgstr "State provando a downgradare IPplan - impossibile"
+
+#: schema.php:81
+msgid "Schema version outdated"
+msgstr "Versione dello schema obsoleta"
+
+#: schema.php:82
+#, php-format
+msgid ""
+"The database structures need to be upgraded to accommodate new features. For "
+"this to happen, you require enough access rights on the %s database. If you "
+"get errors back from the upgrade process, you will need to temporarily grant "
+"more access rights to the %s database for the duration of the upgrade"
+msgstr ""
+"La struttura del database necessita di essere aggiornata per accettare le "
+"nuove caratteristiche.  Per far cio', devi richiedere abbastanza"
+"diritti di accesso sul database %s.  Se ottieni  errori "
+"dal processo di aggiornamento, dovrai assegnare temporaneamente ulteriori "
+"diritti di accesso al database %s per la durata "
+"dell'aggiornamento"
+
+#: schema.php:84
+msgid ""
+"This process needs to be done by the administrator by executing the "
+"installation scripts. See information in the INSTALL and UPGRADE files."
+msgstr ""
+"Questo processo deve essere fatto dall'amministratore per"
+"l'installazione degli scripts. Guardare le informazioni sui file INSTALL and UPGRADE."
+
+#: user/changesettings.php:47
+msgid "Change display settings"
+msgstr "Cambia le impostazioni di visualizzazione"
+
+#: user/changesettings.php:69
+msgid "Settings changed"
+msgstr "Impostazioni cambiate"
+
+#: user/changesettings.php:88
+msgid "Change display settings for this workstation"
+msgstr "Cambi le impostazioni di visualizzazione per questa stazione di lavoro"
+
+#: user/changesettings.php:90
+msgid "Setting paranoid prompts 'Are you sure?' for all deletes"
+msgstr ""
+"Setta il prompt 'Sei sicuro'  per tutte le "
+"eliminazioni"
+
+#: user/changesettings.php:91 user/changesettings.php:99
+#: admin/usermanager.php:273 admin/usermanager.php:279
+#: admin/usermanager.php:427 admin/usermanager.php:433
+msgid "No"
+msgstr "No"
+
+#: user/changesettings.php:92 user/changesettings.php:100
+#: admin/usermanager.php:274 admin/usermanager.php:278
+#: admin/usermanager.php:428 admin/usermanager.php:434
+msgid "Yes"
+msgstr "SI"
+
+#: user/changesettings.php:98
+msgid ""
+"Setting poll forces a scan of the IP address before assigning it, and warns "
+"the user if the address is active. This slows down address assignment."
+msgstr ""
+"Setta pool forces degli indirizzi IP prima di assegnarli "
+"e avverti l'utente se l'indirizzo e' attivo. Questo"
+"rallentera' l'assegnazione degli indirizzi."
+
+#: user/changesettings.php:129
+msgid "Theme:"
+msgstr "Tema"
+
+#: user/changesettings.php:141 user/createarea.php:164
+#: user/createrange.php:307 user/createsubnetform.php:182
+#: user/displaybaseform.php:145 user/displayoverlapform.php:127
+#: user/displayrouterform.php:83 user/displaysubnet.php:454
+#: user/displayswipform.php:121 user/findfreeform.php:127
+#: user/modifyarearangeform.php:63 user/modifybaseform.php:100
+#: user/modifycustomer.php:325 user/modifycustomer.php:819
+#: user/modifydnsform.php:415 user/modifydnsrecordform.php:142
+#: user/modifyipformmul.php:120 user/modifyipform.php:643
+#: user/modifysubnet.php:415 user/modifyzoneform.php:262
+#: user/requestip.php:310 user/searchallform.php:231
+#: admin/changepassword.php:121 admin/exportbaseform.php:59
+#: admin/exportipform.php:63 admin/importbaseform.php:86
+#: admin/importipform.php:81 admin/usermanager.php:662
+msgid "Clear"
+msgstr "Elimina"
+
+#: user/createarea.php:45
+#, fuzzy
+msgid "Modify a network area"
+msgstr "Modifica network area"
+
+#: user/createarea.php:48
+msgid "Create a new network area"
+msgstr "Crea una nuova network area"
+
+#: user/createarea.php:63
+msgid "You need to enter a description for the area"
+msgstr "Bisogna inserire una descrizione dell'area"
+
+#: user/createarea.php:67
+msgid "Area address may not be blank"
+msgstr "L'indirizzo dell'area non puo' essere vuoto"
+
+#: user/createarea.php:69
+msgid "Invalid area address - it must be the same format as an IP address"
+msgstr ""
+"Indirizzo dell'area non valido - deve essere dello stesso formato di un indirizzo IP "
+
+
+#: user/createarea.php:81
+#, fuzzy
+msgid ""
+"You may not create/modify an area for this customer as you are not a member "
+"of the customers admin group"
+msgstr ""
+"Impossibili creare/modificare un area per questo Customer poiche' non sei un membro "
+"del Gruppo customers admin"
+
+#: user/createarea.php:111
+msgid "Area created"
+msgstr "Area creata"
+
+#: user/createarea.php:117
+#, fuzzy
+msgid "Area could not be created/modified - probably a duplicate name"
+msgstr ""
+"L'area non puo' essere createa/modificata - forse e' stato usato un nome gia' esistente"
+
+#: user/createarea.php:128
+msgid ""
+"Create a new network area by entering a unique identifier address for the "
+"area. The identifier has the same format as IP addresses, but has no "
+"relation to existing IP address records. Areas usually define geographic or "
+"administrative boundaries. Areas can also contain multiple ranges of address "
+"space, as in many cases the address space is not contiguous - there may be a "
+"mix of private or public address space used."
+msgstr ""
+"Genera una nuova area della rete inserendo un unico indirizzo identificativo "
+"per l'area. L'identificativo ha lo stesso formato di un indirizzo IP, "
+"ma non deve avere relazioni con record IP esistenti.  Le "
+"aree solitamente definiscono le circoscrizioni geografiche o "
+"amministrative. Le aree possono contenere range multipli dello spazio "
+"per l'indirizzo, poiche' in molti casi lo spazio degli indirizzi non e' contiguo "
+"potrebbe esserci un mix di spazio di indirizzo pubblico e privato utilizzato "
+
+#: user/createarea.php:146 user/createrange.php:243
+#: user/createsubnetform.php:69 user/displaybaseform.php:66
+#: user/displayrouterform.php:57 user/displayswipform.php:64
+#: user/findfreeform.php:74 user/modifyarearangeform.php:59
+#: user/modifybaseform.php:62 user/modifydns.php:381
+#: user/modifydnsrecord.php:441 user/modifysubnet.php:301
+#: user/modifyzone.php:336 user/searchallform.php:70 user/treeview.php:139
+#: admin/exportbaseform.php:55 admin/exportipform.php:59
+#: admin/importbaseform.php:60 admin/importipform.php:65
+msgid "No customers"
+msgstr "Nessun clienti"
+
+#: user/createarea.php:149 user/modifyarearange.php:78
+#: user/modifyarearange.php:195
+msgid "Area address"
+msgstr "Indirizzo Area"
+
+#: user/createarea.php:156 user/createrange.php:272
+#: user/createsubnetform.php:102 user/displaybase.php:151
+#: user/displayoverlap.php:102 user/displayoverlap.php:111
+#: user/displayrouter.php:185 user/findfree.php:183
+#: user/modifyarearange.php:80 user/modifyarearange.php:90
+#: user/modifyarearange.php:197 user/modifybase.php:351
+#: user/modifyipform.php:670 user/searchallform.php:84
+msgid "Description"
+msgstr "Descrizione"
+
+#: user/createrange.php:88
+#, fuzzy
+msgid "Modify a range or supernet/summary"
+msgstr "Modifica un range o supernet/sommario"
+
+#: user/createrange.php:91
+msgid "Create a new range or supernet/summary"
+msgstr "Crea un nuovo range o supernet/sommario"
+
+#: user/createrange.php:106
+#, fuzzy
+msgid "Range cannot be found!"
+msgstr "Il range non puo' essere trovato"
+
+#: user/createrange.php:113
+msgid "You need to enter a description for the range"
+msgstr "Devi inserire l'intera descrizione del range"
+
+#: user/createrange.php:119
+msgid "Range address may not be blank"
+msgstr "L'indirizzo del range non puo' essere vuoto"
+
+#: user/createrange.php:121
+msgid "Invalid range address"
+msgstr "Indirizzo del range non valido"
+
+#: user/createrange.php:123 user/createsubnet.php:75 user/modifyzone.php:149
+#: admin/usermanager.php:1042
+msgid "Size may not be zero"
+msgstr "La dimensione non puo' essere zero"
+
+#: user/createrange.php:136
+msgid ""
+"Range cannot be modified - overlaps with existing range or overlaps with "
+"self if trying to change size. Try moving the range out of the way first "
+"before resizing."
+msgstr "Il range non puo' essere modificato - sovrapposizione con un range esistente"
+
+#: user/createrange.php:140
+msgid "Range cannot be created - overlaps with existing range"
+msgstr "Il range non puo' essere creato - sovrapposizione con altri range esistenti"
+
+#: user/createrange.php:146 admin/usermanager.php:1048
+msgid "Invalid base address"
+msgstr "Indirizzo di base non valido"
+
+#: user/createrange.php:157
+#, fuzzy
+msgid ""
+"You may not create/modify a range for this customer as you are not a member "
+"of the customers admin group"
+msgstr ""
+"Impossibile creare/modificare il range per questo customer in quanto non sei un membro "
+"del Gruppo customer admin"
+
+#: user/createrange.php:198
+msgid "Range created"
+msgstr "Range creato"
+
+#: user/createrange.php:204
+#, fuzzy
+msgid "Range could not be created/modified - probably duplicate name"
+msgstr "Il range non puo' essere creato/modificato - forse e' stato utilizzato un nome gia' esistente"
+
+#: user/createrange.php:215
+msgid ""
+"Modify a range supernet/summary. Changing the range address or size to "
+"overlap with the currently defined range and size is not supported. Move the "
+"range out of the way first."
+msgstr ""
+"Modificare un range supernet/sommario. Cambiando l-indirizzo del range o"
+"la dimensione per sovrapporlo con il corrente range e la dimensione"
+"non e' supportata."
+
+#: user/createrange.php:218
+msgid ""
+"Create a new range or supernet/summary by entering the base (network) "
+"address. A range is an aggregation of a number of subnets which can "
+"ultimately be used to reduce the number of routing entries in routing "
+"tables. Ranges are essentially the same as a normal subnet, just bigger with "
+"a wider view."
+msgstr ""
+"Crea un nuovo range o supernet/sommario inserendo l'indirizzo di base "
+"(della rete).  Un range e' un'aggregazione di un numoro di sottoreti "
+"che possono infine essere utilizzate per ridurre il numero di entrate routing "
+"nelle tabelle di percorso. I range sono essenzialmente gli stessi di una "
+"sottorete normale, appena piu' grandi e con una vista piu' grande."
+
+#: user/createrange.php:265 user/modifyarearange.php:84
+msgid "Range address"
+msgstr "Indirizzo del range"
+
+#: user/createrange.php:277
+msgid "Range size/mask"
+msgstr "Range dimensione/maschera"
+
+#: user/createsubnetform.php:40
+msgid "Create a new subnet"
+msgstr "Crea una nuova sottorete"
+
+#: user/createsubnetform.php:56
+msgid ""
+"Create a new subnet by entering the base (network) address of the subnet. "
+"Subnets are the building blocks of all networks, and are all that is "
+"required for small networks."
+msgstr ""
+"Crea una nuova sottorete inserendo l'indirizzo di base  della "
+"sottorete.  Le sottoreti sono i blocchetti di costruzione di tutte le reti e "
+"sono necessarie anche per piccole reti."
+
+#: user/createsubnetform.php:58
+#, fuzzy
+msgid ""
+"Unused subnets can be pre-allocated with a description of either 'free' or "
+"'spare'. These can be searched for at a later stage using the 'Find Free' "
+"function."
+msgstr ""
+"Le sottoreti inutilizzate possono essere preassegnate con una descrizione "
+"'di libero 'o 'di ricambio '.  Queste possono essere cercate "
+"in un secondo momento utilizzando la funzione 'Find Free'."
+
+#: user/createsubnetform.php:60
+msgid ""
+"It may also be beneficial to give ASE (Autonomous System External, networks "
+"not local to yours) a special handle like EXTERNAL so that they can be "
+"searched for at a later stage. These networks often appear in routing tables "
+"as static routes to third parties (not via the Internet)."
+msgstr ""
+"Pu anche essere favorevole dare a ASE (Autonomous System esterno, reti non "
+"locali ad la vostra) un handle speciale come ESTERNO in modo da poterli "
+"cercare in un secondo momento.  Queste reti compaiono spesso in tabelle di percorso "
+"come percorsi statici ai terzi (non via Internet)."
+
+#: user/createsubnetform.php:79 user/modifycustomer.php:295
+#: user/modifysubnet.php:328 admin/importbaseform.php:70
+msgid "You first need to create some groups!"
+msgstr "In primo luogo dovete generare alcuni gruppi!"
+
+#: user/createsubnetform.php:82 user/modifysubnet.php:376
+#: admin/importbaseform.php:73
+msgid "Admin Group"
+msgstr "Gruppo Di Admin"
+
+#: user/createsubnetform.php:83 user/modifycustomer.php:318
+#: user/modifysubnet.php:377
+msgid ""
+"WARNING: If you choose a group that you do not have access to, you will not "
+"be able to see or access the data"
+msgstr ""
+"WARNING: Se segli un gruppo a cui non hai accesso, non potrai"
+"vedere o accedere ai dati" 
+
+#: user/createsubnetform.php:87
+msgid "Network address"
+msgstr "Indirizzo di rete"
+
+#: user/createsubnetform.php:95
+msgid "Number of contiguous networks to create"
+msgstr "Numero di reti contigue da creare"
+
+#: user/createsubnetform.php:103
+#, fuzzy
+msgid "Leave blank to automatically describe"
+msgstr ""
+"Lascia vuoto per avere una descrizione automatica"
+
+#: user/createsubnetform.php:107
+msgid "Subnet size/mask"
+msgstr "Sottorete dimensione/maschera"
+
+#: user/createsubnetform.php:136
+msgid "Add active hosts using NMAP"
+msgstr "Aggiungi gli host attivi usando NMAP"
+
+#: user/createsubnetform.php:141
+msgid "Add host names from DNS"
+msgstr "Aggiungi i nomi degli host da  DNS"
+
+#: user/createsubnetform.php:147 user/modifysubnet.php:358
+msgid "Is this a DHCP subnet?"
+msgstr "E' questa una sottorete DHCP?"
+
+#: user/createsubnetform.php:150
+#, fuzzy
+msgid "Creating a new DHCP subnet"
+msgstr "Crea una nuova sottorete DHCP"
+
+#: user/createsubnetform.php:175 user/modifycustomer.php:812
+#: user/modifydnsform.php:389 user/modifyipform.php:611
+#: user/modifysubnet.php:406 user/requestip.php:297
+#, fuzzy
+msgid "Additional information"
+msgstr "Informazioni aggiuntive"
+
+#: user/createsubnet.php:45
+msgid "Create subnet results"
+msgstr "Crea i risultati di sottorete"
+
+#: user/createsubnet.php:61
+msgid "Number of subnets to create is out of bounds."
+msgstr "Numero dei sottoreti da creare fuori dai limiti."
+
+#: user/createsubnet.php:71 user/modifyzone.php:145 admin/importbase.php:186
+msgid "IP address may not be blank"
+msgstr "IP address non puo' essere vuoto"
+
+#: user/createsubnet.php:73 user/displayrouter.php:127 user/dns.php:42
+#: user/modifyzone.php:147 user/ping.php:52 user/traceroute.php:55
+#: admin/importip.php:168
+msgid "Invalid IP address"
+msgstr "IP ADDRESS non valido"
+
+#: user/createsubnet.php:78 user/modifyzone.php:152 admin/importbase.php:252
+msgid "Invalid base address!"
+msgstr "Indirizzo di base non valido!"
+
+#: user/createsubnet.php:134
+#, php-format
+msgid "Subnet %s not created - out of defined authority boundary"
+msgstr "Sottorete %s non creata - fuori dal dominio di definizione di autorita'"
+
+#: user/createsubnet.php:141
+#, php-format
+msgid ""
+"Subnet %s could not be created - possibly overlaps with an existing subnet"
+msgstr ""
+"La sottorete %s non puo' essere creata - potrebbe coincidere con "
+"una sottorete esistente"
+
+#: user/createsubnet.php:149
+#, fuzzy
+msgid "WARNING: "
+msgstr "ATTENZIONE:"
+
+#: user/createsubnet.php:150
+#, php-format
+msgid ""
+"Subnet %s overlaps with the following subnets from other customers.  This "
+"may not be a problem as the subnet may occur in both customers routing "
+"tables:"
+msgstr ""
+"La sottorete %s coincide con le seguenti sottoreti di altri customers. Questo "
+"non e' un problema poiche' la sottorete puo' essere in entrambe le tabelle  "
+"di percorso dei clienti:"
+
+#: user/createsubnet.php:159 user/deletecustomer.php:72
+#: user/displaybase.php:145 user/displayoverlap.php:96
+#: user/displayoverlap.php:105 user/displayrouter.php:179
+#: user/findfree.php:177 user/modifybase.php:345
+msgid "Base address"
+msgstr "Indirizzo di base"
+
+#: user/createsubnet.php:161 user/deletecustomer.php:74
+#: user/modifysubnet.php:349
+msgid "Subnet description"
+msgstr "Descrizione sottorete"
+
+#: user/createsubnet.php:163 user/requestip.php:246
+msgid "Customer"
+msgstr "Customer"
+
+#: user/createsubnet.php:189
+msgid ""
+"You may not create a subnet for this customer as you are not a member of the "
+"customers admin group"
+msgstr ""
+"Impossibile  generare una sottorete per questo customer poiche' non siete un "
+"membro del customers admin group"
+
+#: user/createsubnet.php:199
+#, php-format
+msgid "Subnet %s created"
+msgstr "Sottorete %s creata"
+
+#: user/createsubnet.php:205
+#, fuzzy
+msgid "NMAP data not in XML format or XML not available"
+msgstr "dati NMAP non in formato XML oppure XML non disponibile"
+
+#: user/createsubnet.php:230
+#, php-format
+msgid "Subnet %s could not be created"
+msgstr "La sottorete %s non ha potuto essere creata"
+
+#: user/deletearea.php:39
+msgid "Delete a network area"
+msgstr "Elimina una network area"
+
+#: user/deletearea.php:60 user/deleterange.php:59
+msgid ""
+"You may not delete an area for this customer as you are not a member of the "
+"customers admin group"
+msgstr ""
+"Non potete cancellare una zona per questo cliente poiche' non siete un membro "
+"del gruppo di admin dei clienti"
+
+#: user/deletearea.php:82
+msgid "Area could not be deleted"
+msgstr "Area non eliminabile"
+
+#: user/deletecustomer.php:37
+msgid "Delete customer/autonomous system results"
+msgstr "Elimina risultati customer/autonomous system"
+
+#: user/deletecustomer.php:45 user/displaybase.php:53
+#: user/displayoverlap.php:222 user/displayrouter.php:115
+#: user/displaysubnet.php:76 user/displayswip.php:55 user/dns.php:38
+#: user/emailswip.php:55 user/findfree.php:57 user/modifyarearange.php:51
+#: user/modifybase.php:70 user/modifydnsform.php:65
+#: user/modifydnsrecordform.php:59 user/modifyipformmul.php:50
+#: user/modifyipform.php:100 user/modifyzoneform.php:59 user/ping.php:48
+#: user/searchall.php:53 user/traceroute.php:51 user/whois.php:53
+#: admin/deletebounds.php:47 admin/importip.php:51
+msgid "You cannot reload or bookmark this page!"
+msgstr "Impossibile ricaricare o bookmark questa pagina!"
+
+#: user/deletecustomer.php:54
+msgid ""
+"You may not delete customers as you are not a member a group that can delete "
+"customers"
+msgstr ""
+"Impossibile  cancellare i clienti poiche' non siete un membro un gruppo non puo' "
+"essere eliminato"
+
+#: user/deletecustomer.php:63
+msgid ""
+"Cannot delete customer because the following subnets are assigned to the "
+"customer (limited to first 100):"
+msgstr ""
+"Impossibile cancellare customer perche' le seguenti sottoreti sono assegnate al "
+"customer (limitato a primi 100):"
+
+#: user/deletecustomer.php:97
+msgid "Cannot delete customer because customer has DNS zones defined"
+msgstr "Impossibile eliminare il customer ha una zona DNS definita"
+
+#: user/deletecustomer.php:109
+msgid "Cannot delete customer because customer has reverse DNS zones defined"
+msgstr "Impossibile eliminare il customer perche' ha una reverse zona DNS definita"
+
+#: user/deletecustomer.php:143 admin/maintenance.php:92
+msgid "Customer deleted"
+msgstr "Customer cancellato"
+
+#: user/deletecustomer.php:146 admin/maintenance.php:95
+msgid "Customer could not be deleted"
+msgstr "Customer non puo' essere eliminato"
+
+#: user/deleterange.php:39
+msgid "Delete a range or supernet/summary"
+msgstr "Elimina un range o supernet/sommario"
+
+#: user/deleterange.php:82
+msgid "Range could not be deleted"
+msgstr "Il range non pu' essere eliminato"
+
+#: user/deleterange.php:86
+msgid "Range index is invalid"
+msgstr "Indice del range non valido"
+
+#: user/displaybaseform.php:41 user/treeview.php:39
+msgid "Display subnet information"
+msgstr "Visualizza le informazioni della sottorete"
+
+#: user/displaybaseform.php:52 user/displayswipform.php:55
+#: user/treeview.php:50
+msgid "Display subnets."
+msgstr "Visualizza sottoreti."
+
+#: user/displaybaseform.php:87 user/displayswipform.php:82
+#: user/findfreeform.php:91 user/modifybaseform.php:81
+#: user/searchallform.php:131
+#, fuzzy
+msgid "Search criteria"
+msgstr "Criteri di ricerca"
+
+#: user/displaybaseform.php:90 user/displayswipform.php:84
+msgid "Subnet network address (leave blank if range selected)"
+msgstr ""
+"Indirizzo di rete della sottorete (lasciare vuoto se range selezionato) "
+"selezionata)"
+
+#: user/displaybaseform.php:91 user/displayswipform.php:85
+#: user/modifybaseform.php:85
+msgid "Partial subnet addresses can be used eg. 172.20"
+msgstr ""
+"Indirizzi parziali di sottorete possono essere usati per esempio: 172.20"
+
+#: user/displaybaseform.php:101
+msgid "Match any IP address in subnet"
+msgstr "Associa ogni indirizzo IP nelle sottoreti"
+
+#: user/displaybaseform.php:104
+#, fuzzy
+msgid "Jump to IP address record if found"
+msgstr "Vai a IP address record se viene trovato"
+
+#: user/displaybaseform.php:107
+msgid ""
+"Enter a complete ip address in above field and select the above options to "
+"go to the address record or subnet record"
+msgstr ""
+"Inserisci l'intero indirizzo ip nel campo sopra e selzione le opzioni sopra"
+"per andare ai record di indirizzi o di sottorete"
+
+#: user/displaybaseform.php:110 user/displayswipform.php:91
+#: user/modifybaseform.php:91
+msgid "Description (only display networks matching the regular expression)"
+msgstr ""
+"Descrizione (solamente le reti selezionate associano la regolare "
+"espressione)"
+
+#: user/displaybaseform.php:112 user/displayswipform.php:93
+#: user/modifybaseform.php:93
+msgid "Description (only display networks containing)"
+msgstr "Descrizione (contenuta solamente nelle reti selezionate)"
+
+#: user/displaybaseform.php:118
+#, fuzzy
+msgid "Display subnets larger than"
+msgstr "Visualizza sottoreti piu' grandi di"
+
+#: user/displaybaseform.php:119
+#, fuzzy
+msgid "Display all subnets"
+msgstr "Visualizza tutte le sottoreti"
+
+#: user/displaybase.php:45 user/displayoverlap.php:211
+#: user/displaysubnet.php:49 user/displayswip.php:44 user/findfree.php:49
+#: user/searchall.php:45
+msgid "Results of your search"
+msgstr "Risultati della ricerca"
+
+#: user/displaybase.php:89
+#, fuzzy, php-format
+msgid "Search for IP subnets not part of a range for customer '%s'"
+msgstr ""
+"Ricerca di  sottoreti IP che non fanno parte del range del customer '%s'"
+
+#: user/displaybase.php:92 user/displayswip.php:103 user/modifybase.php:299
+#: user/searchall.php:233
+#, php-format
+msgid "Search for IP subnets between multiple ranges for customer '%s'"
+msgstr ""
+"Ricerca di sottoreti IP tra i range multipli del customer '%s'"
+
+#: user/displaybase.php:95 user/displayswip.php:107 user/findfree.php:97
+#: user/modifybase.php:303 user/searchall.php:254
+#, php-format
+msgid "Search for IP subnets between %s and %s %s for customer '%s'"
+msgstr "Ricerca di sottoreti IP tra %s e %s %s per il customer '%s'"
+
+#: user/displaybase.php:99 user/displayswip.php:111 user/modifybase.php:307
+#, fuzzy
+msgid "IP address filter: "
+msgstr "Filtro di IP ADDRESS:"
+
+#: user/displaybase.php:103 user/displayswip.php:115 user/modifybase.php:311
+#, fuzzy
+msgid "Description filter: "
+msgstr "Filtro di descrizione:"
+
+#: user/displaybase.php:107
+msgid "Subnet size filter: Subnets larger than "
+msgstr "Filtro di dimensione della sottorete: Sottorete piu' grande di"
+
+#: user/displaybase.php:147 user/displayoverlap.php:98
+#: user/displayoverlap.php:107 user/displayrouter.php:181
+#: user/findfree.php:179 user/modifybase.php:347
+msgid "Subnet size"
+msgstr "Dimensione sottorete"
+
+#: user/displaybase.php:149 user/displayoverlap.php:100
+#: user/displayoverlap.php:109 user/findfree.php:181 user/modifybase.php:349
+msgid "Subnet mask"
+msgstr "Maschera Sottorete"
+
+#: user/displaybase.php:153 user/displaysubnet.php:507 user/modifydns.php:445
+#: user/modifydnsrecord.php:545 user/modifyzone.php:399 user/searchall.php:308
+msgid "Last modified"
+msgstr "Ultima modifica"
+
+#: user/displaybase.php:155 user/displaysubnet.php:509 user/modifydns.php:448
+#: user/modifydnsrecord.php:547 user/modifyzone.php:402
+msgid "Changed by"
+msgstr "Modificato da"
+
+#: user/displaybase.php:158
+msgid "Update sent"
+msgstr "Aggiornamento inviato"
+
+#: user/displaybase.php:189 user/displayoverlap.php:156
+#: user/displayrouter.php:208 user/displayrouter.php:236 user/findfree.php:261
+#: user/modifybase.php:367 user/modifydnsrecord.php:539
+msgid "Host"
+msgstr "Host"
+
+#: user/displaybase.php:223 user/displaysubnet.php:373
+#: user/displayswip.php:189 user/findfree.php:168 user/modifybase.php:476
+#: user/searchall.php:377
+msgid "Search found no matching entries"
+msgstr "La ricerca non ha trovato entrate di matching"
+
+#: user/displaycustomerform.php:41
+msgid "Display customer/autonomous system information"
+msgstr "Visualizza informazioni customer/sistema autonomo"
+
+#: user/displaycustomerform.php:56
+msgid "All customer/autonomous system info"
+msgstr "Informazioni complete customer/sistema autonomo"
+
+#: user/displaycustomerform.php:60 user/displaysubnet.php:458
+#, fuzzy
+msgid "Refine Search on Description"
+msgstr "Ricerca dettagliata della descrizione"
+
+#: user/displaycustomerform.php:84 admin/maintenance.php:168
+#: admin/maintenance.php:246
+msgid "Customer description"
+msgstr "Descrizione Customer"
+
+#: user/displaycustomerform.php:86
+msgid "CRM"
+msgstr "CRM"
+
+#: user/displaycustomerform.php:88 admin/displayboundsform.php:70
+#: admin/maintenance.php:170
+msgid "Group name"
+msgstr "Nome del gruppo"
+
+#: user/displaycustomerform.php:90 user/modifyarearange.php:82
+#: user/modifyarearange.php:92 user/modifyarearange.php:199
+#: user/modifybase.php:355 user/modifydns.php:450 user/modifydnsrecord.php:549
+#: user/modifyipform.php:676 user/modifyzone.php:404
+#: admin/displayauditlog.php:91 admin/maintenance.php:174
+#: admin/maintenance.php:256
+msgid "Action"
+msgstr "Azione"
+
+#: user/displaycustomerform.php:122 admin/maintenance.php:196
+msgid "Delete customer/AS"
+msgstr "Elimina customer/AS"
+
+#: user/displaycustomerform.php:123 user/modifyarearange.php:120
+#: user/modifyarearange.php:159 user/modifyarearange.php:217
+#: user/modifybase.php:397 user/modifybase.php:411 user/modifybase.php:419
+#: user/modifydns.php:513 user/modifydnsrecord.php:600
+#: user/modifydnsrecord.php:678 user/modifyipformmul.php:128
+#: user/modifyipform.php:463 user/modifyzone.php:479 user/modifyzone.php:504
+#: admin/displayboundsform.php:100 admin/usermanager.php:609
+msgid "Are you sure?"
+msgstr "Sei sicuro?"
+
+#: user/displaycustomerform.php:129
+msgid "Modify customer/AS details"
+msgstr "Modifica i dettagli del customer/AS"
+
+#: user/displaycustomerform.php:133
+#, fuzzy
+msgid "Export DHCP details"
+msgstr "Esporta dettagli DHCP"
+
+#: user/displaycustomerform.php:137
+msgid "Group membership"
+msgstr "Composizione del gruppo"
+
+#: user/displayoverlapform.php:41
+msgid "Display overlapping address space between customers/autonomous systems"
+msgstr ""
+"Visualizza sovrapposizione di indirizzi tra "
+"i customers/sistemi autonomi"
+
+#: user/displayoverlapform.php:52 user/findfreeform.php:58
+msgid ""
+"This function consumes large amounts of memory on the server. If you get "
+"server errors, blank pages or nothing happens when you submit, you may need "
+"to reduce the range of your search or you may need to increase the amount of "
+"memory allocated to PHP on the server."
+msgstr ""
+"Questa funzione consuma una grande quantita' di memoria sul server. Se vengono"
+"ricevuti server errors, pagine vuote o non accade niente quando si noltra. e' necessario"
+"ridurre il range della ricerca oppure aumentare la quantita di memoria di PHP sul server."
+
+#: user/displayoverlapform.php:63
+#, fuzzy
+msgid "Customer/autonomous system 1 - select multiple"
+msgstr "Customer/sistema autonomo 1 - scelta multipla"
+
+#: user/displayoverlapform.php:100
+#, fuzzy
+msgid "Customer/autonomous system 2 - select multiple"
+msgstr "Customer/sistema autonomo 2 - scelta multipla"
+
+#: user/displayoverlap.php:229
+msgid "Search for overlapping subnets between customers/autonomous systems"
+msgstr ""
+"Ricerca sovrapposizione di sottoreti fra customers/"
+"sistemi autonomi"
+
+#: user/displayoverlap.php:236
+msgid "Both customers selected are the same - all subnets will overlap!"
+msgstr ""
+"I cusotmers sono gli stessi - tutte le sottoreti "
+"coincideranno!"
+
+#: user/displayrouterform.php:39
+msgid "Display subnet information obtained from a routing table"
+msgstr ""
+"Visualizza le informazioni della sottorete ottenute dalla routing table"
+
+#: user/displayrouterform.php:49
+msgid ""
+"Display subnet information obtained from a routing table will show the "
+"routing table information on the left of the screen and the corresponding "
+"entries in the database on the right. If there are entries on both sides of "
+"the table, the subnet exists in the routing table and the database. If there "
+"are only entries on the left, the subnet only exists in the routing table. "
+"The same is true for the right hand side. If you click on the left, you can "
+"add the subnet to the database. If you click on the right, you can view the "
+"existing database information."
+msgstr ""
+"Visualizzare le infomazioni della sottorete ottenute dalla routing table "
+" mostreranno le informazioni della routing table  a sinistra "
+"dello schermo e le entries corrispondenti sul database a destra.  "
+"Se ci sono entries da entrambi i lati della tabella, la sottorete esiste "
+"sia nella routing table che nel database.  Se ci sono soltanto entrate "
+"a sinistra, la sottorete esiste soltanto nella routing table.  Lo "
+"stesso se sono presenti solo nel lato destro.  Se premete con il mouse a sinistra, potete "
+"aggiungere la sottorete all database.  Se premete a destra, potete "
+"vedere le informazioni attuali del database."
+
+#: user/displayrouterform.php:59
+#, fuzzy
+msgid "IP address of device to query"
+msgstr "Indirizzo IP del dispositivo da interrogare"
+
+#: user/displayrouterform.php:60
+#, fuzzy
+msgid "The device must be SNMP capable"
+msgstr "Il dispositivo deve essere di tipo SNMP"
+
+
+#: user/displayrouterform.php:66
+msgid "Community string"
+msgstr "Stringa community"
+
+#: user/displayrouterform.php:72
+msgid "Router type"
+msgstr "Tipo Router"
+
+#: user/displayrouterform.php:73
+msgid "Type 'Generic' will work for most routers"
+msgstr "Tipo 'Generico' lavorera' con la maggior parte dei router"
+
+#: user/displayrouter.php:107
+msgid "Display routing table results"
+msgstr "Visualizza i risultati della tabella di routing"
+
+#: user/displayrouter.php:131
+msgid "Could not query router - no SNMP on router or firewall blocking access?"
+msgstr ""
+"Impossibile interrogare il router - nessun SNMP sul router o "
+"il firewall sta bloccando l'accesso?"
+
+#: user/displayrouter.php:136
+#, php-format
+msgid "Search for IP subnets from a routing table for customer '%s'"
+msgstr ""
+"Ricerca di sottoreti IP dalla tabella di routing per il customer '%s'"
+
+#: user/displayrouter.php:164
+msgid "Routing Table"
+msgstr "Tabella di Routing"
+
+#: user/displayrouter.php:168
+msgid "IPplan information"
+msgstr "Informazioni IPplan"
+
+#: user/displayrouter.php:173
+msgid "Routing Table Base address"
+msgstr "Indirizzo di base della Routing Table"
+
+#: user/displayrouter.php:175
+msgid "Routing Table Subnet size"
+msgstr "Dimensione sottorete della Routing Table"
+
+#: user/displayrouter.php:177
+msgid "Routing Table Subnet Mask"
+msgstr "Maschera di sottorete della Routing Table"
+
+#: user/displayrouter.php:183
+msgid "Subnet Mask"
+msgstr "Maschera della sottorete"
+
+#: user/displayrouter.php:256 user/modifyarearange.php:175
+#: user/modifyarearange.php:230 admin/displayboundsform.php:107
+#, php-format
+msgid "Total records: %u"
+msgstr "Record totali:  %u"
+
+#: user/displaysubnet.php:85 user/modifybase.php:164 user/modifysubnet.php:102
+#: user/modifysubnet.php:188 user/modifysubnet.php:280
+#, fuzzy
+msgid "Subnet cannot be found!"
+msgstr "Impossibile trovare la sottorete"
+
+#: user/displaysubnet.php:127
+#, fuzzy
+msgid "IP addresses not updated - out of defined authority boundary"
+msgstr "Sottorete %s non generata - dal contorno definito di autorit"
+
+#: user/displaysubnet.php:130
+#, fuzzy, php-format
+msgid "IP address %s not updated - out of defined authority boundary"
+msgstr "Indirizzo IP %s non aggiornato - si e' usciti dal defined authority boundarY"
+
+#: user/displaysubnet.php:136
+msgid "Another user modified the information before you saved - restart"
+msgstr ""
+"Un altro utente ha modificato le informazioni prima del salvataggio - "
+"riavviare"
+
+#: user/displaysubnet.php:158
+#, fuzzy
+msgid "IP address records deleted"
+msgstr "Record degli indirizzi IP eliminati"
+
+#: user/displaysubnet.php:207
+#, fuzzy, php-format
+msgid "Invalid link address: %s"
+msgstr "Link address non valido %u"
+
+#: user/displaysubnet.php:224
+#, php-format
+msgid "Duplicate MAC address: %s"
+msgstr "Duplicati dell'indirizzo MAC: %s"
+
+#: user/displaysubnet.php:226
+#, fuzzy
+msgid "Show duplicate MAC addresses"
+msgstr "Visualizza gli indirizzi MAC duplicati"
+
+#: user/displaysubnet.php:231 user/requestip.php:86 user/searchall.php:84
+#, fuzzy, php-format
+msgid "Invalid MAC address: %s"
+msgstr "MAC address %s non valido "
+
+#: user/displaysubnet.php:287
+msgid ""
+"Send an email to the IP address requester with details of the allocated "
+"address"
+msgstr "MAnda una email all'indirizzo IP di richiesta per i dettagli"
+"sulla collocazione dell'indirizzo"
+
+#: user/displaysubnet.php:289
+#, fuzzy
+msgid "Email IP address requester"
+msgstr "Email dell'indirizzo Ip di richiesta"
+
+#: user/displaysubnet.php:306 user/emailswip.php:94 user/requestip.php:175
+msgid "E-mail message was not sent"
+msgstr "L'e-mail non e' stata inviata"
+
+#: user/displaysubnet.php:307 user/emailswip.php:95 user/requestip.php:176
+msgid "Mailer Error: "
+msgstr "Mailer Error:"
+
+#: user/displaysubnet.php:310 user/requestip.php:179
+msgid "IP request E-mail message sent"
+msgstr "Richieta IP E-mail inviata"
+
+#: user/displaysubnet.php:319
+#, fuzzy, php-format
+msgid "User %s actioned request %s"
+msgstr "Utente %s azione richiesta %s"
+
+#: user/displaysubnet.php:323 admin/importip.php:220
+msgid "IP address details modified"
+msgstr "Dettagli indirizzo IP modificati"
+
+#: user/displaysubnet.php:326 admin/importip.php:223
+msgid "IP address details could not be modified"
+msgstr "I dettagli dell'indirizzo IP non possono essere modificati"
+
+#: user/displaysubnet.php:331
+msgid "You are not the owner of the subnet"
+msgstr "Non sei il proprietario della sottorete"
+
+#: user/displaysubnet.php:335
+msgid ""
+"Could not find the owner of the subnet - subnet possibly deleted by another "
+"user"
+msgstr ""
+"Non e' possibile trovare il proprietario dell sottorete - la sottorete "
+"potrebbe esser stata cancellata da un altro utente"
+
+#: user/displaysubnet.php:347
+#, fuzzy
+msgid "Close"
+msgstr "Chiudi"
+
+#: user/displaysubnet.php:380
+msgid ""
+"This page was bookmarked and contains invalid information which cannot be "
+"displayed anymore - restart from main menu"
+msgstr ""
+"Questa pagina e' stata controllata e contiente informazioni che non "
+"possono piu' essere visualizzate - riavviare dal menu' principale"
+
+#: user/displaysubnet.php:384 user/modifyipform.php:288
+#: user/modifysubnet.php:288
+msgid "Subnet:"
+msgstr "Sottorete:"
+
+#: user/displaysubnet.php:385 user/modifyipform.php:289
+#: user/modifysubnet.php:289
+msgid "Mask:"
+msgstr "Maschera:"
+
+#: user/displaysubnet.php:389 user/modifyipform.php:298
+#: user/modifysubnet.php:293
+msgid "Description:"
+msgstr "Descrizione:"
+
+#: user/displaysubnet.php:408
+msgid "Show used addresses"
+msgstr "Visualizza gli indirizzi utilizzati"
+
+#: user/displaysubnet.php:410
+msgid ""
+" This can take a while as each address is polled.  Green is active, Red is "
+"inactive"
+msgstr ""
+"Questa operazione potrebbe richiedere un po' di tempo in quanto interroga ogni indirizzo."
+"Il verde e' attivo,rosso  inattivo"
+
+#: user/displaysubnet.php:418
+msgid "Show DNS changes"
+msgstr "Visualizza i cambiamenti DNS "
+
+#: user/displaysubnet.php:420
+msgid ""
+" Show descriptions that do not match DNS reverse entries. Red is new DNS "
+"value"
+msgstr "Visualizza le descrizioni che non corrispondono alle entrate DNS reverse."
+"Rosso e' un nuovo valore DNS"
+
+#: user/displaysubnet.php:437
+msgid "Select multiple addresses to do a bulk change"
+msgstr "Selezionare indirizzi multipli per modificarli"
+
+#: user/displaysubnet.php:438
+msgid "Ideal for reserving DHCP ranges"
+msgstr "Ideale per riservare range DHCP"
+
+#: user/displaysubnet.php:469
+msgid "Use next available address"
+msgstr "Usa il prossimo indirizzo disponibile"
+
+#: user/displaysubnet.php:472
+#, fuzzy
+msgid "Use next available address and probe network if active"
+msgstr "Usa il prossimo indirizzo disponibile e controlla se la rete e' attiva"
+
+#: user/displaysubnet.php:489 user/modifyipformmul.php:82
+#: user/modifyipform.php:541 user/requestip.php:260 user/searchallform.php:82
+#: user/searchall.php:300 admin/maintenance.php:250
+msgid "User"
+msgstr "Utente"
+
+#: user/displaysubnet.php:491 user/modifyipformmul.php:88
+#: user/modifyipform.php:548 user/requestip.php:265 user/searchallform.php:83
+#: user/searchall.php:302
+msgid "Location"
+msgstr "Posizione"
+
+#: user/displaysubnet.php:493 user/modifyipformmul.php:92
+#: user/modifyipform.php:553 user/requestip.php:270 user/searchall.php:304
+msgid "Device description"
+msgstr "Descrizione dispositivo"
+
+#: user/displaysubnet.php:496 user/searchallform.php:86 user/searchall.php:306
+msgid "Telephone Number"
+msgstr "Numero di telefono"
+
+#: user/displaysubnet.php:500 user/modifyipform.php:568 user/requestip.php:285
+#, fuzzy
+msgid "MAC address"
+msgstr "Indirizzo MAC"
+
+#: user/displaysubnet.php:503
+msgid "P"
+msgstr "P"
+
+#: user/displaysubnet.php:504
+#, fuzzy
+msgid "o"
+msgstr "o"
+
+#: user/displaysubnet.php:505
+msgid "l"
+msgstr "l"
+
+#: user/displaysubnet.php:595
+msgid "Reserved - network address"
+msgstr "Riservato - indirizzo di rete"
+
+#: user/displaysubnet.php:601
+msgid "Reserved - broadcast address"
+msgstr "Riservato - indirizzo broadcast"
+
+#: user/displaysubnet.php:641
+#, php-format
+msgid ""
+"DNS queries taking too long - stopped doing queries at %s, time taken for "
+"last query was %s seconds"
+msgstr "Le richieste DNS richiedono troppo tempo - ferma le query a %s,"
+"il tempo necessario per l'ultima query e' stato di %s secondi"
+
+#: user/displaysubnet.php:653
+msgid "No DNS entry defined"
+msgstr "Nessuna entry DNS definita"
+
+#: user/displaysubnet.php:709
+msgid "Subnet Summary"
+msgstr "Sommario della Sottorete"
+
+#: user/displaysubnet.php:711
+msgid "Total addresses:"
+msgstr "Indirizzi totali:"
+
+#: user/displaysubnet.php:712
+msgid "Used addresses:"
+msgstr "Indirizzi utilizzati:"
+
+#: user/displaysubnet.php:712
+msgid " (Including network and broadcast)"
+msgstr "(Include network e broadcast)"
+
+#: user/displaysubnet.php:713
+msgid "Free addresses:"
+msgstr "Indirizzi attivi:"
+
+#: user/displaysubnet.php:714
+msgid "Active polled (D/W/M/Y):"
+msgstr "Polled attivo (D/W/M/Y):"
+
+#: user/displaysubnet.php:716
+msgid "Utilization:"
+msgstr "Utilizzazione:"
+
+#: user/displaysubnet.php:717
+msgid "Efficiency:"
+msgstr "Efficienza:"
+
+#: user/displaysubnet.php:755 user/searchall.php:298
+msgid "IP address"
+msgstr "Indirizzo IP"
+
+#: user/displaysubnet.php:860
+msgid "A record deleted in DNS forward zone"
+msgstr "Record A eliminato  nella zona DNS forward"
+
+#: user/displaysubnet.php:861 user/displaysubnet.php:932
+#: user/displaysubnet.php:987
+#, php-format
+msgid "Domain: %s, Hostname: %s, IP address: %s\n"
+msgstr "Dominio: %s, Hostname: %s. Indirizzo IP: %s\n"
+
+#: user/displaysubnet.php:880
+#, fuzzy, php-format
+msgid "Invalid hostname: %s %s"
+msgstr "Hostname non valido: %s %s"
+
+#: user/displaysubnet.php:915
+msgid "IP hostname field in DNS forward zone modified"
+msgstr "Campo IP hostname nella zona DNS forward modificato"
+
+#: user/displaysubnet.php:930
+msgid "DNS forward A record not updated - multiple A records for this customer"
+msgstr "DNS forward A record non modificato - multipli record A per questo customer"
+
+#: user/displaysubnet.php:986
+msgid "A record created in DNS forward zone"
+msgstr "Record A creato nella zona DNS forward"
+
+#: user/displaysubnet.php:991
+msgid ""
+"DNS forward A record not created - could not find matching zone to create "
+"record in"
+msgstr "DNS forward record A non creato - non si puo' allocare la zona da creare"
+
+#: user/displaysubnet.php:1020
+#, fuzzy, php-format
+msgid ""
+"Destination linked address %s IP record not created as you are not a member "
+"of the customers admin group"
+msgstr ""
+"IP record dell'indirizzo collegamento di destinazione %s non creato poiche'"
+"non sei un membro del gruppo customers admin"
+
+#: user/displaysubnet.php:1027
+#, php-format
+msgid "Destination linked address %s IP record created"
+msgstr "IP record dell'indirizzo collegamento di destinazione %s creato"
+
+#: user/displayswipform.php:41
+#, fuzzy
+msgid "Display registrar information"
+msgstr "Visualizza le informazioni di registrar"
+
+#: user/displayswipform.php:107
+msgid "Template"
+msgstr "Template"
+
+#: user/displayswipform.php:111
+#, fuzzy
+msgid "Network name (ntname field on registrar template)"
+msgstr "Nome della rete (camp ntname sul registrar template)"
+
+#: user/displayswipform.php:114
+msgid "Generate automatically"
+msgstr "Genera automaticamente"
+
+#: user/displayswipform.php:117
+msgid "Use subnet description"
+msgstr "Utilizza la descrizione della sottorete"
+
+#: user/displayswip.php:68 user/emailswip.php:71
+#, fuzzy
+msgid ""
+"You may not send a registrar update for this customer as you are not a "
+"member of the customers admin group"
+msgstr ""
+"Non e' possibili mandare un aggiornamento registrar poiche' non sei un membro "
+"del gruppo customers admin"
+
+#: user/displayswip.php:130 user/exportdhcp.php:79
+msgid "Error reading template!"
+msgstr "Errore lettura del template!"
+
+#: user/displayswip.php:139
+msgid "E-mail this entry?"
+msgstr "E-mail questa entrata?"
+
+#: user/displayswip.php:141
+msgid "Previously sent:"
+msgstr "Precedentemente inviato:"
+
+#: user/displayswip.php:180 user/modifybase.php:468
+#: user/modifydnsrecord.php:647
+msgid "Check all"
+msgstr "Controlla tutto"
+
+#: user/displayswip.php:182 user/modifybase.php:469
+#: user/modifydnsrecord.php:649
+#, fuzzy
+msgid "Clear all"
+msgstr "Elimina tutto"
+
+#: user/dns.php:30
+msgid "DNS results"
+msgstr "Risultati DNS"
+
+#: user/dns.php:48
+#, fuzzy
+msgid " No DNS reverse record found"
+msgstr "Nessun record DNS reverse trovato"
+
+#: user/emailswip.php:44
+#, fuzzy
+msgid "Registrar information sent"
+msgstr "Informazioni registrar inviate"
+
+#: user/emailswip.php:58
+#, fuzzy
+msgid "No registrar updates selected to send"
+msgstr "Nessun aggiornamento registrar selezionato per l'invio"
+
+#: user/exportdhcp.php:43
+#, fuzzy
+msgid "Export DHCP subnet details"
+msgstr "Esporta i dettagli DHCP della sottorete"
+
+#: user/exportdhcp.php:66
+#, fuzzy
+msgid ""
+"You may not export DHCP subnets as you are not a member of the customers "
+"admin group"
+msgstr ""
+"Non e' possibile esportare le sottoreti DHCP poiche' non sei un membro"
+"del gruppo customers admin"
+
+#: user/exportdhcp.php:82
+#, php-format
+msgid ""
+"Exporting all subnets marked as DHCP and all IP addresses with a user marked "
+"as '%s'"
+msgstr "Esporta tutte le sottorete marcate come DHCP e tutte gli indirizzi IP"
+"con l'utente marcato come '%s'"
+
+#: user/exportdhcp.php:108
+#, php-format
+msgid "Exporting DHCP for %s"
+msgstr "Esporta DHCP per %s"
+
+#: user/exportdhcp.php:176
+#, php-format
+msgid "Found IP with MAC: %s, %s"
+msgstr "Trovato IP con MAC: %s, %s"
+
+#: user/exportdhcp.php:183
+#, php-format
+msgid "Found IP with invalid MAC - ignoring: %s, %s"
+msgstr "Trovato IP con MAC non valido - ignorato: %s, %s"
+
+#: user/exportdhcp.php:202
+#, php-format
+msgid "Sent update to Backend Processor as file %s"
+msgstr "Invia aggiornamento al Processore di Backend come file %s"
+
+#: user/exportdhcp.php:206
+#, fuzzy
+msgid "No DHCP subnets could be found."
+msgstr "Non e' stata trovate nessuna sottorete DHCP"
+
+#: user/findfreeform.php:41
+msgid "Find free address space/Statistics"
+msgstr "Trova spazio di indirizzi libero/Statistiche"
+
+#: user/findfreeform.php:54
+msgid ""
+"Display free address space shows blocks or holes that are available for "
+"potential assignment as networks. The search will not display free space if "
+"the search only covers unallocated address space."
+msgstr ""
+"Visualizzare lo spazio di indirizzi libero mostra blocchi o spazi"
+"disponibili per potenziali assegnamenti delle reti. La ricerca non mostrera'"
+"lo spazio libero se la ricerca compre solo lo spazio degli indirizzi non allocati"
+
+#: user/findfreeform.php:56
+msgid "Subnets with a description of 'free' or 'spare' will also be shown."
+msgstr ""
+"Le sottoreti con una descrizione 'di libero 'o 'spare' "
+"'inoltre saranno indicate."
+
+#: user/findfreeform.php:93
+msgid "IP range start (leave blank if range selected)"
+msgstr ""
+"inizio del range IP (lasciare vuoto se il range e' selezionato)"
+
+#: user/findfreeform.php:98
+msgid "IP range end (leave blank if range selected)"
+msgstr "fine del range IP (lasciare vuoto se il range e' selezionato)"
+
+#: user/findfreeform.php:103
+msgid "Display only subnets between these sizes"
+msgstr "Visualizza solo le sottoreti tra queste dimensioni"
+
+#: user/findfreeform.php:104
+msgid "Minimum"
+msgstr "Minimo"
+
+#: user/findfreeform.php:109
+msgid "Maximum"
+msgstr "Massimo"
+
+#: user/findfreeform.php:114
+msgid "Show filter"
+msgstr "Mostra filro"
+
+#: user/findfreeform.php:117
+msgid "Free and Unassigned"
+msgstr "Libero e non assegnato"
+
+#: user/findfreeform.php:120
+#, fuzzy
+msgid "Unassigned only"
+msgstr "Solo non assegnati"
+
+#: user/findfreeform.php:123
+msgid "All"
+msgstr "Tutti"
+
+#: user/findfree.php:77
+msgid ""
+"Invalid IP address! You must select a range or fill in the start and end IP "
+"address."
+msgstr ""
+"IP ADDRESS non valido! Dovete selezionare un range o riempire l'IP "
+"ADDRESS di conclusione e di inizio."
+
+#: user/findfree.php:84
+msgid "Your end ip address is smaller than your start!"
+msgstr "L'ip address di fine e' piu' piccolo di quello d'inizio!"
+
+#: user/findfree.php:100
+#, php-format
+msgid "Subnet size filter: Subnets between %s and %s"
+msgstr "Filtro dimensione Sottorete: Sottorete tra %s e %s "
+
+#: user/findfree.php:185
+msgid "Utilization"
+msgstr "Utilizzazione"
+
+#: user/findfree.php:188
+msgid "Barchart"
+msgstr "Barchart"
+
+#: user/findfree.php:222 user/findfree.php:334 user/findfree.php:366
+msgid "Free space"
+msgstr "Spazio libero"
+
+#: user/findfree.php:275
+#, fuzzy
+msgid "Free/Unassigned space"
+msgstr "Spazio libero"
+
+#: user/findfree.php:279
+msgid "SPACE IS ASSIGNED OVER MULTIPLE CUSTOMERS/AS's"
+msgstr "LO SPAZIO E' ASSEGNATO SU PIU' CUSTOMERS/AS's"
+
+#: user/findfree.php:283
+msgid ""
+"SPACE IS ASSIGNED OVER MULTIPLE CUSTOMERS/AS's AND CONTAINS SPACE MARKED FREE"
+msgstr "LO SPAZIO E' ASSEGNATO SU PIU' CUSTOMERS/AS's E CONTIENE SPAZIO LIBERO"
+
+#: user/findfree.php:378
+msgid "Total:"
+msgstr "Totale:"
+
+#: user/findfree.php:387
+msgid "NOTE: Host and two host subnets are always 100% allocated"
+msgstr "NOTE: Host e due sottoreti host sempre allocati al 100%"
+
+#: user/findfree.php:389
+#, fuzzy
+msgid "Total allocated networks/subnets: "
+msgstr "Totale delle reti/sottoreti assegnate:"
+
+#: user/findfree.php:391
+msgid "Network/subnet space allocated: "
+msgstr "Rete/sottorete spazio allocato"
+
+#: user/findfree.php:400
+msgid "Total unassigned subnets (pre-allocated subnets marked as free): "
+msgstr "Totale delle sottoreti non assegnate (sottoreti non allocate marcate come libere):"
+
+#: user/findfree.php:402
+msgid "Unassigned subnets (pre-allocated subnets marked as free): "
+msgstr "Sottoreti non assegnate (sottoreti non allocate marcate come libere):"
+
+#: user/findfree.php:412
+msgid ""
+"IP addresses allocated (including reserved addresses/excluding reserved "
+"addresses): "
+msgstr "indirizzi IP allocati (include indirizzi riservati/escludi indirizzi riservati):"
+
+#: user/modifyarearangeform.php:39
+msgid "Display/Modify/Delete area information"
+msgstr "Visualizza/Modifica/Elimina informazioni sull'area"
+
+#: user/modifyarearangeform.php:47
+#, fuzzy
+msgid "Display/Modify/Delete areas and ranges."
+msgstr "Visualizza/Modifica/Elimina aree e range"
+
+#: user/modifyarearange.php:43
+msgid "Results of your search for areas"
+msgstr "Risultati della ricerca per aree"
+
+#: user/modifyarearange.php:60
+#, php-format
+msgid "Search for areas and ranges for customer '%s'"
+msgstr "Ricerca di aree e range per il customer '%s'"
+
+#: user/modifyarearange.php:86
+msgid "Range size"
+msgstr "Dimensione range"
+
+#: user/modifyarearange.php:88
+msgid "Range mask"
+msgstr "Maschera range"
+
+#: user/modifyarearange.php:119 user/modifyarearange.php:216
+msgid "Delete Area"
+msgstr "Eliminare Area"
+
+#: user/modifyarearange.php:132
+msgid "No area"
+msgstr "Nessuna area"
+
+#: user/modifyarearange.php:135
+msgid "Range not part of area"
+msgstr "Il range non fa parte dell'area"
+
+#: user/modifyarearange.php:158
+msgid "Delete Range"
+msgstr "Eliminare Range"
+
+#: user/modifyarearange.php:186
+msgid "Areas that have no ranges defined"
+msgstr "Aree che non hanno range definiti"
+
+#: user/modifybaseform.php:39
+#, fuzzy
+msgid "Modify/Copy/Move/Delete/Split/Join subnets"
+msgstr "Modifica/Copia/Muovi/Elimina/Separa/Unisci sottoreti"
+
+#: user/modifybaseform.php:84
+msgid "Subnet address (leave blank if range selected)"
+msgstr "Indirizzo di sottorete (lasciare vuoto se il range e' selezionato)"
+
+#: user/modifybase.php:43
+msgid "Results of your search for subnet to modify"
+msgstr "Risultati della ricerca per le sottoreti da modifcare"
+
+#: user/modifybase.php:84
+msgid ""
+"You may not delete a subnet for this customer as you are not a member of the "
+"customers admin group"
+msgstr ""
+"Non potete cancellare una sottorete per questo customer poiche' non siete un "
+"membro del gruppo customers admin"
+
+#: user/modifybase.php:111
+#, php-format
+msgid "Subnet %s not deleted - out of defined authority boundary"
+msgstr "Sottorete %s non eliminata - fuori dal defined authority boundary"
+
+#: user/modifybase.php:129
+#, fuzzy, php-format
+msgid "IP address %s has files attached"
+msgstr "IP address %s ha dei file allegati:"
+
+#: user/modifybase.php:140
+#, fuzzy, php-format
+msgid "Subnet %s deleted"
+msgstr "Sottorete %s eliminata"
+
+#: user/modifybase.php:143
+#, fuzzy, php-format
+msgid "Subnet %s could not be deleted"
+msgstr "La sottorete %s non puo' essere eliminata"
+
+#: user/modifybase.php:147
+#, fuzzy, php-format
+msgid "Subnet %s could not be deleted - there are files attached"
+msgstr "La sottorete %s non puo' essere eliminata - ci sono file allegati"
+
+#: user/modifybase.php:158
+#, fuzzy
+msgid ""
+"You may not split or join a subnet for this customer as you are not a member "
+"of the customers admin group"
+msgstr ""
+"Non potete cancellare una sottorete per questo customer poiche' non siete un "
+"membro del gruppo customers admin"
+
+#: user/modifybase.php:182
+#, fuzzy, php-format
+msgid "Subnet %s not split or joined - out of defined authority boundary"
+msgstr "Sottorete %s non cancellata - fuori dal defined authority boundary"
+
+#: user/modifybase.php:194
+#, fuzzy
+msgid "Subnets cannot be joined - Invalid base address!"
+msgstr "La sottorete non puo' essere accettata - Indirizzo base non valido!"
+
+#: user/modifybase.php:216
+msgid "Subnets cannot be joined - not the same size!"
+msgstr "La sottorete non puo' essere accettata - non ha la stessa dimensione!"
+
+#: user/modifybase.php:220
+msgid "Subnets cannot be joined - subnet created would be too big!"
+msgstr "La sottorete creata potrebbe essere troppo grande!"
+
+#: user/modifybase.php:237
+msgid "Subnets cannot be split - host network!"
+msgstr "host network!"
+
+#: user/modifybase.php:264
+#, fuzzy
+msgid "Subnet split or joined"
+msgstr "Sottorete %s generata"
+
+#: user/modifybase.php:353
+msgid "Admin group"
+msgstr "Gruppo Admin"
+
+#: user/modifybase.php:396
+msgid "Delete Subnet"
+msgstr "Elimina Sottorete"
+
+#: user/modifybase.php:404 user/modifysubnet.php:43
+msgid "Modify/Copy/Move subnet details"
+msgstr "Modifica/Copia/Muovi dettagli sottorete"
+
+#: user/modifybase.php:410
+#, fuzzy
+msgid "Join Subnet"
+msgstr "Join Sottorete"
+
+#: user/modifybase.php:418
+#, fuzzy
+msgid "Split Subnet"
+msgstr "split Sottorete"
+
+#: user/modifybase.php:472 user/modifydnsrecord.php:652
+#, fuzzy
+msgid "Delete multiple"
+msgstr "eliminazione multipla"
+
+#: user/modifycustomer.php:50
+msgid "Create a new customer/autonomous system"
+msgstr "Crea nuovo customer/sistema autonomo"
+
+#: user/modifycustomer.php:52
+msgid "Modify a customer/autonomous system details"
+msgstr "Modifica i dettagli del customer/sistema autonomo"
+
+#: user/modifycustomer.php:69
+msgid "The customer description must be longer"
+msgstr "La descrizione del customer deve essere piu' lunga"
+
+#: user/modifycustomer.php:72
+#, fuzzy
+msgid "The CRM index is invalid"
+msgstr "L'indice CRM non e' valido"
+
+#: user/modifycustomer.php:76
+msgid "Invalid zipcode"
+msgstr "zipcode non valido"
+
+#: user/modifycustomer.php:80
+msgid "Invalid contact zipcode"
+msgstr "Contatto zipcode non valido"
+
+#: user/modifycustomer.php:83
+msgid "Invalid E-mail address"
+msgstr "Indirizzo E-mail non valido"
+
+#: user/modifycustomer.php:88 user/modifydns.php:154 user/modifyzone.php:162
+#, php-format
+msgid "Invalid hostname %u"
+msgstr "Hostname non valido %u"
+
+#: user/modifycustomer.php:91
+#, php-format
+msgid "Invalid IP address %u"
+msgstr "IP ADDRESS non valido %u"
+
+#: user/modifycustomer.php:94
+#, php-format
+msgid "Invalid hostname/IP address combination %u"
+msgstr "Combinazione %u hostname/indirizzo IP non valida "
+
+#: user/modifycustomer.php:108 user/requestip.php:101
+msgid "Additional information error"
+msgstr "Errore sulle informazioni supplementari"
+
+#: user/modifycustomer.php:118
+msgid ""
+"You may not create customers as you are not a member a group that can create "
+"customers"
+msgstr ""
+"Non potete generare i customers poiche' non siete un membro dell gruppo che puo' "
+"generare i customers"
+
+#: user/modifycustomer.php:158 user/modifycustomer.php:280
+#, fuzzy
+msgid "Customer cannot be found!"
+msgstr "Il customer non puo' essere trovato"
+
+#: user/modifycustomer.php:180
+msgid "The CRM field has already been used for another customer"
+msgstr "Il campo CRM e' gia' utilizzato da un altro customer"
+
+#: user/modifycustomer.php:263
+msgid "Customer/autonomous system details modified"
+msgstr "Customer/sistema autonomo dettagli modificati"
+
+#: user/modifycustomer.php:266
+msgid ""
+"Customer/autonomous system details could not be modified - possibly a "
+"duplicate description"
+msgstr ""
+"I dettagli del customer/sistema autonomo non possono essere modificati - possibile"
+"un duplicato della descrizione"
+
+#: user/modifycustomer.php:305
+#, fuzzy
+msgid "Required information"
+msgstr "Informazioni richieste"
+
+#: user/modifycustomer.php:307
+msgid "Customer/autonomous system description:"
+msgstr "Customer/autonomous system descrizione:"
+
+#: user/modifycustomer.php:317
+#, fuzzy
+msgid "Customer/autonomous system admin group:"
+msgstr "Customer/sistema autonomo gruppo admin:"
+
+#: user/modifycustomer.php:661
+#, fuzzy
+msgid "Customer information (optional)"
+msgstr "Informazioni Customer (facoltative):"
+
+#: user/modifycustomer.php:663
+msgid "CRM index:"
+msgstr "Indice CRM:"
+
+#: user/modifycustomer.php:665
+msgid ""
+"This field can contain a value referencing your external CRM systems "
+"customer id"
+msgstr ""
+"Questo campo puo' contenere un valore di riferimento del vostro sistema CRM esterno"
+"customer id"
+
+#: user/modifycustomer.php:673 user/modifycustomer.php:753
+msgid "Organization:"
+msgstr "Organizzazione:"
+
+#: user/modifycustomer.php:679 user/modifycustomer.php:759
+msgid "Street:"
+msgstr "Via:"
+
+#: user/modifycustomer.php:685 user/modifycustomer.php:765
+msgid "City:"
+msgstr "Citta':"
+
+#: user/modifycustomer.php:691 user/modifycustomer.php:771
+msgid "State:"
+msgstr "Stato:"
+
+#: user/modifycustomer.php:695 user/modifycustomer.php:776
+msgid "Zipcode:"
+msgstr "Zipcode:"
+
+#: user/modifycustomer.php:701 user/modifycustomer.php:782
+msgid "Country:"
+msgstr "Paese:"
+
+#: user/modifycustomer.php:707
+#, fuzzy
+msgid "Reverse DNS information (optional)"
+msgstr "Informazioni Reverse DNS (facoltative):"
+
+#: user/modifycustomer.php:712
+#, php-format
+msgid "Hostname %u:"
+msgstr "Hostname %u:"
+
+#: user/modifycustomer.php:718
+#, php-format
+msgid "IP address %u:"
+msgstr "IP ADDRESS %u:"
+
+#: user/modifycustomer.php:727
+#, fuzzy
+msgid "Technical contact information (optional)"
+msgstr "Le informazioni tecniche contatto (facoltative):"
+
+#: user/modifycustomer.php:729
+msgid "Nickname/handle:"
+msgstr "Nickname/handle:"
+
+#: user/modifycustomer.php:735
+msgid "Last name/surname:"
+msgstr "Ultimo nome/cognome:"
+
+#: user/modifycustomer.php:741
+msgid "First name:"
+msgstr "Nome:"
+
+#: user/modifycustomer.php:747
+msgid "Middle name:"
+msgstr "Secondo Nome:"
+
+#: user/modifycustomer.php:787
+msgid "Telephone number:"
+msgstr "Numero di telefono:"
+
+#: user/modifycustomer.php:793
+msgid "E-mail address:"
+msgstr "Indirizzo E-mail:"
+
+#: user/modifydnsform.php:47
+#, fuzzy
+msgid "Create DNS Zones"
+msgstr "Crea zone DNS"
+
+#: user/modifydnsform.php:50
+msgid "Edit DNS Zones"
+msgstr "Modifica zone DNS"
+
+#: user/modifydnsform.php:113
+msgid "Maintain forward zone SOA information."
+msgstr "Mantieni informazioni sulla zona forward SOA"
+
+#: user/modifydnsform.php:117
+#, fuzzy
+msgid "Forward zone information"
+msgstr "Informazioni sulla zona Forward"
+
+#: user/modifydnsform.php:119 user/modifyzoneform.php:115
+msgid "Zone (Domain Name)"
+msgstr "Zona (Nome del Dominio)"
+
+#: user/modifydnsform.php:121 user/modifyzoneform.php:117
+msgid "Separate multiple domain names with ;"
+msgstr "Separa nomi di dominio multiplo con ;"
+
+#: user/modifydnsform.php:136 user/modifyzoneform.php:160
+msgid "Zone transfer from DNS server"
+msgstr "Trasferimento zona dal DNS server"
+
+#: user/modifydnsform.php:137 user/modifyzoneform.php:161
+msgid "Blank for no zone transfer"
+msgstr "Vuoto per non trasferminto di zona"
+
+#: user/modifydnsform.php:138 user/modifyzoneform.php:162
+msgid "Slave zones only import SOA information, not zone records"
+msgstr "Zone secondarie importano solo informazioni SOA, non record di zona"
+
+#: user/modifydnsform.php:151
+msgid "--- OR ---"
+msgstr "--- O ---"
+
+#: user/modifydnsform.php:241 user/searchallform.php:187
+msgid "January"
+msgstr "Gennaio"
+
+#: user/modifydnsform.php:242 user/searchallform.php:188
+msgid "February"
+msgstr "Febbraio"
+
+#: user/modifydnsform.php:243 user/searchallform.php:189
+msgid "March"
+msgstr "Marzo"
+
+#: user/modifydnsform.php:244 user/searchallform.php:190
+msgid "April"
+msgstr "Aprile"
+
+#: user/modifydnsform.php:245 user/searchallform.php:191
+msgid "May"
+msgstr "Maggio"
+
+#: user/modifydnsform.php:246 user/searchallform.php:192
+msgid "June"
+msgstr "Giugno"
+
+#: user/modifydnsform.php:247 user/searchallform.php:193
+msgid "July"
+msgstr "Luglio"
+
+#: user/modifydnsform.php:248 user/searchallform.php:194
+msgid "August"
+msgstr "Agosto"
+
+#: user/modifydnsform.php:249 user/searchallform.php:195
+msgid "September"
+msgstr "Settembre"
+
+#: user/modifydnsform.php:250 user/searchallform.php:196
+msgid "October"
+msgstr "Ottobre"
+
+#: user/modifydnsform.php:251 user/searchallform.php:197
+msgid "November"
+msgstr "Novembre"
+
+#: user/modifydnsform.php:252 user/searchallform.php:198
+msgid "December"
+msgstr "Dicembre"
+
+#: user/modifydnsform.php:273
+#, fuzzy
+msgid "Registrar information"
+msgstr "Informazioni Registrar"
+
+#: user/modifydnsform.php:278
+#, fuzzy
+msgid "Date zone created"
+msgstr "zona Data creata"
+
+#: user/modifydnsform.php:280 user/modifydnsform.php:292
+#: user/modifydnsform.php:304 user/searchallform.php:150
+msgid "Day"
+msgstr "Giorno"
+
+#: user/modifydnsform.php:283 user/modifydnsform.php:295
+#: user/modifydnsform.php:307 user/searchallform.php:185
+msgid "Month"
+msgstr "Mese"
+
+#: user/modifydnsform.php:286 user/modifydnsform.php:298
+#: user/modifydnsform.php:310 user/searchallform.php:201
+#, fuzzy
+msgid "Year"
+msgstr "Anno"
+
+#: user/modifydnsform.php:290
+msgid "Last registration modification"
+msgstr "Ultima modifica della registrazione"
+
+#: user/modifydnsform.php:302
+msgid "Date zone expires"
+msgstr "Scadenza zona Data"
+
+#: user/modifydnsform.php:318 user/modifyzoneform.php:181
+msgid "Zone SOA information if zone not created via zone transfer"
+msgstr "Informazioni zona SOA se la zona non e' creata tramite zona transfer"
+
+#: user/modifydnsform.php:321 user/modifyzoneform.php:184
+#, fuzzy
+msgid "Zone SOA information"
+msgstr "Informazioni zona SOA"
+
+#: user/modifydnsform.php:332 user/modifyzoneform.php:195
+#, php-format
+msgid "Name server %u:"
+msgstr "Nome server %u:"
+
+#: user/modifydnsform.php:342
+msgid "Forward zone SOA header information"
+msgstr "Informazioni dull'header SOA della zona forward"
+
+#: user/modifydnsform.php:344 user/modifyzoneform.php:206
+#, fuzzy
+msgid "Technical contact email address"
+msgstr "Indirizzo email contatto tecnico"
+
+#: user/modifydnsform.php:345 user/modifyzoneform.php:207
+msgid "No @ allowed - replace with ."
+msgstr "@ non permesso - sostituire con ."
+
+#: user/modifydnsform.php:350 user/modifydns.php:435
+#: user/modifyzoneform.php:212 user/modifyzone.php:389
+msgid "TTL"
+msgstr "TTL"
+
+#: user/modifydnsform.php:356 user/modifydns.php:437
+#: user/modifyzoneform.php:218 user/modifyzone.php:391
+msgid "Refresh"
+msgstr "Ricarica"
+
+#: user/modifydnsform.php:362 user/modifydns.php:439
+#: user/modifyzoneform.php:224 user/modifyzone.php:393
+msgid "Retry"
+msgstr "Riprova"
+
+#: user/modifydnsform.php:368 user/modifydns.php:441
+#: user/modifyzoneform.php:230 user/modifyzone.php:395
+msgid "Expire"
+msgstr "scaduto"
+
+#: user/modifydnsform.php:374 user/modifyzoneform.php:236
+msgid "Minimum TTL"
+msgstr "TTL minimo"
+
+#: user/modifydnsform.php:397
+msgid "Forward zone location"
+msgstr "Locazione zona Forward"
+
+#: user/modifydnsform.php:399 user/modifyzoneform.php:246
+msgid "Zone File Path"
+msgstr "Percorso File di zona"
+
+#: user/modifydnsform.php:400 user/modifyzoneform.php:247
+msgid ""
+"The path where the zone file will be written once exported and processed. "
+"Examples:"
+msgstr ""
+"Il percorso in cui il file di zona verra' scritto una volta che e' stato esportato e processato"
+"Esempi:"
+
+#: user/modifydnsform.php:401 user/modifyzoneform.php:248
+msgid ""
+"ftp://myhost.com/var/named/test.zone - if you want to transfer the zone "
+"using ncftput"
+msgstr ""
+"ftp://myhost.com/var/named/test.zone - se si vuole trasferire la zona "
+"usando ncftput"
+
+#: user/modifydnsform.php:402 user/modifyzoneform.php:249
+msgid ""
+"user@myhost.com:/var/named/test.zone - if you want to transfer the zone "
+"using scp"
+msgstr ""
+"user@myhost.com:/var/named/test.zone - se si vuole trasferire la zona "
+"usando scp"
+
+
+#: user/modifydnsform.php:408 user/modifyzoneform.php:255
+msgid "Secondary Zone File Path"
+msgstr "Percorso del File di zona secondaria"
+
+#: user/modifydnsform.php:414 user/modifydnsrecordform.php:141
+#: user/modifyzoneform.php:261
+#, fuzzy
+msgid "Save"
+msgstr "Salva"
+
+#: user/modifydns.php:43
+msgid "DNS Domain Zones"
+msgstr "Zona Dominio DNS"
+
+#: user/modifydns.php:83
+#, fuzzy
+msgid ""
+"You may not delete a DNS zone as you are not a member of the customers admin "
+"group"
+msgstr ""
+"Non potete cancellare una zona DNS poiche' non siete un membro "
+"del gruppo customers admin"
+
+#: user/modifydns.php:96
+#, fuzzy
+msgid "DNS Zone deleted"
+msgstr "Zona DNS eliminata"
+
+#: user/modifydns.php:102
+#, fuzzy
+msgid "DNS Zone could not be deleted"
+msgstr "La zona DNS non puo' essere eliminata"
+
+#: user/modifydns.php:115 user/modifyzone.php:112 user/modifyzone.php:268
+#, fuzzy
+msgid ""
+"You may not add a zone as you are not a member of the customers admin group"
+msgstr ""
+"Non potete aggiungere una zona per poiche' non siete un membro "
+"del gruppo customers admin"
+
+#: user/modifydns.php:120 user/modifyzone.php:117
+#, fuzzy
+msgid "Domain may not be blank"
+msgstr "Il dominio non puo' essere vuoto"
+
+#: user/modifydns.php:131 user/modifyzone.php:128
+#, fuzzy, php-format
+msgid "Invalid domain name %s"
+msgstr "Nome del dominio %s non valido"
+
+#: user/modifydns.php:143 user/modifyzone.php:140
+#, fuzzy, php-format
+msgid "Invalid hostname %s"
+msgstr "Hostname non valido %s"
+
+#: user/modifydns.php:161 user/modifyzone.php:169
+msgid "Invalid zone - you need at least two nameservers"
+msgstr "Zona non valido - servono almeno due nameservers"
+
+#: user/modifydns.php:167 user/modifyzone.php:174
+#, fuzzy
+msgid "Invalid domain timeout values"
+msgstr "Dominio non valido valori di timeout"
+
+#: user/modifydns.php:171
+msgid "Serial Date can not be blank. Use YYYYMMDD."
+msgstr "Dati Seriali non possono essere vuoti. Utilizzare YYYYMMDD"
+
+#: user/modifydns.php:176 user/modifyzone.php:183
+msgid "Invalid zone email address - no @ allowed, replace with ."
+msgstr "Indirizzo email di zona non valido - @ non permesso, sostituisci con ."
+
+#: user/modifydns.php:180
+#, fuzzy
+msgid "Invalid create date"
+msgstr "Data non valida"
+
+#: user/modifydns.php:183
+#, fuzzy
+msgid "Invalid registration date"
+msgstr "Registrazione data non valida"
+
+#: user/modifydns.php:186
+#, fuzzy
+msgid "Invalid expire date"
+msgstr "Scadenza della data non valida"
+
+#: user/modifydns.php:193
+msgid ""
+"Invalid date combination. Expire date must be greater than last registration "
+"date which must be greater than creation date"
+msgstr ""
+"Combinazione data non valida. La data di scadenza deve essere superiore all'ultima"
+"registrazione, la quale deve essere superiore alla data di creazione"
+
+#: user/modifydns.php:257 user/modifyzone.php:211
+#, fuzzy, php-format
+msgid "DNS Zone created %s"
+msgstr "Zona DNS creata %s"
+
+#: user/modifydns.php:261
+msgid "DNS Zone records added from template.com zone"
+msgstr "Record di zona DNS aggiunto da template.com zone"
+
+#: user/modifydns.php:267 user/modifyzone.php:216
+#, fuzzy, php-format
+msgid "DNS Zone %s could not be created"
+msgstr "La zona DNS %s non puo' essere creata"
+
+#: user/modifydns.php:302 user/modifyzone.php:250
+#, fuzzy
+msgid "DNS Zone Modified"
+msgstr "Zona DNS modificata"
+
+#: user/modifydns.php:306 user/modifyzone.php:254
+#, fuzzy
+msgid "DNS Zone could not be modifed. Try again."
+msgstr "La zona DNS non puo' essere modificata. Riprovare"
+
+#: user/modifydns.php:329
+#, fuzzy
+msgid ""
+"You may not export a zone as you are not a member of the customers admin "
+"group"
+msgstr ""
+"Non potete esportare una zona poiche' non siete un membro "
+"del gruppo customers admin"
+
+#: user/modifydns.php:354
+#, php-format
+msgid "Sent update to Backend Processor as file %s for domain %s"
+msgstr "Invia un aggiornamento al Processore di Backend come file %s per il dominio %s"
+
+#: user/modifydns.php:359
+#, fuzzy, php-format
+msgid "Zone %s could not be exported.  Try again."
+msgstr "Zona %s non puo' essere esportata. Riprovare"
+
+#: user/modifydns.php:370
+msgid ""
+"Create (manually and via a zone transfer) and maintain forward DNS zones."
+msgstr "Creare (manualmente e tramite zone transfer) e mantieni le zone DNS forward."
+
+#: user/modifydns.php:371 user/modifyzone.php:325
+msgid ""
+" Zones in bold and tagged with a &Dagger; have changed domain records, but "
+"have not been exported yet."
+msgstr ""
+"Zone in grassetto e contrassegnate con &Dagger; hanno cambiato dominio record, ma"
+"non sono ancora stati esportati."
+
+#: user/modifydns.php:403
+msgid "Refine Search on Domain"
+msgstr "Ricerca dettagliata sul dominio"
+
+#: user/modifydns.php:427 user/modifydnsrecord.php:459
+msgid "Domain"
+msgstr "Dominio"
+
+#: user/modifydns.php:429 user/modifyzone.php:383
+msgid "Primary NS"
+msgstr "NS Primario"
+
+#: user/modifydns.php:431 user/modifyzone.php:385
+msgid "Secondary NS"
+msgstr "NS Secondario"
+
+#: user/modifydns.php:433 user/modifyzone.php:387
+msgid "SerialDate"
+msgstr "SerialDate"
+
+#: user/modifydns.php:443 user/modifyzone.php:397
+msgid "Min. TTL"
+msgstr "Min. TTL"
+
+#: user/modifydns.php:446 user/modifyzone.php:400
+#, fuzzy
+msgid "Last exported"
+msgstr "Ultima esportazione"
+
+#: user/modifydns.php:467 user/modifyzone.php:423
+msgid "Slave zone"
+msgstr "Zona secondaria"
+
+#: user/modifydns.php:512
+#, fuzzy
+msgid "Delete DNS Zone"
+msgstr "Elimina Zona DNS"
+
+#: user/modifydns.php:529
+msgid "Edit DNS Zone"
+msgstr "Modifica Zona DNS"
+
+#: user/modifydns.php:545
+msgid "Export DNS Zone"
+msgstr "Esporta Zona DNS"
+
+#: user/modifydns.php:546 user/modifydns.php:580 user/modifyzone.php:530
+#, fuzzy
+msgid "Are you sure to Export?"
+msgstr "Sei sicuro di effettuare l'Esportazione?"
+
+#: user/modifydns.php:552 user/modifyipform.php:426
+msgid "Whois"
+msgstr "WHOIS"
+
+#: user/modifydns.php:579 user/modifyzone.php:529
+msgid "Export all changed DNS Zones"
+msgstr "Esporta tutte le Zone DNS modificate"
+
+#: user/modifydns.php:583
+#, fuzzy
+msgid "Search found no DNS Zone entries"
+msgstr "La ricerca non ha trovato entrate di Zone DNS"
+
+#: user/modifydns.php:588
+msgid "Add a DNS Zone"
+msgstr "Aggiungi alla Zona DNS"
+
+#: user/modifydnsrecordform.php:45
+msgid "Add / Edit  DNS Host"
+msgstr "Aggiungi/Modifca Host DNS"
+
+#: user/modifydnsrecordform.php:66
+msgid "Host Record for domain: "
+msgstr "Host Record per il dominio:"
+
+#: user/modifydnsrecordform.php:74
+#, fuzzy
+msgid "DNS record"
+msgstr "Record DNS"
+
+#: user/modifydnsrecordform.php:95 user/searchallform.php:85
+#, fuzzy
+msgid "Host Name"
+msgstr "Hostname:"
+
+#: user/modifydnsrecordform.php:97
+msgid ""
+"Terminate Fully Qualified Domand Name's (FQDN) with a . eg. mywwwserver.com. "
+"to signify 'This domain'"
+msgstr ""
+"Terminare il Fully Qualifies Domand Name's (FQDN) con . eg. mywwwserver.com. "
+"con significato 'Questo dominio'"
+
+#: user/modifydnsrecordform.php:105
+msgid "This domain"
+msgstr "Questo dominio"
+
+#: user/modifydnsrecordform.php:116 user/modifydnsrecord.php:541
+msgid "Record Type"
+msgstr "Record Type"
+
+#: user/modifydnsrecordform.php:126
+#, fuzzy
+msgid "IP / Hostname"
+msgstr "IP / Hostname"
+
+#: user/modifydnsrecordform.php:128
+msgid ""
+"For MX records, format is \"preference hostname\", eg. \"10 mymailserver.com."
+"\""
+msgstr ""
+""
+
+#: user/modifydnsrecordform.php:135
+msgid "Sort Order"
+msgstr "Ordinamento"
+
+#: user/modifydnsrecord.php:41
+msgid "Zone Domain DNS Records"
+msgstr "Record DNS del dominio di zona"
+
+#: user/modifydnsrecord.php:91 user/modifydnsrecord.php:147
+#, fuzzy
+msgid ""
+"You may not delete dns records as you are not a member of the customers "
+"admin group"
+msgstr ""
+"Non potete cancellare record dns  poiche' non siete un membro "
+"del gruppo admin customers"
+
+#: user/modifydnsrecord.php:112
+#, php-format
+msgid ""
+"IP record %s updated in subnet '%s' due to deletion of auto created A record"
+msgstr ""
+"Record IP &s aggiornato nella sottorete '%s' a causa dell'eliminazione del record A autocreato"
+
+#: user/modifydnsrecord.php:130
+msgid "Domain DNS Record Deleted."
+msgstr "Record DNS del dominio eliminato"
+
+#: user/modifydnsrecord.php:134
+#, fuzzy
+msgid "DNS Record could not be deleted."
+msgstr "Il Record DNS non puo' essere eliminato "
+
+#: user/modifydnsrecord.php:178
+msgid "Domain Records Renumbered."
+msgstr "Record del dominio rinumerati"
+
+#: user/modifydnsrecord.php:182
+#, fuzzy
+msgid "DNS Records could not be renumbered."
+msgstr "I record DNS non possono essere rinumerati"
+
+#: user/modifydnsrecord.php:197
+#, fuzzy
+msgid ""
+"You may not add a record as you are not a member of the customers admin group"
+msgstr ""
+"Non potete aggiungere un record poiche'  non siete un membro "
+"del gruppo customers admin"
+
+#: user/modifydnsrecord.php:202
+msgid "Bind @ shortcut converted to Fully Qualified Domain Name (FQDN)"
+msgstr "Impiega @ per convertire in Fully Qualifies Domain Name (FQDN)"
+
+#: user/modifydnsrecord.php:209 user/modifydnsrecord.php:215
+#, fuzzy
+msgid "Invalid hostname"
+msgstr "Hostname non valido "
+
+#: user/modifydnsrecord.php:213
+#, fuzzy
+msgid "Host may not be blank"
+msgstr "Host non puo' essere vuoto"
+
+#: user/modifydnsrecord.php:218
+#, fuzzy
+msgid "Record Type may not be blank."
+msgstr "Record Type non puo' essere vuoto"
+
+#: user/modifydnsrecord.php:222
+#, fuzzy
+msgid "IP / Hostname may not be blank."
+msgstr "IP / Hostname non puo' essere vuoto"
+
+#: user/modifydnsrecord.php:229 user/modifydnsrecord.php:235
+#: user/modifydnsrecord.php:250 user/modifydnsrecord.php:260
+#: user/modifydnsrecord.php:276
+#, fuzzy
+msgid "Invalid IP/ Hostname"
+msgstr "IP / Hostname non valido"
+
+#: user/modifydnsrecord.php:255
+msgid ""
+"Invalid SRV type record.   Usage: SRV <priority> <weight> <port> "
+"<target_host>"
+msgstr ""
+"Record SRV type non valido. Utilizzare: SRV <priorita'> <peso> <porta> "
+"<target_host>"
+
+#: user/modifydnsrecord.php:272
+msgid "For A type, IP / Hostname must be an IP address"
+msgstr "Per A type, IP / Hostname deve essere un indirizzo IP"
+
+#: user/modifydnsrecord.php:297
+msgid "Cannot create duplicate records"
+msgstr "Impossibile creare record duplicati"
+
+#: user/modifydnsrecord.php:343 user/modifydnsrecord.php:397
+msgid "Subnet IP record updated with hostname: "
+msgstr "Record IP di sottorete aggiornato con l'hostname:"
+
+#: user/modifydnsrecord.php:366
+msgid "Host record added."
+msgstr "Record Host aggiunto."
+
+#: user/modifydnsrecord.php:370
+#, fuzzy
+msgid "Host record could not be added."
+msgstr "Record Host non puo' essere aggiunto."
+
+#: user/modifydnsrecord.php:379
+#, fuzzy
+msgid "Could not find the record - possibly deleted by another user"
+msgstr ""
+"Non e' possibile trovare il record - puo' esser stato eliminato da un'altro utente"
+
+#: user/modifydnsrecord.php:418
+#, fuzzy
+msgid "Host Record Modified"
+msgstr "Record Host modificato"
+
+#: user/modifydnsrecord.php:423
+#, fuzzy
+msgid "Host record could not be modifed. Try again."
+msgstr "Host record non puo' essere modificato. Riprovare."
+
+#: user/modifydnsrecord.php:452
+msgid "No domains found. Create some domains and try again."
+msgstr "Nessun dominio trovato. Creare qualche dominio e riprovare."
+
+#: user/modifydnsrecord.php:460
+msgid "Master domains only"
+msgstr "Solamente domini principali"
+
+#: user/modifydnsrecord.php:506
+msgid "Refine Search on Host"
+msgstr "Ricerca dettagliata sull'host"
+
+#: user/modifydnsrecord.php:537
+msgid "Sort-Order"
+msgstr "Ordinamento"
+
+#: user/modifydnsrecord.php:543
+#, fuzzy
+msgid "IP/Hostname"
+msgstr "IP/Hostname"
+
+#: user/modifydnsrecord.php:579
+#, fuzzy
+msgid "Auto record"
+msgstr "Auto record"
+
+#: user/modifydnsrecord.php:599
+#, fuzzy
+msgid "Delete Record"
+msgstr "Elimina Record"
+
+#: user/modifydnsrecord.php:608
+msgid "Edit Record"
+msgstr "Modifica Record"
+
+#: user/modifydnsrecord.php:669
+msgid "Add a Host"
+msgstr "Aggiungi un Host"
+
+#: user/modifydnsrecord.php:673
+msgid "No Records found.  Please choose a domain and try again."
+msgstr "Nessun record trovato. Si prega di scegliere un dominio e riprovare"
+
+#: user/modifydnsrecord.php:677
+msgid "Renumber SortOrder"
+msgstr "Rinumera l'ordinamento"
+
+#: user/modifyipformmul.php:41
+msgid "Modify IP address details (range)"
+msgstr "Modifica dettagli indirizzi IP (range)"
+
+#: user/modifyipformmul.php:63
+msgid "IP Addresses to modify: "
+msgstr "Indirizzi IP da modificare: "
+
+#: user/modifyipformmul.php:68 user/modifyipform.php:294
+#, fuzzy
+msgid "Back to subnet"
+msgstr "Torna alla sottorete"
+
+#: user/modifyipformmul.php:81 user/modifyipform.php:540
+#: user/requestip.php:259
+#, fuzzy
+msgid "User information"
+msgstr "Informazione dell'utente"
+
+#: user/modifyipformmul.php:97 user/modifyipform.php:563
+#: user/requestip.php:280
+msgid "Telephone number"
+msgstr "Numero di telefono"
+
+#: user/modifyipformmul.php:149
+msgid "Delete records"
+msgstr "Elimina record"
+
+#: user/modifyipformmul.php:150
+msgid ""
+"WARNING: Deleting an entry does not preserve the last modified information "
+"as the record is completely removed from the database to conserve space."
+msgstr ""
+"ATTENZIONE: L'eliminazione di un'entrata non conserva l'ultima informazione"
+"modificata cosi' il record viene eliminato completamente dal database per"
+"risparmiare spazio"
+
+#: user/modifyipform.php:81
+msgid "Modify IP address details"
+msgstr "Modifica dettagli degli indirizzi IP"
+
+#: user/modifyipform.php:141
+msgid "There are no available addresses"
+msgstr "Non ci sono indirizzi disponibili"
+
+#: user/modifyipform.php:162 admin/importbase.php:93 admin/importip.php:57
+msgid "File uploads may have been disabled in the php.ini configuration file"
+msgstr "L'aggiornamento file potrebbe essere disabilitato nel file di configurazione php.ini"
+
+#: user/modifyipform.php:169
+#, php-format
+msgid ""
+"Possible file size exceeded php.ini or webserver limit of %s - break file "
+"into smaller parts"
+msgstr ""
+"Probabile superamento della dimensione del file php.ini o il limite del webserver di %s"
+"dividere il file in parti piu' piccole"
+
+#: user/modifyipform.php:172 admin/importbase.php:101 admin/importip.php:65
+msgid "Possible file upload attack"
+msgstr "Possibile attacco all'aggiornamento del file"
+
+#: user/modifyipform.php:178
+msgid "Filename must have a description - uploaded aborted"
+msgstr "Il Filename deve avere una descrizione - caricamento  annullato"
+
+#: user/modifyipform.php:218
+msgid ""
+"File could not be moved to upload location - upload failed probably due to "
+"directory permission problem"
+msgstr ""
+"Il file non puo' essere spostato nella posizione di caricamento - caricamento fallito"
+"dovuto probabilmente a problemi alla directory dei permessi"
+
+#: user/modifyipform.php:250
+msgid ""
+"File could not be deleted - delete failed probably due to directory "
+"permission problem"
+msgstr ""
+"Il file non puo' essere eliminato - fallimento dell'eliminazione dovuto "
+"probabilmente a problemi sulla directory dei permessi"
+
+#: user/modifyipform.php:277
+msgid ""
+"File could not be downloaded - download failed probably due to directory "
+"permission problem"
+msgstr ""
+
+#: user/modifyipform.php:396
+#, fuzzy
+msgid "Requested addresses"
+msgstr "Richiesti indirizzi"
+
+#: user/modifyipform.php:405
+msgid "IP Address to modify:"
+msgstr "IP ADDRESS da modificare:"
+
+#: user/modifyipform.php:411 user/modifyipform.php:417
+msgid " (Address active on network) "
+msgstr "(indirizzo attivo sulla rete)"
+
+#: user/modifyipform.php:431
+msgid "Ping"
+msgstr "Ping"
+
+#: user/modifyipform.php:434
+msgid "Traceroute"
+msgstr "Traceroute"
+
+#: user/modifyipform.php:444
+#, fuzzy
+msgid "Update hostname from DNS"
+msgstr "Aggiorna hostname dal DNS"
+
+#: user/modifyipform.php:452
+msgid "Query device info via SNMP"
+msgstr "Informazioni query device via SNMP"
+
+#: user/modifyipform.php:523
+msgid "The subnet mask configured on the device appears to be incorrect!"
+msgstr "La maschera di sottorete configurata sul dispositivo sembra essere incorretta!"
+
+#: user/modifyipform.php:558 user/requestip.php:275
+#, fuzzy
+msgid "Device hostname"
+msgstr "Hostname Dispositivo"
+
+#: user/modifyipform.php:573
+#, fuzzy
+msgid "Linked address"
+msgstr "Indirizzo del collegamento"
+
+#: user/modifyipform.php:574
+msgid ""
+"Link this address by pointing it to another address - useful for NAT "
+"definitions"
+msgstr ""
+"Link a questo indirizzo puntandolo ad un altro indirizzo - utile per definizioni NAT"
+
+#: user/modifyipform.php:581
+#, fuzzy
+msgid "Go to address"
+msgstr "Vai all'indirizzo"
+
+#: user/modifyipform.php:653
+msgid "Upload files"
+msgstr "Carica files"
+
+#: user/modifyipform.php:668
+#, fuzzy
+msgid "Filename"
+msgstr "Filename"
+
+#: user/modifyipform.php:672
+msgid "Size"
+msgstr "Dimensione"
+
+#: user/modifyipform.php:674
+#, fuzzy
+msgid "Date"
+msgstr "Data"
+
+#: user/modifyipform.php:697
+#, fuzzy
+msgid "Delete file"
+msgstr "Elimina file"
+
+#: user/modifyipform.php:702
+msgid "Download file"
+msgstr "Download file"
+
+#: user/modifyipform.php:709
+#, fuzzy
+msgid "Filename description"
+msgstr "Descrizione Filename"
+
+#: user/modifyipform.php:714 admin/importbaseform.php:77
+#: admin/importipform.php:67
+msgid "File name"
+msgstr "Nome File"
+
+#: user/modifyipform.php:723
+msgid "Upload file"
+msgstr "Carica File"
+
+#: user/modifyipform.php:747
+msgid "Delete record"
+msgstr "Elimina record"
+
+#: user/modifyipform.php:748
+#, fuzzy
+msgid ""
+"WARNING: Deleting an entry does not preserve the last modified information "
+"as the record is completely removed from the database to conserve space. "
+msgstr ""
+"ATTENZIONE: L'eliminazione di un'entrata non preserva l'informazione di ultima "
+"modifica cosi' come il record viene completamente eliminato dal database"
+"per conservare lo spazio."
+
+#: user/modifyipform.php:751
+msgid "Deleting this record will delete all associated uploaded files!"
+msgstr "L'eliminazione di questo record eliminera' tutti i file associati caricati"
+
+#: user/modifysubnet.php:76
+msgid ""
+"You may not modify this subnet for this customer as you are not a member of "
+"the new customers admin group"
+msgstr ""
+"Non e' possibile modificare questa sottorete per questo customer poiche' non sei un"
+"membro del gruppo admin del nuovo customer"
+
+#: user/modifysubnet.php:82
+msgid "You need to enter a description for the subnet"
+msgstr "Dovete fornire una descrizione della sottorete"
+
+#: user/modifysubnet.php:96
+msgid ""
+"You may not move this subnet for this customer as you are not a member of "
+"the original customers admin group"
+msgstr ""
+"Non e' possibile  spostare questa sottorete per questo customer poiche' non siete un "
+"membro del gruppo admin del customer originale"
+
+#: user/modifysubnet.php:118 user/modifysubnet.php:204
+#, php-format
+msgid "Subnet %s not modified - out of defined authority boundary"
+msgstr "Sottorete %s non modificata - fuori dal definito authority boundary"
+
+#: user/modifysubnet.php:123
+msgid ""
+"Subnet could not be created - possibly overlaps with an existing subnet on "
+"new customers network"
+msgstr ""
+"La sottorete non puo' essere creata - possibile sovrapposizione "
+"con una sottorete sulla nuova rete customers"
+
+#: user/modifysubnet.php:264
+msgid "Subnet modified"
+msgstr "Sottorete modificata"
+
+#: user/modifysubnet.php:271
+msgid "Subnet could not be modified"
+msgstr "Non e' stato possibile modificare la sottorete"
+
+#: user/modifysubnet.php:339
+msgid "Move subnet to new customer"
+msgstr "Sposta la sottorete al nuovo customer"
+
+#: user/modifysubnet.php:342
+msgid "Duplicate subnet on new customer"
+msgstr "Duplica la sottorete sul nuovo customer"
+
+#: user/modifysubnet.php:345
+msgid "Duplicate subnet on new customer without IP detail"
+msgstr "Duplica la sottorete sul nuovo customer senza dettagli IP"
+
+#: user/modifyzoneform.php:45
+msgid "Create DNS Reverse Zones"
+msgstr "Crea Zona DNS Reverse"
+
+#: user/modifyzoneform.php:108
+msgid "Maintain reverse zone SOA information"
+msgstr "Mantieni informazione sulla zona reverse SOA"
+
+#: user/modifyzoneform.php:112
+#, fuzzy
+msgid "Reverse zone information"
+msgstr "Informazioni sulla Zona Reverse"
+
+#: user/modifyzoneform.php:118
+msgid "Sample domain would be 20.172.in-addr.arpa"
+msgstr "Un esempio di dominio potrebbe essere 20.172.in-addr.arpa"
+
+#: user/modifyzoneform.php:129
+msgid "Zone (Base IP of Zone)"
+msgstr "Zona (IP Base della Zona"
+
+#: user/modifyzoneform.php:136
+#, fuzzy
+msgid "Reverse zone size/mask"
+msgstr "Zona Reverse dimensione/maschera"
+
+#: user/modifyzoneform.php:204
+#, fuzzy
+msgid "Reverse zone SOA header information"
+msgstr "Informazioni Zona Reverse SOA header"
+
+#: user/modifyzoneform.php:244
+msgid "Reverse zone location"
+msgstr "Locazione della Zona Reverse"
+
+#: user/modifyzone.php:42
+msgid "DNS Reverse Zones"
+msgstr "Zone DNS Reverse"
+
+#: user/modifyzone.php:79
+#, fuzzy
+msgid ""
+"You may not delete a zone as you are not a member of the customers admin "
+"group"
+msgstr ""
+"Non e' possibile cancellare una zona poiche' non siete un membro "
+"del gruppo di admin customers"
+
+#: user/modifyzone.php:93
+#, fuzzy
+msgid "Zone deleted"
+msgstr "Zona eliminata"
+
+#: user/modifyzone.php:99
+#, fuzzy
+msgid "Zone could not be deleted."
+msgstr "La zona non puo' essere eliminata"
+
+#: user/modifyzone.php:178
+msgid "Serial Date can not be blank.  Use YYMMDD."
+msgstr "Serial Date non puo' essere vuoto. Usare YYMMDD"
+
+#: user/modifyzone.php:308
+#, php-format
+msgid ""
+"Sent update to Backend Processor as file %s for domain %s zone ip %s zone "
+"size %s"
+msgstr ""
+"Invia un aggiornamento al Processore di Backend come file %s per il dominio %s"
+"zona ip %s dimensione zona %s"
+
+#: user/modifyzone.php:313
+#, fuzzy
+msgid "Zone could not be exported.  Try again."
+msgstr "La zona non puo' essere esportata. Riprovare"
+
+#: user/modifyzone.php:326
+msgid ""
+"NOTE: Changed domain records are IP records that have been modified since "
+"the domain serial date. Thus even after an export the zone may still show "
+"changed as the resolution of the serial date is one day. The last modified "
+"date is the date when the SOA details for this zone have last changed."
+msgstr ""
+"NOTA: I record di cambio di dominio sono record IP che sono stati modificati dal"
+"dominio serial date. Pertanto anche dopo aver esportato la zona potrebbe ancora"
+"mostrare i cambiamenti dei serial date. L'ultima modifica della data e' la data"
+"in cui i dettagli SOA per questa zona sono stati cambiati per l'ultima volta"
+
+#: user/modifyzone.php:357
+msgid "Refine Search on Zone"
+msgstr "Ricerca dettagliata sulla zona"
+
+#: user/modifyzone.php:381
+msgid "Zone"
+msgstr "Zona"
+
+#: user/modifyzone.php:478
+#, fuzzy
+msgid "Delete Zone"
+msgstr "Elimina Zona"
+
+#: user/modifyzone.php:496
+msgid "Edit Zone"
+msgstr "Modifica Zona"
+
+#: user/modifyzone.php:503
+#, fuzzy
+msgid "Export Zone"
+msgstr "Esporta Zona"
+
+#: user/modifyzone.php:533
+#, fuzzy
+msgid "Search found no Zone entries"
+msgstr "La ricerca non ha trovato entrate per la Zona"
+
+#: user/modifyzone.php:538
+msgid "Add a Zone"
+msgstr "Aggiungi alla Zona"
+
+#: user/ping.php:40
+#, fuzzy
+msgid "Ping results"
+msgstr "Risultati del ping"
+
+#: user/requestip.php:64
+#, fuzzy
+msgid "You need to enter request details for the ip address request"
+msgstr "E' necessario inserire i dettagli della richiesta per la richiesta di indirizzo IP"
+
+#: user/requestip.php:67
+#, fuzzy
+msgid "You need to enter user details for the request"
+msgstr "E' necessario inserire i dettagli dell'utente per la richiesta"
+
+#: user/requestip.php:70
+#, fuzzy
+msgid "You need to enter location details for the request"
+msgstr "E' necessario inserire i dettagli della locazione per la richiesta"
+
+#: user/requestip.php:73
+#, fuzzy
+msgid "You need to enter description details for the request"
+msgstr "E' necessario inserire i dettagli della descrizione per la richiesta"
+
+#: user/requestip.php:76
+#, fuzzy
+msgid "You need to enter a telephone number for the request"
+msgstr "E' necessario per inserire il numero di telefono per la richiesta"
+
+#: user/requestip.php:112
+msgid "Maximum number of outstanding IP requests exceeded"
+msgstr "E' stato superato il numero massimo di richieste IP in sospeso"
+
+#: user/requestip.php:138
+#, fuzzy
+msgid "IP address request created"
+msgstr "Richiesta di indirizzo IP creata"
+
+#: user/requestip.php:185
+#, fuzzy
+msgid "Request could not be created - possibly a duplicate request"
+msgstr "La richiesta non puo' essere creata - possibile un duplicato"
+
+#: user/requestip.php:195
+msgid ""
+"Complete the details below to request an IP address. An administrator will "
+"need to action the request before an address will be allocated."
+msgstr ""
+"Completa le informazioni qui sotto per richiedere un indirizzo IP. L'amministratore"
+"avra' bisogno di attivare una richiesta prima che l'indirizzo venga allocato"
+
+#: user/requestip.php:251
+msgid "Request details"
+msgstr "Dettagli richiesta"
+
+#: user/requestip.php:252
+msgid ""
+"Enter full details describing the request to enable the administrators to "
+"allocate the correct IP address on the network"
+msgstr ""
+"Inserire tutte le informazioni che descrivono la richiesta per consentire"
+"l'amministratore di allocare il corretto indirizzo IP sulla rete"
+
+#: user/searchallform.php:43
+msgid "Search for user info"
+msgstr "Ricerca delle informazioni utente"
+
+#: user/searchallform.php:59
+msgid "Search for user info searches the individual IP address records."
+msgstr ""
+"Ricerca informazioni utente ricercando i singoli record degli indirizzi IP"
+
+#: user/searchallform.php:78
+#, fuzzy
+msgid "Search field"
+msgstr "Ricerca campo"
+
+#: user/searchallform.php:80
+msgid "Field to search"
+msgstr "Campo da cercare"
+
+#: user/searchallform.php:87
+#, fuzzy
+msgid "MAC Address"
+msgstr "Indirizzo MAC"
+
+#: user/searchallform.php:88
+#, fuzzy
+msgid "Search in Template"
+msgstr "Cerca nei Template"
+
+#: user/searchallform.php:149
+#, fuzzy
+msgid "Date to search from"
+msgstr "Data da cercare da"
+
+#: user/searchallform.php:151 user/searchallform.php:186
+#: user/searchallform.php:202
+msgid "Any"
+msgstr "Qualunque"
+
+#: user/searchallform.php:222
+msgid "Search criteria (only display records matching the regular expression)"
+msgstr ""
+"Criterio di ricerca (visualizza solamente i record che hanno "
+"espressione normale)"
+
+#: user/searchallform.php:224
+msgid "Search criteria (only display records containing)"
+msgstr ""
+"Criterio di ricerca (visualizza solo i record contenuti) "
+
+#: user/searchall.php:58
+#, fuzzy
+msgid ""
+"You need to enter a longer search criteria, or select a specific template"
+msgstr "E' necessario inserire piu' criteri di ricerca oppure selezionare un template specifico"
+
+#: user/searchall.php:60
+msgid "You need to enter a longer search criteria."
+msgstr "E' necessario inserire piu' criteri di ricerca"
+
+#: user/searchall.php:67
+#, fuzzy
+msgid "Invalid search field."
+msgstr "Campo di ricerca non valido"
+
+#: user/searchall.php:74
+#, fuzzy
+msgid "Invalid search date."
+msgstr "Data di ricerca non valida"
+
+#: user/searchall.php:96 user/searchall.php:132
+msgid "Regular expression repetition-operator operand invalid"
+msgstr "Espressione regolare operatore repetition - operatore non valido"
+
+#: user/searchall.php:272
+#, fuzzy, php-format
+msgid "Search filter on %s: "
+msgstr "Filtro di ricerca su %s:"
+
+#: user/traceroute.php:43
+#, fuzzy
+msgid "Traceroute results"
+msgstr "Risultati Traceroute"
+
+#: user/whois.php:45
+msgid "WHOIS results"
+msgstr "Risultati del WHOIS"
+
+#: user/whois.php:60
+msgid "Whois query failed - are you behind a firewall?"
+msgstr ""
+"Domanda del WHOIS venuta a mancare - siete dietro una firewall?"
+
+#: admin/changepassword.php:39
+msgid "Change user password"
+msgstr "Cambia password utente"
+
+#: admin/changepassword.php:54 admin/usermanager.php:692
+#: admin/usermanager.php:917
+msgid "The password entered must be at least five characters"
+msgstr "La password deve avere almeno cinque caratteri"
+
+#: admin/changepassword.php:57 admin/usermanager.php:695
+#: admin/usermanager.php:921
+msgid "The passwords entered do not match"
+msgstr "Le password inserite non corrispondono"
+
+#: admin/changepassword.php:72 admin/usermanager.php:931
+#, php-format
+msgid "User %s changed password"
+msgstr "Cambiare password dell'utente %s"
+
+#: admin/changepassword.php:76 admin/usermanager.php:935
+msgid "Password changed"
+msgstr "Password cambiata"
+
+#: admin/changepassword.php:79 admin/usermanager.php:939
+msgid "Password could not be changed"
+msgstr "La password non puo' essere cambiata"
+
+#: admin/changepassword.php:88 admin/changepassword.php:91
+#, php-format
+msgid "Change password for user %s"
+msgstr "Cambia la password per l'utente %s"
+
+#: admin/changepassword.php:108 admin/usermanager.php:320
+msgid "New password (case sensitive!):"
+msgstr "Nuova password (case sensitive):"
+
+#: admin/changepassword.php:114 admin/usermanager.php:324
+msgid "New password (again):"
+msgstr "Nuova password (ancora):"
+
+#: admin/deletebounds.php:39
+msgid "Delete authority boundary results"
+msgstr "Elimina risultati authority boundary"
+
+#: admin/deletebounds.php:61 admin/usermanager.php:1100
+msgid "Boundary deleted"
+msgstr "Boundary eliminato"
+
+#: admin/deletebounds.php:64 admin/usermanager.php:1103
+msgid "Boundary could not be deleted"
+msgstr "Il Boundary non puo' essere eliminato"
+
+#: admin/displayauditlog.php:89
+msgid "Timestamp"
+msgstr "Timestamp"
+
+#: admin/displayauditlog.php:124
+msgid "Total records:"
+msgstr "Record totali"
+
+#: admin/displayboundsform.php:41
+msgid "Display authority boundary information"
+msgstr "Visualizza le informazioni di authority boundary"
+
+#: admin/displayboundsform.php:72
+msgid "Boundary address"
+msgstr "Indirizzo Boundary"
+
+#: admin/displayboundsform.php:74
+msgid "Boundary mask"
+msgstr "Mascherina Boundary"
+
+#: admin/displayboundsform.php:76
+msgid "Group action"
+msgstr "Azione del gruppo"
+
+#: admin/displayboundsform.php:99 admin/usermanager.php:608
+msgid "Delete boundary"
+msgstr "Elimina boundary"
+
+#: admin/exportbaseform.php:41
+msgid "Export subnet data"
+msgstr "Esporta dati della sottorete"
+
+#: admin/exportbaseform.php:47
+msgid ""
+"Export network data to flat ascii files.  The file will contain three "
+"columns each delimited by TAB. The first column contains the IP base "
+"address, the second the description and the third the mask in dotted decimal "
+"format."
+msgstr ""
+"Esporta i dati della rete nei file flat ascii. Il file conterra' tre colonne"
+"ciasuna delimitata dal TAB. La prima colonna contiene l'indirizzo IP di base,"
+"la seconda la descrizione e la terza la maschera in formato decimale"
+
+#: admin/exportipform.php:41
+msgid "Export IP details data"
+msgstr "Esporta dati dei dettagli IP"
+
+#: admin/exportipform.php:47
+#, fuzzy
+msgid ""
+"Export IP details data to flat ascii files.  The file will contain six "
+"columns each delimited by TAB. The first column contains the IP address, the "
+"second the user, the third the location, the fourth the description, fifth "
+"the hostname and the sixth the telephone number."
+msgstr ""
+"Esporta dati dei dettagli IP nei file flat ascii. Il file conterra' sei colonne"
+"ciascuna delimitata dal TAB. La prima colonna contiene l'indirizzo IP, la seconda"
+"l'utente, la terza la locazione, la quarta la descrizione, la quinta l'hostname e"
+"la sesta il numero di telefono"
+
+#: admin/exportipform.php:50
+msgid ""
+"The user defined fields defined in the iptemplate.xml file will be appended "
+"as additional columns to the above in the order specified in the template."
+msgstr ""
+"L'utente definisce campi definite nel file iptemplate.xml verranno aggiunti"
+"come ulteriori colonne secondo l'ordine specificato nel template"
+#: admin/importbaseform.php:41
+msgid "Import subnet data"
+msgstr "Importa dati sottorete"
+
+#: admin/importbaseform.php:47
+msgid ""
+"Import network data from flat ascii files.  The file should contain three "
+"columns each delimited by TAB. The first column contains the IP base "
+"address, the second the description and the third the mask either in dotted "
+"decimal format or in bit format."
+msgstr ""
+"Importa i dati della rete dal file flat ascii. Il file conterra' tre colonne"
+"ciasuna delimitata dal TAB. La prima colonna contiene l'indirizzo IP di base,"
+"la seconda la descrizione e la terza la maschera sia in formato decimale che binario"
+
+
+#: admin/importbaseform.php:49
+msgid ""
+"If the import file has more than three columns, each additional column will "
+"be added to the user defined fields defined in the basetemplate.xml file in "
+"the order specified in the template."
+msgstr ""
+"Se il file importato  ha piu' di tre colonne , ogni colonna supplementare verra'"
+"aggiunta ai campi utente definiti nel file basetemplate.xml nell'ordine"
+"specifico del template"
+
+#: admin/importbaseform.php:51 admin/importipform.php:53
+msgid ""
+"If an error occurs during the import, the process will stop. Records that "
+"have been successfully imported should be deleted from the import file, the "
+"error corrected and the import resumed."
+msgstr ""
+"Se si presenta un errore durante l'importazione, il processo verra' bloccato."
+"I record che sono stati importati con successo dovrebbero essere eliminati dal file"
+"di importazione, l'errore verra' corretto e l'importazione potra' riprendere"
+
+#: admin/importbase.php:83
+msgid "Import subnet results"
+msgstr "Importa i risultati della sottorete"
+
+#: admin/importbase.php:98 admin/importip.php:62
+msgid ""
+"Possible file size exceeded php.ini or webserver limit of 2meg - break file "
+"into smaller parts"
+msgstr "Possibile superamento della dimensione del file php.ini oppure e' stato"
+"superato il limite del webserver di 2meg - dividere il file in parti piu' piccole"
+
+#: admin/importbase.php:114 admin/importip.php:122
+msgid "File could not be opened."
+msgstr "Il file non puo' essere aperto"
+
+#: admin/importbase.php:123 admin/importip.php:129
+#, fuzzy
+msgid "Template could not be opened."
+msgstr "Il template non puo' essere aperto"
+
+#: admin/importbase.php:132 admin/importip.php:136
+msgid "Importing row:"
+msgstr "Importazione riga:"
+
+#: admin/importbase.php:137 admin/importip.php:157
+msgid "Row is blank - ignoring"
+msgstr "Riga vuota - ignorata"
+
+#: admin/importbase.php:142
+#, fuzzy, php-format
+msgid "Row %u of imported file is not the correct format [ %s ]"
+msgstr "La riga%u del file importato non e' nel formato corretto [ %s ]"
+
+#: admin/importbase.php:171 admin/importip.php:198
+msgid "Row failed template verify."
+msgstr "Verica del template fallita"
+
+#: admin/importbase.php:182
+msgid "No description for the subnet"
+msgstr "Nessuna decrizione per la sottorete"
+
+#: admin/importbase.php:190
+#, fuzzy, php-format
+msgid "Invalid IP address [ %s ]"
+msgstr "Indirizzo IP non valido [ %s ]"
+
+#: admin/importbase.php:194
+msgid "Subnet mask is invalid"
+msgstr "Maschera sottorete non valida"
+
+#: admin/importbase.php:203
+#, fuzzy, php-format
+msgid ""
+"Subnet could not be updated - start address and size do not EXACTLY match "
+"existing subnet [ %s ]"
+msgstr ""
+"La sottorete non puo' essere caricata - indirizzo di inizio e dimensione non coincidono esattamente"
+"sottorete esistente [ %s]"
+
+#: admin/importbase.php:206
+#, fuzzy, php-format
+msgid "Row is duplicate - updating with [ %s, %s ]"
+msgstr "Riga duplicata - aggiornare con [ %s, %s]"
+
+#: admin/importbase.php:237 admin/importbase.php:279
+msgid "Error inserting/updating info."
+msgstr "Informazioni errore di inserimento/aggiornamento"
+
+#: admin/importbase.php:244
+#, fuzzy, php-format
+msgid "User %s modified subnet details %s size %u customer cust %u"
+msgstr ""
+"L'utente %s ha modificato dettagli sottorete %s dimensione %u customer cust %u"
+
+#: admin/importbase.php:259
+#, fuzzy, php-format
+msgid "User %s created new subnet %s size %u cust %u"
+msgstr "L'utente %s ha generato il nuovo cust %u di formato %u di sottorete %s"
+
+#: admin/importbase.php:288
+msgid "Subnet could not be created"
+msgstr "La sottorete non ha potuto essere generata"
+
+#: admin/importipform.php:41
+msgid "Import IP details data"
+msgstr "Importa dati dei dettagli IP"
+
+#: admin/importipform.php:47
+msgid ""
+"Import IP details data in XML format. The data is in the same format "
+"generated by <a HREF=\"http://www.insecure.org\">NMAP's</a> -oX parameter. "
+"This is useful to scan and obtain records for sites that have no previous "
+"information."
+msgstr ""
+"Importa i dati dei dettagli IP in formato XML. I dati sono nello stesso formato "
+"generato da <a HREF=\"http://www.insecure.org\">NMAP's</a> -oX parameter."
+"Questo e' utile per ottenere record per siti che non hanno precedenti informazioni"
+
+#: admin/importipform.php:49
+#, fuzzy
+msgid ""
+"Import IP details data from flat ascii files.  The file should contain a "
+"minimum of six columns each delimited by TAB. The first column contains the "
+"IP address, the second the user, the third the location, the fourth the "
+"description, the fifth the hostname and the sixth the telephone number."
+msgstr ""
+"Importi dati dettagli IP dai file flat ascii. Il file potrebbe contenere un minimo di"
+"sei colonne ciascuna delimitata dal TAB. La prima colonna contiene l'indirizzo IP, la seconda"
+"l'utente, la terza la locazione, la quarta la descrizione, la quinta l'hostname"
+"e la sesta il numero di telefono."
+
+#: admin/importipform.php:51
+msgid ""
+"If the import file has more than six columns, each additional column will be "
+"added to the user defined fields defined in the iptemplate.xml file in the "
+"order specified in the template."
+msgstr ""
+"Se il file importato ha piu' di sei colonne, ogni colonna supplementare verra' aggiunta"
+"nei campi definiti nel file iptemplate.xml nell'ordine specifico."
+
+#: admin/importipform.php:55
+msgid ""
+"NOTE: Any number of IP address records for various subnets can be in the "
+"file.  Any existing information will be overwritten."
+msgstr ""
+"NOTA: Qualsiasi numero di record di indirizzi IP per diverse sottoreti possono "
+"essere nel file.  Tutte le informazioni attuali verranno sovrascritte."
+
+#: admin/importipform.php:56
+msgid "Imported addresses will only be added to existing subnets."
+msgstr "Indirizzi importati verranno aggiunti solamenti a sottoreti esistenti"
+
+#: admin/importipform.php:73
+msgid "Format"
+msgstr "Formato"
+
+#: admin/importipform.php:74
+msgid "Standard fields - text format"
+msgstr "Campi standard - formato testo"
+
+#: admin/importipform.php:75
+msgid "Standard fields - NMAP XML format"
+msgstr "Campi standard - formato NMAP XML"
+
+#: admin/importip.php:43
+msgid "Import IP details result"
+msgstr "Importazione risultati dettagli IP"
+
+#: admin/importip.php:82
+#, fuzzy
+msgid "XML not available"
+msgstr "XML non disponibile"
+
+#: admin/importip.php:86
+msgid "Data not in XML format"
+msgstr "Dati non in formato XML"
+
+#: admin/importip.php:92
+msgid "Importing record:"
+msgstr "Importazione record:"
+
+#: admin/importip.php:164
+msgid "Row not the correct format."
+msgstr "Riga non nel formato corretto"
+
+#: admin/importip.php:211
+#, fuzzy, php-format
+msgid "Subnet could not be found for IP address %s"
+msgstr "La sottorete per l'indirizzo IP %s non puo' essere trovata"
+
+#: admin/install.php:46
+msgid "Install/Upgrade IPPlan"
+msgstr "Installa/Aggiorna IPPlan"
+
+#: admin/install.php:49
+msgid "IPplan v4.82 Installation System"
+msgstr "IPplan v4.82 Sistema di Installazione"
+
+#: admin/install.php:70
+msgid "Language"
+msgstr "Lingua"
+
+#: admin/install.php:72
+msgid "Please choose your language:"
+msgstr "Si prega di scegliere la lingua:"
+
+#: admin/install.php:83
+#, fuzzy
+msgid "  Change  "
+msgstr " Cambia "
+
+#: admin/install.php:92
+msgid "IF YOU ARE UPGRADING IPPLAN, BACKUP YOUR DATABASE NOW"
+msgstr "SE STATE AGGIORNANDO IPPLAN, FARE IL BACKUP DEL DATABASE ORA"
+
+#: admin/install.php:93
+msgid "THERE IS NO WAY TO RECOVER YOUR DATA IF SOMETHING GOES WRONG."
+msgstr "NON C'E' MODO DI RECUPERARE I VOSTRI DATI SE QUALCOSA VA MALE"
+
+#: admin/install.php:96
+msgid ""
+"THE DISPLAY TEMPLATES HAVE MOVED TO A DIFFERENT DIRECTORY - READ THE "
+"CHANGELOG AND UPGRADE DOC"
+msgstr "I TEMPLATES DISPLAY SONO STATI SPOSTATI IN UN'ALTRA DIRECTORY - LEGGERE"
+"I FILE CHANGELOG E UPGRADE DOC"
+#: admin/install.php:102
+msgid ""
+"For security purposes, it is highly recomended that IPPlan is installed on "
+"an SSL Webserver."
+msgstr ""
+"Per ragioni di sicurezza, si raccomanda vivamente di installare IPPlan"
+"su un Webserver SSL"
+
+#: admin/install.php:105
+msgid ""
+"Production systems need to use a transaction-aware database table. Do not "
+"use MYISAM (use INNODB) and enable it in config.php"
+msgstr ""
+"I sistemi di produzione necessitano l'uso di database table transaction - aware."
+"Non usare MYISAM (usare INNODB) e attivarlo in config.php"
+
+#: admin/install.php:108
+msgid "Read all Instructions carefully before proceeding!"
+msgstr "Leggere tutte le istruzioni ATTENTAMENTE prima di procedere"
+
+#: admin/install.php:111
+msgid ""
+"Have you read the <a href=\"http://iptrack.sourceforge.net/doku.php?id=faq"
+"\">FAQ</a>? How about the <a href=\"http://iptrack.sourceforge.net/"
+"documentation/\">User Manual</a>? "
+msgstr ""
+"Hai  letto il <a href=\"http://iptrack.sourceforge.net/doku.php?id=faq"
+"\">FAQ</a>?"
+"Oppure  <a href=\"http://iptrack.sourceforge.net/documentation/\">User Manual</a>? "
+
+#: admin/install.php:112
+msgid "Have you read the UPGRADE document if upgrading?"
+msgstr "Hai letto il documento UPGRADE se stai aggiornando?"
+
+#: admin/install.php:115
+msgid "What would you like to do today?"
+msgstr "Cosa volete fare oggi?"
+
+#: admin/install.php:122
+msgid ""
+"Would you like us to run the SQL against the database defined in config.php "
+"or would you rather print it to the screen so you can do it yourself?"
+msgstr ""
+"Volete che SQL parta automaticamente come definito in config.php"
+"o preferite che venga stampato sullo schermo in modo lo potete fare da voi?"
+
+#: admin/install.php:124
+msgid "Run the SQL Now"
+msgstr "Fai partire SQL ora"
+
+#: admin/install.php:125
+msgid "Just print it to the screen"
+msgstr "Stampalo sullo schermo"
+
+#: admin/install.php:126
+msgid "display"
+msgstr ""
+
+#: admin/install.php:129
+msgid ""
+"If you are displaying the schema, please remove the comments with a text "
+"editor before executing into your database."
+msgstr ""
+
+#: admin/install.php:131
+msgid "Go!"
+msgstr "Vai!"
+
+#: admin/maintenance.php:42
+#, fuzzy
+msgid "IPplan Maintenance"
+msgstr "Manutenzione IPplan"
+
+#: admin/maintenance.php:56
+msgid "You need MySQL v4.0.0 or higher for this function!"
+msgstr "C'e' bisogno di MySQL v4.0.0 o piu' alto per questa funzione"
+
+#: admin/maintenance.php:103
+msgid "Requested IP addresses cleared"
+msgstr "Tichiesta di indirizzi IP cancellata"
+
+#: admin/maintenance.php:107
+msgid "Requested IP addresses cleared!"
+msgstr "Richiesta di indirizzi IP cancellata!"
+
+#: admin/maintenance.php:110
+#, fuzzy
+msgid "Requested IP addresses could not be cleared."
+msgstr "La richiesta di indirizzi IP non puo' essere cancellata"
+
+#: admin/maintenance.php:120
+#, fuzzy
+msgid "Requested IP address deleted"
+msgstr "Richiesta di indirizzo IP eliminata"
+
+#: admin/maintenance.php:124
+msgid "Requested IP address deleted!"
+msgstr "Richiesta di indirizzo IP eliminata!"
+
+#: admin/maintenance.php:127
+#, fuzzy
+msgid "Requested IP address could not be deleted."
+msgstr "La richiesta di indirizzo IP non puo' essere eliminato"
+
+#: admin/maintenance.php:137
+msgid "Audit log cleared"
+msgstr "Audit log eliminato"
+
+#: admin/maintenance.php:141
+msgid "Audit log cleared!"
+msgstr "Audit log eliminato!"
+
+#: admin/maintenance.php:144
+msgid "Audit log could not be cleared."
+msgstr "Audit log non puo' essere eliminato"
+
+#: admin/maintenance.php:172
+#, fuzzy
+msgid "Customer index"
+msgstr "Indice customer"
+
+#: admin/maintenance.php:197
+msgid ""
+"Are you sure? THIS ACTION WILL DELETE ALL TRACES OF THE CUSTOMER INCLUDING "
+"ALL SUBNETS, AREAS, RANGES AND DNS ZONES!"
+msgstr "Sei sicuro? QUESTA AZIONE ELIMINERA' TUTTI I DATI DEL CUSTOMER INCLUSI"
+"TUTTE LE SOTTORETI, AREE, RANGE E ZONE DNS"
+
+#: admin/maintenance.php:248
+#, fuzzy
+msgid "Request description"
+msgstr "Descrizione Richiesta"
+
+#: admin/maintenance.php:252
+#, fuzzy
+msgid "User description"
+msgstr "Descrizione Utente"
+
+#: admin/maintenance.php:254
+msgid "Request date"
+msgstr "Data Richiesta"
+
+#: admin/maintenance.php:280
+#, fuzzy
+msgid "Delete request"
+msgstr "Elimina Richiesta"
+
+#: admin/maintenance.php:309
+msgid "Perform the selected IPplan database maintenance."
+msgstr "Eseguire la manutenzione del database IPplan selezionato"
+
+#: admin/maintenance.php:319
+msgid "Display list of customer indexes"
+msgstr "Visualizza la lista degli indici del customer"
+
+#: admin/maintenance.php:329
+msgid "View request list"
+msgstr "Visualizza lista della richiesta"
+
+#: admin/maintenance.php:338
+msgid "Clear IP address request list"
+msgstr "Elimina la lista della richiesta di indirizzo IP"
+
+#: admin/maintenance.php:348
+msgid "Clear Audit Log"
+msgstr "Elimina Audit Log"
+
+#: admin/usermanager.php:42
+#, fuzzy
+msgid "User Manager"
+msgstr "User Manager"
+
+#: admin/usermanager.php:102
+#, fuzzy
+msgid "Search Result"
+msgstr "Risultati Ricerca"
+
+#: admin/usermanager.php:108
+msgid "No Matches Found"
+msgstr "Non e' stata trovata nessuna corrispondenza"
+
+#: admin/usermanager.php:137
+#, fuzzy
+msgid "All Groups"
+msgstr "Tutti i gruppi"
+
+#: admin/usermanager.php:145
+#, fuzzy
+msgid "No users in group"
+msgstr "Nessun utente nel gruppo"
+
+#: admin/usermanager.php:161
+msgid "Orphan Users"
+msgstr "Utenti senza gruppo"
+
+#: admin/usermanager.php:166
+msgid "Current Users/Groups"
+msgstr "Utente/Gruppo corrente"
+
+#: admin/usermanager.php:170
+#, fuzzy
+msgid "New User"
+msgstr "Nuovo Utente"
+
+#: admin/usermanager.php:173
+#, fuzzy
+msgid "New Group"
+msgstr "Nuovo Gruppo"
+
+#: admin/usermanager.php:180 admin/usermanager.php:187
+msgid "Search"
+msgstr "Ricerca"
+
+#: admin/usermanager.php:188
+msgid "Edit Users/Groups"
+msgstr "Modific Utente/Gruppo"
+
+#: admin/usermanager.php:190
+msgid "Click on a group or user"
+msgstr "Premere su un gruppo o utente"
+
+#: admin/usermanager.php:255 admin/usermanager.php:282
+#, fuzzy
+msgid "Create group"
+msgstr "Crea gruppo"
+
+#: admin/usermanager.php:258
+msgid "Group name:"
+msgstr "Nome del gruppo"
+
+#: admin/usermanager.php:265 admin/usermanager.php:424
+msgid "Group description:"
+msgstr "Descrizione del gruppo:"
+
+#: admin/usermanager.php:272 admin/usermanager.php:426
+msgid "Group can create/modify/delete customers?"
+msgstr "Il gruppo puo' creare/modificare/eliminare i customers?"
+
+#: admin/usermanager.php:277 admin/usermanager.php:431
+#, fuzzy
+msgid "Group can view any customers data?"
+msgstr "Il gruppo puo' visualizzare qualunque dato dei customers?"
+
+#: admin/usermanager.php:305
+msgid "Real Name: "
+msgstr "Nome Reale:"
+
+#: admin/usermanager.php:310
+#, fuzzy
+msgid "Delete User"
+msgstr "Elimina Utente"
+
+#: admin/usermanager.php:316 admin/usermanager.php:329
+#, fuzzy
+msgid "Change Password"
+msgstr "Cambia Password"
+
+#: admin/usermanager.php:356
+#, fuzzy
+msgid "Add User to Group"
+msgstr "Aggiungi Utente al Gruppo"
+
+#: admin/usermanager.php:376
+#, fuzzy
+msgid "Group Membership"
+msgstr "Composizione del Gruppo"
+
+#: admin/usermanager.php:390
+msgid " Remove From Group"
+msgstr "Rimuovi dal Gruppo"
+
+#: admin/usermanager.php:409
+#, fuzzy
+msgid "Editing Group:"
+msgstr "Modifica Gruppo:"
+
+#: admin/usermanager.php:410
+#, fuzzy
+msgid " Description: "
+msgstr "Descrizione:"
+
+#: admin/usermanager.php:416
+#, fuzzy
+msgid "Delete Group"
+msgstr "Elimina Gruppo"
+
+#: admin/usermanager.php:421
+#, fuzzy
+msgid "Modify group"
+msgstr "Modifica Gruppo"
+
+#: admin/usermanager.php:437
+msgid "Number of reserved addresses at start of subnets:"
+msgstr "Numero di indirizzi riservati all'inizio della sottorete"
+
+#: admin/usermanager.php:438
+msgid ""
+"NOTE: if the user belongs to multiple groups and one of the groups does not "
+"contain a reserved limit, then the user is allowed all actions"
+msgstr ""
+"NOTA: se l'utente appartiene a piu' gruppi e uno dei gruppi non contiene"
+"limiti riservati, allora all'utente sono permesse tutte le operazioni"
+
+#: admin/usermanager.php:445
+msgid "Update"
+msgstr "Aggiorna"
+
+#: admin/usermanager.php:463
+#, fuzzy
+msgid "User Membership"
+msgstr "Composizione Utente"
+
+#: admin/usermanager.php:473
+#, fuzzy
+msgid "Add User"
+msgstr "Aggiungi Utente"
+
+#: admin/usermanager.php:490
+msgid "Current Members"
+msgstr "Membri correnti"
+
+#: admin/usermanager.php:506
+msgid "Remove From Group"
+msgstr "Rimuovi dal Gruppo"
+
+#: admin/usermanager.php:516
+msgid ""
+"NOTE: if the user belongs to multiple groups and one of the groups does not "
+"contain authority boundaries, then the user is allowed all actions"
+msgstr ""
+"NOTA: se l'utente appartiene a piu' gruppi e uno dei gruppi non contiene"
+"authority boundaries, allora all'utente sono permesse tutte le operazioni"
+
+#: admin/usermanager.php:518
+#, fuzzy
+msgid "Authority Boundaries"
+msgstr "Authority Boundaries"
+
+#: admin/usermanager.php:524
+msgid "Authority boundary start address"
+msgstr "Indirizzo iniziale Authority boundary"
+
+#: admin/usermanager.php:535
+msgid "Authority size/mask"
+msgstr "Dimensione/Maschera Authority"
+
+#: admin/usermanager.php:555
+#, fuzzy
+msgid "Add Boundary"
+msgstr "Aggiungi Boundary"
+
+#: admin/usermanager.php:565 admin/usermanager.php:594
+#, fuzzy
+msgid "Read only group"
+msgstr "Gruppo di sola lettura"
+
+#: admin/usermanager.php:588
+msgid "Current Boundaries"
+msgstr "Boundaries correnti"
+
+#: admin/usermanager.php:627
+#, fuzzy
+msgid "Create new user"
+msgstr "Crea un nuovo Utente"
+
+#: admin/usermanager.php:628
+msgid "User-id (case sensitive!):"
+msgstr "User -id (case sensitive!):"
+
+#: admin/usermanager.php:633
+msgid "User's fullname:"
+msgstr "Nome completo dell'Utente:"
+
+#: admin/usermanager.php:639
+msgid "Password (case sensitive!):"
+msgstr "Password (case sensitive!):"
+
+#: admin/usermanager.php:643
+msgid "Password (again):"
+msgstr "Digitare nuovamente la password:"
+
+#: admin/usermanager.php:656
+msgid "Group"
+msgstr "Gruppo"
+
+#: admin/usermanager.php:661
+#, fuzzy
+msgid "Create User"
+msgstr "Crea Utente"
+
+#: admin/usermanager.php:686
+msgid "The user-id must be longer"
+msgstr "L'user - id deve essere piu' lungo"
+
+#: admin/usermanager.php:689
+msgid "The user description must be longer"
+msgstr "La descrizione dell'utente deve essere piu' lunga"
+
+#: admin/usermanager.php:724
+msgid "Existing user overwritten"
+msgstr "Esiste gia' un altro utente uguale"
+
+#: admin/usermanager.php:726
+msgid "User created"
+msgstr "Utente creato"
+
+#: admin/usermanager.php:730
+msgid "User could not be created"
+msgstr "L'utente non puo' essere creato"
+
+#: admin/usermanager.php:745
+msgid "The group name must be longer"
+msgstr "Il nome del gruppo deve essere piu' lungo"
+
+#: admin/usermanager.php:748 admin/usermanager.php:988
+msgid "Reserved addresses out of range"
+msgstr "Indirizzi riservati sono fuori dal range"
+
+#: admin/usermanager.php:751 admin/usermanager.php:985
+msgid "The group description must be longer"
+msgstr "La descrizione del gruppo deve essere piu' lunga"
+
+#: admin/usermanager.php:754
+msgid "Only numbers and digits are allowed in the group name"
+msgstr "Nel nome del Gruppo sono permessi solo cifre e numeri"
+
+#: admin/usermanager.php:781
+msgid "Group created"
+msgstr "Gruppo creato"
+
+#: admin/usermanager.php:786
+msgid "Group could not be created - possibly a duplicate"
+msgstr "Il gruppo non puo' essere creato - possibile duplicato"
+
+#: admin/usermanager.php:802
+msgid "User deleted from group"
+msgstr "Utente eliminato dal gruppo"
+
+#: admin/usermanager.php:811 admin/usermanager.php:861
+msgid "User could not be deleted from group"
+msgstr "L'utente non puo' essere eliminato dal gruppo"
+
+#: admin/usermanager.php:839
+msgid "User could not be deleted"
+msgstr "L'utente non puo' essere eliminato"
+
+#: admin/usermanager.php:871
+msgid ""
+"Cannot delete group because the following customers are assigned to the "
+"group:"
+msgstr ""
+"Impossibile eliminare il gruppo in quanto i seguenti customers sono assegnati"
+"al gruppo:"
+
+#: admin/usermanager.php:884
+msgid ""
+"Cannot delete group because the following subnets are assigned to the group:"
+msgstr ""
+"Impossibile eliminare il gruppo in quanto le seguenti sottoreti sono assegnati al gruppo"
+
+#: admin/usermanager.php:904
+msgid "Group could not be deleted"
+msgstr "Il gruppo non puo' essere eliminato"
+
+#: admin/usermanager.php:966
+msgid "User added to group"
+msgstr "Utente aggiunto al gruppo"
+
+#: admin/usermanager.php:974
+msgid "User could not be added to group"
+msgstr "L'utente non puo' essere aggiunto al gruppo"
+
+#: admin/usermanager.php:1014
+msgid "Group details could not be modified"
+msgstr "I dettagli del gruppo non possono essere modificati"
+
+#: admin/usermanager.php:1033 admin/usermanager.php:1044
+msgid "Boundary cannot be created - overlaps with existing boundary"
+msgstr ""
+"Il boundary non puo' essere creato - sovrapposizione con un boundary esistente"
+
+#: admin/usermanager.php:1038
+msgid "Boundary address may not be blank"
+msgstr "l'indirizzo di Boundary non puo' essere vuoto"
+
+#: admin/usermanager.php:1040
+msgid "Invalid boundary address"
+msgstr "Indirizzo boundary non valido"
+
+#: admin/usermanager.php:1064
+msgid "Boundary created"
+msgstr "Boundary creato"
+
+#: admin/usermanager.php:1068
+msgid "Boundary could not be created"
+msgstr "Boundary non puo' essere creato"
+
+#~ msgid "Add authority boundary to a group"
+#~ msgstr "Aggiunga il contorno di autorit ad un gruppo"
+
+#~ msgid ""
+#~ "Create a new authority boundary limit by entering the base (network) "
+#~ "address. The boundary will limit the members of the group to only be able "
+#~ "to create new subnets in this range, thus preventing the user from "
+#~ "creating networks outside their area of authority."
+#~ msgstr ""
+#~ "Creare un nuovo limite di authority boundary inserendo l'idirizzo"
+#~ "di base. Il boundary sara' limitato solo ai membri del gruppo in grado"
+#~ "di creare nuove sottoreti in questo range, questo per impedire agli utenti"
+#~ "di creare reti fuori dalla loro area di autorita'."
+
+#~ msgid ""
+#~ "A group with no boundary limits (the default) can create networks with no "
+#~ "limitations."
+#~ msgstr ""
+#~ "Un gruppo senza limiti boundary (e' il default) puo' creare reti"
+#~ "senza nessuna limitazione."
+
+#~ msgid "You first need to create some users!"
+#~ msgstr "Per prima cosa dovete creare qualche utente!"
+
+#~ msgid "User-id"
+#~ msgstr "User-id"
+
+#~ msgid "IPplan - IP address management and tracking admin"
+#~ msgstr "IPplan - Gestione e monitoraggio degli indirizzi IP admin"
+
+#~ msgid ""
+#~ "The admin functions below can only be performed by the admin user.  Any "
+#~ "other functions not on this page need to be performed by a normal user "
+#~ "and CANNOT be performed by the admin user."
+#~ msgstr ""
+#~ "Le funzioni di admin qui sotto possono essere eseguite solo dall'utente admin."
+#~ "Qualsiasi altra funzione non in questa pagina puo' essere fatta dall'utente normale"
+#~ "a non puo' essere fatta dall'utente admin."
+
+#~ msgid "Admin functions:"
+#~ msgstr "Funzioni di Admin:"
+
+#~ msgid "Display/Delete authority boundary information"
+#~ msgstr "Visualizza/Elimina informazioni di authority boundary"
+
+#~ msgid "Display/Modify/Delete access control information"
+#~ msgstr "Visualizza/Modifica/Elimina informazioni del controllo d'accesso"
+
+#~ msgid "Import subnet descriptions/definitions from external files"
+#~ msgstr ""
+#~ "Importa descrizioni/definizioni della sottorete da file esterni"
+
+#~ msgid "Export subnet descriptions/definitions to external files"
+#~ msgstr ""
+#~ "Esporta descrizioni/definizioni della sottorete in file esterni"
+
+#~ msgid "Display audit log"
+#~ msgstr "Visualizza audit log"
+
+#~ msgid "User functions:"
+#~ msgstr "Funzioni Utente:"
+
+#~ msgid "IPplan home page:"
+#~ msgstr "Pagina principale di IPplan:"
+
+#~ msgid "User %s created new range %s size %u in areaindex %u cust %u"
+#~ msgstr ""
+#~ "L'utente %s ha creato il nuovo range %s nell'areaindex %u cust %u"
+
+#~ msgid "Delete access control results"
+#~ msgstr "Elimina risultati controllo accesso"
+
+#~ msgid "User deleted"
+#~ msgstr "Utente eliminato"
+
+#~ msgid "Group deleted"
+#~ msgstr "Gruppo cancellato"
+
+#~ msgid "User %s deleted area %s customer cust %u"
+#~ msgstr "L'utente %s ha eliminato l'area %s customer cust %u"
+
+#~ msgid "Area deleted"
+#~ msgstr "Area eliminata"
+
+#~ msgid "User %s deleted customer cust %u"
+#~ msgstr "L'utente %s ha eliminato il customer cust %u"
+
+#~ msgid "User %s deleted range %s size %u customer cust %u"
+#~ msgstr ""
+#~ "L'utente %s ha eliminato il range %s dimensione %u customer cust %u"
+
+#~ msgid "Display user access information"
+#~ msgstr "Visualizza le informazioni di accesso dell'Utente"
+
+#~ msgid "All groups and users assigned to them"
+#~ msgstr "Tutti i gruppi e gli utenti a loro assegnati"
+
+#~ msgid "All info for group %s"
+#~ msgstr "Tutto l'Info per il gruppo %s"
+
+#~ msgid "Group description"
+#~ msgstr "Descrizione del gruppo"
+
+#~ msgid "User's fullname"
+#~ msgstr "Nome completo dell'utente"
+
+#~ msgid "Display/delete group bounds"
+#~ msgstr "Visualizza/Elimina bounds del gruppo"
+
+#~ msgid "Modify group details"
+#~ msgstr "Modifica i dettagli del gruppo"
+
+#~ msgid "Delete user from group"
+#~ msgstr "Cancella utente del gruppo"
+
+#~ msgid ""
+#~ "These users will not be able to login as they do not have access anywhere."
+#~ msgstr ""
+#~ "Questi utenti non saranno in grado di accedere in quanto non hanno"
+#~ "accesso da nessuna parte"
+
+#~ msgid "Audit log."
+#~ msgstr "Audit log."
+
+#~ msgid "SWIP sent"
+#~ msgstr "SWIP trasmesso"
+
+#~ msgid ""
+#~ "Number of networks and masks do not match - try again.  This may occur "
+#~ "when reading a large, constantly changing routing table as the network "
+#~ "and host portions are read independently."
+#~ msgstr ""
+#~ "Numero di reti e maschere non assegnato - Riprovare."
+
+#~ msgid "You need at least php 4.0.1p1 to run this script"
+#~ msgstr ""
+#~ "E' necessario avere almeno php 4.o.1p1 per far partire questo scrip"
+
+#~ msgid "User %s sent SWIP %s template %s size %u cust %u"
+#~ msgstr ""
+#~ "L'utente %s ha inviato SWIP %s template %s dimensione %u cust %u"
+
+#~ msgid "Address space used:"
+#~ msgstr "Spazio indirizzi utilizzato:"
+
+#~ msgid "Show used address space too"
+#~ msgstr "Mostri lo spazio per l'indirizzo usato anche"
+
+#~ msgid "Network address - ignored"
+#~ msgstr "Indirizzo di rete - ignorato"
+
+#~ msgid "Broadcast address - ignored"
+#~ msgstr "Indirizzo Broadcast - ignorato"
+
+#~ msgid "Text"
+#~ msgstr "Testo"
+
+#~ msgid "XML"
+#~ msgstr "XML"
+
+#~ msgid ""
+#~ "Your browser must be JavaScript capable to use this application. Please "
+#~ "turn JavaScript on."
+#~ msgstr ""
+#~ "Il vostro browser deve essere di tipo JavaScript per  usare questa "
+#~ "applicazione.  Accenda prego il Javascript."
+
+#~ msgid "This application administers and tracks IP address space."
+#~ msgstr ""
+#~ "Questa applicazione amministra e rintraccia lo spazio di IP ADDRESS."
+
+#~ msgid "IPplan admin functions"
+#~ msgstr "Funzioni di IPplan admin"
+
+#~ msgid "Customer/autonomous system group functions"
+#~ msgstr "Grupp di funzioni del sistema di Customer/autonomous"
+
+#~ msgid "Display/Modify/Delete customer information/autonomous system"
+#~ msgstr "Visualizza/Modifica/Elimina informazioni customer/sistemi autonomi"
+
+#~ msgid "User group functions"
+#~ msgstr "Funzioni gruppo Utente"
+
+#~ msgid "Display subnets that overlap between customers/autonomous systems"
+#~ msgstr ""
+#~ "Visualizza sottoreti che coincidono tra i customers/sistemi autonomi"
+
+#~ msgid "User %s deleted subnet %s size %u customer cust %u"
+#~ msgstr ""
+#~ "L'utente %s ha eliminato la sottorete %s dimensione %u customer cust %u"
+
+#~ msgid "Modify/Copy/Move/Delete a subnet information"
+#~ msgstr "Visualizza/Copia/Muovi/Elimina informazioni sottorete"
+
+#~ msgid "User %s created new customer cust %u"
+#~ msgstr "L'utente %s ha creato il nuovo customer cust %u"
+
+#~ msgid "User %s modified customer details cust %u"
+#~ msgstr "L'utente %s ha modificato i dettagli customer cust %u"
+
+#~ msgid "Group details modified"
+#~ msgstr "Dettagli del gruppo modificati"
+
+#~ msgid "User %s moved subnet %s size %u to customer cust %u"
+#~ msgstr ""
+#~ "L'utente %s ha spostato la sottorete %s dimensione %u al customer cust %u"
+
+#~ msgid "User %s created new subnet %s size %u customer cust %u"
+#~ msgstr ""
+#~ "L'utente %s ha creato la nuova sottorete %s dimensione %u customer cust %u"
+
+#~ msgid ""
+#~ "Alternatively, the database administrator can manually issue the "
+#~ "following SQL statements:"
+#~ msgstr ""
+#~ "Alternativamente, l'amministratore del database puo' rilasciare manualmente"
+#~ "le seguenti dichiarazioni SQL"
+
+#~ msgid ""
+#~ "NOTE: Care should be taken when doing this to ensure that the correct "
+#~ "table type is used if transaction safe tables like InnoDB are used. All "
+#~ "CREATE TABLE statements should be appended with a TYPE=innodb"
+#~ msgstr ""
+#~ "NOTA: si deve prestare attenzione durante questa operazione per garantire "
+#~ "che il corretto tipo di tabella e' utilizzato se viene utilizza una transazione"
+#~ "sicura delle tabelle come InnoBB. Tutte le dichiarazioni CREATE TABLE"
+#~ "devono essere aggiunti con TYPE=innodb"
+
+#~ msgid "Schema upgrade failed with error:"
+#~ msgstr "Aggiornamento dello schema fallito con l'errore:"
+
+#~ msgid "Schema upgrade was successful:"
+#~ msgstr "Lo schema e' stato aggiornato con successo:"
+

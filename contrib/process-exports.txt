@@ -1,0 +1,20 @@
+Hi!
+
+I like ipplan very much, good job so far!
+
+Just to meet our needs, I wrote a small perl script. As it might be useful for 
+others I'm sending it to you.
+
+Karsten Hecker
+
+---
+
+This forum thread may be useful too:
+
+https://sourceforge.net/forum/forum.php?thread_id=1568603&forum_id=101034
+
+CHANGES:
+
+Jan 16, 2007
+	changed: template selection logic (swapped lines around) - jprates
+

@@ -1,0 +1,146 @@
+Short Term:
+----------
+
+Customer should only see his own data
+	add multiple groups to a customer
+	update docs about how groups work and also anonymous access
+	createcust attrib should also be part of auth class
+		second bit?
+Printing
+	Create @print additions to main.css file, provide print button on pages
+Alternate auth
+	http://sourceforge.net/projects/tackle/
+Matrix for free space
+	divided into class C blocks - green all free, yellow partly free
+		red all used
+Attach user to registrar via selection - can send to one only or all?
+move of subnet used wrong group 
+	used ip address modify group, not subnet modify group!!!
+Uploaded files
+	authentication - can anybody see all files?
+Save previous info in auditlog
+	done for ip records, add to more places
+Link from displaysubnet page to search for DNS zone A records 
+	if hname field completed
+Use md5 passwd in config.php for admin user
+Logout?
+	$user = 'user';
+	$pass = 'pass';
+	header("Authorization: Basic " . base64endode("$user:$pass"));
+Allow changing field seperator - idea by Frank Elsner
+	should be selectable on screen?
+Modifybase search is wrong format
+Linked addresses - option to link bidirectional for 1-1 NAT - extra
+	button which then completes other side
+	Consider linked addresses across customers
+	Multiple linked addresses per address - see sf 1252209
+		new table with fields: src customer, src ipaddr, dst ipaddr, 
+			dst customer
+	Still need LNK to indicate there is a link on record, 
+		remove if all links gone
+	Link admin in external page opened via link on displaysubnet 
+		and modifysubnet needs add record, delete record, choose 
+		target customer, needs to check target rec,cust exists 
+		add if subnet exists
+	On delete of record, check for links and remove
+	Show backlinks (addresses pointing to this one)
+Linked addresses
+	Show backlinks (addresses pointing to this one)
+	Use popup window as we do not want to select against a non keyed
+		column (userinf) with 'LIKE LNKx.x.x.x%'
+	use textbox field, one IP addr/link per line, parse in backend
+	split and join of subnets - baseindex changes
+	delete subnets, delete all customer - remove entries from table
+Perl network crawler via snmp to document network/routing.
+	http://snmp-info.sourceforge.net/
+Tweak div boxes to fill entire screen
+Expand searches in displaysubnet to also search on other fields/multiple feilds
+Searchall - search across all fields
+	text search - just add all columns (col1+col2+col3 then for search)
+Install overwrites templates and config file, need better way to handle this
+XMLRPC needs updating - security fix
+	http://phpxmlrpc.sourceforge.net/
+	http://pear.php.net/package/XML_RPC/
+	Now also included in PHP so need to check if already installed else will
+		get duplicate functions.
+Subnet request page feature
+Add colour to reserved addresses on displaysubnet - yellow
+Check filepath of zones - can have illegal chars like < etc
+	check for UNC paths too
+Some way of generating an A record automatically if it does not exist
+	Does this check if user is allowed to modify zone records?
+Lookup MAC address manufacturer codes:
+	http://standards.ieee.org/regauth/oui/index.shtml
+Treemenu 
+	scale - needs pager
+	Treeview check mem size - generates blank pages - add to FAQ
+Test oracle searchall and date search
+DNS symlinked domains
+Displaycustomer pager and filtered customers - check
+Insert on autoincrement key could generate key error if out of numbers!
+	mysql> insert into customer set custdescrip='rererere';
+	ERROR 1062 (23000): Duplicate entry '65535' for key 1
+Audit entry on logon/logoff
+	Not easy - need to keep track of logons. doing so in auth->validat()
+		not as entry is created for each page.
+Update docs about removal of "Reserved" from subnets" 
+	define in displaysubnet.php
+Import/export IP details
+	add option to merge fields, not overwrite for import
+On subnet creation, query user defined DNS server 
+	via template variable - don't think so
+		rather use customer DNS servers?
+	gethostbyaddr does not allow query to specific DNS server
+	can use Net::DNS class, requires checking of input
+	nmap can do this - need to modify ProcessNmap in createsubnet.php
+	or use ipplan-poller script to update subnet once created
+		--dns-servers <serv1[,serv2],...>: Specify custom DNS servers
+		modify define("NMAP_CMDH", "-sP -PE -q -R -v -oG");
+SNMP_COMMUNITY not hardcoded - should be per customer or subnet? 
+	Use template field when available
+	template not processed yet in modifyipform when SNMP is done - tricky
+	
+
+IPplanAPI:
+---------
+
+Check: whoisd must run as root, cannot run under safemode
+Cannot access template vars 
+
+DNS management:
+--------------
+Update internals docs
+Have search button to find duplicate IP addresses across zones on ip hostname form
+Some way of checking for PTR without A - on zone export maybe?
+Warn on multiple A's pointing to same address - should be OK - used for virtual hosts
+Warn on too few MX's - should be 2 for valid zones
+Modify modifydnsrecordform.php and bind9_zone.xsl to allow to add subdomains. 
+	added 'NS' to selectbox 'recordtype'  
+	use textbox 'host' as the subdomain and 'iphostname' as the name server for the subdomain. 
+TTL on individual zone records - why?? What benefit? Bind specific or standard?
+Access control - add group to data
+	only fwdzone has admingrp field, but could be used to different group for DNS admins
+
+Longer Term:
+-----------
+
+Feature Requests-1477996 ] Import and Export Areas and Ranges
+DNS A record creation during import of IP records
+Some separate poller 
+	show efficiency of networks relative to actually used addresses
+Whois server
+	http://www.generic-nic.net/sheets/practical/whois-en
+Create IP address php class
+Modify user details page for now just delete and recreate
+Split "import from routing table" and "find free" into MAXTABLESIZE
+	does not really make sense to do this as you will miss free blocks
+	on start and end of range
+IPv6
+	string inet_ntop ( string in_addr )
+	string inet_pton ( string address )
+	use database to do bigint math/tests
+DBF Table name prefixes - useful for Oracle and shared databases
+	where ipplan is installed with other apps
+Move multiple subnets from one customer to another - sf request
+
+ipplan@gmail.com

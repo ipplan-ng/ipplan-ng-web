@@ -1,0 +1,3671 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-29 10:51+1000\n"
+"PO-Revision-Date: 2006-06-23 14:01+0900\n"
+"Last-Translator: Tadashi Jokagi <elf2000@users.sourceforge.net>\n"
+"Language-Team: Japanese <ja@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: class.dbflib.php:283
+#, php-format
+msgid "User %s modified ip details %s index %u"
+msgstr ""
+
+#: class.dbflib.php:1111 user/displayswip.php:88 user/modifybase.php:276
+msgid "Invalid IP address!"
+msgstr "無効な IP アドレスです!"
+
+#: class.dnslib.php:149
+#, php-format
+msgid "Zone transfer for domain %s failed - using defaults: %s"
+msgstr ""
+
+#: class.dnslib.php:190
+msgid "Cannot delete domain zone - there are still DNS records\n"
+msgstr ""
+
+#: class.dnslib.php:292 class.dnslib.php:730 user/modifydns.php:291
+#: user/modifydnsrecord.php:82 user/modifydnsrecord.php:313
+#: user/modifyzone.php:272
+msgid "Could not find the zone - possibly deleted by another user"
+msgstr ""
+
+#: class.dnslib.php:308
+msgid ""
+"You are changing this zone to a slave only zone, but there are zone records\n"
+msgstr ""
+
+#: class.dnslib.php:413 class.dnslib.php:453 class.dnslib.php:841
+#: class.dnslib.php:867
+#, php-format
+msgid "DNS Domain %s could not be created - possibly duplicate zone"
+msgstr ""
+
+#: class.dnslib.php:490 class.dnslib.php:902 user/exportdhcp.php:125
+msgid "Could not create temporary file!"
+msgstr "一時ファイルを作成できませんでした!"
+
+#: class.dnslib.php:546 class.dnslib.php:963
+msgid "Invalid zone - zone should have at least two name servers defined"
+msgstr ""
+
+#: class.dnslib.php:638 schema.php:39 schema.php:67 user/createarea.php:53
+#: user/createrange.php:96 user/createsubnetform.php:56
+#: user/createsubnet.php:67 user/deletearea.php:47 user/deletecustomer.php:51
+#: user/deleterange.php:46 user/displaybaseform.php:48 user/displaybase.php:58
+#: user/displaycustomerform.php:50 user/displayoverlapform.php:57
+#: user/displayoverlap.php:227 user/displayrouterform.php:51
+#: user/displayrouter.php:124 user/displayswipform.php:51
+#: user/displayswip.php:60 user/emailswip.php:63 user/exportdhcp.php:57
+#: user/findfreeform.php:56 user/findfree.php:62
+#: user/modifyarearangeform.php:46 user/modifyarearange.php:56
+#: user/modifybaseform.php:49 user/modifybase.php:75
+#: user/modifycustomer.php:53 user/modifydnsform.php:63 user/modifydns.php:68
+#: user/modifydnsrecordform.php:58 user/modifydnsrecord.php:73
+#: user/modifyipformmul.php:56 user/modifyipform.php:96
+#: user/modifysubnet.php:55 user/modifyzoneform.php:58 user/modifyzone.php:67
+#: user/requestip.php:56 user/searchallform.php:55 user/searchall.php:76
+#: user/treeview.php:69 admin/changepassword.php:47 admin/deletebounds.php:53
+#: admin/displayauditlog.php:48 admin/displayboundsform.php:50
+#: admin/exportbaseform.php:49 admin/exportbase.php:44
+#: admin/exportipform.php:53 admin/exportip.php:45 admin/importbaseform.php:53
+#: admin/importbase.php:109 admin/importipform.php:58 admin/importip.php:73
+#: admin/maintenance.php:49 admin/usermanager.php:66
+msgid "Could not connect to database"
+msgstr "データベースに接続できませんでした。"
+
+#: class.dnslib.php:658
+#, php-format
+msgid "Invalid address %s"
+msgstr "「%s」は無効なアドレスです。"
+
+#: class.dnslib.php:679
+#, php-format
+msgid "No subnet found for address %s"
+msgstr "アドレス「%s」のサブネットが見つかりません"
+
+#: class.dnslib.php:985
+#, php-format
+msgid "Invalid record - ignored: %s %s"
+msgstr "無効なレコードです - 無視しました: %s %s"
+
+#: ipplanlib.php:268
+msgid "Customer/autonomous system"
+msgstr ""
+
+#: ipplanlib.php:335
+msgid "Area (optional)"
+msgstr "エリア (オプション)"
+
+#: ipplanlib.php:337
+msgid "No area selected"
+msgstr "エリアを選択していません。"
+
+#: ipplanlib.php:339 user/treeview.php:95
+msgid "All subnets not part of range"
+msgstr ""
+
+#: ipplanlib.php:368
+msgid "Range (optional)"
+msgstr "範囲 (オプション)"
+
+#: ipplanlib.php:370
+msgid "No range selected"
+msgstr "範囲を選択していません。"
+
+#: ipplanlib.php:577
+msgid "IPPlan - IP Address Management and Tracking"
+msgstr "IPPlan - IP アドレス管理と追跡"
+
+#: ipplanlib.php:595
+#, php-format
+msgid "Logged in as %s"
+msgstr "%s としてログイン"
+
+#: ipplanlib.php:625
+msgid "Refine Search"
+msgstr ""
+
+#: ipplanlib.php:644
+msgid "Starts with"
+msgstr ""
+
+#: ipplanlib.php:645
+msgid "Ends with"
+msgstr ""
+
+#: ipplanlib.php:646
+msgid "Contains"
+msgstr ""
+
+#: ipplanlib.php:647
+msgid "Does not contain"
+msgstr ""
+
+#: ipplanlib.php:648
+msgid "Equal to"
+msgstr ""
+
+#: ipplanlib.php:650
+msgid "Regex contains"
+msgstr ""
+
+#: ipplanlib.php:654
+msgid "Does not regex contain"
+msgstr ""
+
+#: ipplanlib.php:669 user/createarea.php:163 user/createrange.php:306
+#: user/createsubnetform.php:165 user/displaybaseform.php:138
+#: user/displayoverlapform.php:126 user/displayrouterform.php:82
+#: user/displaysubnet.php:379 user/displayswipform.php:114
+#: user/displayswip.php:185 user/findfreeform.php:120
+#: user/modifyarearangeform.php:59 user/modifybaseform.php:93
+#: user/modifycustomer.php:302 user/modifycustomer.php:789
+#: user/modifyipformmul.php:119 user/modifyipform.php:640
+#: user/modifysubnet.php:400 user/requestip.php:314 user/searchallform.php:223
+#: admin/changepassword.php:120 admin/changesettings.php:136
+#: admin/exportbaseform.php:58 admin/exportipform.php:62
+#: admin/importbaseform.php:85 admin/importipform.php:80
+msgid "Submit"
+msgstr "送信"
+
+#: menudefs.php:22
+msgid "Main"
+msgstr "メイン"
+
+#: menudefs.php:23
+msgid "Customers"
+msgstr "カスタマー管理"
+
+#: menudefs.php:24
+msgid "Create a New Customer/Autonomous System"
+msgstr ""
+
+#: menudefs.php:25
+msgid "Edit Existing Customer/Autonomous System"
+msgstr ""
+
+#: menudefs.php:26
+msgid "Network"
+msgstr "ネットワーク"
+
+#: menudefs.php:27
+msgid "Hierarchy"
+msgstr "階層"
+
+#: menudefs.php:28
+msgid "Create a new Network Area"
+msgstr "新規ネットワークエリアを作成する"
+
+#: menudefs.php:29
+msgid "Create a new Network Range/Supernet"
+msgstr ""
+
+#: menudefs.php:30
+msgid "Display/Modify/Delete Ranges/Supernets"
+msgstr ""
+
+#: menudefs.php:35
+msgid "Registrar"
+msgstr "レジストラ"
+
+#: menudefs.php:36
+msgid "Display Registrar Information"
+msgstr "レジストラ情報を表示する"
+
+#: menudefs.php:40
+msgid "Subnets"
+msgstr "サブネット"
+
+#: menudefs.php:41
+msgid "Create Subnet"
+msgstr "サブネットを作成する"
+
+#: menudefs.php:42
+msgid "Create from Routing Table"
+msgstr "ルーティングテーブルから作成する"
+
+#: menudefs.php:43
+msgid "Delete/Edit/Modify/Split/Join Subnet"
+msgstr "サブネットの削除/編集/修正/分割/結合"
+
+#: menudefs.php:44
+msgid "Display Subnet Information"
+msgstr "サブネット情報を表示する"
+
+#: menudefs.php:45
+msgid "Display Subnet Information - Tree"
+msgstr "サブネット情報を表示する - ツリー"
+
+#: menudefs.php:46
+msgid "Search All Subnets"
+msgstr "すべてのサブネットを検索する"
+
+#: menudefs.php:47
+msgid "Find Free Space"
+msgstr "フリースペースを検索する"
+
+#: menudefs.php:48
+msgid "Display Subnet Overlap"
+msgstr "サブネットのオーバーラップを表示する"
+
+#: menudefs.php:49 user/requestip.php:51
+msgid "Request an IP address"
+msgstr ""
+
+#: menudefs.php:53 user/modifyipform.php:436
+msgid "DNS"
+msgstr "DNS"
+
+#: menudefs.php:54
+msgid "Create/Modify/Export Zone Domains"
+msgstr "ドメインゾーンを作成/修正/エクスポートする"
+
+#: menudefs.php:55
+msgid "Create/Modify Zone DNS Records"
+msgstr "DNS ゾーンレコードを作成/修正"
+
+#: menudefs.php:56
+msgid "Create/Modify Reverse DNS Records"
+msgstr "DNS 逆引きレコードを作成/修正"
+
+#: menudefs.php:60
+msgid "Options"
+msgstr "オプション"
+
+#: menudefs.php:61
+msgid "Settings"
+msgstr "設定"
+
+#: menudefs.php:62
+msgid "Change my Password"
+msgstr "パスワードを変更する"
+
+#: menudefs.php:63
+msgid "Admin"
+msgstr "管理"
+
+#: menudefs.php:64
+msgid "Users"
+msgstr "ユーザー管理"
+
+#: menudefs.php:65
+msgid "Create a new User"
+msgstr "新規ユーザーを作成する"
+
+#: menudefs.php:66
+msgid "Add a user to Group"
+msgstr "グループにユーザーを追加する"
+
+#: menudefs.php:67
+msgid "Display/Edit Users"
+msgstr "ユーザー一覧の表示/編集"
+
+#: menudefs.php:68 admin/usermanager.php:350
+msgid "Groups"
+msgstr "グループ管理"
+
+#: menudefs.php:69
+msgid "Create a new Group"
+msgstr "新規グループを作成する"
+
+#: menudefs.php:70
+msgid "Add Authority Bounderies to Group"
+msgstr "境界権限をグループに追加する"
+
+#: menudefs.php:71
+msgid "Display/Modify Authority Boundary Info"
+msgstr "境界権限情報の表示/修正"
+
+#: menudefs.php:72
+msgid "Import"
+msgstr "インポート"
+
+#: menudefs.php:73
+msgid "Import Subnet Descriptions"
+msgstr "サブネットの説明をエクスポートする"
+
+#: menudefs.php:74
+msgid "Import IP Address Detail Records"
+msgstr ""
+
+#: menudefs.php:75
+msgid "Export"
+msgstr "エクスポート"
+
+#: menudefs.php:76
+msgid "Export Subnet Descriptions"
+msgstr "サブネットの説明をエクスポートする"
+
+#: menudefs.php:77
+msgid "Export IP Address Detail Records"
+msgstr "IP アドレスの詳細のレコードをエクスポートする"
+
+#: menudefs.php:78
+msgid "Maintenance"
+msgstr "メンテナンス"
+
+#: menudefs.php:79 admin/displayauditlog.php:41
+msgid "Display Audit Log"
+msgstr "監査ログを表示する"
+
+#: menudefs.php:80
+msgid "Help"
+msgstr "ヘルプ"
+
+#: menudefs.php:81
+msgid "Online Manual"
+msgstr "オンラインマニュアル"
+
+#: menudefs.php:82
+msgid "Support Groups"
+msgstr "サポートグループ"
+
+#: menudefs.php:83
+msgid "Home Page"
+msgstr "ホームページ"
+
+#: menudefs.php:84
+msgid "License"
+msgstr "ライセンス"
+
+#: menudefs.php:93
+msgid "Logout"
+msgstr "ログアウト"
+
+#: schema.php:66
+msgid ""
+"Problem with database permission or database tables - have installation "
+"instructions been followed?"
+msgstr ""
+
+#: schema.php:77
+msgid "You are trying to downgrade IPplan - impossible"
+msgstr ""
+
+#: schema.php:81
+msgid "Schema version outdated"
+msgstr ""
+
+#: schema.php:82
+#, php-format
+msgid ""
+"The database structures need to be upgraded to accommodate new features. For "
+"this to happen, you require enough access rights on the %s database. If you "
+"get errors back from the upgrade process, you will need to temporarily grant "
+"more access rights to the %s database for the duration of the upgrade"
+msgstr ""
+
+#: schema.php:84
+msgid ""
+"This process needs to be done by the administrator by executing the "
+"installation scripts. See information in the INSTALL and UPGRADE files."
+msgstr ""
+
+#: user/createarea.php:45
+msgid "Modify a network area"
+msgstr "ネットワークエリアを修正する"
+
+#: user/createarea.php:48
+msgid "Create a new network area"
+msgstr "新規ネットワークエリアを作成する"
+
+#: user/createarea.php:63
+msgid "You need to enter a description for the area"
+msgstr ""
+
+#: user/createarea.php:67
+msgid "Area address may not be blank"
+msgstr ""
+
+#: user/createarea.php:69
+msgid "Invalid area address - it must be the same format as an IP address"
+msgstr ""
+
+#: user/createarea.php:81
+msgid ""
+"You may not create/modify an area for this customer as you are not a member "
+"of the customers admin group"
+msgstr ""
+
+#: user/createarea.php:111
+msgid "Area created"
+msgstr "エリアを作成しました。"
+
+#: user/createarea.php:117
+msgid "Area could not be created/modified - probably a duplicate name"
+msgstr "エリアを作成/修正できませんでした - おそらく名前の複製です"
+
+#: user/createarea.php:128
+msgid ""
+"Create a new network area by entering a unique identifier address for the "
+"area. The identifier has the same format as IP addresses, but has no "
+"relation to existing IP address records. Areas usually define geographic or "
+"administrative boundaries. Areas can also contain multiple ranges of address "
+"space, as in many cases the address space is not contiguous - there may be a "
+"mix of private or public address space used."
+msgstr ""
+
+#: user/createarea.php:146 user/createrange.php:243
+#: user/createsubnetform.php:63 user/displaybaseform.php:60
+#: user/displayrouterform.php:57 user/displayswipform.php:58
+#: user/findfreeform.php:68 user/modifyarearangeform.php:56
+#: user/modifybaseform.php:56 user/modifydns.php:336
+#: user/modifydnsrecord.php:426 user/modifysubnet.php:292
+#: user/modifyzone.php:314 user/searchallform.php:64 user/treeview.php:139
+#: admin/exportbaseform.php:55 admin/exportipform.php:59
+#: admin/importbaseform.php:60 admin/importipform.php:65
+msgid "No customers"
+msgstr "カスタマーがありません。"
+
+#: user/createarea.php:149 user/modifyarearange.php:78
+#: user/modifyarearange.php:195
+msgid "Area address"
+msgstr "エリアアドレス"
+
+#: user/createarea.php:156 user/createrange.php:272
+#: user/createsubnetform.php:96 user/displaybase.php:151
+#: user/displayoverlap.php:102 user/displayoverlap.php:111
+#: user/displayrouter.php:185 user/findfree.php:183
+#: user/modifyarearange.php:80 user/modifyarearange.php:90
+#: user/modifyarearange.php:197 user/modifybase.php:342
+#: user/modifyipform.php:667 user/searchallform.php:82
+msgid "Description"
+msgstr "説明"
+
+#: user/createarea.php:164 user/createrange.php:307
+#: user/createsubnetform.php:166 user/displaybaseform.php:139
+#: user/displayoverlapform.php:127 user/displayrouterform.php:83
+#: user/displaysubnet.php:380 user/displayswipform.php:115
+#: user/findfreeform.php:121 user/modifyarearangeform.php:60
+#: user/modifybaseform.php:94 user/modifycustomer.php:303
+#: user/modifycustomer.php:790 user/modifydnsform.php:243
+#: user/modifydnsrecordform.php:134 user/modifyipformmul.php:120
+#: user/modifyipform.php:641 user/modifysubnet.php:401
+#: user/modifyzoneform.php:256 user/requestip.php:315
+#: user/searchallform.php:224 admin/changepassword.php:121
+#: admin/changesettings.php:137 admin/exportbaseform.php:59
+#: admin/exportipform.php:63 admin/importbaseform.php:86
+#: admin/importipform.php:81 admin/usermanager.php:662
+msgid "Clear"
+msgstr "消去"
+
+#: user/createrange.php:88
+msgid "Modify a range or supernet/summary"
+msgstr ""
+
+#: user/createrange.php:91
+msgid "Create a new range or supernet/summary"
+msgstr ""
+
+#: user/createrange.php:106
+msgid "Range cannot be found!"
+msgstr ""
+
+#: user/createrange.php:113
+msgid "You need to enter a description for the range"
+msgstr ""
+
+#: user/createrange.php:119
+msgid "Range address may not be blank"
+msgstr ""
+
+#: user/createrange.php:121
+msgid "Invalid range address"
+msgstr "アドレス範囲が無効です。"
+
+#: user/createrange.php:123 user/createsubnet.php:75 user/modifyzone.php:149
+#: admin/usermanager.php:1042
+msgid "Size may not be zero"
+msgstr ""
+
+#: user/createrange.php:136
+msgid ""
+"Range cannot be modified - overlaps with existing range or overlaps with "
+"self if trying to change size. Try moving the range out of the way first "
+"before resizing."
+msgstr ""
+
+#: user/createrange.php:140
+msgid "Range cannot be created - overlaps with existing range"
+msgstr ""
+
+#: user/createrange.php:146 admin/usermanager.php:1048
+msgid "Invalid base address"
+msgstr ""
+
+#: user/createrange.php:157
+msgid ""
+"You may not create/modify a range for this customer as you are not a member "
+"of the customers admin group"
+msgstr ""
+
+#: user/createrange.php:198
+msgid "Range created"
+msgstr "範囲を作成しました。"
+
+#: user/createrange.php:204
+msgid "Range could not be created/modified - probably duplicate name"
+msgstr "範囲を作成/修正できませんでした - おそらく名前が複製です"
+
+#: user/createrange.php:215
+msgid ""
+"Modify a range supernet/summary. Changing the range address or size to "
+"overlap with the currently defined range and size is not supported. Move the "
+"range out of the way first."
+msgstr ""
+
+#: user/createrange.php:218
+msgid ""
+"Create a new range or supernet/summary by entering the base (network) "
+"address. A range is an aggregation of a number of subnets which can "
+"ultimately be used to reduce the number of routing entries in routing "
+"tables. Ranges are essentially the same as a normal subnet, just bigger with "
+"a wider view."
+msgstr ""
+
+#: user/createrange.php:265 user/modifyarearange.php:84
+msgid "Range address"
+msgstr "アドレスの範囲"
+
+#: user/createrange.php:277
+msgid "Range size/mask"
+msgstr "範囲 サイズ/マスク"
+
+#: user/createsubnetform.php:40
+msgid "Create a new subnet"
+msgstr "新規サブネットを作成する"
+
+#: user/createsubnetform.php:50
+msgid ""
+"Create a new subnet by entering the base (network) address of the subnet. "
+"Subnets are the building blocks of all networks, and are all that is "
+"required for small networks."
+msgstr ""
+
+#: user/createsubnetform.php:52
+msgid ""
+"Unused subnets can be pre-allocated with a description of either 'free' or "
+"'spare'. These can be searched for at a later stage using the 'Find Free' "
+"function."
+msgstr ""
+
+#: user/createsubnetform.php:54
+msgid ""
+"It may also be beneficial to give ASE (Autonomous System External, networks "
+"not local to yours) a special handle like EXTERNAL so that they can be "
+"searched for at a later stage. These networks often appear in routing tables "
+"as static routes to third parties (not via the Internet)."
+msgstr ""
+
+#: user/createsubnetform.php:73 user/modifycustomer.php:273
+#: user/modifysubnet.php:319 admin/importbaseform.php:70
+msgid "You first need to create some groups!"
+msgstr ""
+
+#: user/createsubnetform.php:76 user/modifysubnet.php:366
+#: admin/importbaseform.php:73
+msgid "Admin Group"
+msgstr "グループ管理"
+
+#: user/createsubnetform.php:77 user/modifycustomer.php:296
+#: user/modifysubnet.php:367
+msgid ""
+"WARNING: If you choose a group that you do not have access to, you will not "
+"be able to see or access the data"
+msgstr ""
+
+#: user/createsubnetform.php:81
+msgid "Network address"
+msgstr "ネットワークアドレス"
+
+#: user/createsubnetform.php:89
+msgid "Number of contiguous networks to create"
+msgstr ""
+
+#: user/createsubnetform.php:97
+msgid "Leave blank to automatically describe"
+msgstr ""
+
+#: user/createsubnetform.php:101
+msgid "Subnet size/mask"
+msgstr "サブネット サイズ/マスク"
+
+#: user/createsubnetform.php:130
+msgid "Add active hosts using NMAP"
+msgstr "アクティブなホストを NMAP を使って追加する"
+
+#: user/createsubnetform.php:135
+msgid "Add host names from DNS"
+msgstr "DNS からホスト名を追加する"
+
+#: user/createsubnetform.php:139 user/modifysubnet.php:348
+msgid "Is this a DHCP subnet?"
+msgstr "これは DHCP　サブネットですか?"
+
+#: user/createsubnetform.php:159 user/modifycustomer.php:783
+#: user/modifyipform.php:609 user/modifysubnet.php:392 user/requestip.php:302
+msgid "Additional information"
+msgstr "追加情報"
+
+#: user/createsubnet.php:45
+msgid "Create subnet results"
+msgstr ""
+
+#: user/createsubnet.php:61
+msgid "Number of subnets to create is out of bounds."
+msgstr ""
+
+#: user/createsubnet.php:71 user/modifyzone.php:145 admin/importbase.php:194
+msgid "IP address may not be blank"
+msgstr ""
+
+#: user/createsubnet.php:73 user/displayrouter.php:127 user/dns.php:42
+#: user/modifyzone.php:147 user/ping.php:52 user/traceroute.php:55
+#: admin/importip.php:174
+msgid "Invalid IP address"
+msgstr "IP アドレスが無効です。"
+
+#: user/createsubnet.php:78 user/modifyzone.php:152 admin/importbase.php:260
+msgid "Invalid base address!"
+msgstr ""
+
+#: user/createsubnet.php:131
+#, php-format
+msgid "Subnet %s not created - out of defined authority boundary"
+msgstr ""
+
+#: user/createsubnet.php:138
+#, php-format
+msgid ""
+"Subnet %s could not be created - possibly overlaps with an existing subnet"
+msgstr ""
+
+#: user/createsubnet.php:146
+msgid "WARNING: "
+msgstr ""
+
+#: user/createsubnet.php:147
+#, php-format
+msgid ""
+"Subnet %s overlaps with the following subnets from other customers.  This "
+"may not be a problem as the subnet may occur in both customers routing "
+"tables:"
+msgstr ""
+
+#: user/createsubnet.php:156 user/deletecustomer.php:72
+#: user/displaybase.php:145 user/displayoverlap.php:96
+#: user/displayoverlap.php:105 user/displayrouter.php:179
+#: user/findfree.php:177 user/modifybase.php:336
+msgid "Base address"
+msgstr "ベースアドレス"
+
+#: user/createsubnet.php:158 user/deletecustomer.php:74
+#: user/modifysubnet.php:339
+msgid "Subnet description"
+msgstr "サブネットの詳細"
+
+#: user/createsubnet.php:160 user/requestip.php:250
+msgid "Customer"
+msgstr "カスタマー"
+
+#: user/createsubnet.php:186
+msgid ""
+"You may not create a subnet for this customer as you are not a member of the "
+"customers admin group"
+msgstr ""
+
+#: user/createsubnet.php:196
+#, php-format
+msgid "Subnet %s created"
+msgstr "サブネット %s を作成しました。"
+
+#: user/createsubnet.php:202
+msgid "NMAP data not in XML format or XML not available"
+msgstr ""
+
+#: user/createsubnet.php:227
+#, php-format
+msgid "Subnet %s could not be created"
+msgstr ""
+
+#: user/deletearea.php:39
+msgid "Delete a network area"
+msgstr "ネットワークエリアを削除する"
+
+#: user/deletearea.php:60 user/deleterange.php:59
+msgid ""
+"You may not delete an area for this customer as you are not a member of the "
+"customers admin group"
+msgstr ""
+
+#: user/deletearea.php:82
+msgid "Area could not be deleted"
+msgstr "エリアを削除できませんでした。"
+
+#: user/deletecustomer.php:37
+msgid "Delete customer/autonomous system results"
+msgstr ""
+
+#: user/deletecustomer.php:45 user/displaybase.php:53
+#: user/displayoverlap.php:222 user/displayrouter.php:115
+#: user/displaysubnet.php:72 user/displayswip.php:55 user/dns.php:38
+#: user/emailswip.php:55 user/findfree.php:57 user/modifyarearange.php:51
+#: user/modifybase.php:70 user/modifydnsform.php:58
+#: user/modifydnsrecordform.php:53 user/modifyipformmul.php:50
+#: user/modifyipform.php:90 user/modifyzoneform.php:53 user/ping.php:48
+#: user/searchall.php:53 user/traceroute.php:51 user/whois.php:53
+#: admin/deletebounds.php:47 admin/importip.php:51
+msgid "You cannot reload or bookmark this page!"
+msgstr ""
+
+#: user/deletecustomer.php:54
+msgid ""
+"You may not delete customers as you are not a member a group that can delete "
+"customers"
+msgstr ""
+
+#: user/deletecustomer.php:63
+msgid ""
+"Cannot delete customer because the following subnets are assigned to the "
+"customer (limited to first 100):"
+msgstr ""
+
+#: user/deletecustomer.php:97
+msgid "Cannot delete customer because customer has DNS zones defined"
+msgstr ""
+
+#: user/deletecustomer.php:109
+msgid "Cannot delete customer because customer has reverse DNS zones defined"
+msgstr ""
+
+#: user/deletecustomer.php:141 admin/maintenance.php:90
+msgid "Customer deleted"
+msgstr "カスタマーを削除しました。"
+
+#: user/deletecustomer.php:144 admin/maintenance.php:93
+msgid "Customer could not be deleted"
+msgstr "カスタマーを削除できませんでした。"
+
+#: user/deleterange.php:39
+msgid "Delete a range or supernet/summary"
+msgstr ""
+
+#: user/deleterange.php:82
+msgid "Range could not be deleted"
+msgstr ""
+
+#: user/deleterange.php:86
+msgid "Range index is invalid"
+msgstr ""
+
+#: user/displaybaseform.php:41 user/treeview.php:39
+msgid "Display subnet information"
+msgstr "サブネット情報を表示する"
+
+#: user/displaybaseform.php:46 user/displayswipform.php:49
+#: user/treeview.php:50
+msgid "Display subnets."
+msgstr ""
+
+#: user/displaybaseform.php:81 user/displayswipform.php:76
+#: user/findfreeform.php:85 user/modifybaseform.php:75
+#: user/searchallform.php:124
+msgid "Search criteria"
+msgstr ""
+
+#: user/displaybaseform.php:84 user/displayswipform.php:78
+msgid "Subnet network address (leave blank if range selected)"
+msgstr ""
+
+#: user/displaybaseform.php:85 user/displayswipform.php:79
+#: user/modifybaseform.php:79
+msgid "Partial subnet addresses can be used eg. 172.20"
+msgstr ""
+
+#: user/displaybaseform.php:95
+msgid "Match any IP address in subnet"
+msgstr ""
+
+#: user/displaybaseform.php:98
+msgid "Jump to IP address record if found"
+msgstr ""
+
+#: user/displaybaseform.php:101
+msgid ""
+"Enter a complete ip address in above field and select the above options to "
+"go to the address record or subnet record"
+msgstr ""
+
+#: user/displaybaseform.php:104 user/displayswipform.php:85
+#: user/modifybaseform.php:85
+msgid "Description (only display networks matching the regular expression)"
+msgstr ""
+
+#: user/displaybaseform.php:106 user/displayswipform.php:87
+#: user/modifybaseform.php:87
+msgid "Description (only display networks containing)"
+msgstr ""
+
+#: user/displaybaseform.php:112
+msgid "Display subnets larger than"
+msgstr ""
+
+#: user/displaybaseform.php:113
+msgid "Display all subnets"
+msgstr "すべてのサブネットを表示する"
+
+#: user/displaybase.php:45 user/displayoverlap.php:211
+#: user/displaysubnet.php:45 user/displayswip.php:44 user/findfree.php:49
+#: user/searchall.php:45
+msgid "Results of your search"
+msgstr "検索の結果"
+
+#: user/displaybase.php:89
+#, php-format
+msgid "Search for IP subnets not part of a range for customer '%s'"
+msgstr ""
+
+#: user/displaybase.php:92 user/displayswip.php:103 user/modifybase.php:292
+#: user/searchall.php:180
+#, php-format
+msgid "Search for IP subnets between multiple ranges for customer '%s'"
+msgstr ""
+
+#: user/displaybase.php:95 user/displayswip.php:107 user/findfree.php:97
+#: user/modifybase.php:296 user/searchall.php:201
+#, php-format
+msgid "Search for IP subnets between %s and %s %s for customer '%s'"
+msgstr ""
+
+#: user/displaybase.php:99 user/displayswip.php:111 user/modifybase.php:300
+msgid "IP address filter: "
+msgstr "IP アドレスフィルター:"
+
+#: user/displaybase.php:103 user/displayswip.php:115 user/modifybase.php:304
+msgid "Description filter: "
+msgstr "説明フィルター:"
+
+#: user/displaybase.php:107
+msgid "Subnet size filter: Subnets larger than "
+msgstr ""
+
+#: user/displaybase.php:147 user/displayoverlap.php:98
+#: user/displayoverlap.php:107 user/displayrouter.php:181
+#: user/findfree.php:179 user/modifybase.php:338
+msgid "Subnet size"
+msgstr "サブネットサイズ"
+
+#: user/displaybase.php:149 user/displayoverlap.php:100
+#: user/displayoverlap.php:109 user/findfree.php:181 user/modifybase.php:340
+msgid "Subnet mask"
+msgstr "サブネットマスク"
+
+#: user/displaybase.php:153 user/displaysubnet.php:427 user/modifydns.php:398
+#: user/modifydnsrecord.php:532 user/modifyzone.php:375 user/searchall.php:252
+msgid "Last modified"
+msgstr "最終更新日時"
+
+#: user/displaybase.php:155 user/displaysubnet.php:429 user/modifydns.php:400
+#: user/modifydnsrecord.php:534 user/modifyzone.php:377
+msgid "Changed by"
+msgstr ""
+
+#: user/displaybase.php:158
+msgid "Update sent"
+msgstr ""
+
+#: user/displaybase.php:189 user/displayoverlap.php:156
+#: user/displayrouter.php:208 user/displayrouter.php:236 user/findfree.php:261
+#: user/modifybase.php:358 user/modifydnsrecord.php:526
+msgid "Host"
+msgstr "ホスト"
+
+#: user/displaybase.php:223 user/displaysubnet.php:309
+#: user/displayswip.php:189 user/findfree.php:168 user/modifybase.php:467
+#: user/searchall.php:321
+msgid "Search found no matching entries"
+msgstr ""
+
+#: user/displaycustomerform.php:41
+msgid "Display customer/autonomous system information"
+msgstr ""
+
+#: user/displaycustomerform.php:56
+msgid "All customer/autonomous system info"
+msgstr ""
+
+#: user/displaycustomerform.php:60 user/displaysubnet.php:384
+msgid "Refine Search on Description"
+msgstr ""
+
+#: user/displaycustomerform.php:84 admin/maintenance.php:147
+msgid "Customer description"
+msgstr "カスタマーの説明"
+
+#: user/displaycustomerform.php:86 admin/displayboundsform.php:70
+#: admin/maintenance.php:149
+msgid "Group name"
+msgstr "グループ名"
+
+#: user/displaycustomerform.php:88 user/modifyarearange.php:82
+#: user/modifyarearange.php:92 user/modifyarearange.php:199
+#: user/modifybase.php:346 user/modifydns.php:402 user/modifydnsrecord.php:536
+#: user/modifyipform.php:673 user/modifyzone.php:379
+#: admin/displayauditlog.php:90 admin/maintenance.php:153
+msgid "Action"
+msgstr "操作"
+
+#: user/displaycustomerform.php:117 admin/maintenance.php:175
+msgid "Delete customer/AS"
+msgstr "カスタマー/AS を削除する"
+
+#: user/displaycustomerform.php:118 user/modifyarearange.php:120
+#: user/modifyarearange.php:159 user/modifyarearange.php:217
+#: user/modifybase.php:388 user/modifybase.php:402 user/modifybase.php:410
+#: user/modifydns.php:463 user/modifydnsrecord.php:587
+#: user/modifydnsrecord.php:665 user/modifyipformmul.php:128
+#: user/modifyipform.php:461 user/modifyzone.php:444 user/modifyzone.php:469
+#: admin/displayboundsform.php:100 admin/usermanager.php:609
+msgid "Are you sure?"
+msgstr "本当にしますか?"
+
+#: user/displaycustomerform.php:123
+msgid "Modify customer/AS details"
+msgstr "カスタマー/AS の詳細を修正する"
+
+#: user/displaycustomerform.php:126
+msgid "Export DHCP details"
+msgstr "DHCP の詳細をエクスポートする"
+
+#: user/displaycustomerform.php:129
+msgid "Group membership"
+msgstr "グループメンバーシップ"
+
+#: user/displayoverlapform.php:41
+msgid "Display overlapping address space between customers/autonomous systems"
+msgstr ""
+
+#: user/displayoverlapform.php:52 user/findfreeform.php:52
+msgid ""
+"This function consumes large amounts of memory on the server. If you get "
+"server errors, blank pages or nothing happens when you submit, you may need "
+"to reduce the range of your search or you may need to increase the amount of "
+"memory allocated to PHP on the server."
+msgstr ""
+
+#: user/displayoverlapform.php:63
+msgid "Customer/autonomous system 1 - select multiple"
+msgstr ""
+
+#: user/displayoverlapform.php:100
+msgid "Customer/autonomous system 2 - select multiple"
+msgstr ""
+
+#: user/displayoverlap.php:229
+msgid "Search for overlapping subnets between customers/autonomous systems"
+msgstr ""
+
+#: user/displayoverlap.php:236
+msgid "Both customers selected are the same - all subnets will overlap!"
+msgstr ""
+
+#: user/displayrouterform.php:39
+msgid "Display subnet information obtained from a routing table"
+msgstr ""
+
+#: user/displayrouterform.php:49
+msgid ""
+"Display subnet information obtained from a routing table will show the "
+"routing table information on the left of the screen and the corresponding "
+"entries in the database on the right. If there are entries on both sides of "
+"the table, the subnet exists in the routing table and the database. If there "
+"are only entries on the left, the subnet only exists in the routing table. "
+"The same is true for the right hand side. If you click on the left, you can "
+"add the subnet to the database. If you click on the right, you can view the "
+"existing database information."
+msgstr ""
+
+#: user/displayrouterform.php:59
+msgid "IP address of device to query"
+msgstr ""
+
+#: user/displayrouterform.php:60
+msgid "The device must be SNMP capable"
+msgstr ""
+
+#: user/displayrouterform.php:66
+msgid "Community string"
+msgstr "コミュニティ文字列"
+
+#: user/displayrouterform.php:72
+msgid "Router type"
+msgstr "ルーターの種類"
+
+#: user/displayrouterform.php:73
+msgid "Type 'Generic' will work for most routers"
+msgstr ""
+
+#: user/displayrouter.php:107
+msgid "Display routing table results"
+msgstr ""
+
+#: user/displayrouter.php:131
+msgid "Could not query router - no SNMP on router or firewall blocking access?"
+msgstr ""
+
+#: user/displayrouter.php:136
+#, php-format
+msgid "Search for IP subnets from a routing table for customer '%s'"
+msgstr ""
+
+#: user/displayrouter.php:164
+msgid "Routing Table"
+msgstr "ルーティングテーブル"
+
+#: user/displayrouter.php:168
+msgid "IPplan information"
+msgstr "IPplan 情報"
+
+#: user/displayrouter.php:173
+msgid "Routing Table Base address"
+msgstr "ルーティングテーブルのベースアドレス"
+
+#: user/displayrouter.php:175
+msgid "Routing Table Subnet size"
+msgstr "ルーティングテーブルのサブネットサイズ"
+
+#: user/displayrouter.php:177
+msgid "Routing Table Subnet Mask"
+msgstr "ルーティングテーブルサブネットマスク"
+
+#: user/displayrouter.php:183
+msgid "Subnet Mask"
+msgstr "サブネットマスク"
+
+#: user/displayrouter.php:256 user/modifyarearange.php:175
+#: user/modifyarearange.php:230 admin/displayboundsform.php:107
+#, php-format
+msgid "Total records: %u"
+msgstr "総レコード数: %u"
+
+#: user/displaysubnet.php:81 user/modifybase.php:157 user/modifysubnet.php:96
+#: user/modifysubnet.php:182 user/modifysubnet.php:271
+msgid "Subnet cannot be found!"
+msgstr "サブネットが見つかりません!"
+
+#: user/displaysubnet.php:123
+msgid "IP addresses not updated - out of defined authority boundary"
+msgstr ""
+
+#: user/displaysubnet.php:126
+#, php-format
+msgid "IP address %s not updated - out of defined authority boundary"
+msgstr ""
+
+#: user/displaysubnet.php:132
+msgid "Another user modified the information before you saved - restart"
+msgstr ""
+
+#: user/displaysubnet.php:154
+msgid "IP address records deleted"
+msgstr "IP アドレスのレコードを削除しました"
+
+#: user/displaysubnet.php:208
+#, php-format
+msgid "Invalid link address: %s"
+msgstr "無効なリンクアドレスです: %s"
+
+#: user/displaysubnet.php:220 user/requestip.php:86
+#, php-format
+msgid "Invalid MAC address: %s"
+msgstr "無効な Mac アドレスです: %s"
+
+#: user/displaysubnet.php:236
+msgid ""
+"Send an email to the IP address requester with details of the allocated "
+"address"
+msgstr ""
+
+#: user/displaysubnet.php:251
+msgid "Email IP address requester"
+msgstr ""
+
+#: user/displaysubnet.php:255
+#, php-format
+msgid "User %s actioned request %s"
+msgstr ""
+
+#: user/displaysubnet.php:259 admin/importip.php:226
+msgid "IP address details modified"
+msgstr "IP アドレスの詳細を修正しました。"
+
+#: user/displaysubnet.php:262 admin/importip.php:229
+msgid "IP address details could not be modified"
+msgstr "IP アドレスの詳細を修正できませんでした。"
+
+#: user/displaysubnet.php:267
+msgid "You are not the owner of the subnet"
+msgstr ""
+
+#: user/displaysubnet.php:271
+msgid ""
+"Could not find the owner of the subnet - subnet possibly deleted by another "
+"user"
+msgstr ""
+
+#: user/displaysubnet.php:283
+msgid "Close"
+msgstr "閉じる"
+
+#: user/displaysubnet.php:316
+msgid ""
+"This page was bookmarked and contains invalid information which cannot be "
+"displayed anymore - restart from main menu"
+msgstr ""
+
+#: user/displaysubnet.php:320 user/modifyipform.php:278
+#: user/modifysubnet.php:279
+msgid "Subnet:"
+msgstr "サブネット:"
+
+#: user/displaysubnet.php:321 user/modifyipform.php:279
+#: user/modifysubnet.php:280
+msgid "Mask:"
+msgstr "マスク:"
+
+#: user/displaysubnet.php:325 user/modifyipform.php:288
+#: user/modifysubnet.php:284
+msgid "Description:"
+msgstr "説明:"
+
+#: user/displaysubnet.php:334
+msgid "Show used addresses"
+msgstr "使用済アドレスを表示する"
+
+#: user/displaysubnet.php:336
+msgid ""
+" This can take a while as each address is polled.  Green is active, Red is "
+"inactive"
+msgstr ""
+
+#: user/displaysubnet.php:344
+msgid "Show DNS changes"
+msgstr "DNS の変更を表示する"
+
+#: user/displaysubnet.php:346
+msgid ""
+" Show descriptions that do not match DNS reverse entries. Red is new DNS "
+"value"
+msgstr ""
+
+#: user/displaysubnet.php:363
+msgid "Select multiple addresses to do a bulk change"
+msgstr ""
+
+#: user/displaysubnet.php:364
+msgid "Ideal for reserving DHCP ranges"
+msgstr ""
+
+#: user/displaysubnet.php:395
+msgid "Use next available address"
+msgstr ""
+
+#: user/displaysubnet.php:398
+msgid "Use next available address and probe network if active"
+msgstr ""
+
+#: user/displaysubnet.php:415 user/modifyipformmul.php:82
+#: user/modifyipform.php:533 user/requestip.php:264 user/searchallform.php:80
+#: user/searchall.php:244
+msgid "User"
+msgstr "ユーザー"
+
+#: user/displaysubnet.php:417 user/modifyipformmul.php:88
+#: user/modifyipform.php:540 user/requestip.php:269 user/searchallform.php:81
+#: user/searchall.php:246
+msgid "Location"
+msgstr "位置"
+
+#: user/displaysubnet.php:419 user/modifyipformmul.php:92
+#: user/modifyipform.php:545 user/requestip.php:274 user/searchall.php:248
+msgid "Device description"
+msgstr "デバイスの説明"
+
+#: user/displaysubnet.php:421 user/searchallform.php:84 user/searchall.php:250
+msgid "Telephone Number"
+msgstr "電話番号"
+
+#: user/displaysubnet.php:423
+msgid "P"
+msgstr ""
+
+#: user/displaysubnet.php:424
+msgid "o"
+msgstr ""
+
+#: user/displaysubnet.php:425
+msgid "l"
+msgstr ""
+
+#: user/displaysubnet.php:515
+msgid "Reserved - network address"
+msgstr "予約済み - ネットワークアドレス"
+
+#: user/displaysubnet.php:521
+msgid "Reserved - broadcast address"
+msgstr "予約済み - ブロードキャストアドレス"
+
+#: user/displaysubnet.php:561
+#, php-format
+msgid ""
+"DNS queries taking too long - stopped doing queries at %s, time taken for "
+"last query was %s seconds"
+msgstr ""
+
+#: user/displaysubnet.php:573
+msgid "No DNS entry defined"
+msgstr "定義済 DNS エントリがありません"
+
+#: user/displaysubnet.php:623
+msgid "Subnet Summary"
+msgstr "サブネット要約"
+
+#: user/displaysubnet.php:625
+msgid "Total addresses:"
+msgstr "総アドレス"
+
+#: user/displaysubnet.php:626
+msgid "Used addresses:"
+msgstr "使用済みアドレス"
+
+#: user/displaysubnet.php:626
+msgid " (Including network and broadcast)"
+msgstr ""
+
+#: user/displaysubnet.php:627
+msgid "Free addresses:"
+msgstr "空きアドレス:"
+
+#: user/displaysubnet.php:628
+msgid "Active polled (D/W/M/Y):"
+msgstr ""
+
+#: user/displaysubnet.php:630
+msgid "Utilization:"
+msgstr ""
+
+#: user/displaysubnet.php:631
+msgid "Efficiency:"
+msgstr ""
+
+#: user/displaysubnet.php:669 user/searchall.php:242
+msgid "IP address"
+msgstr "IP アドレス"
+
+#: user/displaysubnet.php:774
+msgid "A record deleted in DNS forward zone"
+msgstr ""
+
+#: user/displaysubnet.php:775 user/displaysubnet.php:846
+#: user/displaysubnet.php:901
+#, php-format
+msgid "Domain: %s, Hostname: %s, IP address: %s\n"
+msgstr ""
+
+#: user/displaysubnet.php:794
+#, php-format
+msgid "Invalid hostname: %s %s"
+msgstr "ホスト名が無効です: %s %s"
+
+#: user/displaysubnet.php:829
+msgid "IP hostname field in DNS forward zone modified"
+msgstr ""
+
+#: user/displaysubnet.php:844
+msgid "DNS forward A record not updated - multiple A records for this customer"
+msgstr ""
+
+#: user/displaysubnet.php:900
+msgid "A record created in DNS forward zone"
+msgstr ""
+
+#: user/displaysubnet.php:905
+msgid ""
+"DNS forward A record not created - could not find matching zone to create "
+"record in"
+msgstr ""
+
+#: user/displaysubnet.php:934
+#, php-format
+msgid ""
+"Destination linked address %s IP record not created as you are not a member "
+"of the customers admin group"
+msgstr ""
+
+#: user/displaysubnet.php:941
+#, php-format
+msgid "Destination linked address %s IP record created"
+msgstr ""
+
+#: user/displayswipform.php:41
+msgid "Display registrar information"
+msgstr "レジストラ情報を表示する"
+
+#: user/displayswipform.php:101
+msgid "Template"
+msgstr "テンプレート"
+
+#: user/displayswipform.php:105
+msgid "Network name (ntname field on registrar template)"
+msgstr ""
+
+#: user/displayswipform.php:108
+msgid "Generate automatically"
+msgstr "自動生成する"
+
+#: user/displayswipform.php:111
+msgid "Use subnet description"
+msgstr "サブネットの説明を使用する"
+
+#: user/displayswip.php:68 user/emailswip.php:71
+msgid ""
+"You may not send a registrar update for this customer as you are not a "
+"member of the customers admin group"
+msgstr ""
+
+#: user/displayswip.php:130 user/exportdhcp.php:82
+msgid "Error reading template!"
+msgstr "テンプレートの読み込みエラーです!"
+
+#: user/displayswip.php:139
+msgid "E-mail this entry?"
+msgstr ""
+
+#: user/displayswip.php:141
+msgid "Previously sent:"
+msgstr ""
+
+#: user/displayswip.php:180 user/modifydnsrecord.php:634
+msgid "Check all"
+msgstr "すべて検査"
+
+#: user/displayswip.php:182 user/modifybase.php:460
+#: user/modifydnsrecord.php:636
+msgid "Clear all"
+msgstr "すべて消去する"
+
+#: user/dns.php:30
+msgid "DNS results"
+msgstr "DNS 結果"
+
+#: user/dns.php:48
+msgid " No DNS reverse record found"
+msgstr ""
+
+#: user/emailswip.php:44
+msgid "Registrar information sent"
+msgstr "レジストラ情報を送信する"
+
+#: user/emailswip.php:58
+msgid "No registrar updates selected to send"
+msgstr ""
+
+#: user/emailswip.php:94 user/requestip.php:179
+msgid "E-mail message was not sent"
+msgstr "電子メールメッセージは送信していません"
+
+#: user/emailswip.php:95 user/requestip.php:180
+msgid "Mailer Error: "
+msgstr "メーラーエラー: "
+
+#: user/exportdhcp.php:43
+msgid "Export DHCP subnet details"
+msgstr "DHCP サブネットの詳細をエクスポートする"
+
+#: user/exportdhcp.php:66
+msgid ""
+"You may not export DHCP subnets as you are not a member of the customers "
+"admin group"
+msgstr ""
+
+#: user/exportdhcp.php:85
+#, php-format
+msgid ""
+"Exporting all subnets marked as DHCP and all IP addresses with a user marked "
+"as '%s'"
+msgstr ""
+
+#: user/exportdhcp.php:110
+#, php-format
+msgid "Exporting DHCP for %s"
+msgstr "%s の DHCP をエクスポート中"
+
+#: user/exportdhcp.php:167
+#, php-format
+msgid "Found IP with MAC: %s, %s"
+msgstr "IP と MAC を見つけました: %s、%s"
+
+#: user/exportdhcp.php:173
+#, php-format
+msgid "Found IP with invalid MAC - ignoring: %s, %s"
+msgstr "IP と無効な MAC を見つけました - 無視します: %s、%s"
+
+#: user/exportdhcp.php:189 user/modifyzone.php:290
+#, php-format
+msgid "Sent update to Backend Processor as file %s"
+msgstr ""
+
+#: user/exportdhcp.php:193
+msgid "No DHCP subnets could be found."
+msgstr ""
+
+#: user/findfreeform.php:41
+msgid "Find free address space/Statistics"
+msgstr ""
+
+#: user/findfreeform.php:48
+msgid ""
+"Display free address space shows blocks or holes that are available for "
+"potential assignment as networks. The search will not display free space if "
+"the search only covers unallocated address space."
+msgstr ""
+
+#: user/findfreeform.php:50
+msgid "Subnets with a description of 'free' or 'spare' will also be shown."
+msgstr ""
+
+#: user/findfreeform.php:87
+msgid "IP range start (leave blank if range selected)"
+msgstr ""
+
+#: user/findfreeform.php:92
+msgid "IP range end (leave blank if range selected)"
+msgstr ""
+
+#: user/findfreeform.php:97
+msgid "Display only subnets between these sizes"
+msgstr ""
+
+#: user/findfreeform.php:98
+msgid "Minimum"
+msgstr "最小"
+
+#: user/findfreeform.php:103
+msgid "Maximum"
+msgstr "最大"
+
+#: user/findfreeform.php:108
+msgid "Show filter"
+msgstr "フィルターを表示"
+
+#: user/findfreeform.php:111
+msgid "Free and Unassigned"
+msgstr "空きと未割り当て"
+
+#: user/findfreeform.php:114
+msgid "Unassigned only"
+msgstr "未割り当てのみ"
+
+#: user/findfreeform.php:117
+msgid "All"
+msgstr "すべて"
+
+#: user/findfree.php:77
+msgid ""
+"Invalid IP address! You must select a range or fill in the start and end IP "
+"address."
+msgstr ""
+
+#: user/findfree.php:84
+msgid "Your end ip address is smaller than your start!"
+msgstr ""
+
+#: user/findfree.php:100
+#, php-format
+msgid "Subnet size filter: Subnets between %s and %s"
+msgstr ""
+
+#: user/findfree.php:185
+msgid "Utilization"
+msgstr ""
+
+#: user/findfree.php:188
+msgid "Barchart"
+msgstr "棒チャート"
+
+#: user/findfree.php:222 user/findfree.php:334 user/findfree.php:366
+msgid "Free space"
+msgstr "空きスペース"
+
+#: user/findfree.php:275
+msgid "Free/Unassigned space"
+msgstr "空き/未割り当て空間"
+
+#: user/findfree.php:279
+msgid "SPACE IS ASSIGNED OVER MULTIPLE CUSTOMERS/AS's"
+msgstr ""
+
+#: user/findfree.php:283
+msgid ""
+"SPACE IS ASSIGNED OVER MULTIPLE CUSTOMERS/AS's AND CONTAINS SPACE MARKED FREE"
+msgstr ""
+
+#: user/findfree.php:378
+msgid "Total:"
+msgstr "合計:"
+
+#: user/findfree.php:387
+msgid "NOTE: Host and two host subnets are always 100% allocated"
+msgstr ""
+
+#: user/findfree.php:389
+msgid "Total allocated networks/subnets: "
+msgstr "総割り当て済ネットワーク/サブネット"
+
+#: user/findfree.php:391
+msgid "Network/subnet space allocated: "
+msgstr ""
+
+#: user/findfree.php:400
+msgid "Total unassigned subnets (pre-allocated subnets marked as free): "
+msgstr ""
+
+#: user/findfree.php:402
+msgid "Unassigned subnets (pre-allocated subnets marked as free): "
+msgstr ""
+
+#: user/findfree.php:412
+msgid ""
+"IP addresses allocated (including reserved addresses/excluding reserved "
+"addresses): "
+msgstr ""
+
+#: user/modifyarearangeform.php:39
+msgid "Display/Modify/Delete area information"
+msgstr ""
+
+#: user/modifyarearangeform.php:44
+msgid "Display/Modify/Delete areas and ranges."
+msgstr ""
+
+#: user/modifyarearange.php:43
+msgid "Results of your search for areas"
+msgstr ""
+
+#: user/modifyarearange.php:60
+#, php-format
+msgid "Search for areas and ranges for customer '%s'"
+msgstr ""
+
+#: user/modifyarearange.php:86
+msgid "Range size"
+msgstr "範囲サイズ"
+
+#: user/modifyarearange.php:88
+msgid "Range mask"
+msgstr "マスクの範囲"
+
+#: user/modifyarearange.php:119 user/modifyarearange.php:216
+msgid "Delete Area"
+msgstr "エリアを削除する"
+
+#: user/modifyarearange.php:132
+msgid "No area"
+msgstr "エリアがありません"
+
+#: user/modifyarearange.php:135
+msgid "Range not part of area"
+msgstr "範囲がエリアの一部ではない"
+
+#: user/modifyarearange.php:158
+msgid "Delete Range"
+msgstr "範囲を削除する"
+
+#: user/modifyarearange.php:186
+msgid "Areas that have no ranges defined"
+msgstr ""
+
+#: user/modifybaseform.php:39
+msgid "Modify/Copy/Move/Delete/Split/Join subnets"
+msgstr ""
+
+#: user/modifybaseform.php:78
+msgid "Subnet address (leave blank if range selected)"
+msgstr ""
+
+#: user/modifybase.php:43
+msgid "Results of your search for subnet to modify"
+msgstr ""
+
+#: user/modifybase.php:84
+msgid ""
+"You may not delete a subnet for this customer as you are not a member of the "
+"customers admin group"
+msgstr ""
+
+#: user/modifybase.php:111
+#, php-format
+msgid "Subnet %s not deleted - out of defined authority boundary"
+msgstr ""
+
+#: user/modifybase.php:122
+#, php-format
+msgid "IP address %s has files attached"
+msgstr ""
+
+#: user/modifybase.php:133
+#, php-format
+msgid "Subnet %s deleted"
+msgstr ""
+
+#: user/modifybase.php:136
+#, php-format
+msgid "Subnet %s could not be deleted"
+msgstr ""
+
+#: user/modifybase.php:140
+#, php-format
+msgid "Subnet %s could not be deleted - there are files attached"
+msgstr ""
+
+#: user/modifybase.php:151
+msgid ""
+"You may not split or join a subnet for this customer as you are not a member "
+"of the customers admin group"
+msgstr ""
+
+#: user/modifybase.php:175
+#, php-format
+msgid "Subnet %s not split or joined - out of defined authority boundary"
+msgstr ""
+
+#: user/modifybase.php:187
+msgid "Subnets cannot be joined - Invalid base address!"
+msgstr ""
+
+#: user/modifybase.php:209
+msgid "Subnets cannot be joined - not the same size!"
+msgstr ""
+
+#: user/modifybase.php:213
+msgid "Subnets cannot be joined - subnet created would be too big!"
+msgstr ""
+
+#: user/modifybase.php:230
+msgid "Subnets cannot be split - host network!"
+msgstr ""
+
+#: user/modifybase.php:257
+msgid "Subnet split or joined"
+msgstr ""
+
+#: user/modifybase.php:344
+msgid "Admin group"
+msgstr "グループ管理"
+
+#: user/modifybase.php:387
+msgid "Delete Subnet"
+msgstr "サブネットを削除する"
+
+#: user/modifybase.php:395 user/modifysubnet.php:43
+msgid "Modify/Copy/Move subnet details"
+msgstr ""
+
+#: user/modifybase.php:401
+msgid "Join Subnet"
+msgstr "サブネットの結合をする"
+
+#: user/modifybase.php:409
+msgid "Split Subnet"
+msgstr "サブネットを分割する"
+
+#: user/modifybase.php:463 user/modifydnsrecord.php:639
+msgid "Delete multiple"
+msgstr ""
+
+#: user/modifycustomer.php:47
+msgid "Create a new customer/autonomous system"
+msgstr ""
+
+#: user/modifycustomer.php:49
+msgid "Modify a customer/autonomous system details"
+msgstr ""
+
+#: user/modifycustomer.php:60
+msgid "The customer description must be longer"
+msgstr ""
+
+#: user/modifycustomer.php:64
+msgid "Invalid zipcode"
+msgstr "郵便番号が無効です。"
+
+#: user/modifycustomer.php:68
+msgid "Invalid contact zipcode"
+msgstr "連絡先郵便番号が無効です。"
+
+#: user/modifycustomer.php:71
+msgid "Invalid E-mail address"
+msgstr "電子メールアドレスが無効です。"
+
+#: user/modifycustomer.php:76 user/modifydns.php:151 user/modifyzone.php:162
+#, php-format
+msgid "Invalid hostname %u"
+msgstr "ホスト名 %u が無効です。"
+
+#: user/modifycustomer.php:79
+#, php-format
+msgid "Invalid IP address %u"
+msgstr "IP アドレス %u が無効です。"
+
+#: user/modifycustomer.php:82
+#, php-format
+msgid "Invalid hostname/IP address combination %u"
+msgstr ""
+
+#: user/modifycustomer.php:99 user/requestip.php:104
+msgid "Additional information error"
+msgstr "追加情報エラー"
+
+#: user/modifycustomer.php:109
+msgid ""
+"You may not create customers as you are not a member a group that can create "
+"customers"
+msgstr ""
+
+#: user/modifycustomer.php:148 user/modifycustomer.php:258
+msgid "Customer cannot be found!"
+msgstr "カスタマーを見つけることができません!"
+
+#: user/modifycustomer.php:241
+msgid "Customer/autonomous system details modified"
+msgstr ""
+
+#: user/modifycustomer.php:244
+msgid ""
+"Customer/autonomous system details could not be modified - possibly a "
+"duplicate description"
+msgstr ""
+
+#: user/modifycustomer.php:283
+msgid "Required information"
+msgstr "必須情報"
+
+#: user/modifycustomer.php:285
+msgid "Customer/autonomous system description:"
+msgstr ""
+
+#: user/modifycustomer.php:295
+msgid "Customer/autonomous system admin group:"
+msgstr ""
+
+#: user/modifycustomer.php:639
+msgid "Customer information (optional)"
+msgstr "カスタマー情報 (オプション)"
+
+#: user/modifycustomer.php:641 user/modifycustomer.php:721
+msgid "Organization:"
+msgstr "所属:"
+
+#: user/modifycustomer.php:647 user/modifycustomer.php:727
+msgid "Street:"
+msgstr "通り:"
+
+#: user/modifycustomer.php:653 user/modifycustomer.php:733
+msgid "City:"
+msgstr "市区町村:"
+
+#: user/modifycustomer.php:659 user/modifycustomer.php:739
+msgid "State:"
+msgstr "州(アメリカのみ)"
+
+#: user/modifycustomer.php:663 user/modifycustomer.php:744
+msgid "Zipcode:"
+msgstr "郵便番号:"
+
+#: user/modifycustomer.php:669 user/modifycustomer.php:750
+msgid "Country:"
+msgstr "国籍:"
+
+#: user/modifycustomer.php:675
+msgid "Reverse DNS information (optional)"
+msgstr "予約 DNS 情報 (オプション)"
+
+#: user/modifycustomer.php:680
+#, php-format
+msgid "Hostname %u:"
+msgstr "ホスト名 %u:"
+
+#: user/modifycustomer.php:686
+#, php-format
+msgid "IP address %u:"
+msgstr "IP アドレス %u:"
+
+#: user/modifycustomer.php:695
+msgid "Technical contact information (optional)"
+msgstr "技術者連絡情報 (オプション)"
+
+#: user/modifycustomer.php:697
+msgid "Nickname/handle:"
+msgstr "ニックネーム/ハンドル"
+
+#: user/modifycustomer.php:703
+msgid "Last name/surname:"
+msgstr "ラストネーム/名字"
+
+#: user/modifycustomer.php:709
+msgid "First name:"
+msgstr "名前(ファーストネーム):"
+
+#: user/modifycustomer.php:715
+msgid "Middle name:"
+msgstr "ミドルネーム"
+
+#: user/modifycustomer.php:755
+msgid "Telephone number:"
+msgstr "電話番号:"
+
+#: user/modifycustomer.php:761
+msgid "E-mail address:"
+msgstr "電子メールアドレス:"
+
+#: user/modifydnsform.php:46
+msgid "Create DNS Zones"
+msgstr "DNS ゾーンを作成する"
+
+#: user/modifydnsform.php:49
+msgid "Edit DNS Zones"
+msgstr "DNS ゾーンを編集する"
+
+#: user/modifydnsform.php:106
+msgid "Maintain forward zone SOA information."
+msgstr ""
+
+#: user/modifydnsform.php:110
+msgid "Forward zone information"
+msgstr "転送ゾーン情報"
+
+#: user/modifydnsform.php:112 user/modifyzoneform.php:109
+msgid "Zone (Domain Name)"
+msgstr "ゾーン (ドメイン名)"
+
+#: user/modifydnsform.php:114 user/modifyzoneform.php:111
+msgid "Separate multiple domain names with ;"
+msgstr ""
+
+#: user/modifydnsform.php:129 user/modifyzoneform.php:154
+msgid "Zone transfer from DNS server"
+msgstr "DNS サーバーからのゾーン転送"
+
+#: user/modifydnsform.php:130 user/modifyzoneform.php:155
+msgid "Blank for no zone transfer"
+msgstr "空にするとゾーン転送はありません"
+
+#: user/modifydnsform.php:131 user/modifyzoneform.php:156
+msgid "Slave zones only import SOA information, not zone records"
+msgstr ""
+
+#: user/modifydnsform.php:144
+msgid "--- OR ---"
+msgstr "--- または ---"
+
+#: user/modifydnsform.php:161 user/modifyzoneform.php:175
+msgid "Zone SOA information if zone not created via zone transfer"
+msgstr ""
+
+#: user/modifydnsform.php:164 user/modifyzoneform.php:178
+msgid "Zone SOA information"
+msgstr "ゾーン SOA 情報"
+
+#: user/modifydnsform.php:175 user/modifyzoneform.php:189
+#, php-format
+msgid "Name server %u:"
+msgstr "ネームサーバー %u:"
+
+#: user/modifydnsform.php:185
+msgid "Forward zone SOA header information"
+msgstr "転送ゾーン SOA ヘッダー情報"
+
+#: user/modifydnsform.php:187 user/modifyzoneform.php:200
+msgid "Technical contact email address"
+msgstr "技術者連絡用電子メールアドレス"
+
+#: user/modifydnsform.php:188 user/modifyzoneform.php:201
+msgid "No @ allowed - replace with ."
+msgstr "「@」は許可されていません - 「.」で置換します"
+
+#: user/modifydnsform.php:193 user/modifydns.php:388
+#: user/modifyzoneform.php:206 user/modifyzone.php:365
+msgid "TTL"
+msgstr "TTL"
+
+#: user/modifydnsform.php:199 user/modifydns.php:390
+#: user/modifyzoneform.php:212 user/modifyzone.php:367
+msgid "Refresh"
+msgstr "Refresh"
+
+#: user/modifydnsform.php:205 user/modifydns.php:392
+#: user/modifyzoneform.php:218 user/modifyzone.php:369
+msgid "Retry"
+msgstr "Retry"
+
+#: user/modifydnsform.php:211 user/modifydns.php:394
+#: user/modifyzoneform.php:224 user/modifyzone.php:371
+msgid "Expire"
+msgstr "Expire"
+
+#: user/modifydnsform.php:217 user/modifyzoneform.php:230
+msgid "Minimum TTL"
+msgstr "最小 TTL"
+
+#: user/modifydnsform.php:225
+msgid "Forward zone location"
+msgstr "ゾーン転送場所"
+
+#: user/modifydnsform.php:227 user/modifyzoneform.php:240
+msgid "Zone File Path"
+msgstr "ゾーンファイルパス"
+
+#: user/modifydnsform.php:228 user/modifyzoneform.php:241
+msgid ""
+"The path where the zone file will be written once exported and processed. "
+"Examples:"
+msgstr ""
+
+#: user/modifydnsform.php:229 user/modifyzoneform.php:242
+msgid ""
+"ftp://myhost.com/var/named/test.zone - if you want to transfer the zone "
+"using ncftput"
+msgstr ""
+
+#: user/modifydnsform.php:230 user/modifyzoneform.php:243
+msgid ""
+"user@myhost.com:/var/named/test.zone - if you want to transfer the zone "
+"using scp"
+msgstr ""
+
+#: user/modifydnsform.php:236 user/modifyzoneform.php:249
+msgid "Secondary Zone File Path"
+msgstr "セカンダリゾーンファイルパス"
+
+#: user/modifydnsform.php:242 user/modifydnsrecordform.php:133
+#: user/modifyzoneform.php:255
+msgid "Save"
+msgstr "保存"
+
+#: user/modifydns.php:42
+msgid "DNS Domain Zones"
+msgstr "DNS ドメインゾーン"
+
+#: user/modifydns.php:80
+msgid ""
+"You may not delete a DNS zone as you are not a member of the customers admin "
+"group"
+msgstr ""
+
+#: user/modifydns.php:93
+msgid "DNS Zone deleted"
+msgstr "DNS ゾーンを削除しました。"
+
+#: user/modifydns.php:99
+msgid "DNS Zone could not be deleted"
+msgstr ""
+
+#: user/modifydns.php:112 user/modifyzone.php:112 user/modifyzone.php:268
+msgid ""
+"You may not add a zone as you are not a member of the customers admin group"
+msgstr ""
+
+#: user/modifydns.php:117 user/modifyzone.php:117
+msgid "Domain may not be blank"
+msgstr "ドメインは空にできないでしょう"
+
+#: user/modifydns.php:128 user/modifyzone.php:128
+#, php-format
+msgid "Invalid domain name %s"
+msgstr "無効なドメイン名「%s」です。"
+
+#: user/modifydns.php:140 user/modifyzone.php:140
+#, php-format
+msgid "Invalid hostname %s"
+msgstr "無効なホスト名「%s」です。"
+
+#: user/modifydns.php:158 user/modifyzone.php:169
+msgid "Invalid zone - you need at least two nameservers"
+msgstr "無効なゾーン - 少なくとも二つのネームサーバーが必要です"
+
+#: user/modifydns.php:164 user/modifyzone.php:174
+msgid "Invalid domain timeout values"
+msgstr "無効なドメインタイムアウト値です。"
+
+#: user/modifydns.php:168
+msgid "Serial Date can not be blank. Use YYYYMMDD."
+msgstr ""
+
+#: user/modifydns.php:173 user/modifyzone.php:183
+msgid "Invalid zone email address - no @ allowed, replace with ."
+msgstr ""
+"無効なゾーン電子メールアドレス - 「@」は許可されていません。「.」で置換します"
+
+#: user/modifydns.php:218 user/modifyzone.php:211
+#, php-format
+msgid "DNS Zone created %s"
+msgstr "DNS ゾーン「%s」を作成しました。<"
+
+#: user/modifydns.php:222
+msgid "DNS Zone records added from template.com zone"
+msgstr ""
+
+#: user/modifydns.php:228 user/modifyzone.php:216
+#, php-format
+msgid "DNS Zone %s could not be created"
+msgstr "DNS ゾーン「%s」を作成できませんでした。"
+
+#: user/modifydns.php:260 user/modifyzone.php:250
+msgid "DNS Zone Modified"
+msgstr "DNS ゾーンを修正しました。"
+
+#: user/modifydns.php:264 user/modifyzone.php:254
+msgid "DNS Zone could not be modifed. Try again."
+msgstr "DNS ゾーンを修正できませんでした。再度試してください。"
+
+#: user/modifydns.php:287
+msgid ""
+"You may not export a zone as you are not a member of the customers admin "
+"group"
+msgstr ""
+
+#: user/modifydns.php:309
+#, php-format
+msgid "Sent update to Backend Processor as file %s for domain %s"
+msgstr ""
+
+#: user/modifydns.php:314
+#, php-format
+msgid "Zone %s could not be exported.  Try again."
+msgstr "ゾーン「%s」をエクスポートができませんでした。再度試してください。"
+
+#: user/modifydns.php:325
+msgid ""
+"Create (manually and via a zone transfer) and maintain forward DNS zones."
+msgstr ""
+
+#: user/modifydns.php:326
+msgid ""
+" Zones in bold and tagged with a &Dagger; have changed domain records, but "
+"have not been exported yet."
+msgstr ""
+
+#: user/modifydns.php:356
+msgid "Refine Search on Domain"
+msgstr ""
+
+#: user/modifydns.php:380 user/modifydnsrecord.php:444
+msgid "Domain"
+msgstr "ドメイン"
+
+#: user/modifydns.php:382 user/modifyzone.php:359
+msgid "Primary NS"
+msgstr "プライマリ NS"
+
+#: user/modifydns.php:384 user/modifyzone.php:361
+msgid "Secondary NS"
+msgstr "セカンダリ NS"
+
+#: user/modifydns.php:386 user/modifyzone.php:363
+msgid "SerialDate"
+msgstr "シリアル日付"
+
+#: user/modifydns.php:396 user/modifyzone.php:373
+msgid "Min. TTL"
+msgstr "最小 TTL"
+
+#: user/modifydns.php:419 user/modifyzone.php:390
+msgid "Slave zone"
+msgstr "スレーブゾーン"
+
+#: user/modifydns.php:462
+msgid "Delete DNS Zone"
+msgstr "DNS ゾーンを削除する"
+
+#: user/modifydns.php:479
+msgid "Edit DNS Zone"
+msgstr "DNS ゾーンを編集する"
+
+#: user/modifydns.php:495
+msgid "Export DNS Zone"
+msgstr "DNS ゾーンをエクスポートする"
+
+#: user/modifydns.php:496 user/modifydns.php:533
+msgid "Are you sure to Export?"
+msgstr "本当にエクスポートしますか?"
+
+#: user/modifydns.php:502 user/modifyipform.php:424
+msgid "Whois"
+msgstr "Whois"
+
+#: user/modifydns.php:528
+msgid "Search found no DNS Zone entries"
+msgstr ""
+
+#: user/modifydns.php:532
+msgid "Export all changed DNS Zones"
+msgstr "すべての変更された DNS ゾーンをエクスポートする"
+
+#: user/modifydns.php:538
+msgid "Add a DNS Zone"
+msgstr "DNS ゾーンを追加する"
+
+#: user/modifydnsrecordform.php:45
+msgid "Add / Edit  DNS Host"
+msgstr "DNS ホストの追加/削除"
+
+#: user/modifydnsrecordform.php:60
+msgid "Host Record for domain: "
+msgstr "Éメインのホストレコード: "
+
+#: user/modifydnsrecordform.php:68
+msgid "DNS record"
+msgstr "DNS レコード"
+
+#: user/modifydnsrecordform.php:89 user/searchallform.php:83
+msgid "Host Name"
+msgstr "ホスト名"
+
+#: user/modifydnsrecordform.php:91
+msgid ""
+"Terminate Fully Qualified Domand Name's (FQDN) with a . eg. mywwwserver.com. "
+"to signify 'This domain'"
+msgstr ""
+
+#: user/modifydnsrecordform.php:99
+msgid "This domain"
+msgstr "このドメイン"
+
+#: user/modifydnsrecordform.php:110 user/modifydnsrecord.php:528
+msgid "Record Type"
+msgstr "レコードタイプ"
+
+#: user/modifydnsrecordform.php:118
+msgid "IP / Hostname"
+msgstr "IP アドレス / ホスト名"
+
+#: user/modifydnsrecordform.php:120
+msgid ""
+"For MX records, format is \"preference hostname\", eg. \"10 mymailserver.com."
+"\""
+msgstr ""
+
+#: user/modifydnsrecordform.php:127
+msgid "Sort Order"
+msgstr "ソート順"
+
+#: user/modifydnsrecord.php:41
+msgid "Zone Domain DNS Records"
+msgstr ""
+
+#: user/modifydnsrecord.php:91 user/modifydnsrecord.php:147
+msgid ""
+"You may not delete dns records as you are not a member of the customers "
+"admin group"
+msgstr ""
+
+#: user/modifydnsrecord.php:112
+#, php-format
+msgid ""
+"IP record %s updated in subnet '%s' due to deletion of auto created A record"
+msgstr ""
+
+#: user/modifydnsrecord.php:130
+msgid "Domain DNS Record Deleted."
+msgstr "ドメイン名の DNS レコードを削除しました。"
+
+#: user/modifydnsrecord.php:134
+msgid "DNS Record could not be deleted."
+msgstr "DNS レコードを削除できませんでした。"
+
+#: user/modifydnsrecord.php:178
+msgid "Domain Records Renumbered."
+msgstr "ドメインのレコードをリナンバリングしました。"
+
+#: user/modifydnsrecord.php:182
+msgid "DNS Records could not be renumbered."
+msgstr "ドメインのレコードをリナンバリングできませんでした。"
+
+#: user/modifydnsrecord.php:197
+msgid ""
+"You may not add a record as you are not a member of the customers admin group"
+msgstr ""
+
+#: user/modifydnsrecord.php:202
+msgid "Bind @ shortcut converted to Fully Qualified Domain Name (FQDN)"
+msgstr ""
+
+#: user/modifydnsrecord.php:209 user/modifydnsrecord.php:215
+msgid "Invalid hostname"
+msgstr "無効なホスト名です。"
+
+#: user/modifydnsrecord.php:213
+msgid "Host may not be blank"
+msgstr "ホスト名は空にできないでしょう。"
+
+#: user/modifydnsrecord.php:218
+msgid "Record Type may not be blank."
+msgstr ""
+
+#: user/modifydnsrecord.php:222
+msgid "IP / Hostname may not be blank."
+msgstr ""
+
+#: user/modifydnsrecord.php:229 user/modifydnsrecord.php:235
+#: user/modifydnsrecord.php:245 user/modifydnsrecord.php:261
+msgid "Invalid IP/ Hostname"
+msgstr ""
+
+#: user/modifydnsrecord.php:257
+msgid "For A type, IP / Hostname must be an IP address"
+msgstr ""
+
+#: user/modifydnsrecord.php:282
+msgid "Cannot create duplicate records"
+msgstr "複製レコードを作成できませんでした。"
+
+#: user/modifydnsrecord.php:328 user/modifydnsrecord.php:382
+msgid "Subnet IP record updated with hostname: "
+msgstr ""
+
+#: user/modifydnsrecord.php:351
+msgid "Host record added."
+msgstr "ホストレコードを追加しました。"
+
+#: user/modifydnsrecord.php:355
+msgid "Host record could not be added."
+msgstr "ホストレコードを追加できませんでした。"
+
+#: user/modifydnsrecord.php:364
+msgid "Could not find the record - possibly deleted by another user"
+msgstr "レコードを見つけることができませんでした - おそらく他のユーザーにより削除されました"
+
+#: user/modifydnsrecord.php:403
+msgid "Host Record Modified"
+msgstr "ホストレコードを修正しました。"
+
+#: user/modifydnsrecord.php:408
+msgid "Host record could not be modifed. Try again."
+msgstr "ホストレコードを修正できませんでした。再度試してください。"
+
+#: user/modifydnsrecord.php:437
+msgid "No domains found. Create some domains and try again."
+msgstr ""
+
+#: user/modifydnsrecord.php:445
+msgid "Master domains only"
+msgstr "マスタードメインのみ"
+
+#: user/modifydnsrecord.php:493
+msgid "Refine Search on Host"
+msgstr ""
+
+#: user/modifydnsrecord.php:524
+msgid "Sort-Order"
+msgstr ""
+
+#: user/modifydnsrecord.php:530
+msgid "IP/Hostname"
+msgstr "IP/ホスト名"
+
+#: user/modifydnsrecord.php:566
+msgid "Auto record"
+msgstr "自動レコード"
+
+#: user/modifydnsrecord.php:586
+msgid "Delete Record"
+msgstr "レコードを削除する"
+
+#: user/modifydnsrecord.php:595
+msgid "Edit Record"
+msgstr "レコードを編集する"
+
+#: user/modifydnsrecord.php:656
+msgid "Add a Host"
+msgstr "ホストを追加する"
+
+#: user/modifydnsrecord.php:660
+msgid "No Records found.  Please choose a domain and try again."
+msgstr "レコードがありません。ドメインを選んで再度試してください。"
+
+#: user/modifydnsrecord.php:664
+msgid "Renumber SortOrder"
+msgstr ""
+
+#: user/modifyipformmul.php:41
+msgid "Modify IP address details (range)"
+msgstr ""
+
+#: user/modifyipformmul.php:63
+msgid "IP Addresses to modify: "
+msgstr ""
+
+#: user/modifyipformmul.php:68 user/modifyipform.php:284
+msgid "Back to subnet"
+msgstr "サブネットに戻る"
+
+#: user/modifyipformmul.php:81 user/modifyipform.php:532
+#: user/requestip.php:263
+msgid "User information"
+msgstr "ユーザー情報"
+
+#: user/modifyipformmul.php:97 user/modifyipform.php:555
+#: user/requestip.php:284
+msgid "Telephone number"
+msgstr "電話番号"
+
+#: user/modifyipformmul.php:149
+msgid "Delete records"
+msgstr "レコードを削除する"
+
+#: user/modifyipformmul.php:150
+msgid ""
+"WARNING: Deleting an entry does not preserve the last modified information "
+"as the record is completely removed from the database to conserve space."
+msgstr ""
+
+#: user/modifyipform.php:77
+msgid "Modify IP address details"
+msgstr ""
+
+#: user/modifyipform.php:131
+msgid "There are no available addresses"
+msgstr ""
+
+#: user/modifyipform.php:152 admin/importbase.php:93 admin/importip.php:57
+msgid "File uploads may have been disabled in the php.ini configuration file"
+msgstr ""
+
+#: user/modifyipform.php:159
+#, php-format
+msgid ""
+"Possible file size exceeded php.ini or webserver limit of %s - break file "
+"into smaller parts"
+msgstr ""
+
+#: user/modifyipform.php:162 admin/importbase.php:101 admin/importip.php:65
+msgid "Possible file upload attack"
+msgstr ""
+
+#: user/modifyipform.php:168
+msgid "Filename must have a description - uploaded aborted"
+msgstr ""
+
+#: user/modifyipform.php:208
+msgid ""
+"File could not be moved to upload location - upload failed probably due to "
+"directory permission problem"
+msgstr ""
+
+#: user/modifyipform.php:240
+msgid ""
+"File could not be deleted - delete failed probably due to directory "
+"permission problem"
+msgstr ""
+
+#: user/modifyipform.php:267
+msgid ""
+"File could not be downloaded - download failed probably due to directory "
+"permission problem"
+msgstr ""
+
+#: user/modifyipform.php:394
+msgid "Requested addresses"
+msgstr "要求されたアドレス"
+
+#: user/modifyipform.php:403
+msgid "IP Address to modify:"
+msgstr ""
+
+#: user/modifyipform.php:409 user/modifyipform.php:415
+msgid " (Address active on network) "
+msgstr ""
+
+#: user/modifyipform.php:429
+msgid "Ping"
+msgstr "Ping"
+
+#: user/modifyipform.php:432
+msgid "Traceroute"
+msgstr "Traceroute"
+
+#: user/modifyipform.php:442
+msgid "Update hostname from DNS"
+msgstr "DNS でホスト名を更新"
+
+#: user/modifyipform.php:450
+msgid "Query device info via SNMP"
+msgstr ""
+
+#: user/modifyipform.php:515
+msgid "The subnet mask configured on the device appears to be incorrect!"
+msgstr ""
+
+#: user/modifyipform.php:550 user/requestip.php:279
+msgid "Device hostname"
+msgstr "デバイスホスト名"
+
+#: user/modifyipform.php:560 user/requestip.php:289
+msgid "MAC address"
+msgstr "MAC アドレス"
+
+#: user/modifyipform.php:565
+msgid "Linked address"
+msgstr "リンクアドレス"
+
+#: user/modifyipform.php:566
+msgid ""
+"Link this address by pointing it to another address - useful for NAT "
+"definitions"
+msgstr ""
+
+#: user/modifyipform.php:573
+msgid "Go to address"
+msgstr "アドレスに移動"
+
+#: user/modifyipform.php:650
+msgid "Upload files"
+msgstr "ファイルアップロード"
+
+#: user/modifyipform.php:665
+msgid "Filename"
+msgstr "ファイル名"
+
+#: user/modifyipform.php:669
+msgid "Size"
+msgstr "サイズ"
+
+#: user/modifyipform.php:671
+msgid "Date"
+msgstr "日付"
+
+#: user/modifyipform.php:694
+msgid "Delete file"
+msgstr "ファイルを削除する"
+
+#: user/modifyipform.php:699
+msgid "Download file"
+msgstr "ファイルをダウンロードする"
+
+#: user/modifyipform.php:706
+msgid "Filename description"
+msgstr "ファイルの説明"
+
+#: user/modifyipform.php:711 admin/importbaseform.php:77
+#: admin/importipform.php:67
+msgid "File name"
+msgstr "ファイル名"
+
+#: user/modifyipform.php:720
+msgid "Upload file"
+msgstr "アップロードファイル"
+
+#: user/modifyipform.php:744
+msgid "Delete record"
+msgstr "レコードを削除する"
+
+#: user/modifyipform.php:745
+msgid ""
+"WARNING: Deleting an entry does not preserve the last modified information "
+"as the record is completely removed from the database to conserve space. "
+msgstr ""
+
+#: user/modifyipform.php:748
+msgid "Deleting this record will delete all associated uploaded files!"
+msgstr ""
+
+#: user/modifysubnet.php:70
+msgid ""
+"You may not modify this subnet for this customer as you are not a member of "
+"the new customers admin group"
+msgstr ""
+
+#: user/modifysubnet.php:76
+msgid "You need to enter a description for the subnet"
+msgstr ""
+
+#: user/modifysubnet.php:90
+msgid ""
+"You may not move this subnet for this customer as you are not a member of "
+"the original customers admin group"
+msgstr ""
+
+#: user/modifysubnet.php:112 user/modifysubnet.php:198
+#, php-format
+msgid "Subnet %s not modified - out of defined authority boundary"
+msgstr ""
+
+#: user/modifysubnet.php:117
+msgid ""
+"Subnet could not be created - possibly overlaps with an existing subnet on "
+"new customers network"
+msgstr ""
+
+#: user/modifysubnet.php:255
+msgid "Subnet modified"
+msgstr "サブネットを修正しました。"
+
+#: user/modifysubnet.php:262
+msgid "Subnet could not be modified"
+msgstr "サブネットを修正できませんでした。"
+
+#: user/modifysubnet.php:329
+msgid "Move subnet to new customer"
+msgstr "新規カスタマーのサブネットを移動する<"
+
+#: user/modifysubnet.php:332
+msgid "Duplicate subnet on new customer"
+msgstr "新規カスタマーのサブネットを複製する"
+
+#: user/modifysubnet.php:335
+msgid "Duplicate subnet on new customer without IP detail"
+msgstr ""
+
+#: user/modifyzoneform.php:45
+msgid "Create DNS Reverse Zones"
+msgstr "DNS 逆引きゾーンを作成する"
+
+#: user/modifyzoneform.php:102
+msgid "Maintain reverse zone SOA information"
+msgstr ""
+
+#: user/modifyzoneform.php:106
+msgid "Reverse zone information"
+msgstr "予約ゾーン情報"
+
+#: user/modifyzoneform.php:112
+msgid "Sample domain would be 20.172.in-addr.arpa"
+msgstr ""
+
+#: user/modifyzoneform.php:123
+msgid "Zone (Base IP of Zone)"
+msgstr ""
+
+#: user/modifyzoneform.php:130
+msgid "Reverse zone size/mask"
+msgstr "逆引きゾーンサイズ/マスク"
+
+#: user/modifyzoneform.php:198
+msgid "Reverse zone SOA header information"
+msgstr "逆引きゾーン SOA ヘッダー情報"
+
+#: user/modifyzoneform.php:238
+msgid "Reverse zone location"
+msgstr "逆引きゾーン位置"
+
+#: user/modifyzone.php:42
+msgid "DNS Reverse Zones"
+msgstr "DNS 逆引きゾーン"
+
+#: user/modifyzone.php:79
+msgid ""
+"You may not delete a zone as you are not a member of the customers admin "
+"group"
+msgstr ""
+
+#: user/modifyzone.php:93
+msgid "Zone deleted"
+msgstr "ゾーンを削除しました。"
+
+#: user/modifyzone.php:99
+msgid "Zone could not be deleted."
+msgstr "ゾーンの削除が出来ませんでした。"
+
+#: user/modifyzone.php:178
+msgid "Serial Date can not be blank.  Use YYMMDD."
+msgstr ""
+
+#: user/modifyzone.php:295
+msgid "Zone could not be exported.  Try again."
+msgstr "ゾーンをエクスポートができませんでした。再度試してください。"
+
+#: user/modifyzone.php:333
+msgid "Refine Search on Zone"
+msgstr ""
+
+#: user/modifyzone.php:357
+msgid "Zone"
+msgstr "ゾーン"
+
+#: user/modifyzone.php:443
+msgid "Delete Zone"
+msgstr "ゾーンを削除する"
+
+#: user/modifyzone.php:461
+msgid "Edit Zone"
+msgstr "ゾーンを編集する"
+
+#: user/modifyzone.php:468
+msgid "Export Zone"
+msgstr "ゾーンをエクスポートする"
+
+#: user/modifyzone.php:493
+msgid "Search found no Zone entries"
+msgstr ""
+
+#: user/modifyzone.php:498
+msgid "Add a Zone"
+msgstr "ゾーンを追加する"
+
+#: user/ping.php:40
+msgid "Ping results"
+msgstr ""
+
+#: user/requestip.php:64
+msgid "You need to enter request details for the ip address request"
+msgstr ""
+
+#: user/requestip.php:67
+msgid "You need to enter user details for the request"
+msgstr "要求のユーザーの詳細を入力する必要があります。"
+
+#: user/requestip.php:70
+msgid "You need to enter location details for the request"
+msgstr "要求の位置の詳細を入力する必要があります。"
+
+#: user/requestip.php:73
+msgid "You need to enter description details for the request"
+msgstr "要求の詳細説明を入力する必要があります。"
+
+#: user/requestip.php:76
+msgid "You need to enter a telephone number for the request"
+msgstr ""
+
+#: user/requestip.php:115
+msgid "Maximum number of outstanding IP requests exceeded"
+msgstr ""
+
+#: user/requestip.php:141
+msgid "IP address request created"
+msgstr ""
+
+#: user/requestip.php:183
+msgid "IP request E-mail message sent"
+msgstr ""
+
+#: user/requestip.php:189
+msgid "Request could not be created - possibly a duplicate request"
+msgstr "要求を作成できませんでした - おそらく複製要求です"
+
+#: user/requestip.php:199
+msgid ""
+"Complete the details below to request an IP address. An administrator will "
+"need to action the request before an address will be allocated."
+msgstr ""
+
+#: user/requestip.php:255
+msgid "Request details"
+msgstr "要求の詳細"
+
+#: user/requestip.php:256
+msgid ""
+"Enter full details describing the request to enable the administrators to "
+"allocate the correct IP address on the network"
+msgstr ""
+
+#: user/searchallform.php:43
+msgid "Search for user info"
+msgstr "ユーザー情報を検索する"
+
+#: user/searchallform.php:53
+msgid "Search for user info searches the individual IP address records."
+msgstr ""
+
+#: user/searchallform.php:72
+msgid "Search field"
+msgstr "検索項目"
+
+#: user/searchallform.php:79
+msgid "Field to search"
+msgstr ""
+
+#: user/searchallform.php:85
+msgid "Search in Template"
+msgstr ""
+
+#: user/searchallform.php:142
+msgid "Date to search from"
+msgstr ""
+
+#: user/searchallform.php:143
+msgid "Day"
+msgstr ""
+
+#: user/searchallform.php:144 user/searchallform.php:179
+#: user/searchallform.php:195
+msgid "Any"
+msgstr ""
+
+#: user/searchallform.php:178
+msgid "Month"
+msgstr ""
+
+#: user/searchallform.php:180
+msgid "January"
+msgstr "1 月"
+
+#: user/searchallform.php:181
+msgid "February"
+msgstr "2 月"
+
+#: user/searchallform.php:182
+msgid "March"
+msgstr "3 月"
+
+#: user/searchallform.php:183
+msgid "April"
+msgstr "4 月"
+
+#: user/searchallform.php:184
+msgid "May"
+msgstr "5 月"
+
+#: user/searchallform.php:185
+msgid "June"
+msgstr "6 月"
+
+#: user/searchallform.php:186
+msgid "July"
+msgstr "7 月"
+
+#: user/searchallform.php:187
+msgid "August"
+msgstr "8 月"
+
+#: user/searchallform.php:188
+msgid "September"
+msgstr "9 月"
+
+#: user/searchallform.php:189
+msgid "October"
+msgstr "10 月"
+
+#: user/searchallform.php:190
+msgid "November"
+msgstr "11 月"
+
+#: user/searchallform.php:191
+msgid "December"
+msgstr "12 月"
+
+#: user/searchallform.php:194
+msgid "Year"
+msgstr "年"
+
+#: user/searchallform.php:215
+msgid "Search criteria (only display records matching the regular expression)"
+msgstr ""
+
+#: user/searchallform.php:217
+msgid "Search criteria (only display records containing)"
+msgstr ""
+
+#: user/searchall.php:57
+msgid "You need to enter a longer search criteria."
+msgstr ""
+
+#: user/searchall.php:62
+msgid "Invalid search field."
+msgstr "検索フィールドが無効です。"
+
+#: user/searchall.php:69
+msgid "Invalid search date."
+msgstr "検索の日付が無効です。"
+
+#: user/searchall.php:81 user/searchall.php:105
+msgid "Regular expression repetition-operator operand invalid"
+msgstr ""
+
+#: user/searchall.php:219
+#, php-format
+msgid "Search filter on %s: "
+msgstr ""
+
+#: user/traceroute.php:43
+msgid "Traceroute results"
+msgstr "Traceroute の結果"
+
+#: user/whois.php:45
+msgid "WHOIS results"
+msgstr "WHOIS の結果"
+
+#: user/whois.php:60
+msgid "Whois query failed - are you behind a firewall?"
+msgstr ""
+
+#: admin/changepassword.php:39
+msgid "Change user password"
+msgstr "ユーザーのパスワードを変更する"
+
+#: admin/changepassword.php:54 admin/usermanager.php:692
+#: admin/usermanager.php:917
+msgid "The password entered must be at least five characters"
+msgstr "パスワードは少なくとも 5 文字入力しなければなりません"
+
+#: admin/changepassword.php:57 admin/usermanager.php:695
+#: admin/usermanager.php:921
+msgid "The passwords entered do not match"
+msgstr "入力されたパスワードが一致しません"
+
+#: admin/changepassword.php:72 admin/usermanager.php:931
+#, php-format
+msgid "User %s changed password"
+msgstr "ユーザー %s のパスワードを変更しました。"
+
+#: admin/changepassword.php:76 admin/usermanager.php:935
+msgid "Password changed"
+msgstr "パスワードを変更しました。"
+
+#: admin/changepassword.php:79 admin/usermanager.php:939
+msgid "Password could not be changed"
+msgstr "パスワードを変更できませんでした。"
+
+#: admin/changepassword.php:88 admin/changepassword.php:91
+#, php-format
+msgid "Change password for user %s"
+msgstr "ユーザー %s のパスワードを変更する"
+
+#: admin/changepassword.php:108 admin/usermanager.php:320
+msgid "New password (case sensitive!):"
+msgstr "新規パスワード (英大小文字を区別します!):"
+
+#: admin/changepassword.php:114 admin/usermanager.php:324
+msgid "New password (again):"
+msgstr "新規パスワード (再度)"
+
+#: admin/changesettings.php:47
+msgid "Change display settings"
+msgstr "表示設定を変更"
+
+#: admin/changesettings.php:69
+msgid "Settings changed"
+msgstr "設定を変更しました。"
+
+#: admin/changesettings.php:88
+msgid "Change display settings for this workstation"
+msgstr "このワークステーションの表示設定を変更する"
+
+#: admin/changesettings.php:90
+msgid "Setting paranoid prompts 'Are you sure?' for all deletes"
+msgstr ""
+
+#: admin/changesettings.php:91 admin/changesettings.php:99
+#: admin/usermanager.php:273 admin/usermanager.php:279
+#: admin/usermanager.php:427 admin/usermanager.php:433
+msgid "No"
+msgstr "いいえ"
+
+#: admin/changesettings.php:92 admin/changesettings.php:100
+#: admin/usermanager.php:274 admin/usermanager.php:278
+#: admin/usermanager.php:428 admin/usermanager.php:434
+msgid "Yes"
+msgstr "はい"
+
+#: admin/changesettings.php:98
+msgid ""
+"Setting poll forces a scan of the IP address before assigning it, and warns "
+"the user if the address is active. This slows down address assignment."
+msgstr ""
+
+#: admin/changesettings.php:126
+msgid "Theme:"
+msgstr "テーマ:"
+
+#: admin/deletebounds.php:39
+msgid "Delete authority boundary results"
+msgstr ""
+
+#: admin/deletebounds.php:61 admin/usermanager.php:1100
+msgid "Boundary deleted"
+msgstr ""
+
+#: admin/deletebounds.php:64 admin/usermanager.php:1103
+msgid "Boundary could not be deleted"
+msgstr ""
+
+#: admin/displayauditlog.php:88
+msgid "Timestamp"
+msgstr "タイムスタンプ"
+
+#: admin/displayauditlog.php:123
+msgid "Total records:"
+msgstr "総レコード数:"
+
+#: admin/displayboundsform.php:41
+msgid "Display authority boundary information"
+msgstr ""
+
+#: admin/displayboundsform.php:72
+msgid "Boundary address"
+msgstr "バウンダリアドレス"
+
+#: admin/displayboundsform.php:74
+msgid "Boundary mask"
+msgstr "バウンダリマスク"
+
+#: admin/displayboundsform.php:76
+msgid "Group action"
+msgstr "グループの操作"
+
+#: admin/displayboundsform.php:99 admin/usermanager.php:608
+msgid "Delete boundary"
+msgstr "バウンダリを削除する"
+
+#: admin/exportbaseform.php:41
+msgid "Export subnet data"
+msgstr "サブネットデータをエクスポートする"
+
+#: admin/exportbaseform.php:47
+msgid ""
+"Export network data to flat ascii files.  The file will contain three "
+"columns each delimited by TAB. The first column contains the IP base "
+"address, the second the description and the third the mask in dotted decimal "
+"format."
+msgstr ""
+
+#: admin/exportipform.php:41
+msgid "Export IP details data"
+msgstr "IP アドレスの詳細データをエクスポートする"
+
+#: admin/exportipform.php:47
+msgid ""
+"Export IP details data to flat ascii files.  The file will contain six "
+"columns each delimited by TAB. The first column contains the IP address, the "
+"second the user, the third the location, the fourth the description, fifth "
+"the hostname and the sixth the telephone number."
+msgstr ""
+
+#: admin/exportipform.php:50
+msgid ""
+"The user defined fields defined in the iptemplate.xml file will be appended "
+"as additional columns to the above in the order specified in the template."
+msgstr ""
+
+#: admin/importbaseform.php:41
+msgid "Import subnet data"
+msgstr "サブネットデータをインポートする"
+
+#: admin/importbaseform.php:47
+msgid ""
+"Import network data from flat ascii files.  The file should contain three "
+"columns each delimited by TAB. The first column contains the IP base "
+"address, the second the description and the third the mask either in dotted "
+"decimal format or in bit format."
+msgstr ""
+
+#: admin/importbaseform.php:49
+msgid ""
+"If the import file has more than three columns, each additional column will "
+"be added to the user defined fields defined in the basetemplate.xml file in "
+"the order specified in the template."
+msgstr ""
+
+#: admin/importbaseform.php:51 admin/importipform.php:53
+msgid ""
+"If an error occurs during the import, the process will stop. Records that "
+"have been successfully imported should be deleted from the import file, the "
+"error corrected and the import resumed."
+msgstr ""
+
+#: admin/importbase.php:83
+msgid "Import subnet results"
+msgstr ""
+
+#: admin/importbase.php:98 admin/importip.php:62
+msgid ""
+"Possible file size exceeded php.ini or webserver limit of 2meg - break file "
+"into smaller parts"
+msgstr ""
+
+#: admin/importbase.php:114 admin/importip.php:122
+msgid "File could not be opened."
+msgstr ""
+
+#: admin/importbase.php:125 admin/importbase.php:130 admin/importip.php:130
+#: admin/importip.php:135
+msgid "Template could not be opened."
+msgstr "テンプレートを開くことができませんでした。"
+
+#: admin/importbase.php:140 admin/importip.php:142
+msgid "Importing row:"
+msgstr "行をインポート中:"
+
+#: admin/importbase.php:145 admin/importip.php:163
+msgid "Row is blank - ignoring"
+msgstr "行が空です - 無効です"
+
+#: admin/importbase.php:150
+#, php-format
+msgid "Row %u of imported file is not the correct format [ %s ]"
+msgstr ""
+
+#: admin/importbase.php:179 admin/importip.php:204
+msgid "Row failed template verify."
+msgstr ""
+
+#: admin/importbase.php:190
+msgid "No description for the subnet"
+msgstr "サブネットの詳細がありません"
+
+#: admin/importbase.php:198
+#, php-format
+msgid "Invalid IP address [ %s ]"
+msgstr "無効な IP アドレス [ %s ]"
+
+#: admin/importbase.php:202
+msgid "Subnet mask is invalid"
+msgstr "サブネットマスクが無効です。"
+
+#: admin/importbase.php:211
+#, php-format
+msgid ""
+"Subnet could not be updated - start address and size do not EXACTLY match "
+"existing subnet [ %s ]"
+msgstr ""
+
+#: admin/importbase.php:214
+#, php-format
+msgid "Row is duplicate - updating with [ %s, %s ]"
+msgstr ""
+
+#: admin/importbase.php:245 admin/importbase.php:287
+msgid "Error inserting/updating info."
+msgstr "情報の追加・更新時にエラーです。"
+
+#: admin/importbase.php:252
+#, php-format
+msgid "User %s modified subnet details %s size %u customer cust %u"
+msgstr ""
+
+#: admin/importbase.php:267
+#, php-format
+msgid "User %s created new subnet %s size %u cust %u"
+msgstr ""
+
+#: admin/importbase.php:296
+msgid "Subnet could not be created"
+msgstr "サブネットマスクを作成できませんでした。"
+
+#: admin/importipform.php:41
+msgid "Import IP details data"
+msgstr ""
+
+#: admin/importipform.php:47
+msgid ""
+"Import IP details data in XML format. The data is in the same format "
+"generated by <a HREF=\"http://www.insecure.org\">NMAP's</a> -oX parameter. "
+"This is useful to scan and obtain records for sites that have no previous "
+"information."
+msgstr ""
+
+#: admin/importipform.php:49
+msgid ""
+"Import IP details data from flat ascii files.  The file should contain a "
+"minimum of six columns each delimited by TAB. The first column contains the "
+"IP address, the second the user, the third the location, the fourth the "
+"description, the fifth the hostname and the sixth the telephone number."
+msgstr ""
+
+#: admin/importipform.php:51
+msgid ""
+"If the import file has more than six columns, each additional column will be "
+"added to the user defined fields defined in the iptemplate.xml file in the "
+"order specified in the template."
+msgstr ""
+
+#: admin/importipform.php:55
+msgid ""
+"NOTE: Any number of IP address records for various subnets can be in the "
+"file.  Any existing information will be overwritten."
+msgstr ""
+
+#: admin/importipform.php:56
+msgid "Imported addresses will only be added to existing subnets."
+msgstr ""
+
+#: admin/importipform.php:73
+msgid "Format"
+msgstr "形式"
+
+#: admin/importipform.php:74
+msgid "Standard fields - text format"
+msgstr "標準項目 - テキスト形式"
+
+#: admin/importipform.php:75
+msgid "Standard fields - NMAP XML format"
+msgstr "ș準形式 - NMAP XML 形式"
+
+#: admin/importip.php:43
+msgid "Import IP details result"
+msgstr ""
+
+#: admin/importip.php:82
+msgid "XML not available"
+msgstr "有効な XML ではありません。"
+
+#: admin/importip.php:86
+msgid "Data not in XML format"
+msgstr "XML 形式にデータがありません。"
+
+#: admin/importip.php:92
+msgid "Importing record:"
+msgstr "レコードをインポート中:"
+
+#: admin/importip.php:170
+msgid "Row not the correct format."
+msgstr "行が正しくない書式です。"
+
+#: admin/importip.php:217
+#, php-format
+msgid "Subnet could not be found for IP address %s"
+msgstr "IP アドレス %s のサブネットが見つかりませんでした。"
+
+#: admin/install.php:46
+msgid "Install/Upgrade IPPlan"
+msgstr "IPPlan のインストール/アップグレード"
+
+#: admin/install.php:49
+msgid "IPplan v4.57 Installation System"
+msgstr "IPplan バージョン 4.57 インストールシステム"
+
+#: admin/install.php:70
+msgid "Language"
+msgstr "言語"
+
+#: admin/install.php:72
+msgid "Please choose your language:"
+msgstr "言語を選んでください"
+
+#: admin/install.php:83
+msgid "  Change  "
+msgstr "  変更する "
+
+#: admin/install.php:92
+msgid "IF YOU ARE UPGRADING IPPLAN, BACKUP YOUR DATABASE NOW"
+msgstr ""
+
+#: admin/install.php:93
+msgid "THERE IS NO WAY TO RECOVER YOUR DATA IF SOMETHING GOES WRONG."
+msgstr ""
+
+#: admin/install.php:99
+msgid ""
+"For security purposes, it is highly recomended that IPPlan is installed on "
+"an SSL Webserver."
+msgstr ""
+
+#: admin/install.php:102
+msgid ""
+"Production systems need to use a transaction-aware database table. Do not "
+"use MYISAM (use INNODB) and enable it in config.php"
+msgstr ""
+
+#: admin/install.php:105
+msgid "Read all Instructions carefully before proceeding!"
+msgstr ""
+
+#: admin/install.php:108
+msgid ""
+"Have you read the <a href=\"http://iptrack.sourceforge.net/doku.php?id=faq"
+"\">FAQ</a>? How about the <a href=\"http://iptrack.sourceforge.net/"
+"documentation/\">User Manual</a>? "
+msgstr ""
+
+#: admin/install.php:109
+msgid "Have you read the UPGRADE document if upgrading?"
+msgstr ""
+
+#: admin/install.php:112
+msgid "What would you like to do today?"
+msgstr ""
+
+#: admin/install.php:119
+msgid ""
+"Would you like us to run the SQL against the database defined in config.php "
+"or would you rather print it to the screen so you can do it yourself?"
+msgstr ""
+
+#: admin/install.php:121
+msgid "Run the SQL Now"
+msgstr "今 SQL を実行する"
+
+#: admin/install.php:122
+msgid "Just print it to the screen"
+msgstr ""
+
+#: admin/install.php:123
+msgid "display"
+msgstr "表示"
+
+#: admin/install.php:126
+msgid ""
+"If you are displaying the schema, please remove the comments with a text "
+"editor before executing into your database."
+msgstr ""
+
+#: admin/install.php:128
+msgid "Go!"
+msgstr ""
+
+#: admin/maintenance.php:42
+msgid "IPplan Maintenance"
+msgstr "IPplan メンテナンス"
+
+#: admin/maintenance.php:56
+msgid "You need MySQL v4.0.0 or higher for this function!"
+msgstr "この機能は MySQL 4.0.0 以上が必要です!"
+
+#: admin/maintenance.php:101
+msgid "Requested IP addresses cleared"
+msgstr "要求された IP アドレスを消去しました"
+
+#: admin/maintenance.php:105
+msgid "Requested IP addresses cleared!"
+msgstr "要求された IP アドレスを消去しました!"
+
+#: admin/maintenance.php:108
+msgid "Requested IP addresses could not be cleared."
+msgstr ""
+
+#: admin/maintenance.php:116
+msgid "Audit log cleared"
+msgstr "監査ログを作成しました。"
+
+#: admin/maintenance.php:120
+msgid "Audit log cleared!"
+msgstr "監査ログを消去しました!"
+
+#: admin/maintenance.php:123
+msgid "Audit log could not be cleared."
+msgstr "監査ログを消去できませんでした。"
+
+#: admin/maintenance.php:151
+msgid "Customer index"
+msgstr "カスタマーインデックス"
+
+#: admin/maintenance.php:176
+msgid ""
+"Are you sure? THIS ACTION WILL DELETE ALL TRACES OF THE CUSTOMER INCLUDING "
+"ALL SUBNETS, AREAS, RANGES AND DNS ZONES!"
+msgstr ""
+
+#: admin/maintenance.php:204
+msgid "Perform the selected IPplan database maintenance."
+msgstr ""
+
+#: admin/maintenance.php:214
+msgid "Display list of customer indexes"
+msgstr ""
+
+#: admin/maintenance.php:224
+msgid "Clear IP address request list"
+msgstr ""
+
+#: admin/maintenance.php:234
+msgid "Clear Audit Log"
+msgstr "監査ログを消去する"
+
+#: admin/usermanager.php:42
+msgid "User Manager"
+msgstr "ユーザー管理"
+
+#: admin/usermanager.php:102
+msgid "Search Result"
+msgstr "検索結果"
+
+#: admin/usermanager.php:108
+msgid "No Matches Found"
+msgstr "一致するものが見つかりません"
+
+#: admin/usermanager.php:137
+msgid "All Groups"
+msgstr "すべてのグループ"
+
+#: admin/usermanager.php:145
+msgid "No users in group"
+msgstr "グループにユーザーがいません"
+
+#: admin/usermanager.php:161
+msgid "Orphan Users"
+msgstr ""
+
+#: admin/usermanager.php:166
+msgid "Current Users/Groups"
+msgstr "現在のユーザー/グループ"
+
+#: admin/usermanager.php:170
+msgid "New User"
+msgstr "新規ユーザー"
+
+#: admin/usermanager.php:173
+msgid "New Group"
+msgstr "新規グループ"
+
+#: admin/usermanager.php:180 admin/usermanager.php:187
+msgid "Search"
+msgstr "検索"
+
+#: admin/usermanager.php:188
+msgid "Edit Users/Groups"
+msgstr "ユーザー/グループを編集する"
+
+#: admin/usermanager.php:190
+msgid "Click on a group or user"
+msgstr "グループまたはユーザーをクリックします"
+
+#: admin/usermanager.php:255 admin/usermanager.php:282
+msgid "Create group"
+msgstr "グループを作成する"
+
+#: admin/usermanager.php:258
+msgid "Group name:"
+msgstr "グループの名前:"
+
+#: admin/usermanager.php:265 admin/usermanager.php:424
+msgid "Group description:"
+msgstr "グループの説明:"
+
+#: admin/usermanager.php:272 admin/usermanager.php:426
+msgid "Group can create/modify/delete customers?"
+msgstr "グループはカスタマーの作成/編集/削除ができるようにしますか?"
+
+#: admin/usermanager.php:277 admin/usermanager.php:431
+msgid "Group can view any customers data?"
+msgstr "グループはいくつかのカスタマーデータを閲覧することができますか?"
+
+#: admin/usermanager.php:305
+msgid "Real Name: "
+msgstr "本名:"
+
+#: admin/usermanager.php:310
+msgid "Delete User"
+msgstr "ユーザーを削除する"
+
+#: admin/usermanager.php:316 admin/usermanager.php:329
+msgid "Change Password"
+msgstr "パスワードを変更する"
+
+#: admin/usermanager.php:356
+msgid "Add User to Group"
+msgstr "グループにユーザーを追加する"
+
+#: admin/usermanager.php:376
+msgid "Group Membership"
+msgstr "グループメンバーシップ"
+
+#: admin/usermanager.php:390
+msgid " Remove From Group"
+msgstr ""
+
+#: admin/usermanager.php:409
+msgid "Editing Group:"
+msgstr "グループ編集中:"
+
+#: admin/usermanager.php:410
+msgid " Description: "
+msgstr "説明:"
+
+#: admin/usermanager.php:416
+msgid "Delete Group"
+msgstr "グループを削除する"
+
+#: admin/usermanager.php:421
+msgid "Modify group"
+msgstr "グループを修正する"
+
+#: admin/usermanager.php:437
+msgid "Number of reserved addresses at start of subnets:"
+msgstr ""
+
+#: admin/usermanager.php:438
+msgid ""
+"NOTE: if the user belongs to multiple groups and one of the groups does not "
+"contain a reserved limit, then the user is allowed all actions"
+msgstr ""
+
+#: admin/usermanager.php:445
+msgid "Update"
+msgstr "更新する"
+
+#: admin/usermanager.php:463
+msgid "User Membership"
+msgstr "ユーザーメンバーシップ"
+
+#: admin/usermanager.php:473
+msgid "Add User"
+msgstr "ユーザーを追加する"
+
+#: admin/usermanager.php:490
+msgid "Current Members"
+msgstr "現在のメンバー"
+
+#: admin/usermanager.php:506
+msgid "Remove From Group"
+msgstr "グループから削除する"
+
+#: admin/usermanager.php:516
+msgid ""
+"NOTE: if the user belongs to multiple groups and one of the groups does not "
+"contain authority boundaries, then the user is allowed all actions"
+msgstr ""
+
+#: admin/usermanager.php:518
+msgid "Authority Boundaries"
+msgstr ""
+
+#: admin/usermanager.php:524
+msgid "Authority boundary start address"
+msgstr ""
+
+#: admin/usermanager.php:535
+msgid "Authority size/mask"
+msgstr ""
+
+#: admin/usermanager.php:555
+msgid "Add Boundary"
+msgstr "バウンダリを追加する"
+
+#: admin/usermanager.php:565 admin/usermanager.php:594
+msgid "Read only group"
+msgstr "読み込み専用グループ"
+
+#: admin/usermanager.php:588
+msgid "Current Boundaries"
+msgstr "現在のバウンダリ"
+
+#: admin/usermanager.php:627
+msgid "Create new user"
+msgstr "新規ユーザーを作成する"
+
+#: admin/usermanager.php:628
+msgid "User-id (case sensitive!):"
+msgstr "ユーザー ID (英大小文字を区別します!):"
+
+#: admin/usermanager.php:633
+msgid "User's fullname:"
+msgstr "ユーザーのフルネーム:"
+
+#: admin/usermanager.php:639
+msgid "Password (case sensitive!):"
+msgstr "パスワード (英大小文字を区別します!)"
+
+#: admin/usermanager.php:643
+msgid "Password (again):"
+msgstr "パスワード (再度)"
+
+#: admin/usermanager.php:656
+msgid "Group"
+msgstr "グループ"
+
+#: admin/usermanager.php:661
+msgid "Create User"
+msgstr "ユーザーを作成する"
+
+#: admin/usermanager.php:686
+msgid "The user-id must be longer"
+msgstr "ユーザー ID はもっと長くなければなりません"
+
+#: admin/usermanager.php:689
+msgid "The user description must be longer"
+msgstr "ユーザーの説明はもっと長くなければなりません"
+
+#: admin/usermanager.php:724
+msgid "Existing user overwritten"
+msgstr ""
+
+#: admin/usermanager.php:726
+msgid "User created"
+msgstr "ユーザーを作成しました。"
+
+#: admin/usermanager.php:730
+msgid "User could not be created"
+msgstr "ユーザーを作成できませんでした。"
+
+#: admin/usermanager.php:745
+msgid "The group name must be longer"
+msgstr "グループ名はもっと長くなければなりません"
+
+#: admin/usermanager.php:748 admin/usermanager.php:988
+msgid "Reserved addresses out of range"
+msgstr "逆引きアドレスが範囲外です"
+
+#: admin/usermanager.php:751 admin/usermanager.php:985
+msgid "The group description must be longer"
+msgstr "グループの説明はもっと長くなければなりません"
+
+#: admin/usermanager.php:754
+msgid "Only numbers and digits are allowed in the group name"
+msgstr ""
+
+#: admin/usermanager.php:781
+msgid "Group created"
+msgstr "グループを作成しました。"
+
+#: admin/usermanager.php:786
+msgid "Group could not be created - possibly a duplicate"
+msgstr "グループを作成できませんでした - おそらく複製です。"
+
+#: admin/usermanager.php:802
+msgid "User deleted from group"
+msgstr "グループからユーザーを削除しました。"
+
+#: admin/usermanager.php:811 admin/usermanager.php:861
+msgid "User could not be deleted from group"
+msgstr "グループからユーザーを削除できませんでした"
+
+#: admin/usermanager.php:839
+msgid "User could not be deleted"
+msgstr "ユーザーを削除できませんでした"
+
+#: admin/usermanager.php:871
+msgid ""
+"Cannot delete group because the following customers are assigned to the "
+"group:"
+msgstr ""
+
+#: admin/usermanager.php:884
+msgid ""
+"Cannot delete group because the following subnets are assigned to the group:"
+msgstr ""
+
+#: admin/usermanager.php:904
+msgid "Group could not be deleted"
+msgstr "グループを削除できませんでした。"
+
+#: admin/usermanager.php:966
+msgid "User added to group"
+msgstr "グループにユーザーを追加しました。"
+
+#: admin/usermanager.php:974
+msgid "User could not be added to group"
+msgstr "ユーザーをグループに追加できませんでした。"
+
+#: admin/usermanager.php:1014
+msgid "Group details could not be modified"
+msgstr "グループの詳細を修正できませんでした。"
+
+#: admin/usermanager.php:1033 admin/usermanager.php:1044
+msgid "Boundary cannot be created - overlaps with existing boundary"
+msgstr ""
+
+#: admin/usermanager.php:1038
+msgid "Boundary address may not be blank"
+msgstr ""
+
+#: admin/usermanager.php:1040
+msgid "Invalid boundary address"
+msgstr "無効なバウンダリアドレスです。"
+
+#: admin/usermanager.php:1064
+msgid "Boundary created"
+msgstr "バウンダリを作成しました。"
+
+#: admin/usermanager.php:1068
+msgid "Boundary could not be created"
+msgstr "バウンダリを作成できませんでした。"
+
+#~ msgid "Area deleted"
+#~ msgstr "エリアを削除しました。"
+
+#~ msgid "Range deleted"
+#~ msgstr "範囲を削除しました。"
+
+#~ msgid "Zone created"
+#~ msgstr "ゾーンを作成しました。"
+
+#~ msgid "User %s modified zone %s."
+#~ msgstr "ユーザー %s をゾーン %s で修正しました。"
+
+#~ msgid "Zone Modified"
+#~ msgstr "ゾーンを修正しました。"
+
+#~ msgid "User-id"
+#~ msgstr "ユーザー ID"
+
+#~ msgid "IPPlan User Administration"
+#~ msgstr "IPPlan ユーザー管理"
+
+#~ msgid "User deleted"
+#~ msgstr "ユーザーを削除しました。"
+
+#~ msgid "Group deleted"
+#~ msgstr "グループを削除しました。"
+
+#~ msgid "Group description"
+#~ msgstr "グループの詳細"
+
+#~ msgid "User's fullname"
+#~ msgstr "フルネーム"
+
+#~ msgid "User action"
+#~ msgstr "操作"
+
+#~ msgid "Modify group details"
+#~ msgstr "グループ詳細を修正する"
+
+#~ msgid "Delete user from group"
+#~ msgstr "グループからユーザーを削除する"
+
+#~ msgid "Text"
+#~ msgstr "テキスト"
+
+#~ msgid "XML"
+#~ msgstr "XML"
+
+#~ msgid "Group details modified"
+#~ msgstr "グループの詳細を修正しました。"

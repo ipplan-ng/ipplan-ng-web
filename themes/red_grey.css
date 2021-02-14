@@ -1,0 +1,227 @@
+/* 
+ * Red/grey CSS
+ * Clement OUDOT - LINAGORA Group
+ *
+ */
+
+
+/* Main */
+body, table, tr, td {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+body {
+	background: #fff url(img_red_grey/page-bg.png) repeat top left;
+	margin: 0;
+	padding: 1em;
+}
+
+hr {
+	border: 1px solid #c23f45;
+}
+
+/* Links */
+a, a:active, a:visited {
+	color: #c23f45;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: overline underline;
+}
+
+/* Text styles */
+
+/* Changes colour of focused input box */
+input:focus, textarea:focus {
+	background-color: #ddd;
+}
+
+.textError {
+	font-size: 12px;
+	font-weight: bold;
+	color: #c23f45;
+}
+
+.textErrorBig {
+       font-size: 15px;
+       font-weight: bold;
+       color: #c23f45;
+       padding: 15px;
+       text-align: center;
+}
+
+.textInfo {
+	font-size: 12px;
+	color: green;
+}
+
+.textWarn {
+	font-size: 12px;
+	color: yellow;
+}
+
+.textSmall {
+	font-size: 10px;
+	font-style: italic;
+	display: block;
+}
+
+/* The main header */
+.headerbox h1 {
+	font-size: 18px;
+	display: inline;
+	color: #c23f45;
+}
+
+.headerbox h3 {
+	font-style: italic;
+	font-size: 15px;
+	display: inline;
+}
+
+.headerbox {
+        border: 2px dotted #ccc;
+	background: #eee;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* The main body of the page */
+.normalbox      {
+	border: 2px dotted #ccc;
+	padding: 10px;
+	background: #fff url(img_red_grey/head-bg.png) repeat-y top right;
+	overflow: hidden; 
+}
+
+.normalbox h3 {
+	font-size: 1em;
+}
+
+input.normalbox	{
+	overflow: hidden;
+}
+
+.legend {
+	border: 1px solid #999;
+	background-color: #fff;
+	padding: 2px;
+	font-style: italic;
+}
+
+.fieldset {
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #999;
+	background-color: #eee;
+	overflow: auto;
+}
+
+/* Matte Box - background onto which output is displayed */
+.matte {
+
+        background: #ddd;
+	border: 1px solid #999;
+	padding:      20px;
+	margin-bottom:    0px;	
+	margin-top:       0px;
+}
+
+.email {
+	position: fixed;
+	top: 15%;
+	left: 75%;
+	width: 20%;
+	background-color: #F1F1F1;
+	padding:          2px;
+        border-bottom:    2px solid #000000;
+        border-right:     2px solid #000000;
+	border-top:	  1px solid #0c00ff;
+	border-left:      1px solid #0c00ff;
+} 
+
+/* Table formatting for all data display tables */
+table.outputtable {
+	border: 1px solid #999;
+	border-collapse: collapse;
+}
+
+table.outputtable td {
+	padding: 5px;
+	margin: 0;
+	border: 1px dotted #ccc;
+}
+
+td.heading {
+	font-weight: bold;
+}
+
+td.oddrow {
+	background-color: #eee;
+}
+
+td.evenrow {
+	background-color: #fff;
+}
+
+td.redcell {
+	background-color: #c23f45;
+}
+
+td.greencell {
+	background-color: #0f0;
+}
+
+/* style for "Logged in as" */
+.userbox {
+        font-size: 10px;
+}
+
+/* style for myError */
+.errorbox {
+	background-color: red;
+	font-size: 12px;
+	color: white;
+}
+
+/* Top Menu */
+.horbar, .subframe {
+	color: black;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+.horbaritem a, .item a {
+	padding: 5px;
+}
+
+.horbar td, .subframe td {
+	border: 1px solid #ccc;
+}
+
+.horbaritem a:hover, .item a:hover {
+	background-color: #c23f45;
+}
+
+/* IPplan tree */
+/*
+.phplmnormal {
+	font-family: sans-serif;
+	color: #000;
+}
+
+a.phplmnormal:hover, a.phplm:hover, a.phplmselected:hover {
+	font-family: sans-serif;
+	color: #c23f45;
+	background-color: #ddd;
+	text-decoration: none;
+}
+
+a.phplm:link, a.phplm:visited, a.phplm:active, a.phplmselected:link, a.phplmselected:visited, a.phplmselected:active {
+	font-family: sans-serif;
+	color: #000;
+	text-decoration: none;
+}
+*/

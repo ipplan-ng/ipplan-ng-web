@@ -1,0 +1,36 @@
+***************
+*** 15,27 ****
+  
+  # main
+  opendir (BIN, $dir) or die "Can't open $dir: $!";
+- my @files = sort { -M "$dir/$b" <=> -M "$dir/$a" }
+- 	grep { -f "$dir/$_" }
+- 		readdir BIN;
+- closedir (BIN);
+  
+  # parse xml files
+- foreach my $file (@files) {
+    if (-T "$dir/$file" && $file =~ /^(zone|revzone)/) {
+      open (FH, "< $dir/$file")
+          or die "Couldn't open $dir/$file for reading: $!\n";
+--- 15,23 ----
+  
+  # main
+  opendir (BIN, $dir) or die "Can't open $dir: $!";
+  
+  # parse xml files
++ while (defined ($file = readdir BIN)) {
+    if (-T "$dir/$file" && $file =~ /^(zone|revzone)/) {
+      open (FH, "< $dir/$file")
+          or die "Couldn't open $dir/$file for reading: $!\n";
+***************
+*** 59,61 ****
+    } # if zone || revzone
+  } # while files
+  
+--- 55,59 ----
+    } # if zone || revzone
+  } # while files
+  
++ closedir (BIN);
++ 

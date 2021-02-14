@@ -1,0 +1,54 @@
+I would like to thank the following for significant contributions to
+IPplan:
+
+Aug 2009:	Italian language files
+                        contributed by Calligaris Andrea
+
+May 2009:	German language files, additional localizations
+			contributed by Dr. Michael Weller
+
+Dec 2008:	View export function
+			contributed by Sonny J Zhao
+
+June 2007:	French language files
+                        contributed by Gilles Mocellin
+
+June 2006:	Japanese language files
+                        contributed by Tadashi Jokagi
+
+May 2006:	Russian language files
+                        contributed by Vladimir Leshchenko
+
+Jan 2006:	Brazillian language files
+                        contributed by Conrado Pinto Rebessi
+
+Aug 2005:	Patch for new integrated tree menu user manager
+                        contributed by Stephen Blackstone
+
+Jul 2005:	Patch for theme chooser
+                        contributed by Stephen Blackstone
+		Bulgarian language files
+                        contributed by Nickola Kolev
+
+Jun 2005:	Patch for template support on subnet definitions, DHCP
+			support and associated templates and backend functions,
+			bargraph display on findfree pages
+			contributed by Frank Elsner of the Universitaet Osnabrueck
+		New install script
+			contributed by Stephen Blackstone
+
+Dec 2004:	Patch for stylesheets and drop down menus
+                        contributed by Stephen Blackstone
+
+Nov 2004:	Patch for alternating row colours in tables
+                        contributed by Stephen Blackstone
+
+Sep 2004:	James MacDonald of Allstream for updated user admin
+			scripts
+
+Jun 2004:	Tony D. Koehn of Pixius Communications for the DNS
+			administration code and other ideas
+
+Jul 2002:	Mark Lawrence for code to search for duplicate subnets 
+			across multiple customers
+

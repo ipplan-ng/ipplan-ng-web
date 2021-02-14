@@ -1,0 +1,45 @@
+When updating adodb, the following changes have been made specifically for
+IPplan:
+
+	Changed the qstr function in /adodb/adodb.inc.php to:
+	(noticed that there is now a qmagic() method that does this)
+
+	function qstr($s,$magic_quotes=false)
+	{	
+        $magic_quotes=get_magic_quotes_gpc();
+		if (!$magic_quotes) {
+
+---
+	change datadict nameRegex in datadict directory for mysql driver
+	var $nameRegex = '\.\w';
+
+---
+	add RowLock method to mysqlt driver - /adodb/drivers/adodb-mysqlt.inc.php
+	in "class ADODB_mysqlt extends ADODB_mysql "
+
+    // Added richarde@users.sourceforge.net (http://iptrack.sourceforge.net)
+	function RowLock($tables,$where) 
+	{
+		if (!$this->transCnt) $this->BeginTrans();
+        // cannot use GetOne as in other drivers as GetOne adds limit clause at
+        // end of SQL - this generates sql error in mysql
+        // so emulate using GetRow and discard result if ok, but return 1 as other
+        // drivers would. False on error or no record found
+		if($this->GetRow("select 1 from $tables where $where limit 1 for update")) {
+            return 1;
+        }
+        else {
+            return FALSE;
+        }
+	}
+	
+---
+	add to "class ADODB2_oci8 extends ADODB_DataDict" 
+		in /adodb/datadict/datadict-oci8.inc.php
+	var $renameTable = 'ALTER TABLE %s RENAME TO %s';
+
+---
+	cursor issue with adodb driver (changed line
+		47 of /adodb/adodb-odbc_mssql.inc.php to read
+			$this->curmode = SQL_CUR_USE_DRIVER;
+

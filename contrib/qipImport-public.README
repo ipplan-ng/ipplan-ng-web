@@ -1,0 +1,17 @@
+Lucent QIP to IPplan conversion script
+--------------------------------------
+
+This script has converted 145 networks, 5639 subnets and 47425 objects
+for me. A few errors still come up if there are single quotes in the
+data (clashes with the SQL statement).
+
+There is a lot of hard coding but I think it should be a good starting
+point.
+
+No I have the data in IPplan it is looking quite good.  I setup a
+hierarchy of area, net range, subnet, ip address and it looks easy to
+use.
+
+Thanks for the work you have done.
+
+Duane Walker

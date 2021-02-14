@@ -1,0 +1,17 @@
+***************
+*** 22,28 ****
+  
+  <xsl:template match="record">
+  <xsl:for-each select="NS" xml:space="preserve">
+-        IN      NS      <xsl:value-of select="iphostname"/>.</xsl:for-each>
+  
+  <xsl:for-each select="A" xml:space="preserve">
+  <xsl:value-of select="host"/>  IN      A       <xsl:value-of select="iphostname"/></xsl:for-each>
+--- 22,28 ----
+  
+  <xsl:template match="record">
+  <xsl:for-each select="NS" xml:space="preserve">
++ <xsl:value-of select="host"/>  IN      NS      <xsl:value-of select="iphostname"/></xsl:for-each>
+  
+  <xsl:for-each select="A" xml:space="preserve">
+  <xsl:value-of select="host"/>  IN      A       <xsl:value-of select="iphostname"/></xsl:for-each>
