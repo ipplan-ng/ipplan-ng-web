@@ -18,11 +18,12 @@
 // Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 //
 
-if (phpversion() >= "6") {
-   die("This version of IPplan will not work with PHP 6.x");
+if (PHP_VERSION_ID  < 70400) {
+   die("You need php version 7.4.0 or later");
 }
 
 require_once("../config.php");
+require_once('../classes/Version.php');
 //require_once("../schema.php");
 require_once("../ipplanlib.php");
 require_once("../layout/class.layout");
@@ -47,10 +48,10 @@ Your browser must be JavaScript capable to use this application. Please turn Jav
 </noscript>
 "));
 
-$w=myheading($p, my_("Install/Upgrade IPPlan"), false);
+$w=myheading($p, my_("Install/Upgrade IPplan-NG"), false);
 insert($w, $t=container("div"));
 
-insert($t, heading(3, my_("IPplan v4.92b Installation System")));
+insert($t, heading(3, my_('IPplan-NG '.IPplan_NG\Version::VERSION_NAME.' Installation System')));
 
 // BEGIN INSTALLER LANGUAGE SUPPORT
 if(extension_loaded("gettext") and LANGCHOICE) {

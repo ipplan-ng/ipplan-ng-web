@@ -18,6 +18,8 @@
 // Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 //
 
+require_once('classes/Version.php');
+
 define("DEFAULTROUTE", "0.0.0.0");
 define("ALLNETS", "255.255.255.255");
 
@@ -466,8 +468,8 @@ function base_url() {
         // dirname strips trailing slash!
         $tmp = dirname($_SERVER["PHP_SELF"]);
         //$tmp = dirname($_SERVER["SCRIPT_NAME"]);
-        $tmp = eregi_replace("/user$","",$tmp);
-        $tmp = eregi_replace("/admin$","",$tmp);
+        $tmp = preg_replace('/user$/',"",$tmp);
+        $tmp = preg_replace('/admin$/',"",$tmp);
 
         // installed in root of a virtual server? then return empty path
         // second case here is for wierd Windows behaviour - dirname strips
@@ -488,8 +490,8 @@ function base_dir() {
     // dirname strips trailing slash!
     $tmp = dirname(__FILE__);
     //$tmp = dirname($_SERVER["SCRIPT_FILENAME"]);
-    $tmp = eregi_replace("/user$","",$tmp);
-    $tmp = eregi_replace("/admin$","",$tmp);
+    $tmp = preg_replace('/user$/',"",$tmp);
+    $tmp = preg_replace('/admin$/',"",$tmp);
 
     return $tmp;
 
@@ -558,7 +560,7 @@ function myheading($q, $title, $displaymenu=true) {
     eval("\$ADMIN_MENU = \"$ADMIN_MENU\";");
 
     // create the html page HEAD section
-    insert($q, $header=wheader("IPPlan - $title"));
+    insert($q, $header=wheader("IPplan-NG - $title"));
     insert($q, $w=container("div",array("class"=>"matte")));
 
     insert($header, generic("meta",array("http-equiv"=>"Content-Type","content"=>"text/html; charset=UTF-8")));
@@ -606,7 +608,7 @@ function myheading($q, $title, $displaymenu=true) {
     // draw header box
     insert($w,$con=container("div",array("class"=>"headerbox",
                     "align"=>"center")));
-    insert($con, heading(1, my_("IPPlan - IP Address Management and Tracking")));
+    insert($con, heading(1, my_("IPplan-NG - IP Address Management and Tracking")));
     insert($con, block("<br>"));
     insert($con, heading(3, $title));
 
@@ -630,7 +632,7 @@ function myheading($q, $title, $displaymenu=true) {
 
     insert($w,$con=container("div",array("class"=>"normalbox")));
     insert($w,$con1=container("div",array("class"=>"footerbox")));
-    insert($con1,block("IPPlan v4.92b"));
+    insert($con1,block('IPplan-NG '.IPplan_NG\Version::VERSION_NAME));
     return $con;
 
 }

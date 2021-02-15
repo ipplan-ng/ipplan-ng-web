@@ -21,6 +21,7 @@
 // when the database layout changes, bump up this value.
 define("SCHEMA", 22);
 
+require_once('../classes/Version.php');
 require_once("../ipplanlib.php");
 //require_once('../adodb/adodb-errorhandler.inc.php');
 require_once("../adodb/adodb.inc.php");
@@ -556,7 +557,7 @@ function UpdateSchema($display) {
    // could not read version number - probably hit upgrade button
    // for new install
    if (!$result) {
-       die("<p>Could not determine IPplan version number - probably a database permission problem, the wrong database was selected or this is actually a new installation and not an upgrade!");
+       die("<p>Could not determine IPplan-NG version number - probably a database permission problem, the wrong database was selected or this is actually a new installation and not an upgrade!");
    }
 
    // could return error if schema table does not exist!
@@ -569,7 +570,7 @@ function UpdateSchema($display) {
       return;
    }
    else if (SCHEMA < $version) {
-      echo "You are trying to downgrade IPplan - impossible";
+      echo "You are trying to downgrade IPplan-NG - impossible";
       exit;
    }
 
@@ -1092,11 +1093,8 @@ function PrintSQL($sqlarray) {
 //******************************************************************************
 
 // check php version
-if (phpversion() < "4.1.0") {
-   die("You need php version 4.1.0 or later");
-}
-if (phpversion() >= "6") {
-    die("This version of IPplan will not work with PHP 6.x");
+if (PHP_VERSION_ID  < 70400) {
+   die("You need php version 7.4.0 or later");
 }
 
 // check for regex support
@@ -1179,39 +1177,40 @@ echo "\n";
 // only check on unix systems - not sure if this works on windows?
 if (strncmp(PHP_OS,'WIN',3) != 0) {
    switch (DBF_TYPE) {
-     case "mysql":
-     case "mysqlt":
-     case "maxsql":
-        if(!extension_loaded("mysql")) {
-           echo "<p>mysql driver not compiled into php - cannot complete install<br>";
-           echo "this is a php issue and has nothing to do with IPplan<br>";
+     case 'mysqli':
+        if(!extension_loaded('mysqli')) {
+           echo '<p>mysqli driver not compiled into php - cannot complete install<br/>';
+           echo 'this is a php issue and has nothing to do with IPplan-NG</p>';
            exit;
         }
         break;
-     case "mssql":
-        if(!extension_loaded("mssql")) {
-           echo "<p>mssql driver not compiled into php - cannot complete install<br>";
-           echo "this is a php issue and has nothing to do with IPplan<br>";
+     case 'mssql':
+        if(!extension_loaded('mssql')) {
+           echo '<p>mssql driver not compiled into php - cannot complete install<br/>';
+           echo 'this is a php issue and has nothing to do with IPplan-NG</p>';
            exit;
         }
         break;
-     case "oci8po":
-        if(!extension_loaded("oci8")){
-           echo "<p>oci8 driver not compiled into php - cannot complete install<br>";
-           echo "this is a php issue and has nothing to do with IPplan<br>";
+     case 'oci8po':
+        if(!extension_loaded('oci8')){
+           echo '<p>oci8 driver not compiled into php - cannot complete install<br/>';
+           echo 'this is a php issue and has nothing to do with IPplan-NG</p>';
            exit;
         }
         break;
-     case "oci8":
-        echo "<p>you must use the oci8po driver for Oracle - change driver in config.php<br>";
+     case 'oci8':
+        echo '<p>you must use the oci8po driver for Oracle - change driver in config.php</p>';
         exit;
-     case "postgres7":
-        if(!extension_loaded("pgsql")) {
-           echo "<p>pgsql driver not compiled into php - cannot complete install<br>";
-           echo "this is a php issue and has nothing to do with IPplan<br>";
+     case 'postgres7':
+        if(!extension_loaded('pgsql')) {
+           echo '<p>pgsql driver not compiled into php - cannot complete install<br/>';
+           echo 'this is a php issue and has nothing to do with IPplan-NG</p>';
            exit;
         }
         break;
+	default:
+		echo '<p>Unknown database driver '.DBF_TYPE.'</p>';
+		exit;
    }
 }
 
@@ -1225,7 +1224,7 @@ if ($new) {
    CreateSchema($display);
 
    if ($display) {
-      echo "<b>#The above commands need to be executed by the administrator to create the database schema for IPplan</b>\n";
+      echo "<b>#The above commands need to be executed by the administrator to create the database schema for IPplan-NG</b>\n";
    }
    else {
       echo "<b>The database schema was created - you can now create users and groups after loggin in with the admin user specified in the config.php file</b><br>";
@@ -1239,7 +1238,7 @@ else {
     }
    UpdateSchema($display);
    if ($display) {
-      echo "<b>#The above commands need to be executed by the administrator to update the database schema for IPplan to v4.92b. There may be no commands required.</b>\n";
+      echo "<b>#The above commands need to be executed by the administrator to update the database schema for IPplan-NG to ".IPplan_NG\Version::VERSION_NAME.". There may be no commands required.</b>\n";
    }
    else {
       echo "<b>The database schema was updated</b>";
