@@ -859,24 +859,24 @@ function user_trigger($action) {
 function myRegister($vars) {
 
     $newvars=array();
-    $tokens = split(" ", $vars);
+    $tokens = explode(" ", $vars);
 
     foreach ($tokens as $value) {
-        list($code, $variable) = split(":", $value);
+        list($code, $variable) = explode(":", $value);
         switch ($code) {
             case "A":
                 $newvars[]=isset($_REQUEST["$variable"]) ? stripslashes_deep($_REQUEST["$variable"]) : array();
-                continue;
+                break;
             case "S":
                 $newvars[]=isset($_REQUEST["$variable"]) ? stripslashes((string)$_REQUEST["$variable"]) : "";
-                continue;
+                break;
             case "B":  
                 // use floor here to convert to float as int is just not big enough for ip addresses
                 $newvars[]=isset($_REQUEST["$variable"]) ? floor($_REQUEST["$variable"]) : 0;
-                continue;
+                break;
             case "I":  
                 $newvars[]=isset($_REQUEST["$variable"]) ? (int)$_REQUEST["$variable"] : 0;
-                continue;
+                break;
         }
     }
 
