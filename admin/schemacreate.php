@@ -28,6 +28,50 @@ require_once("../adodb/adodb.inc.php");
 require_once("../class.dbflib.php");
 require_once("../auth.php");
 
+
+function get_table_options( object $db_object ) : array
+{
+	if(!$db_object->databaseType) {
+	die ('Could not get database type.');
+	}
+
+	$_table_options=array();
+	$_storage_option='TYPE';
+	$_storage_engine='MyISAM';
+
+	// check mysql version
+	if ($db_object->databaseType=='mysqli') {
+		$result=$db_object->Execute('SELECT version() AS version');
+	      $row = $result->FetchRow();
+	      preg_match('@^(\d+)\.(\d+)\.(\d+)@',$row['version'],$version);
+
+	      if (count($version) != 4) {
+	            die('Error getting MySQL version.');
+	      }
+
+	      $mysql_version_id = ( $version[1] * 10000 + $version[2] * 100 + $version[3] );
+
+		if ($mysql_version_id < 32315) {
+		die('You need mysql version 3.23.15 or later');
+		}
+
+		if ($mysql_version_id >= 50100) {   // database TYPE= changed to ENGINE= in 5.1
+		$_storage_option='ENGINE';
+		}
+
+		if ($mysql_version_id >= 50500) {   // InnoDB is the default storage engine for > 5.5
+		$_storage_engine='InnoDB';
+		}
+
+	$_table_options=array('mysql' => "$_storage_option".'='."$_storage_engine");
+	}
+	else if ($db_object->databaseType=='oci8po') {
+	$_table_options=array('oci8po' => 'tablespace users');
+	}
+
+	return $_table_options;
+}
+
 // check for latest variable added to config.php file, if not there
 // user did not upgrade properly
 if (!defined("FQDNREGEX")) die("Your config.php file is inconsistent - you cannot use your old config.php file during upgrade");
@@ -38,18 +82,6 @@ $auth->addUser(ADMINUSER, ADMINPASSWD);
 
 // And now perform the authentication
 $auth->authenticate();
-
-// adodb always maps the driver to mysql no matter what you select
-if (DBF_TYPE=='mysql') {
-   $taboptarray = array('mysql' => 'TYPE=MYISAM');
-}
-else if (DBF_TYPE=='maxsql') {
-   $taboptarray = array('mysql' => 'TYPE=INNODB');
-}
-else {
-   $taboptarray = array('mysql' => 'TYPE=MYISAM',
-                        'oci8po' => 'tablespace users');
-}
 
 $tables['area']=array(
    array('areaaddr', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
@@ -236,7 +268,7 @@ $indexes['revdns']=array(
 );
 
 if (DBF_TYPE=="mssql" or DBF_TYPE=="ado_mssql" or DBF_TYPE=="odbc_mssql" or 
-    DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') {
+    DBF_TYPE=='mysqli') {
    $tables['version']=array(
       array('version', 'I4', 'DEFAULT' => 0, 'NotNull')
    );
@@ -401,19 +433,7 @@ function CreateSchema($display) {
    error_reporting($tmp);
    $ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
 
-   // check mysql version
-   if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql") {
-      $result=&$ds->Execute("SELECT version() AS version");
-      $row = $result->FetchRow();
-      $version=$row["version"];
-
-      if ($version < "3.23.15") {
-         die("You need mysql version 3.23.15 or later");
-      }
-      if ($version >= "5.1") {   // database TYPE= changed to ENGINE=
-          $taboptarray=str_replace("TYPE=", "ENGINE=", $taboptarray);
-      }
-   }
+	$taboptarray = get_table_options($ds,DBF_TYPE);
 
    // loop through tables and indexes arrays to create SQL
    foreach($tables as $tblname => $fldarray) {
@@ -434,7 +454,7 @@ function CreateSchema($display) {
    }
 
    if (DBF_TYPE=="mssql" or DBF_TYPE=="ado_mssql" or DBF_TYPE=="odbc_mssql" or
-       DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') {
+       DBF_TYPE=='mysqli') {
       $sqlarray[] = 'INSERT INTO version (version) VALUES ('.SCHEMA.')';
    }  
    else {
@@ -518,24 +538,12 @@ function UpdateSchema($display) {
    }
    error_reporting($tmp);
    $ds->SetFetchMode(ADODB_FETCH_ASSOC);
-
-   // check mysql version
-   if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql") {
-      $result=&$ds->Execute("SELECT version() AS version");
-      $row = $result->FetchRow();
-      $version=$row["version"];
-
-      if ($version < "3.23.15") {
-         die("You need mysql version 3.23.15 or later");
-      }
-      if ($version >= "5.1") {   // database TYPE= changed to ENGINE=
-          $taboptarray=str_replace("TYPE=", "ENGINE=", $taboptarray);
-      }
-   }
+	
+	$taboptarray = get_table_options($ds,DBF_TYPE);
 
    // get schema version
    // schema is reserved word in mssql and mysql 5
-   if (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') {
+   if (DBF_TYPE=='mysqli') {
        // version upgrade before schema 18 using table called 'schema'
        if (in_array("schema", $ds->MetaTables())) {
            $result=&$ds->Execute("SELECT version
