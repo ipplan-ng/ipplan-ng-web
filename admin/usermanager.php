@@ -785,7 +785,7 @@ function parseCreateGroupForm($w,$ds) {
     if (strlen($grpdescrip) < 2 or strlen($grpdescrip) > 80) {
         $formerror .= my_("The group description must be longer")."\n";
     }
-    if (ereg("[^[:alnum:]-]", $grp)) {
+    if (preg_match('/[^[:alnum:]-]/', $grp)) {
         $formerror .= my_("Only numbers and digits are allowed in the group name")."\n";
     }
 

@@ -532,7 +532,7 @@ function getAuthUsername() {
     // (see http://www.php.net/features.http-auth - example 34.3)
     if ( (!(isset($MY_SERVER_VARS[AUTH_VAR])))      &&
             (isset($MY_SERVER_VARS["HTTP_AUTHORIZATION"]))) {
-        if (ereg("^Basic ", $MY_SERVER_VARS["HTTP_AUTHORIZATION"]) ) {
+        if (preg_match('/^Basic /', $MY_SERVER_VARS["HTTP_AUTHORIZATION"]) ) {
             list($MY_SERVER_VARS[AUTH_VAR],$MY_SERVER_VARS["PHP_AUTH_PW"]) =
                 explode(':',base64_decode(substr($MY_SERVER_VARS["HTTP_AUTHORIZATION"], 6)));
         }

@@ -465,7 +465,7 @@ function setMenuStructureFile($tree_file)
 	}
 	$this->menuStructure = '';
 	while ($buffer = fgets($fd, 4096)) {
-		$buffer = ereg_replace(chr(13), '', $buffer);	// Microsoft Stupidity Suppression
+		$buffer = str_replace(chr(13), '', $buffer);	// Microsoft Stupidity Suppression
 		$this->menuStructure .= $buffer;
 	}
 	fclose($fd);
@@ -484,7 +484,7 @@ function setMenuStructureFile($tree_file)
 */
 function setMenuStructureString($tree_string)
 {
-	$this->menuStructure = ereg_replace(chr(13), '', $tree_string);	// Microsoft Stupidity Suppression
+	$this->menuStructure = str_replace(chr(13), '', $tree_string);	// Microsoft Stupidity Suppression
 	if ($this->menuStructure == '') {
 		$this->error('setMenuStructureString: empty string.');
 		return false;
@@ -790,7 +790,7 @@ function _postParse(
 	for ($cnt=$this->_firstItem[$menu_name]; $cnt<=$this->_lastItem[$menu_name]; $cnt++) {	// this counter scans all nodes of the new menu
 		$this->tree[$cnt]['child_of_root_node'] = ($this->tree[$cnt]['level'] == 1);
 		$this->tree[$cnt]['parsed_text'] = stripslashes($this->tree[$cnt]['text']);
-		$this->tree[$cnt]['parsed_href'] = (ereg_replace(' ', '', $this->tree[$cnt]['href']) == '') ? '#' : $this->prependedUrl . $this->tree[$cnt]['href'];
+		$this->tree[$cnt]['parsed_href'] = (str_replace(' ', '', $this->tree[$cnt]['href']) == '') ? '#' : $this->prependedUrl . $this->tree[$cnt]['href'];
 		$this->tree[$cnt]['parsed_title'] = ($this->tree[$cnt]['title'] == '') ? '' : ' title="' . stripslashes($this->tree[$cnt]['title']) . '"';
 		$fooimg = $this->icondir . $this->tree[$cnt]['icon'];
 		if ($this->tree[$cnt]['icon'] != '' && (substr($this->tree[$cnt]['icon'], 0, 7) == 'http://' || substr($this->tree[$cnt]['icon'], 0, 8) == 'https://')) {
@@ -918,18 +918,18 @@ function setSelectedItemByUrl($menu_name, $url)
 }
 
 /**
-* A method to select the current item of $menu_name specifying a regular expression that matches (a substring of) the current URL; just the same as the setSelectedItemByUrl() method, but using eregi() instead of strpos()
+* A method to select the current item of $menu_name specifying a regular expression that matches (a substring of) the current URL; just the same as the setSelectedItemByUrl() method, but using preg_match() instead of strpos()
 * @access public
 * @param string $menu_name the name of the menu for which the current item
 *   has to be selected
-* @param string $url_eregi the regular expression that matches
+* @param string $url_pregi the regular expression that matches
 *   (a substring of) the current URL
 * @return void
 */
-function setSelectedItemByUrlEregi($menu_name, $url_eregi)
+function setSelectedItemByUrlPregi($menu_name, $url_pregi)
 {
 	for ($cnt=$this->_firstItem[$menu_name]; $cnt<=$this->_lastItem[$menu_name]; $cnt++) {  // this counter scans all nodes of the new menu
-		if (eregi($url_eregi, $this->tree[$cnt]['parsed_href'])) {
+		if (preg_match("/$url_pregi/i", $this->tree[$cnt]['parsed_href'])) {
 			$this->tree[$cnt]['selected'] = true;
 			break;
 		}

@@ -169,8 +169,8 @@ function NmapScan ($range) {
             $ret[$m[1]] = "";   // host is active, no hostname defined
 
             if ($hostnames) { // remove brackets
-                $myhosts = (preg_split("/[\s,]+/",$line));
-                $ret[$m[1]] = ereg_replace("[()]", "", $myhosts[2]);
+                $myhosts = (preg_split('/[\s,]+/',$line));
+                $ret[$m[1]] = preg_replace('/[()]/', '', $myhosts[2]);
             }
         }
     }
