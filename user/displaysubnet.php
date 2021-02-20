@@ -777,7 +777,7 @@ while($row = $rr->FetchRow()) {
     
     insert($t,$c = cell());
     insert($c,block("<small>"));
-    insert($c,block($result->UserTimeStamp($row["lastmod"], "M d Y H:i:s")));
+    insert($c,block($row['lastmod']));
     insert($c,block("</small>"));
     $export->addCell($row["lastmod"]);
     insert($t,$c = cell());
@@ -892,6 +892,7 @@ class myFetchRow {
         if ($this->saverow AND $this->saverow["ipaddr"]==$this->baseaddr+$this->pointer) {
             $this->pointer++;
             $tmp=$this->saverow;
+            $tmp['lastmod']=$this->result->UserTimeStamp($tmp['lastmod'], 'M d Y H:i:s');
             $this->__MoveNext();
             return $tmp;
         }

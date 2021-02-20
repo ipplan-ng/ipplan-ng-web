@@ -169,6 +169,11 @@ while($row = $result->FetchRow()) {
 setdefault("cell",array("class"=>color_flip_flop()));
     $export->addRow(NULL);
 
+    if (isset($row['swipmod']))
+    {
+    $row['swipmod']=$result->UserTimeStamp($row['swipmod'], 'M d Y H:i:s');
+    }
+
     // customer is 0, display all customers with customer description
     // on customer change
     if ($cust == 0 and $row["custdescrip"] != $prevrow) {
@@ -220,7 +225,7 @@ setdefault("cell",array("class"=>color_flip_flop()));
     if (REGENABLED) {
        insert($t,$c = cell());
        insert($c,block("<small>"));
-       insert($c,block($result->UserTimeStamp($row["swipmod"], "M d Y H:i:s")));
+       insert($c,block($row['swipmod']));
        insert($c,block("</small>"));
     }
     $export->addCell($row["swipmod"]);
