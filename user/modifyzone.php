@@ -119,7 +119,7 @@ if ($action=="add" or $action=="edit") {
     }
 
     if ($action=="add") {
-        $muldomains = split(";", $zone);
+        $muldomains = explode(';', $zone);
     }
     else {
         $muldomains = array($zone);

@@ -612,7 +612,7 @@ $export->saveRow();
 
 $pollcnt=array("d"=>0, "w"=>0, "m"=>0, "y"=>0);
 // note for translations to work here, the next field should have exactly 4x elements
-$pollflag=split(":", my_("D:W:M:Y"));
+$pollflag=explode(':', my_("D:W:M:Y"));
 $pollflag["d"]=$pollflag[0];
 $pollflag["w"]=$pollflag[1];
 $pollflag["m"]=$pollflag[2];

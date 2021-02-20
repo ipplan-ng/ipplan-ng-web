@@ -197,7 +197,7 @@ insert($w,textbrbr(my_("Complete the details below to request an IP address. An 
 
 // create list of customers to display based on REQUESTCUST variable
 $sql = "";
-$lst = split(",", REQUESTCUST);
+$lst = explode(',', REQUESTCUST);
 if (REQUESTCUST != "" and !empty($lst)) {
     foreach ($lst as $value) {
         $i=(int)$value;  // force to int

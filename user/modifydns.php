@@ -122,7 +122,7 @@ if ($action=="add" or $action=="edit") {
     }
 
     if ($action=="add") {
-        $muldomains = split(";", $domain);
+        $muldomains = explode(';', $domain);
     }
     else {
         $muldomains = array($domain);

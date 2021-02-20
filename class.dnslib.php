@@ -755,7 +755,7 @@ class DNSrevZone extends DNSZone {
             }
 
             // now split ip address
-            list($oc1, $oc2, $oc3, $oc4, $tail) = split("\.", $host, 5);
+            list($oc1, $oc2, $oc3, $oc4, $tail) = explode('.', $host, 5);
             $ipaddr="$oc4.$oc3.$oc2.$oc1";
             if (testIP($ipaddr)) {
                 $this->errstr .= sprintf(my_("Invalid address %s"), $ipaddr)."\n";

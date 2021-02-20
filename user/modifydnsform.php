@@ -180,19 +180,19 @@ else {
     $zonepath=$row["zonepath"];
     $seczonepath=$row["seczonepath"];
     if (!empty($row["createmod"])) {
-        list($createyear, $createmonth, $createday) = split('[/.-]', $row["createmod"]);
+        list($createyear, $createmonth, $createday) = preg_split('/[/.-]/', $row["createmod"]);
     }
     else {
         $createyear = $createmonth =  $createday = "";
     }
     if (!empty($row["expiremod"])) {
-        list($expireyear, $expiremonth, $expireday) = split('[/.-]', $row["expiremod"]);
+        list($expireyear, $expiremonth, $expireday) = preg_split('/[/.-]/', $row["expiremod"]);
     }
     else {
         $expireyear = $expiremonth = $expireday = "";
     }
     if (!empty($row["regmod"])) {
-        list($regyear, $regmonth, $regday) = split('[/.-]', $row["regmod"]);
+        list($regyear, $regmonth, $regday) = preg_split('/[/.-]/', $row["regmod"]);
     }
     else {
         $regyear = $regmonth = $regday = "";
