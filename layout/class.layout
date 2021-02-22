@@ -1,7 +1,7 @@
 <?php
 /*
       (C) Copywrite 1999 Valuehunt Inc. <php@valuehunt.com>
-          Version 1.0
+          Version 2.0
 
 	Copyright 1999 ValueHunt Inc. All rights reserved.
 	Permission is granted to anyone to use this software for any purpose
@@ -35,6 +35,7 @@
 // 24-09-2005 added htmlspecialchars to anchor
 // 20-07-2006 removed microtime dependency as this caused issues on SMP/VM type machines
 //            Josh Kelley (yeshua) iptrack-Bugs-1525499
+// 20-02-2021 Update to output HTML 5 style tags.
 
 # Helper functions
 function insert($p,$c) {
@@ -346,23 +347,23 @@ class HTMLBase {
           }
           reset($temp);
           while (list($key,$val) = each($temp) ) {
-                $key = strtoupper($key);
-                if ( $key == "COLS" && $this->classname == "table" )    { 
+                $key = strtolower($key);
+                if ( $key == "cols" && $this->classname == "table" )    {
                     $this->cols = $val;
                     continue;
                 }
-                if ( ($key == "B" or $key == "I" or $key == "SMALL") 
+                if ( ($key == "b" or $key == "i" or $key == "small")
                     && $this->classname == "text" ) {
                     $this->fmt .= "<~$key>"; 
                     continue;
                 }
-                if ( $key == "COLSPAN" ) { $this->cs   = $val; }
-                if ( $key == "ROWSPAN" ) { $this->rs   = $val; }
+                if ( $key == "colspan" ) { $this->cs   = $val; }
+                if ( $key == "rowspan" ) { $this->rs   = $val; }
                 if ( $val == "undef" || $val == "UNDEF" ) {
                     $this->settings .= " $key";
                 } else {
                     // quoted the VALUE component - RE 11/12/2004
-                    if ( $key == "VALUE" ) { 
+                    if ( $key == "value" ) {
                        $this->settings .= " $key=\"".htmlspecialchars($val)."\"";
                     } else {
                        $this->settings .= " $key=\"$val\"";
@@ -380,14 +381,12 @@ class Window extends HTMLBase {
         }
 
         function printit() {
-           //echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n";
-           echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n";
-           echo "        \"http://www.w3.org/TR/html4/loose.dtd\">\n";
-           echo "<HTML>\n<HEAD>\n";
+           echo "<!DOCTYPE html>\n";
+           echo "<html>\n<head>\n";
            $this->printheader();
-           echo "\n</HEAD>\n<BODY" . $this->settings . ">";
+           echo "\n</head>\n<body" . $this->settings . ">";
            $this->printchild();
-           echo "\n</BODY>\n</HTML>\n";
+           echo "\n</body>\n</html>\n";
         }
 
         function printheader() {
@@ -416,12 +415,12 @@ class WHeader extends HTMLBase {
 
         function printit() {
           if ( isset($this->title) ) {
-             echo "        <TITLE>" . $this->title . "</TITLE>";
+             echo "        <title>" . $this->title . "</title>";
           }
           // plx: including the content var to head as meta
           if (is_array($this->meta) && count(array_keys($this->meta)) > 0) {
              while (list($name, $content) = each($this->meta)) {
-                 echo "        <META NAME=\"".$name."\" CONTENT=\"".$content."\" />";
+                 echo "        <meta name=\"".$name."\" content=\"".$content."\" />";
              }
           }
           $this->printchild();
@@ -440,9 +439,9 @@ class Table extends HTMLBase {
         }
 
         function printit() {
-           $this->indent(); echo "<TABLE" . $this->settings . ">";
+           $this->indent(); echo "<table" . $this->settings . ">";
            $this->printtable();
-           $this->indent(); echo "</TABLE>";
+           $this->indent(); echo "</table>";
         }
 
         function printtable() {
@@ -456,7 +455,7 @@ class Table extends HTMLBase {
                         $row = $this->currow;
                         if (empty($this->printrow[$row]) ) {
                             $this->printrow[$row] = TRUE;
-                            $this->indent(); echo "<TR>";
+                            $this->indent(); echo "<tr>";
                         }
 
                         $GLOBALS["$ch"]->printit();
@@ -469,7 +468,7 @@ class Table extends HTMLBase {
                         }
 
                         if ( $this->count[$row] == $this->cols ) {
-                            $this->indent(); echo "</TR>";
+                            $this->indent(); echo "</tr>";
                             ++$this->currow;
                         }
                 }
@@ -486,8 +485,8 @@ class Cell extends HTMLBase {
         }
 
         function printit() {
-           $this->indent() ; echo "<TD" . $this->settings . ">";
-           $this->printchild() ; echo "</TD>";
+           $this->indent() ; echo "<td" . $this->settings . ">";
+           $this->printchild() ; echo "</td>";
         }
 }
 
@@ -504,7 +503,7 @@ class Image extends HTMLBase {
 
         function printit() {
                 if(!$this->noindent) { $this->indent(); }
-                echo "<IMG SRC=\"". $this->source . "\" ";
+                echo "<img src=\"". $this->source . "\" ";
                 if($this->noindent) {
                     echo $this->settings . ">";
                 } else {
@@ -529,7 +528,7 @@ class Anchor extends HTMLBase {
 
     function printit() {
         $this->indent();
-        echo "<A" . ( empty($this->href)? "" : " HREF=\"". $this->href . "\"");
+        echo "<a" . ( empty($this->href)? "" : " href=\"". $this->href . "\"");
         echo $this->settings . ">";
                 if (empty($this->source)) {
                        $this->printchild();
@@ -565,10 +564,10 @@ class Text extends HTMLBase {
 
     function printit() {
         if ($this->settings)
-           echo "<FONT". $this->settings . ">";
+           echo "<font". $this->settings . ">";
         echo str_replace("~", "", $this->fmt).$this->str.str_replace("~", "/", $this->fmt);
         if ($this->settings)
-           echo "</FONT>";
+           echo "</font>";
     }
 }
 
@@ -585,7 +584,7 @@ class TextBR extends HTMLBase {
     function printit() {
 //        if ($this->settings)
 //           echo "<FONT". $this->settings . ">";
-        echo str_replace("~", "", $this->fmt).$this->str.str_replace("~", "/", $this->fmt)."<br>";
+        echo str_replace("~", "", $this->fmt).$this->str.str_replace("~", "/", $this->fmt)."<br/>";
 //        if ($this->settings)
 //           echo "</FONT>";
     }
@@ -604,7 +603,7 @@ class TextBRBR extends HTMLBase {
     function printit() {
 //        if ($this->settings)
 //           echo "<FONT". $this->settings . ">";
-        echo "<br>".str_replace("~", "", $this->fmt).$this->str.str_replace("~", "/", $this->fmt)."<br>";
+        echo "<br/>".str_replace("~", "", $this->fmt).$this->str.str_replace("~", "/", $this->fmt)."<br/>";
 //        if ($this->settings)
 //           echo "</FONT>";
     }
@@ -621,9 +620,9 @@ class Span extends HTMLBase {
 
     function printit() {
         if (!empty($this->str)) {
-           echo "<SPAN". $this->settings . ">";
+           echo "<span". $this->settings . ">";
            echo $this->str;
-           echo "</SPAN>";
+           echo "</span>";
         }
     }
 }
@@ -636,9 +635,9 @@ class Form extends HTMLBase {
     }
 
     function printit() {
-        $this->indent(); echo "<FORM" . $this->settings . ">";
+        $this->indent(); echo "<form" . $this->settings . ">";
         $this->printchild();
-        $this->indent(); echo "</FORM>";
+        $this->indent(); echo "</form>";
     }
 }
 
@@ -652,13 +651,13 @@ class Script extends HTMLBase {
     }
 
     function printit() {
-        $this->indent(); echo "<SCRIPT" . $this->settings . ">";
+        $this->indent(); echo "<script" . $this->settings . ">";
         if (!empty($this->content)) {
            $this->indent(); echo "     " . "<!--";
            $this->indent(); echo "             " . $this->content . "";
            $this->indent(); echo "     " . "//-->";
         }
-        $this->indent(); echo "</SCRIPT>";
+        $this->indent(); echo "</script>";
     }
 }
 
@@ -673,9 +672,9 @@ class NoScript extends HTMLBase {
     }
 
     function printit() {
-        $this->indent(); echo "<NOSCRIPT" . $this->settings . ">";
+        $this->indent(); echo "<noscript" . $this->settings . ">";
         $this->indent(); echo "     " . $this->content . "";
-        $this->indent(); echo "</NOSCRIPT>";
+        $this->indent(); echo "</noscript>";
     }
 }
 
@@ -690,8 +689,8 @@ class Heading extends HTMLBase {
     }
 
     function printit() {
-        $this->indent(); echo "<H" . $this->lev . $this->settings . ">";
-        echo htmlspecialchars($this->content); echo "</H". $this->lev .">";
+        $this->indent(); echo "<h" . $this->lev . $this->settings . ">";
+        echo htmlspecialchars($this->content); echo "</h". $this->lev .">";
     }
 }
 
@@ -700,7 +699,7 @@ class Generic extends HTMLBase {
     var $tag;
 
     function Generic($t,$a = "") {
-       $t = strtoupper($t);        
+       $t = strtolower($t);
        $this->setparam($a);
        $this->tag = $t;
     }
@@ -715,9 +714,9 @@ class Container extends HTMLBase {
     var $tag;
 
     function Container($t,$a = "") {
-       $t = strtoupper($t);
+       $t = strtolower($t);
        $this->setparam($a);
-       $this->tag = strtoupper($t);
+       $this->tag = strtolower($t);
     }
 
     function printit() {
@@ -747,7 +746,7 @@ class Alist extends HTMLBase {
     var $tag; var $content;
 
     function Alist($t,$c,$a = "") {
-       $t = strtoupper($t);
+       $t = strtolower($t);
        $this->setparam($a);
        $this->tag = $t;
        $this->content = $c;
@@ -760,11 +759,11 @@ class Alist extends HTMLBase {
                 if ( getclass($ll) ) {
 		    $this->children = array();
                     $this->insert($ll);
-                    $this->indent(); echo "<LI>";
+                    $this->indent(); echo "<li>";
                     $this->printchild();
-                    echo "</LI>";
+                    echo "</li>";
                 } else {
-                    $this->indent(); echo "<LI>" . $ll . "</LI>";
+                    $this->indent(); echo "<li>" . $ll . "</li>";
                 }
             }
         }
@@ -781,7 +780,7 @@ class Button extends HTMLBase {
 
     function printit() {
       $this->indent();
-      echo "<INPUT TYPE=\"BUTTON\"" . $this->settings . ">";
+      echo "<input type=\"button\"" . $this->settings . ">";
     }
 }
 
@@ -792,13 +791,13 @@ class Checkbox extends HTMLBase {
 
     function Checkbox($a,$t,$c = "") {
        $this->setparam($a);
-       if (!empty($c)) { $this->checked = " CHECKED"; }
+       if (!empty($c)) { $this->checked = " checked"; }
        $this->textfield = $t ;
     }
 
     function printit() {
       $this->indent();
-      echo "<INPUT TYPE=\"CHECKBOX\"". $this->checked . $this->settings . ">" . $this->textfield . "";
+      echo "<input type=\"checkbox\"". $this->checked . $this->settings . ">" . $this->textfield . "";
     }
 }
 
@@ -811,7 +810,7 @@ class Inputfile extends HTMLBase {
 
     function printit() {
       $this->indent();
-      echo "<INPUT TYPE=\"FILE\"". $this->settings . ">";
+      echo "<input type=\"FILE\"". $this->settings . ">";
     }
 }
 
@@ -824,7 +823,7 @@ class Hidden extends HTMLBase {
 
     function printit() {
       $this->indent();
-      echo "<INPUT TYPE=\"HIDDEN\"". $this->settings . ">";
+      echo "<input type=\"HIDDEN\"". $this->settings . ">";
     }
 }
 
@@ -839,7 +838,7 @@ class Imagebutton extends HTMLBase {
 
     function printit() {
       $this->indent();
-      echo "<INPUT TYPE=\"IMAGE\"". $this->settings . " SRC=\"". $this->source . "\">";
+      echo "<input type=\"image\"". $this->settings . " src=\"". $this->source . "\">";
     }
 }
 
@@ -852,7 +851,7 @@ class Password extends HTMLBase {
 
     function printit() {
       $this->indent();
-      echo "<INPUT TYPE=\"PASSWORD\"". $this->settings . ">";
+      echo "<input type=\"password\"". $this->settings . ">";
     }
 }
 
@@ -863,7 +862,7 @@ class Radio extends HTMLBase {
 
     function Radio($a,$t,$c = "") {
        $this->setparam($a);
-       if (!empty($c)) { $this->checked = " CHECKED"; }
+       if (!empty($c)) { $this->checked = " checked"; }
        if ( getclass($t) ) {
            $this->insert($t);
        } else {
@@ -873,7 +872,7 @@ class Radio extends HTMLBase {
 
     function printit() {
       $this->indent();
-      echo "<INPUT TYPE=\"RADIO\"". $this->checked . $this->settings ;
+      echo "<input type=\"radio\"". $this->checked . $this->settings ;
 	  echo ">&nbsp; ";
 	  if(!empty($this->textfield)) {
          echo $this->textfield ;
@@ -893,7 +892,7 @@ class Freset extends HTMLBase {
 
     function printit() {
       $this->indent();
-      echo "<INPUT TYPE=\"RESET\"". $this->settings . ">";
+      echo "<input type=\"reset\"". $this->settings . ">";
     }
 }
 
@@ -906,7 +905,7 @@ class Submit extends HTMLBase {
 
     function printit() {
       $this->indent();
-      echo "<INPUT TYPE=\"SUBMIT\"". $this->settings . ">";
+      echo "<input type=\"submit\"". $this->settings . ">";
     }
 }
 
@@ -919,7 +918,7 @@ class Input_text extends HTMLBase {
 
     function printit() {
       $this->indent();
-      echo "<INPUT TYPE=\"TEXT\"". $this->settings . ">";
+      echo "<input type=\"text\"". $this->settings . ">";
     }
 }
 
@@ -935,22 +934,22 @@ class Selectbox extends HTMLBase {
     }
 
     function printit() {
-      $this->indent(); echo "<SELECT". $this->settings . ">";
+      $this->indent(); echo "<select". $this->settings . ">";
       while( list($val,$na) = each($this->options) ) {
          if (!is_array($na)) {
-             $this->indent(); echo "    <OPTION VALUE=\"$val\"";
-             if ( $this->selected == $val ) { echo " SELECTED"; }
+             $this->indent(); echo "    <option value=\"$val\"";
+             if ( $this->selected == $val ) { echo " selected"; }
              echo ">".htmlspecialchars($na);
          } else {
              list($txt,$clr) = each($na);
              $this->indent();
-             echo "    <OPTION VALUE=\"$val\"";
-             if ( $this->selected == $val ) { echo " SELECTED"; }
-             echo "><FONT COLOR=\"$clr\">$txt</FONT>";
+             echo "    <option value=\"$val\"";
+             if ( $this->selected == $val ) { echo " selected"; }
+             echo "><font color=\"$clr\">$txt</font>";
          }
-         echo "</OPTION>";
+         echo "</option>";
       }
-      $this->indent(); echo "</SELECT>";
+      $this->indent(); echo "</select>";
     }
 }
 
@@ -964,8 +963,8 @@ class Textarea extends HTMLBase {
     }
 
     function printit() {
-      $this->indent(); echo "<TEXTAREA". $this->settings . ">";
-      echo $this->messages ; echo "</TEXTAREA>";
+      $this->indent(); echo "<textarea". $this->settings . ">";
+      echo $this->messages ; echo "</textarea>";
     }
 }
 
@@ -977,9 +976,9 @@ class Imagemap extends HTMLBase {
     }
 
     function printit() {
-      $this->indent(); echo "<MAP". $this->settings . ">";
+      $this->indent(); echo "<map". $this->settings . ">";
       $this->printchild();
-      $this->indent(); echo "</MAP>";
+      $this->indent(); echo "</map>";
     }
 }
 
@@ -991,7 +990,7 @@ class Area extends HTMLBase {
     }
 
     function printit() {
-      $this->indent(); echo "<AREA". $this->settings . ">";
+      $this->indent(); echo "<area". $this->settings . ">";
     }
 }
 
@@ -1003,9 +1002,9 @@ class Layer extends HTMLBase {
     }
 
     function printit() {
-      $this->indent(); echo "<LAYER". $this->settings . ">";
+      $this->indent(); echo "<layer". $this->settings . ">";
       $this->printchild();
-      $this->indent(); echo "</LAYER>";
+      $this->indent(); echo "</layer>";
     }
 }
 
@@ -1018,9 +1017,9 @@ class Nolayer extends HTMLBase {
     }
 
     function printit() {
-      $this->indent(); echo "<NOLAYER>";
+      $this->indent(); echo "<nolayer>";
       $this->indent(); echo $this->messages . "";
-      $this->indent(); echo "</NOLAYER>";
+      $this->indent(); echo "</nolayer>";
     }
 }
 
@@ -1033,9 +1032,9 @@ class IFrame extends HTMLBase {
     }
 
     function printit() {
-      $this->indent(); echo "<IFRAME". $this->settings . ">";
+      $this->indent(); echo "<iframe". $this->settings . ">";
       $this->printchild() ;
-      $this->indent(); echo "</IFRAME>";
+      $this->indent(); echo "</iframe>";
     }
 }
 
@@ -1048,9 +1047,9 @@ class Frameset extends HTMLBase {
     }
 
     function printit() {
-      $this->indent(); echo "<FRAMESET". $this->settings . ">";
+      $this->indent(); echo "<frameset". $this->settings . ">";
       $this->printchild() ;
-      $this->indent(); echo "</FRAMESET>";
+      $this->indent(); echo "</frameset>";
     }
 }
 
@@ -1062,7 +1061,7 @@ class Frame extends HTMLBase {
     }
 
     function printit() {
-      $this->indent(); echo "<FRAME". $this->settings . ">";
+      $this->indent(); echo "<frame". $this->settings . ">";
     }
 }
 
@@ -1075,9 +1074,9 @@ class Noframe extends HTMLBase {
     }
 
     function printit() {
-      $this->indent(); echo "<NOFRAME>";
+      $this->indent(); echo "<noframe>";
       $this->indent(); echo $this->messages . "";
-      $this->indent(); echo "</NOFRAME>";
+      $this->indent(); echo "</noframe>";
     }
 }
 
@@ -1091,9 +1090,9 @@ class Style extends HTMLBase {
     }
 
     function printit() {
-      $this->indent(); echo "<STYLE" . $this->settings . ">";
+      $this->indent(); echo "<style" . $this->settings . ">";
       $this->indent(); echo $this->messages . "";
-      $this->indent(); echo "</STYLE>";
+      $this->indent(); echo "</style>";
     }
 }
 
