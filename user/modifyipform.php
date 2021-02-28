@@ -388,7 +388,7 @@ function modifyipform() {
    document.MODIFY.macaddr.value=dbf[idx][6];
    '.$jsset.'
 
-} ', array("language"=>"JavaScript", "type"=>"text/javascript")));
+} ', array('type'=>'text/javascript')));
 
     insert($w, $f = form(array("name"=>"REQUESTIP",
                     "method"=>"get",
@@ -599,7 +599,7 @@ function follow() {
        document.DUMMY.ipaddr.value=document.MODIFY.lnk.value;
        document.DUMMY.submit();
 } 
-', array("language"=>"JavaScript", "type"=>"text/javascript")));
+', array('type'=>'text/javascript')));
 
 // ------------------- user information block ends here ------------------------
 

@@ -111,7 +111,7 @@ insert($con,anchor("JavaScript:thisdomain()",
 function thisdomain() {
 
     document.ENTRY.host.value="'.$domain.'.";
-} ', array("language"=>"JavaScript", "type"=>"text/javascript")));
+} ', array('type'=>'text/javascript')));
 
 
 insert($con,textbrbr(my_("Record Type")));

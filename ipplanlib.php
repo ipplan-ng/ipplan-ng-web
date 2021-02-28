@@ -587,9 +587,9 @@ function myheading($q, $title, $displaymenu=true) {
     }
 
     if ($displaymenu) {
-        insert($w, script("",array("language"=>"JavaScript","type"=>"text/javascript","src"=> $myWwwPath."libjs/layersmenu-browser_detection.js")));
-        insert($w, script("",array("language"=>"JavaScript","type"=>"text/javascript","src"=> $myWwwPath . 'libjs/layersmenu-library.js')));
-        insert($w, script("",array("language"=>"JavaScript","type"=>"text/javascript","src"=> $myWwwPath . 'libjs/layersmenu.js')));
+        insert($w, script("",array("src"=> $myWwwPath."libjs/layersmenu-browser_detection.js")));
+        insert($w, script("",array("src"=> $myWwwPath . 'libjs/layersmenu-library.js')));
+        insert($w, script("",array("src"=> $myWwwPath . 'libjs/layersmenu.js')));
 
         $mid= new LayersMenu(6, 7, 2, 1);
         $mid->setDirroot ($BASE_DIR.'/menus/');
@@ -720,8 +720,7 @@ class mySearch {
 // form and field variables must be static text variables
 function myFocus($w, $form, $field) {
 
-    insert($w, script("document.$form.$field.focus();",
-                array("language"=>"JavaScript", "type"=>"text/javascript")));
+    insert($w, script("document.$form.$field.focus();"));
 }
 
 // IPplan error handler function

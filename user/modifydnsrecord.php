@@ -655,7 +655,7 @@ if ($cnt) {
 // code to select all buttons on form named swiptosend
 // checkbox array variable is named baseindex[]
         insert($f,block('
-<script language="JavaScript" type="text/javascript">
+<script type="text/javascript">
 <!--
 function checkAll(val) {
    al=document.deleterecords;
