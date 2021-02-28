@@ -117,8 +117,28 @@ function textbrbr($t,$a = "") {
    return $na;
 }
 
-function span($t,$a = "") {
-   $na = "cl_" . ++$GLOBALS["cl_counter"]; $GLOBALS["$na"] = new Span($t,$a);
+function paragraph($s,$a = null) {
+   $na = "cl_" . ++$GLOBALS["cl_counter"]; $GLOBALS["$na"] = new Paragraph($s,$a);
+   return $na;
+}
+
+function span($s,$a = null) {
+   $na = "cl_" . ++$GLOBALS["cl_counter"]; $GLOBALS["$na"] = new Span($s,$a);
+   return $na;
+}
+
+function div($a = null) {
+   $na = "cl_" . ++$GLOBALS["cl_counter"]; $GLOBALS["$na"] = new Div($a);
+   return $na;
+}
+
+function article($a = null) {
+   $na = "cl_" . ++$GLOBALS["cl_counter"]; $GLOBALS["$na"] = new Article($a);
+   return $na;
+}
+
+function section($a = null) {
+   $na = "cl_" . ++$GLOBALS["cl_counter"]; $GLOBALS["$na"] = new Section($a);
    return $na;
 }
 
@@ -348,6 +368,10 @@ class HTMLBase {
           reset($temp);
           while (list($key,$val) = each($temp) ) {
                 $key = strtolower($key);
+                if ( $key == 'lang' && $this->classname == 'window') {
+                    $this->page_lang = ' lang="'.$val.'"';
+                    continue;
+                }
                 if ( $key == "cols" && $this->classname == "table" )    {
                     $this->cols = $val;
                     continue;
@@ -382,7 +406,7 @@ class Window extends HTMLBase {
 
         function printit() {
            echo "<!DOCTYPE html>\n";
-           echo "<html>\n<head>\n";
+           echo "<html" . $this->page_lang . ">\n<head>\n";
            $this->printheader();
            echo "\n</head>\n<body" . $this->settings . ">";
            $this->printchild();
@@ -415,7 +439,7 @@ class WHeader extends HTMLBase {
 
         function printit() {
           if ( isset($this->title) ) {
-             echo "        <title>" . $this->title . "</title>";
+             echo "     <title>" . $this->title . "</title>";
           }
           // plx: including the content var to head as meta
           if (is_array($this->meta) && count(array_keys($this->meta)) > 0) {
@@ -609,6 +633,21 @@ class TextBRBR extends HTMLBase {
     }
 }
 
+class Paragraph extends HTMLBase {
+    var $classname = "paragraph";
+    var $str;
+
+    function Paragraph($s,$a = null) {
+        $this->setparam($a);
+        $this->str = (strlen($s)==0 and empty($s)) ? "" : htmlspecialchars($s);
+    }
+
+    function printit() {
+        $this->indent();
+        echo '<p>'.$this->str.'</p>';
+    }
+}
+
 class Span extends HTMLBase {
     var $classname = "span";
     var $str;
@@ -624,6 +663,57 @@ class Span extends HTMLBase {
            echo $this->str;
            echo "</span>";
         }
+    }
+}
+
+class Div extends HTMLBase {
+    var $classname = "div";
+    var $tag;
+
+    function Div($a = null) {
+       $this->setparam($a);
+    }
+
+    function printit() {
+        $this->indent();
+        echo "<div". $this->settings . ">\n";
+        $this->printchild();
+	  $this->indent();
+        echo "</div>";
+    }
+}
+
+class Article extends HTMLBase {
+    var $classname = "article";
+    var $tag;
+
+    function Article($a = null) {
+       $this->setparam($a);
+    }
+
+    function printit() {
+        $this->indent();
+        echo "<article". $this->settings . ">";
+        $this->printchild();
+	  $this->indent();
+        echo "</article>";
+    }
+}
+
+class Section extends HTMLBase {
+    var $classname = "section";
+    var $tag;
+
+    function Section($a = null) {
+       $this->setparam($a);
+    }
+
+    function printit() {
+        $this->indent();
+        echo "<section". $this->settings . ">";
+        $this->printchild();
+	  $this->indent();
+        echo "</section>";
     }
 }
 
@@ -651,13 +741,16 @@ class Script extends HTMLBase {
     }
 
     function printit() {
-        $this->indent(); echo "<script" . $this->settings . ">";
         if (!empty($this->content)) {
+           $this->indent(); echo "<script" . $this->settings . ">";
            $this->indent(); echo "     " . "<!--";
            $this->indent(); echo "             " . $this->content . "";
            $this->indent(); echo "     " . "//-->";
+           $this->indent(); echo "</script>";
         }
-        $this->indent(); echo "</script>";
+        else {
+           $this->indent(); echo "<script" . $this->settings . "></script>";
+        }
     }
 }
 
