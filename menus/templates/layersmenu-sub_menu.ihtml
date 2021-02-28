@@ -33,19 +33,19 @@ you can safely remove it.
 <!-- BEGIN template -->
 
 <div id="{layer_label}" class="submenu" onmouseover="clearLMTO();" onmouseout="setLMTO();">
-<table border="0" cellspacing="0" cellpadding="0">
+<table>
 <tr>
-<td nowrap="nowrap">
+<td>
 <div class="subframe">
 <!-- BEGIN sub_menu_cell -->
 <div id="{refid}" class="item">
 <a href="{href}"{onmouseover}{title}{target}><img
-align="top" src="{imgwww}{transparent}" width="1" height="16" border="0"
+src="{imgwww}{transparent}" width="1" height="16"
 alt="" /><!-- BEGIN cell_icon --><img
-align="top" src="{iconsrc}" width="{iconwidth}" height="{iconheight}" border="0"
+src="{iconsrc}" width="{iconwidth}" height="{iconheight}" 
 alt="{iconalt}" />&nbsp;<!-- END cell_icon -->{text}<!-- BEGIN cell_arrow -->&nbsp;<img
 class="fwdarr" src="{imgwww}{arrowsrc}" width="{arrowwidth}" height="{arrowheight}"
-border="0" alt=">>" /><!-- END cell_arrow -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+alt=">>" /><!-- END cell_arrow -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 </div>
 <!-- END sub_menu_cell -->
 <!-- BEGIN separator -->

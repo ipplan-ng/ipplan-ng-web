@@ -564,6 +564,10 @@ function myheading($q, $title, $displaymenu=true) {
     insert($q, $w=container("div",array("class"=>"matte")));
 
     insert($header, generic("meta",array("http-equiv"=>"Content-Type","content"=>"text/html; charset=UTF-8")));
+
+    // Move all the page layout attibutes to CSS.
+    insert($header, generic("link",array("rel"=>"stylesheet","href"=>"$BASE_URL".'/css/ipplan-ng-layout.css')));
+
     if ($displaymenu) {
         insert($header, generic("link",array("rel"=>"stylesheet","href"=>"$myWwwPath"."layersmenu-gtk2.css")));
         //    insert($header, generic("link",array("rel"=>"stylesheet","href"=>"$myWwwPath"."layersmenu-demo.css")));
@@ -606,8 +610,7 @@ function myheading($q, $title, $displaymenu=true) {
     }
 
     // draw header box
-    insert($w,$con=container("div",array("class"=>"headerbox",
-                    "align"=>"center")));
+    insert($w,$con=container("div",array("class"=>"headerbox")));
     insert($con, heading(1, my_("IPplan-NG - IP Address Management and Tracking")));
     insert($con, block("<br>"));
     insert($con, heading(3, $title));
@@ -615,9 +618,9 @@ function myheading($q, $title, $displaymenu=true) {
     if ($displaymenu) {
         // draw menu box here
         insert($w,$con=container("div",array("class"=>"menubox")));
-        insert($con,$t =table(array("cols"=>"2","width"=>"100%")));
+        insert($con,$t =table(array("cols"=>"2", 'id'=>'menubar')));
         insert($t, $c1=cell());
-        insert($t, $c2=cell(array("align"=>"right")));
+        insert($t, $c2=cell());
 
         insert($c1,block($mid->getHeader()));
         insert($c1,block($mid->getMenu('hormenu1')));
