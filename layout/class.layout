@@ -117,8 +117,8 @@ function textbrbr($t,$a = "") {
    return $na;
 }
 
-function paragraph($s,$a = null) {
-   $na = "cl_" . ++$GLOBALS["cl_counter"]; $GLOBALS["$na"] = new Paragraph($s,$a);
+function paragraph($a = null) {
+   $na = "cl_" . ++$GLOBALS["cl_counter"]; $GLOBALS["$na"] = new Paragraph($a);
    return $na;
 }
 
@@ -637,14 +637,17 @@ class Paragraph extends HTMLBase {
     var $classname = "paragraph";
     var $str;
 
-    function Paragraph($s,$a = null) {
+    function Paragraph($a = null) {
         $this->setparam($a);
-        $this->str = (strlen($s)==0 and empty($s)) ? "" : htmlspecialchars($s);
     }
 
     function printit() {
         $this->indent();
-        echo '<p>'.$this->str.'</p>';
+        echo '<p'. $this->settings . ">\n";
+        $this->printchild();
+        $this->indent();
+        echo '</p>';
+
     }
 }
 
@@ -654,7 +657,7 @@ class Span extends HTMLBase {
 
     function Span($s,$a = "") {
         $this->setparam($a);
-        $this->str = $s;
+        $this->str = (strlen($s)==0 and empty($s)) ? "" : htmlspecialchars($s);
     }
 
     function printit() {
