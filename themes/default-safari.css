@@ -212,6 +212,10 @@ td.greencell {
 	color: white;
 }
 
+.reserved_ip_text {
+	color: #FF0000;
+}
+
 /* search bar */
 
 /*

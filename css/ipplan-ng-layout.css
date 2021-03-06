@@ -1,15 +1,25 @@
+/* IPplan-NG <% :version_name %>
 
-.headerbox 
-{
+CSS that controls the layout of the page elements.
+Style of elements is controlled by the theme.
+
+*/
+.headerbox {
 	text-align: center;
 }
 
-.userbox
-{
+.userbox {
 	text-align: right;
 }
 
-#menubar 
-{
+#menubar {
 	width: 100%;
 }
+
+#subnet_summary {
+	vertical-align: top;
+}
+
+#summary_pad {
+	width: 5%;
+}	

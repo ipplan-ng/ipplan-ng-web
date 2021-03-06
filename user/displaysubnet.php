@@ -536,9 +536,9 @@ if ($maxcnt > 1) {
     insert($w,textbr(" |"));
 
     // three cells for better spacing
-    insert($tbig,$c = cell(array("width"=>"5%")));
+    insert($tbig,$c = cell(array('id'=>'summary_pad')));
     // create stats cell for later use
-    insert($tbig,$cstats = cell(array("valign"=>"top")));
+    insert($tbig,$cstats = cell(array('id'=>'subnet_summary')));
 }
 
 // create a table
@@ -668,15 +668,15 @@ while($row = $rr->FetchRow()) {
     insert($t,$c = cell());
     // network address
     if (SHOWRESERVED and $maxcnt > 2 and $row["ipaddr"] == $baseaddr) {
-        insert($c,text(my_("Reserved - network address"), 
-                    array("color"=>"#FF0000")));
+        insert($c,span(my_("Reserved - network address"), 
+                    array('class'=>'reserved_ip_text')));
         insert($c,textbr());
         $export->addCell(my_("Reserved - network address"));
     }
     // broadcast address
     else if (SHOWRESERVED and $maxcnt > 2 and $row["ipaddr"] == $baseaddr+$maxcnt-1) {
-        insert($c,text(my_("Reserved - broadcast address"), 
-                    array("color"=>"#FF0000")));
+        insert($c,span(my_("Reserved - broadcast address"), 
+                    array('class'=>'reserved_ip_text')));
         insert($c,textbr());
         $export->addCell(my_("Reserved - broadcast address"));
     }
@@ -798,14 +798,14 @@ insert($w,block("<p>"));
 if ($maxcnt > 2 and empty($search)) {
     // display stats
     insert($cstats,textb(my_("Subnet Summary")));
-    insert($cstats,block("<p>"));
-    insert($cstats,textbr(my_("Total addresses:")." ".$maxcnt));
-    insert($cstats,textbr(my_("Used addresses:")." ".($recs+2).my_(" (Including network and broadcast)")));
-    insert($cstats,textbr(my_("Free addresses:")." ".($maxcnt-$recs-2)));
-    insert($cstats,textbr(my_("Active polled (D/W/M/Y):")." ".
+    insert($cstats,$para=paragraph());
+    insert($para,textbr(my_("Total addresses:")." ".$maxcnt));
+    insert($para,textbr(my_("Used addresses:")." ".($recs+2).my_(" (Including network and broadcast)")));
+    insert($para,textbr(my_("Free addresses:")." ".($maxcnt-$recs-2)));
+    insert($para,textbr(my_("Active polled (D/W/M/Y):")." ".
         sprintf("%d/%d/%d/%d", $pollcnt["d"],$pollcnt["w"],$pollcnt["m"],$pollcnt["y"])));
-    insert($cstats,textbr(my_("Utilization:")." ".(round(($recs+2)/$maxcnt*100,2))."%"));
-    insert($cstats,textbr(my_("Efficiency:")." ".(round(($recs)/$maxcnt*100,2))."%"));
+    insert($para,textbr(my_("Utilization:")." ".(round(($recs+2)/$maxcnt*100,2))."%"));
+    insert($para,textbr(my_("Efficiency:")." ".(round(($recs)/$maxcnt*100,2))."%"));
 }
 
 // display various blocks of subnet
