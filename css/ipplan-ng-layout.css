@@ -22,4 +22,8 @@ Style of elements is controlled by the theme.
 
 #summary_pad {
 	width: 5%;
+}
+
+#treemenu td {
+	padding: .25em;
 }	

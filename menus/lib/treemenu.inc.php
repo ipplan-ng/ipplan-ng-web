@@ -186,7 +186,7 @@ function newTreeMenu(
 				$img = $img_space;
 				$alt = $alt_space;
 			}
-			$this->_treeMenu[$menu_name] .= '<img align="top" border="0" class="imgs" src="' . $img . '" alt="' . $alt . '" />';
+			$this->_treeMenu[$menu_name] .= '<img class="imgs" src="' . $img . '" alt="' . $alt . '" />';
 		}
 
 		$not_a_leaf = $cnt<$this->_lastItem[$menu_name] && $this->tree[$cnt+1]['level']>$this->tree[$cnt]['level'];
@@ -201,9 +201,9 @@ function newTreeMenu(
 					$img = $img_collapse_corner;
 					$alt = $alt_collapse_corner;
 				}
-				$this->_treeMenu[$menu_name] .= '<a onmousedown="' . $toggle_function_name . "('" . $cnt . "')" . '"><img align="top" border="0" class="imgs" id="jt' . $cnt . 'node" src="' . $img . '" alt="' . $alt . '" /></a>';
+				$this->_treeMenu[$menu_name] .= '<a onmousedown="' . $toggle_function_name . "('" . $cnt . "')" . '"><img class="imgs" id="jt' . $cnt . 'node" src="' . $img . '" alt="' . $alt . '" /></a>';
 			} else {
-				$this->_treeMenu[$menu_name] .= '<img align="top" border="0" class="imgs" src="' . $img_corner . '" alt="' . $alt_corner . '" />';
+				$this->_treeMenu[$menu_name] .= '<img class="imgs" src="' . $img_corner . '" alt="' . $alt_corner . '" />';
 			}
 			$levels[$this->tree[$cnt]['level']-1] = 0;
 		} else {
@@ -215,7 +215,7 @@ function newTreeMenu(
 					$img = $img_collapse;
 					$alt = $alt_collapse;
 				}
-				$this->_treeMenu[$menu_name] .= '<a onmousedown="' . $toggle_function_name . "('" . $cnt . "');" . '"><img align="top" border="0" class="imgs" id="jt' . $cnt . 'node" src="' . $img . '" alt="' . $alt . '" /></a>';
+				$this->_treeMenu[$menu_name] .= '<a onmousedown="' . $toggle_function_name . "('" . $cnt . "');" . '"><img class="imgs" id="jt' . $cnt . 'node" src="' . $img . '" alt="' . $alt . '" /></a>';
 			} else {
 				if ($cnt == $this->_firstItem[$menu_name]) {
 					$img = $img_split_first;
@@ -224,7 +224,7 @@ function newTreeMenu(
 					$img = $img_split;
 					$alt = $alt_split;
 				}
-				$this->_treeMenu[$menu_name] .= '<img align="top" border="0" class="imgs" id="jt' . $cnt . 'node" src="' . $img . '" alt="' . $alt . '" />';
+				$this->_treeMenu[$menu_name] .= '<img class="imgs" id="jt' . $cnt . 'node" src="' . $img . '" alt="' . $alt . '" />';
 			}
 			$levels[$this->tree[$cnt]['level']-1] = 1;
 		}
@@ -242,12 +242,12 @@ function newTreeMenu(
 		}
 
 		if ($not_a_leaf) {
-			$this->_treeMenu[$menu_name] .= $a_href_open_img . '<img align="top" border="0" class="imgs" id="jt' . $cnt . 'folder" src="' . $img_folder_open . '" alt="' . $alt_folder_open . '" />' . $a_href_close_img;
+			$this->_treeMenu[$menu_name] .= $a_href_open_img . '<img class="imgs" id="jt' . $cnt . 'folder" src="' . $img_folder_open . '" alt="' . $alt_folder_open . '" />' . $a_href_close_img;
 		} else {
 			if ($this->tree[$cnt]['parsed_icon'] != '') {
-				$this->_treeMenu[$menu_name] .= $a_href_open_img . '<img align="top" border="0" src="' . $this->tree[$cnt]['parsed_icon'] . '" width="' . $this->tree[$cnt]['iconwidth'] . '" height="' . $this->tree[$cnt]['iconheight'] . '" alt="' . $alt_leaf . '" />' . $a_href_close_img;
+				$this->_treeMenu[$menu_name] .= $a_href_open_img . '<img src="' . $this->tree[$cnt]['parsed_icon'] . '" width="' . $this->tree[$cnt]['iconwidth'] . '" height="' . $this->tree[$cnt]['iconheight'] . '" alt="' . $alt_leaf . '" />' . $a_href_close_img;
 			} else {
-				$this->_treeMenu[$menu_name] .= $a_href_open_img . '<img align="top" border="0" class="imgs" src="' . $img_leaf . '" alt="' . $alt_leaf . '" />' . $a_href_close_img;
+				$this->_treeMenu[$menu_name] .= $a_href_open_img . '<img class="imgs" src="' . $img_leaf . '" alt="' . $alt_leaf . '" />' . $a_href_close_img;
 			}
 		}
 		$this->_treeMenu[$menu_name] .= '&nbsp;' . $a_href_open . $this->tree[$cnt]['text'] . $a_href_close . "\n";
@@ -277,9 +277,9 @@ function newTreeMenu(
 */
 	// Some (old) browsers do not support the "white-space: nowrap;" CSS property...
 	$this->_treeMenu[$menu_name] =
-	'<table cellspacing="0" cellpadding="0" border="0">' . "\n" .
+	'<table class="treemenutable">' . "\n" .
 	'<tr>' . "\n" .
-	'<td class="phplmnormal" nowrap="nowrap">' . "\n" .
+	'<td class="phplmnormal">' . "\n" .
 	$this->_treeMenu[$menu_name] .
 	'</td>' . "\n" .
 	'</tr>' . "\n" .
@@ -302,14 +302,14 @@ function newTreeMenu(
 	));
 	$toggle_function = $t->parse('out', 'tplfile');
 	$toggle_function =
-	'<script language="JavaScript" type="text/javascript">' . "\n" .
+	'<script type="text/javascript">' . "\n" .
 	'<!--' . "\n" .
 	$toggle_function .
 	'// -->' . "\n" .
 	'</script>' . "\n";
 
 	$toggle =
-	'<script language="JavaScript" type="text/javascript">' . "\n" .
+	'<script type="text/javascript">' . "\n" .
 	'<!--' . "\n" .
 	'if ((DOM && !Opera56 && !Konqueror22) || IE4) {' . "\n" .
 	$toggle .

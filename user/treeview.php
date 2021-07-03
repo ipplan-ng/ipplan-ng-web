@@ -55,15 +55,10 @@ insert($w,block("<p><hr>"));
 
 insert($w, $t=table(
 array(
-     "cols"		=>"1",
-     "width"		=>"100%",
-     "border"		=>"1",
-     "cellspacing"	=>"2",
-     "frame"		=>"void",
-     "rules"		=>"ALL",
-     "cellpadding"  =>"5")));
+     "id" 	=>"treemenu",
+     "cols"		=>"1")));
 
-insert($t, $leftmenu   = cell(array("align"=>"left" ,"width"=>"100%" ,"valign"=>"top")));
+insert($t, $leftmenu   = cell());
 
 //read the database and create the strings containing the menus 
 $ds= new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
