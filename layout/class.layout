@@ -1,7 +1,12 @@
 <?php
 /*
+	PHP Layout Class	
+	Version 2.0
+	Modified for use in IPplan-NG.
+
+
       (C) Copywrite 1999 Valuehunt Inc. <php@valuehunt.com>
-          Version 2.0
+          Version 1.0
 
 	Copyright 1999 ValueHunt Inc. All rights reserved.
 	Permission is granted to anyone to use this software for any purpose
@@ -35,7 +40,7 @@
 // 24-09-2005 added htmlspecialchars to anchor
 // 20-07-2006 removed microtime dependency as this caused issues on SMP/VM type machines
 //            Josh Kelley (yeshua) iptrack-Bugs-1525499
-// 20-02-2021 Update to output HTML 5 style tags.
+// 20-02-2021 Version 2.0 started for IPplan-NG. Update to output HTML 5 style tags.
 
 # Helper functions
 function insert($p,$c) {
@@ -49,7 +54,7 @@ function setdefault($o,$a) {
 
 function defsetting($a) {
     if( is_array($a) ) {
-        while( list($key,$val) = each($a) ) {
+        foreach ($a as $key => $val) {
           $name = "def_" . $key ;
           $GLOBALS["$name"] = $val;
         }
@@ -308,6 +313,7 @@ class HTMLBase {
         var $settings = "";
         var $children = FALSE;
         var $level = 0;
+        var $page_lang;
 
         function insert($c) {
            $this->children[] = $c ;
@@ -316,7 +322,7 @@ class HTMLBase {
 
         function listchild() {
            reset($this->children);
-           while( list($key,$ch) = each($this->children) ) {
+           foreach ($this->children as $key => $ch) {
                 $val = $this->children[$key];
            }
         }
@@ -326,13 +332,13 @@ class HTMLBase {
                 reset($this->children);
                 $ac = $this->children ; unset($this->children);
 
-                while ( list($key,$ch) = each($ac) ) {
+                foreach ($ac as $key => $ch) {
                        if ( getclass($ch) == "wheader" ) { continue ;}
                        $this->children[] = $ch;
                 }
                 if(is_array($this->children)) {
                     reset($this->children);
-                    while( list($key,$ch) = each($this->children) ) {
+                    foreach ($this->children as $key => $ch) {
                         $val = $this->children[$key];
                         $GLOBALS["$val"]->printit();
                     }
@@ -355,18 +361,18 @@ class HTMLBase {
           global $$def;
           if ( is_array(${$def}) ) {
             reset(${$def});
-            while( list($key,$val) = each(${$def}) ) {
+            foreach (${$def} as $key => $val) {
                 $temp["$key"] = $val;
             }
           }
           if ( is_array($a) ) {
             reset($a);
-            while( list($key,$val) = each($a) ) {
+            foreach ($a as $key => $val) {
                 $temp["$key"] = $val;
             }
           }
           reset($temp);
-          while (list($key,$val) = each($temp) ) {
+          foreach ($temp as $key => $val) {
                 $key = strtolower($key);
                 if ( $key == 'lang' && $this->classname == 'window') {
                     $this->page_lang = ' lang="'.$val.'"';
@@ -402,6 +408,11 @@ class Window extends HTMLBase {
 
         function Window($a = "") {
           $this->setparam($a);
+
+          if (!defined($this->page_lang))
+          {
+            $this->page_lang=' lang="en"';
+          }
         }
 
         function printit() {
@@ -416,7 +427,7 @@ class Window extends HTMLBase {
         function printheader() {
             if (is_array($this->children)) {
                 reset($this->children);
-                while ( list(,$ch) = each($this->children) ) {
+                foreach ($this->children as $ch) {
                     if ( getclass($ch) == "wheader" ) {
                          $GLOBALS["$ch"]->printit();
                     }
@@ -439,12 +450,17 @@ class WHeader extends HTMLBase {
 
         function printit() {
           if ( isset($this->title) ) {
-             echo "     <title>" . $this->title . "</title>";
+             echo "     <title>" . $this->title . "</title>\n";
           }
           // plx: including the content var to head as meta
           if (is_array($this->meta) && count(array_keys($this->meta)) > 0) {
-             while (list($name, $content) = each($this->meta)) {
-                 echo "        <meta name=\"".$name."\" content=\"".$content."\" />";
+             foreach ($this->meta as $name => $content) {
+                if ($name == 'charset') {
+                 echo "        <meta charset=\"".$content."\">\n";
+                }
+                else {
+                 echo "        <meta name=\"".$name."\" content=\"".$content."\">\n";
+                }
              }
           }
           $this->printchild();
@@ -471,7 +487,7 @@ class Table extends HTMLBase {
         function printtable() {
            if (is_array($this->children)) {
                 reset($this->children);
-                while( list($key,$ch) = each($this->children) ) {
+                foreach ($this->children as $key => $ch) {
                         if ( getclass($ch) != "cell" ) {
                             $GLOBALS["$ch"]->printit();
                             continue;
@@ -851,7 +867,7 @@ class Alist extends HTMLBase {
     function printit() {
         $this->indent(); echo "<" . $this->tag . $this->settings . ">";
         if (is_array($this->content)) {
-            while (list(,$ll) = each($this->content) ) {
+            foreach ($this->content as $ll) {
                 if ( getclass($ll) ) {
 		    $this->children = array();
                     $this->insert($ll);
@@ -1031,17 +1047,11 @@ class Selectbox extends HTMLBase {
 
     function printit() {
       $this->indent(); echo "<select". $this->settings . ">";
-      while( list($val,$na) = each($this->options) ) {
+      foreach ($this->options as $val => $na) {
          if (!is_array($na)) {
              $this->indent(); echo "    <option value=\"$val\"";
              if ( $this->selected == $val ) { echo " selected"; }
              echo ">".htmlspecialchars($na);
-         } else {
-             list($txt,$clr) = each($na);
-             $this->indent();
-             echo "    <option value=\"$val\"";
-             if ( $this->selected == $val ) { echo " selected"; }
-             echo "><font color=\"$clr\">$txt</font>";
          }
          echo "</option>";
       }
