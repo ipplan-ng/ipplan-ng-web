@@ -33,10 +33,10 @@ $auth = new SQLAuthenticator(REALM, REALMERROR);
 $auth->authenticate();
 
 // set language
-isset($_COOKIE["ipplanLanguage"]) && myLanguage($_COOKIE['ipplanLanguage']);
+myLanguage(getUserLanguage());
 
 // set language
-isset($_COOKIE["ipplanLanguage"]) && myLanguage($_COOKIE['ipplanLanguage']);
+myLanguage(getUserLanguage());
 
 //setdefault("window",array("bgcolor"=>"white"));
 

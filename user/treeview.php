@@ -34,7 +34,7 @@ $auth = new SQLAuthenticator(REALM, REALMERROR);
 $grps=$auth->authenticate();
 
 // set language
-isset($_COOKIE["ipplanLanguage"]) && myLanguage($_COOKIE['ipplanLanguage']);
+myLanguage(getUserLanguage());
 
 $title=my_("Display subnet information");
 newhtml($p);

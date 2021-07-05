@@ -34,7 +34,7 @@ $auth->addUser(ADMINUSER, ADMINPASSWD);
 $grps=$auth->authenticate();
 
 // set language
-isset($_COOKIE["ipplanLanguage"]) && myLanguage($_COOKIE['ipplanLanguage']);
+myLanguage(getUserLanguage());
 
 //setdefault("window",array("bgcolor"=>"white"));
 //setdefault("table",array("cellpadding"=>"0"));

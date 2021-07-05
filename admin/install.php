@@ -33,7 +33,7 @@ require_once("../layout/class.layout");
 if (!defined('CONFIG_DIR')) die("Your config.php file is inconsistent - you cannot copy over your old config.php file during upgrade");
 
 // set language
-isset($_COOKIE["ipplanLanguage"]) && myLanguage($_COOKIE['ipplanLanguage']);
+myLanguage(getUserLanguage());
 
 
 newhtml($p);
@@ -60,31 +60,29 @@ if(extension_loaded("gettext") and LANGCHOICE) {
 
         // set language cookie if language changed by user
         // language includes path of ipplan root seperated by :
-        if ($lang) {
-            setcookie("ipplanLanguage",$lang.":".dirname(dirname(__FILE__)),time() + 10000000, "/");
-            $_COOKIE['ipplanLanguage']=$lang.":".dirname(dirname(__FILE__));
+        if (isValidLanguage($lang)) {
+            setcookie('IPplanNG_Language',$lang,time() + 10000000, '/');
+            $_COOKIE['IPplanNG_Language']=$lang;
         }
     }
 
-    if (isset($_COOKIE["ipplanLanguage"])) { 
-        myLanguage($_COOKIE['ipplanLanguage']);
-    }
+    myLanguage(getUserLanguage());
 
     insert($w, $con=container("fieldset",array("class"=>"fieldset")));
     insert($con, $legend=container("legend",array("class"=>"legend")));
     insert($legend, text(my_("Language")));
     insert($con,  $f=form(array("method"=>"post","action"=>$_SERVER["PHP_SELF"])));
     insert($f,  textbr(my_("Please choose your language:")));
-    insert($f,  block('<select NAME="lang">'));
 
-    foreach($iso_codes as $key => $value)
-        // look only at language part of cookie
-        if (isset($_COOKIE["ipplanLanguage"]) and substr($_COOKIE['ipplanLanguage'],0,5)==$key) {
-            insert($f,block('<option VALUE="'.$key.'" SELECTED>'.$value."\n")); }
-        else {
-            insert($f, block('<option VALUE="'.$key.'">'.$value."\n"));
+    $current_lang=null;
+
+    $user_lang=getUserLanguage();
+
+        if (isValidLanguage($user_lang)) {
+        $current_lang=$user_lang;
         }
-    insert($f,block("</select>"));
+
+    insert($f,selectbox($iso_codes,array('name' => 'lang'),$current_lang));
     insert($f,submit(array("value"=>my_("  Change  "))));
     insert($w,generic("br"));
     insert($w,generic("br"));

@@ -18,7 +18,8 @@
 // Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 //
 
-require_once('classes/Version.php');
+require_once dirname(__FILE__).'/config.php';
+require_once dirname(__FILE__).'/classes/Version.php';
 
 define("DEFAULTROUTE", "0.0.0.0");
 define("ALLNETS", "255.255.255.255");
@@ -426,13 +427,23 @@ function my_($message) {
 }
 
 // set the language to use
-// cookie is in form <2 letter country code>;<path to ipplan root>
-function myLanguage($langcookie) {
+// language argument is the country code
+function myLanguage($lang_v) {
+
+    if ($lang_v === null) {
+    return;
+    }
+
+    $path=dirname(__FILE__);
+    $lang=null;
 
     if(extension_loaded("gettext")) {
-        // split language and path from cookie
-        list($lang,$path) = explode(":", $langcookie, 2);
-
+        if (isValidLanguage($lang_v)) {
+        $lang = $lang_v.'.utf8';
+        } else {
+        trigger_error("$lang_v is not a valid language.\n");
+        }
+		print "<b>LANG $lang, PATH $path</b>\n";
         // initialize gettext for Windows
         if (strpos(strtoupper(PHP_OS),'WIN') !== false) {
             putenv("LANG=$lang");
@@ -455,6 +466,30 @@ function myLanguage($langcookie) {
 
         // Choose domain 
         textdomain ("messages");
+    }
+}
+
+// check that the language exists in the config file
+function isValidLanguage($user_lang)
+{
+    global $iso_codes;
+
+    if (isset($user_lang) && array_key_exists($user_lang, $iso_codes)) {
+    return true;
+    }
+    else {
+    return false;
+    }
+}
+
+// get the language from the user's cookie
+function getUserLanguage()
+{
+    if (!empty($_COOKIE['IPplanNG_Language']))
+    {
+    return $_COOKIE['IPplanNG_Language'];
+    } else {
+    return null;
     }
 }
 

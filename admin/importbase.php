@@ -74,7 +74,7 @@ $auth->authenticate();
 setcookie("ipplanCustomer","$cust",time() + 10000000, "/");
 
 // set language
-isset($_COOKIE["ipplanLanguage"]) && myLanguage($_COOKIE['ipplanLanguage']);
+myLanguage(getUserLanguage());
 
 //setdefault("window",array("bgcolor"=>"white"));
 //setdefault("table",array("cellpadding"=>"0"));

@@ -23,7 +23,7 @@ require_once("../config.php");
 require_once("../layout/class.layout");
 
 // set language
-isset($_COOKIE["ipplanLanguage"]) && myLanguage($_COOKIE['ipplanLanguage']);
+myLanguage(getUserLanguage());
 
 //setdefault("window",array("bgcolor"=>"white"));
 

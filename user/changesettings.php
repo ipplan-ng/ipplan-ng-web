@@ -34,10 +34,10 @@ list($paranoid, $ipplanParanoid, $poll, $ipplanPoll, $lang) = myRegister("I:para
 
 // set language
 if ($lang) {
-    myLanguage($lang.":".dirname(dirname(__FILE__)));
+    myLanguage($lang);
 }
 else {
-    isset($_COOKIE["ipplanLanguage"]) && myLanguage($_COOKIE['ipplanLanguage']);
+    myLanguage(getUserLanguage());
 }
 
 //setdefault("window",array("bgcolor"=>"white"));
@@ -58,12 +58,9 @@ if ($_POST) {
     $ipplanPoll=$poll;  // to update display once page submitted
 
     // set language cookie if language changed by user
-    // language includes path of ipplan root seperated by :
-    if ($lang) {
-        setcookie("ipplanLanguage",$lang.":".dirname(dirname(__FILE__)),time() + 10000000, "/");
-        $_COOKIE['ipplanLanguage']=$lang.":".dirname(dirname(__FILE__));
-        //isset($_COOKIE["ipplanLanguage"]) && myLanguage($_COOKIE['ipplanLanguage']);
-        //isset($_COOKIE["ipplanLanguage"]) && myLanguage($lang.":".dirname(dirname(__FILE__)));
+    if (isValidLanguage($lang)) {
+        setcookie('IPplanNG_Language',$lang,time() + 10000000, '/');
+        $_COOKIE['IPplanNG_Language']=$lang;
     }
 
     $results=my_("Settings changed");
@@ -106,17 +103,16 @@ insert($con,textbr());
 if(extension_loaded("gettext") and LANGCHOICE) {
 
     insert($con,block("<br>Language:<br>"));
-    //      insert($f,block('<select NAME="lang" ONCHANGE="submit()">'));
-    insert($con,block('<select NAME="lang">'));
 
-    foreach($iso_codes as $key => $value)
-        // look only at language part of cookie
-        if (isset($_COOKIE["ipplanLanguage"]) and substr($_COOKIE['ipplanLanguage'],0,5)==$key)
-            insert($con,block('<option VALUE="'.$key.'" SELECTED>'.$value."\n"));
-        else
-            insert($con, block('<option VALUE="'.$key.'">'.$value."\n"));
+    $current_lang=null;
 
-    insert($con,block("</select>"));
+    $user_lang=getUserLanguage();
+
+        if (isValidLanguage($user_lang)) {
+        $current_lang=$user_lang;
+        }
+
+    insert($con,selectbox($iso_codes,array('name' => 'lang'),$current_lang));
     insert($con,textbr());
 
 }

@@ -28,7 +28,7 @@ require_once("layout/class.layout");
 if (!defined("CONFIG_DIR")) die("Your config.php file is inconsistent - you cannot use your old config.php file during upgrade");
 
 // set language
-isset($_COOKIE["ipplanLanguage"]) && myLanguage($_COOKIE['ipplanLanguage']);
+myLanguage(getUserLanguage());
 
 CheckSchema();
 
