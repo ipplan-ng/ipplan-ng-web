@@ -1,5 +1,5 @@
 <?php
-// PHP Layers Menu 3.2.0-rc (C) 2001-2004 Marco Pratesi - http://www.marcopratesi.it/
+// PHP Layers Menu 4.0.0-rc (C) 2021 IPplan-NG
 
 /**
 * This file contains the code of the ProcessLayersMenu class.
@@ -11,7 +11,7 @@
 *
 * It provides methods useful to process/convert menus data, e.g. to output a menu structure and a DB SQL dump corresponding to already parsed data and hence also to convert a menu structure file to a DB SQL dump and viceversa
 *
-* @version 3.2.0-rc
+* @version 4.0.0-rc
 * @package PHPLayersMenu
 */
 class ProcessLayersMenu extends LayersMenuCommon

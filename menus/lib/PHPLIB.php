@@ -166,7 +166,7 @@ class Template_PHPLIB
         } else {
     
             reset($handle);
-            while (list($h, $f) = each($handle)) {
+            foreach ($handle as $h=>$f) {
                 $this->file[$h] = $this->_filename($f);
             }
         }
@@ -234,7 +234,7 @@ class Template_PHPLIB
         } else {
             reset($varname);
 
-            while (list($k, $v) = each($varname)) {
+            foreach ($varname as $k=>$v) {
                 if (!empty($k))
                     if ($this->debug) print "array: set *$k* to *$v*<br>\n";
 
@@ -297,7 +297,7 @@ class Template_PHPLIB
         } else {
             reset($handle);
 
-            while (list(, $h) = each($handle)) {
+            foreach ($handle as $h) {
                 $str = $this->subst($h);
                 $this->setVar($target, $str);
             }
@@ -332,7 +332,7 @@ class Template_PHPLIB
     {
         reset($this->_varKeys);
 
-        while (list($k, ) = each($this->_varKeys)) {
+        foreach ($this->_varKeys as $k) {
             $result[$k] = $this->getVar($k);
         }
 
@@ -357,7 +357,7 @@ class Template_PHPLIB
         } else {
             reset($varname);
     
-            while (list($k, ) = each($varname)) {
+            foreach ($varname as $k) {
                 $result[$k] = (isset($this->_varVals[$k])) ? $this->_varVals[$k] : "";
             }
 
@@ -386,7 +386,7 @@ class Template_PHPLIB
         }
 
         reset($m);
-        while (list(, $v) = each($m)) {
+        foreach ($m as $v) {
             if (!isset($this->_varKeys[$v])) {
                 $result[$v] = $v;
             }
@@ -462,7 +462,7 @@ class Template_PHPLIB
         if (file_exists($filename)) return $filename;
         if (is_array($this->file_fallbacks) && count($this->file_fallbacks) > 0) {
             reset($this->file_fallbacks);
-            while (list(,$v) = each($this->file_fallbacks)) {
+            foreach ($this->file_fallbacks as $v) {
                 if (file_exists($v.basename($filename))) return $v.basename($filename);
             }
             $this->halt(sprintf("filename: file %s does not exist in the fallback paths %s.",$filename,implode(",",$this->file_fallbacks)));

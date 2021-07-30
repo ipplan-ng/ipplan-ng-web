@@ -1,4 +1,4 @@
-// PHP Layers Menu 3.2.0-rc (C) 2001-2004 Marco Pratesi - http://www.marcopratesi.it/
+// PHP Layers Menu 4.0.0-rc (C) 2021 IPplan-NG
 
 useTimeouts = 1;
 timeoutLength = 1000;	// time in ms; not significant if useTimeouts = 0;

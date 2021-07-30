@@ -1,3 +1,10 @@
+---------------------------------------
+PHP Layers Menu 4.0.0-rc (Jul 30, 2021)
+---------------------------------------
+
+Updated to work with PHP 7+.
+Changed HTML to meet new standards.
+Migrated HTML formatting attributes to CSS.
 
 ---------------------------------------
 PHP Layers Menu 3.2.0-rc (Aug 17, 2004)

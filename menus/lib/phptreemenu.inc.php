@@ -1,5 +1,5 @@
 <?php
-// PHP Layers Menu 3.2.0-rc (C) 2001-2004 Marco Pratesi - http://www.marcopratesi.it/
+// PHP Layers Menu 4.0.0-rc (C) 2021 IPplan-NG
 
 /**
 * This file contains the code of the PHPTreeMenu class.
@@ -11,7 +11,7 @@
 *
 * This class depends on the LayersMenuCommon class.  It provides "server-side" (PHP-based) tree menus, that to do not require JavaScript to work.
 *
-* @version 3.2.0-rc
+* @version 4.0.0-rc
 * @package PHPLayersMenu
 */
 class PHPTreeMenu extends LayersMenuCommon
@@ -142,7 +142,7 @@ function newPHPTreeMenu(
 	$url = $protocol . $this_host . $me;
 	$query = '';
 	reset($_GET);
-	while (list($key, $value) = each($_GET)) {
+    foreach ($_GET as $key=>$value) {
 		if ($key != 'p' && $value != '') {
 			$query .= '&amp;' . $key . '=' . $value;
 		}

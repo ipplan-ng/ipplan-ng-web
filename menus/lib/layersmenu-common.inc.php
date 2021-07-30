@@ -1,5 +1,5 @@
 <?php
-// PHP Layers Menu 3.2.0-rc (C) 2001-2004 Marco Pratesi - http://www.marcopratesi.it/
+// PHP Layers Menu 4.0.0-rc (C) 2021 IPplan-NG
 
 /**
 * This file contains the code of the LayersMenuCommon class.
@@ -11,7 +11,7 @@
 *
 * You need to include PEAR.php and DB.php if (and only if) you want to use the DB support provided by ths class.
 *
-* @version 3.2.0-rc
+* @version 4.0.0-rc
 * @package PHPLayersMenu
 */
 class LayersMenuCommon
@@ -233,9 +233,9 @@ var $_tmpArray = array();
 function LayersMenuCommon()
 {
 	$this->_packageName = 'PHP Layers Menu';
-	$this->version = '3.2.0-rc';
-	$this->copyright = '(C) 2001-2004';
-	$this->author = 'Marco Pratesi - http://www.marcopratesi.it/';
+	$this->version = '4.0.0-rc';
+	$this->copyright = '(C) 2021';
+	$this->author = 'IPplan-NG';
 
 	$this->prependedUrl = '';
 
@@ -573,7 +573,7 @@ function setTableFields($tableFields)
 		return false;
 	}
 	reset ($tableFields);
-	while (list($key, $value) = each($tableFields)) {
+        foreach ($tableFields as $key=>$value) {
 		$this->tableFields[$key] = ($value == '') ? "''" : $value;
 	}
 	return true;
@@ -596,7 +596,7 @@ function setTableFields_i18n($tableFields_i18n)
 		return false;
 	}
 	reset ($tableFields_i18n);
-	while (list($key, $value) = each($tableFields_i18n)) {
+    foreach ($tableFields_i18n as $key=>$value) {
 		$this->tableFields_i18n[$key] = ($value == '') ? "''" : $value;
 	}
 	return true;
@@ -755,7 +755,7 @@ function _getmicrotime()
 function _depthFirstSearch($menu_name, $tmpArray, $parent_id=1, $level=1)
 {
 	reset ($tmpArray);
-	while (list($id, $foobar) = each($tmpArray)) {
+    foreach ($tmpArray as $id=>$foobar) {
 		if ($foobar['parent_id'] == $parent_id) {
 			unset($tmpArray[$id]);
 			unset($this->_tmpArray[$id]);
