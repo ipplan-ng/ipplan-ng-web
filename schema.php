@@ -21,47 +21,49 @@
 // when the database layout changes, bump up this value.
 define("SCHEMA", 22);
 
-require_once("adodb/adodb.inc.php");
-require_once("class.dbflib.php");
+require_once '/classes/DBLib.php';
 
 // checks to see if user is using latest schema
 function CheckSchema() {
-
    // check php version
-   if (phpversion() < "4.1.0") {
-      die("You need php version 4.1.0 or later");
+   if (PHP_VERSION_ID < 70200) {
+      die("You need php version 7.2.0 or later");
    }
-   if (phpversion() >= "6") {
-      die("This version of IPplan will not work with PHP 6.x");
+
+   if (PHP_VERSION_ID >= 80000) {
+      die("This version of IPplan-NG does not run on PHP 8 yet.");
    }
 
    // cant use myError here as we do not have access to layout yet!
-   $ds=new IPplanDbf();
+   $ds=new IPplan_NG\DBLib();
    //$ds->ds->debug = true;
    if (!$ds) {
       die(my_("Could not connect to database"));
    }
 
    // check mysql version
-   if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql") {
-      $result=&$ds->ds->Execute("SELECT version() AS version");
+   if (DBF_TYPE=="mysqli") {
+      $result=$ds->ds->Execute("SELECT version() AS version");
       $row = $result->FetchRow();
-      $version=$row["version"];
-
-      if ($version < "3.23.15") {
-         die("You need mysql version 3.23.15 or later");
+      preg_match('@(\d+)\.(\d+)\.(\d+)@',$row['version'],$version);
+	if (count($version) != 4) {
+		die('Error getting MySQL version.');
+	}
+	$mysql_version_id = ( $version[1] * 10000 + $version[2] * 100 + $version[3] );
+      if ($mysql_version_id < 50167) {
+         die("You need mysql version 5.1.67 or later");
       }
    }
 
    // get schema version
    // schema is reserved word in mssql
    if (DBF_TYPE=="mssql" or DBF_TYPE=="ado_mssql" or DBF_TYPE=="odbc_mssql" or 
-       DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') {
-      $result=&$ds->ds->Execute("SELECT version
+       DBF_TYPE=='mysqli') {
+      $result=$ds->ds->Execute("SELECT version
                              FROM version");
    }
    else {
-      $result=&$ds->ds->Execute("SELECT version
+      $result=$ds->ds->Execute("SELECT version
                              FROM schema");
    }
    // could return error if schema table does not exist!
@@ -77,7 +79,7 @@ function CheckSchema() {
    if ($version == SCHEMA)
       return;
    else if (SCHEMA < $version) {
-      echo my_("You are trying to downgrade IPplan - impossible");
+      echo my_("You are trying to downgrade IPplan-NG - impossible");
       exit;
    }
 
