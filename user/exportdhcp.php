@@ -96,7 +96,7 @@ while($row = $result->FetchRow()) {
     $size = inet_ntoa( inet_aton(ALLNETS)+1 - $row["subnetsize"] );
     $broadcast = inet_ntoa($row["baseaddr"] + $row["subnetsize"] - 1);
 
-    $result_template=&$ds->ds->Execute("SELECT info, infobin
+    $result_template=$ds->ds->Execute("SELECT info, infobin
             FROM baseadd
             WHERE baseindex=$baseindex");
 
@@ -146,7 +146,7 @@ while($row = $result->FetchRow()) {
 
 
     // needs %% around userinf field as this could also contain a LNK!
-    $result_ip=&$ds->ds->Execute("SELECT ipaddr, macaddr, hname
+    $result_ip=$ds->ds->Execute("SELECT ipaddr, macaddr, hname
             FROM ipaddr
             WHERE baseindex=$baseindex AND
             userinf LIKE ".$ds->ds->qstr("%".DHCPRESERVED."%")."

@@ -127,7 +127,7 @@ if ($_POST) {
                 // move the subnet to another customer, template will move with as relation
                 // between base and baseadd is baseindex column
                 if ($duplicatesubnet==0) {
-                    $result=&$ds->ds->Execute("UPDATE base
+                    $result=$ds->ds->Execute("UPDATE base
                             SET descrip=".$ds->ds->qstr($descrip).",
                             admingrp=".$ds->ds->qstr($grp).",
                             customer=$cust,
@@ -158,7 +158,7 @@ if ($_POST) {
                                 $tempdescrip=$row["descrip"];
                                 $templastmod=$row["lastmod"];
                                 $tempuserid=$row["userid"];
-                                $tempresult=&$ds->ds->Execute("INSERT INTO ipaddr
+                                $tempresult=$ds->ds->Execute("INSERT INTO ipaddr
                                         (ipaddr, userinf, location, telno,
                                          descrip, lastmod, userid, baseindex)
                                         VALUES
@@ -204,7 +204,7 @@ if ($_POST) {
             }
 
             $ds->DbfTransactionStart();
-            $result=&$ds->ds->Execute("UPDATE base
+            $result=$ds->ds->Execute("UPDATE base
                     SET descrip=".$ds->ds->qstr($descrip).",
                     admingrp=".$ds->ds->qstr($grp).",
                     lastmod=".$ds->ds->DBTimeStamp(time()).",
@@ -240,7 +240,7 @@ if ($_POST) {
             if($ds->ds->GetRow("SELECT baseindex
                         FROM baseadd
                         WHERE baseindex=$baseindex")) {   // should have FOR UPDATE here!
-                $result = &$ds->ds->Execute("UPDATE baseadd
+                $result = $ds->ds->Execute("UPDATE baseadd
                         SET info=".$ds->ds->qstr($info)."
                         WHERE baseindex=$baseindex");
             // this generates a "duplicate key" error if no update
@@ -249,7 +249,7 @@ if ($_POST) {
         }
             else {
                 if (!empty($info)) {
-                    $result = &$ds->ds->Execute("INSERT INTO baseadd
+                    $result = $ds->ds->Execute("INSERT INTO baseadd
                             (info, baseindex)
                             VALUES
                             (".$ds->ds->qstr($info).", $baseindex)");
@@ -383,7 +383,7 @@ if (!$_POST || $formerror) {
     // Requires new default template: basetemplate.xml
     // Start of template support [FE]
 
-    $result=&$ds->ds->Execute("SELECT info, infobin
+    $result=$ds->ds->Execute("SELECT info, infobin
             FROM baseadd
             WHERE baseindex=$baseindex");
 

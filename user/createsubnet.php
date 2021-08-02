@@ -215,7 +215,7 @@ for ($i=1; $i <= $num; $i++) {
             }
 
             if (!empty($info)) {
-                $result = &$ds->ds->Execute("INSERT INTO baseadd
+                $result = $ds->ds->Execute("INSERT INTO baseadd
                         (info, baseindex)
                         VALUES
                         (".$ds->ds->qstr($info).", $id)");

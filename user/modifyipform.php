@@ -34,7 +34,7 @@ define("ADD_INFO", 9);
 function FindNextFree($ds, $baseindex, $baseaddr, $subnetsize) {
 
     // order is important here!
-    $result=&$ds->ds->Execute("SELECT ipaddr
+    $result=$ds->ds->Execute("SELECT ipaddr
             FROM ipaddr
             WHERE baseindex=$baseindex
             ORDER BY ipaddr");
@@ -116,13 +116,13 @@ if ($ip) {
     $iptemp=inet_ntoa($ip);
 
     // query could return nothing which is OK
-    $result=&$ds->ds->Execute("SELECT userinf, location, telno, macaddr, ipaddr, descrip, hname
+    $result=$ds->ds->Execute("SELECT userinf, location, telno, macaddr, ipaddr, descrip, hname
             FROM ipaddr
             WHERE ipaddr=$ip AND baseindex=$baseindex");
 
     $row = $result->FetchRow();
 
-    $result=&$ds->ds->Execute("SELECT info, infobin
+    $result=$ds->ds->Execute("SELECT info, infobin
             FROM ipaddradd
             WHERE ipaddr=$ip AND baseindex=$baseindex");
 

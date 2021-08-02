@@ -239,7 +239,7 @@ if ($action=="add") {
             // echo $ds->dataid;
 
 /*
-            $result = &$ds->ds->Execute("INSERT into fwdzonerec 
+            $result = $ds->ds->Execute("INSERT into fwdzonerec 
             (customer, data_id, sortorder, lastmod, host, 
              recordtype, userid, ip_hostname) ".
             "VALUES ($cust, $ds->dataid, 9999,".
@@ -313,7 +313,7 @@ if ($action=="export") {
 
     # get all changed zones into array
     if ($dataid==0) {
-        $dataid = &$ds->ds->GetCol("SELECT data_id
+        $dataid = $ds->ds->GetCol("SELECT data_id
                 FROM fwdzone 
                 WHERE customer=$cust AND error_message=".$ds->ds->qstr("E")."
                 ORDER BY domain ");
@@ -392,7 +392,7 @@ $cust=myCustomerDropDown($ds, $f1, $cust, $grps) or myError($w,$p, my_("No custo
 $search=$ds->mySearchSql("domain", $expr, $descrip);
 $sqllastmod = $ds->ds->SQLDate("M d Y H:i:s", 'lastmod');
 $sqllastexp = $ds->ds->SQLDate("M d Y H:i:s", 'lastexp');
-$result = &$ds->ds->Execute("SELECT data_id, domain, engineer, error_message, responsiblemail, 
+$result = $ds->ds->Execute("SELECT data_id, domain, engineer, error_message, responsiblemail, 
                                 serialdate, serialnum, ttl, refresh, retry, expire, minimum, 
                                 zonefilepath1, zonefilepath2, customer, admingrp, 
                                 $sqllastexp AS lastexp, $sqllastmod AS lastmod, userid, 
@@ -485,7 +485,7 @@ setdefault("cell",array("class"=>color_flip_flop()));
     $export->addCell($row["domain"]);
     }
 
-    $result1 = &$ds->ds->Execute("SELECT hname FROM fwddns
+    $result1 = $ds->ds->Execute("SELECT hname FROM fwddns
                                   WHERE id=".$row["data_id"]."
                                   ORDER BY horder");
 

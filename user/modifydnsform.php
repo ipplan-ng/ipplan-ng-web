@@ -135,7 +135,7 @@ if ($action=="add") {
                     "size"=>"30",
                     "maxlength"=>"30")));
 
-    $result2=&$ds->ds->Execute("SELECT hname,horder
+    $result2=$ds->ds->Execute("SELECT hname,horder
             FROM revdns
             WHERE customer=$cust");
 
@@ -157,7 +157,7 @@ else {
     $sqlcreatemod = $ds->ds->SQLDate("Y-m-d", 'createmod');
     $sqlexpiremod = $ds->ds->SQLDate("Y-m-d", 'expiremod');
     $sqlregmod = $ds->ds->SQLDate("Y-m-d", 'regmod');
-    $row = &$ds->ds->GetRow("SELECT data_id, domain, responsiblemail, 
+    $row = $ds->ds->GetRow("SELECT data_id, domain, responsiblemail, 
                                 serialdate, serialnum, ttl, refresh, retry, expire, minimum, 
                                 zonefilepath1 AS zonepath, zonefilepath2 AS seczonepath, 
                                 customer, admingrp, slaveonly,
@@ -197,7 +197,7 @@ else {
         $regyear = $regmonth = $regday = "";
     }
 
-    $result2=&$ds->ds->Execute("SELECT hname,horder 
+    $result2=$ds->ds->Execute("SELECT hname,horder 
             FROM fwddns
             WHERE id=$dataid");
 }

@@ -30,14 +30,14 @@ function genSWIP($ds, $baseindex, $start, $end, $cust,
 
     //************ now process customer standard fields ************//
 
-    $result1=&$ds->ds->Execute("SELECT *
+    $result1=$ds->ds->Execute("SELECT *
             FROM custinfo
             WHERE customer=$cust");
     // should only be one row here, none if SWIP turned off during creation
     // of customer
     $row1=$result1->FetchRow();
 
-    $result2=&$ds->ds->Execute("SELECT hname, ipaddr
+    $result2=$ds->ds->Execute("SELECT hname, ipaddr
             FROM revdns
             WHERE customer=$cust
             ORDER BY horder");
@@ -110,7 +110,7 @@ function genSWIP($ds, $baseindex, $start, $end, $cust,
 
     // process fields form the user defined template
     if (!$err) {
-        $restmp=&$ds->ds->Execute("SELECT info
+        $restmp=$ds->ds->Execute("SELECT info
                 FROM custadd
                 WHERE customer=$cust");
 
@@ -130,7 +130,7 @@ function genSWIP($ds, $baseindex, $start, $end, $cust,
     $err=$template->is_error();
 
     if (!$err) {
-        $result_template=&$ds->ds->Execute("SELECT info, infobin
+        $result_template=$ds->ds->Execute("SELECT info, infobin
                 FROM baseadd
                 WHERE baseindex=$baseindex");
 

@@ -114,7 +114,7 @@ if ($_POST) {
     if (!$formerror) {
 
         $ds->DbfTransactionStart();
-        $result=&$ds->ds->Execute("INSERT INTO requestip
+        $result=$ds->ds->Execute("INSERT INTO requestip
                 (customer, requestdesc, userinf, location, descrip,
                  hname, telno, macaddr, info)
                 VALUES

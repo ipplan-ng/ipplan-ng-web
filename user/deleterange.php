@@ -65,7 +65,7 @@ if ($_GET) {
       $rangesize=$row["rangesize"];
  
       $ds->DbfTransactionStart();
-      $result=&$ds->ds->Execute("DELETE FROM netrange
+      $result=$ds->ds->Execute("DELETE FROM netrange
                               WHERE rangeindex=$rangeindex") and
       $ds->AuditLog(array("event"=>162, "action"=>"delete range", 
                     "baseaddr"=>$rangeip, "user"=>getAuthUsername(), "size"=>$rangesize,

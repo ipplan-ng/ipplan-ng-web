@@ -113,12 +113,12 @@ if ($action=="delete") {
         $ds->DbfTransactionStart();
         // check for attached files
         if (DBF_TYPE=="mssql" or DBF_TYPE=="ado_mssql" or DBF_TYPE=="odbc_mssql") {
-            $result=&$ds->ds->Execute("SELECT ipaddr
+            $result=$ds->ds->Execute("SELECT ipaddr
                 FROM ipaddradd
                 WHERE baseindex=$baseindextmp AND datalength(infobin) != 0");
         }
         else {
-            $result=&$ds->ds->Execute("SELECT ipaddr
+            $result=$ds->ds->Execute("SELECT ipaddr
                 FROM ipaddradd
                 WHERE baseindex=$baseindextmp AND ".$ds->ds->length."(infobin) != 0");
         }
@@ -220,7 +220,7 @@ else if ($action=="split" or $action=="join") {
         }
         // none found overlapping, so can extend subnet!
         // or overlapping subnet was already deleted
-        $result=&$ds->ds->Execute("UPDATE base
+        $result=$ds->ds->Execute("UPDATE base
                 SET subnetsize=$size*2,
                 lastmod=".$ds->ds->DBTimeStamp(time()).",
                 userid=".$ds->ds->qstr(getAuthUsername())."
@@ -236,7 +236,7 @@ else if ($action=="split" or $action=="join") {
             myError($w,$p, my_("Subnets cannot be split - host network!"));
         }
         // halve size of subnet
-        $result=&$ds->ds->Execute("UPDATE base
+        $result=$ds->ds->Execute("UPDATE base
                 SET subnetsize=$size/2,
                 lastmod=".$ds->ds->DBTimeStamp(time()).",
                 userid=".$ds->ds->qstr(getAuthUsername())."

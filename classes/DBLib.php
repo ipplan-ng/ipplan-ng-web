@@ -146,7 +146,7 @@ class DBLib {
                 FROM ipaddr
                 WHERE baseindex=$baseindex AND
                 ipaddr=$ipaddr")) {   // should have FOR UPDATE here!
-        $result = &$this->ds->Execute("UPDATE ipaddr
+        $result = $this->ds->Execute("UPDATE ipaddr
                 SET userinf=".$this->ds->qstr($user).",
                 location=".$this->ds->qstr($location).",
                 telno=".$this->ds->qstr($telno).",
@@ -159,7 +159,7 @@ class DBLib {
                 ipaddr=$ipaddr");
         }
         else {
-            $result = &$this->ds->Execute("INSERT INTO ipaddr
+            $result = $this->ds->Execute("INSERT INTO ipaddr
                     (userinf, location, telno, macaddr, descrip, hname,
                      baseindex, ipaddr, lastmod, userid)
                     VALUES
@@ -186,7 +186,7 @@ class DBLib {
                 FROM ipaddradd
                 WHERE baseindex=$baseindex AND
                 ipaddr=$ipaddr")) {   // should have FOR UPDATE here!
-            $result = &$this->ds->Execute("UPDATE ipaddradd
+            $result = $this->ds->Execute("UPDATE ipaddradd
                     SET info=".$this->ds->qstr($info)."
                     WHERE baseindex=$baseindex AND
                     ipaddr=$ipaddr");
@@ -196,7 +196,7 @@ class DBLib {
         }
         else {
             if (!empty($info)) {
-                $result = &$this->ds->Execute("INSERT INTO ipaddradd
+                $result = $this->ds->Execute("INSERT INTO ipaddradd
                         (info, baseindex, ipaddr)
                         VALUES
                         (".$this->ds->qstr($info).",
@@ -211,7 +211,7 @@ class DBLib {
 
         $userid = getAuthUsername();
 
-        $result = &$this->ds->Execute("UPDATE ipaddr
+        $result = $this->ds->Execute("UPDATE ipaddr
                            SET $field=".$this->ds->qstr($value).",
                               lastmod=".$this->ds->DBTimeStamp(time()).",
                               userid=".$this->ds->qstr($userid)."
@@ -330,7 +330,7 @@ class DBLib {
         $userid = getAuthUsername();
 
         // no other options defined for baseopt, so always make 1 or 0
-        $result = &$this->ds->Execute("INSERT INTO base
+        $result = $this->ds->Execute("INSERT INTO base
                               (baseaddr, subnetsize, descrip, admingrp,
                                baseopt, customer, userid, lastmod)
                            VALUES
@@ -347,7 +347,7 @@ class DBLib {
         }
         else {
             // emulate getting the last insert_id
-            $result = &$this->ds->Execute("SELECT baseindex 
+            $result = $this->ds->Execute("SELECT baseindex 
                                FROM base
                                WHERE baseaddr=$baseaddr AND customer=$cust");
             $temprow = $result->FetchRow();
@@ -359,7 +359,7 @@ class DBLib {
     function TestCustomerGrp($baseindex, $userid) {
 
         // could use GetRow here
-        $result = &$this->ds->Execute("SELECT customer.admingrp AS admingrp
+        $result = $this->ds->Execute("SELECT customer.admingrp AS admingrp
                             FROM base, customer, usergrp
                             WHERE base.baseindex=$baseindex AND
                                base.customer=customer.customer AND
@@ -378,7 +378,7 @@ class DBLib {
     function TestCustomerCreate($userid) {
 
         // could use GetRow here
-        $result = &$this->ds->Execute("SELECT usergrp.grp
+        $result = $this->ds->Execute("SELECT usergrp.grp
                             FROM usergrp, grp
                             WHERE usergrp.userid=".$this->ds->qstr($userid)." AND
                                usergrp.grp=grp.grp AND
@@ -396,7 +396,7 @@ class DBLib {
     function GetBaseGrp($baseindex) {
 
         // could use GetRow here
-        $result = &$this->ds->Execute("SELECT admingrp
+        $result = $this->ds->Execute("SELECT admingrp
                            FROM base
                            WHERE baseindex=$baseindex");
 
@@ -414,11 +414,11 @@ class DBLib {
 // no need for customer as baseindex makes delete unique!!!
     function DeleteSubnet($baseindex) {
 
-        $result = &$this->ds->Execute("DELETE FROM base
+        $result = $this->ds->Execute("DELETE FROM base
                          WHERE baseindex=$baseindex") and 
-        $result = &$this->ds->Execute("DELETE FROM ipaddr
+        $result = $this->ds->Execute("DELETE FROM ipaddr
                          WHERE baseindex=$baseindex") and
-        $result = &$this->ds->Execute("DELETE FROM baseadd
+        $result = $this->ds->Execute("DELETE FROM baseadd
                          WHERE baseindex=$baseindex");
 
         return $result;
@@ -459,7 +459,7 @@ class DBLib {
 // returns 1 if action allowed (create etc), zero if action not allowed
     function TestBounds($boundsaddr, $boundssize, $grp) {
 
-        $result = &$this->ds->Execute("SELECT count(*) AS cnt
+        $result = $this->ds->Execute("SELECT count(*) AS cnt
                          FROM bounds
                          WHERE grp=".$this->ds->qstr($grp));
         $row = $result->FetchRow();
@@ -468,7 +468,7 @@ class DBLib {
             return 1;
         }
 
-        $result = &$this->ds->Execute("SELECT boundsaddr
+        $result = $this->ds->Execute("SELECT boundsaddr
                                FROM bounds
                                WHERE (($boundsaddr BETWEEN boundsaddr AND 
                                   boundsaddr + boundssize - 1) AND
@@ -909,17 +909,17 @@ class DBLib {
         // optimised for mysql
         if (DBF_TYPE == 'mysqli') {
             $result =
-                &$this->ds->Execute("SELECT md5(sum(lastmod)) AS md5str
+                $this->ds->Execute("SELECT md5(sum(lastmod)) AS md5str
                              FROM ipaddr
                              WHERE ipaddr IN($sql) AND baseindex=$baseindex
                              GROUP BY lastmod");
 
             $row = $result->FetchRow();
-            return $row["md5str"];
+            if (is_array($row)) return $row["md5str"];
         }
         else {
             $sqllastmod = $this->ds->SQLDate("M d Y H:i:s", 'lastmod');
-            $result = &$this->ds->Execute("SELECT $sqllastmod AS lastmod
+            $result = $this->ds->Execute("SELECT $sqllastmod AS lastmod
                              FROM ipaddr
                              WHERE ipaddr IN($sql) AND baseindex=$baseindex");
 
@@ -927,7 +927,7 @@ class DBLib {
             while ($row = $result->FetchRow()) {
                 $md5str .= $row["lastmod"];
             }
-            return md5($md5str);
+            if (is_array($row)) return md5($md5str);
         }
     }
 

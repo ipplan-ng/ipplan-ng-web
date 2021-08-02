@@ -122,7 +122,7 @@ if ($_POST) {
 
         // new record?
         if ($cust == 0) {
-            $result=&$ds->ds->Execute("INSERT INTO customer
+            $result=$ds->ds->Execute("INSERT INTO customer
                     (custdescrip, crm, admingrp)
                     VALUES
                     (".$ds->ds->qstr($custdescrip).",
@@ -136,7 +136,7 @@ if ($_POST) {
                 }
                 else {
                     // emulate getting the last insert_id
-                    $result=&$ds->ds->Execute("SELECT customer 
+                    $result=$ds->ds->Execute("SELECT customer 
                             FROM customer
                             WHERE custdescrip=".$ds->ds->qstr($custdescrip));
                     $temprow = $result->FetchRow();
@@ -158,7 +158,7 @@ if ($_POST) {
                 myError($w,$p, my_("Customer cannot be found!"));
             }
 
-            $result=&$ds->ds->Execute("UPDATE customer
+            $result=$ds->ds->Execute("UPDATE customer
                     SET custdescrip=".$ds->ds->qstr($custdescrip).",
                     crm=".$ds->ds->qstr($crm).",
                     admingrp=".$ds->ds->qstr($grp)."
@@ -190,9 +190,9 @@ if ($_POST) {
 
             // must emulate replace here as custinfo record may
             // not exist
-            $result=&$ds->ds->Execute("DELETE FROM custinfo
+            $result=$ds->ds->Execute("DELETE FROM custinfo
                     WHERE customer=$cust");
-            $result=&$ds->ds->Execute("INSERT INTO custinfo
+            $result=$ds->ds->Execute("INSERT INTO custinfo
                     (customer, maint, org, street, city, state, zipcode,
                      cntry, nichandl, lname, fname, mname, torg,
                      tstreet, tcity, tstate, tzipcode, tcntry,
@@ -220,7 +220,7 @@ if ($_POST) {
                      ".$ds->ds->qstr($mbox).")");
 
             // delete all the DNS records first to preserve correct order
-            $result=&$ds->ds->Execute("DELETE FROM revdns
+            $result=$ds->ds->Execute("DELETE FROM revdns
                     WHERE customer=$cust");
 
             // add reverse DNS into revdns table
@@ -230,7 +230,7 @@ if ($_POST) {
                     $ipaddrtemp=$ipaddr[$i];
 
                     // add DNS records
-                    $result=&$ds->ds->Execute("INSERT INTO revdns
+                    $result=$ds->ds->Execute("INSERT INTO revdns
                             (customer, hname, ipaddr, horder)
                             VALUES
                             ($cust,
@@ -243,7 +243,7 @@ if ($_POST) {
             if($ds->ds->GetRow("SELECT customer
                         FROM custadd
                         WHERE customer=$cust")) {   // should have FOR UPDATE here!
-                $result = &$ds->ds->Execute("UPDATE custadd
+                $result = $ds->ds->Execute("UPDATE custadd
                         SET info=".$ds->ds->qstr($info)."
                         WHERE customer=$cust");
             // this generates a "duplicate key" error if no update
@@ -252,7 +252,7 @@ if ($_POST) {
         }
             else {
                 if (!empty($info)) {
-                    $result = &$ds->ds->Execute("INSERT INTO custadd
+                    $result = $ds->ds->Execute("INSERT INTO custadd
                             (info, customer)
                             VALUES
                             (".$ds->ds->qstr($info).", $cust)");
@@ -806,7 +806,7 @@ if (!$_POST || $formerror) {
                     "size"=>"100",
                     "maxlength"=>"100")));
 
-    $result=&$ds->ds->Execute("SELECT info
+    $result=$ds->ds->Execute("SELECT info
             FROM custadd
             WHERE customer=$cust");
 

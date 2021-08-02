@@ -62,7 +62,7 @@ if ($where) {
     $where = "WHERE ".$where;
 }
 $sqllastmod = $ds->ds->SQLDate("M d Y H:i:s", 'dt');
-$result=&$ds->ds->Execute("SELECT action, dt, $sqllastmod AS newdt
+$result=$ds->ds->Execute("SELECT action, dt, $sqllastmod AS newdt
         FROM auditlog
         $where
         ORDER BY dt DESC");

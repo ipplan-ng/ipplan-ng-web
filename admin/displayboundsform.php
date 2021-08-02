@@ -53,7 +53,7 @@ if ($grp) {
    $where="WHERE grp=".$ds->ds->qstr($grp);
 }
 
-$result=&$ds->ds->Execute("SELECT boundsaddr, boundssize, grp
+$result=$ds->ds->Execute("SELECT boundsaddr, boundssize, grp
                        FROM bounds
                        $where
                        ORDER BY grp, boundsaddr");

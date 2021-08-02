@@ -65,7 +65,7 @@ if ($_GET) {
       $areaip=inet_ntoa($row["areaaddr"]);
  
       $ds->DbfTransactionStart();
-      $result=&$ds->ds->Execute("DELETE FROM area
+      $result=$ds->ds->Execute("DELETE FROM area
                               WHERE areaindex=$areaindex") and
       $ds->AuditLog(array("event"=>152, "action"=>"delete area", 
                     "area"=>$areaip, "user"=>getAuthUsername(),

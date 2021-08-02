@@ -229,7 +229,7 @@ $sqllastmod = $ds->ds->SQLDate("M d Y H:i:s", 'ipaddr.lastmod');
 if ($areaindex and !$rangeindex) {
    insert($w,heading(3, sprintf(my_("Search for IP subnets between multiple ranges for customer '%s'"), $custdescrip)));
    // NOTE: ipaddr column aliased to baseaddr to make DisplayBlock work
-   $result=&$ds->ds->Execute("SELECT ipaddr.userinf, ipaddr.location, 
+   $result=$ds->ds->Execute("SELECT ipaddr.userinf, ipaddr.location, 
                              ipaddr.telno, ipaddr.descrip, $sqllastmod AS lastmod,
                              ipaddr.ipaddr AS baseaddr, ipaddr.baseindex, 
                              ipaddr.hname, 
@@ -251,7 +251,7 @@ else {
    insert($w,heading(3, sprintf(my_("Search for IP subnets between %s and %s %s for customer '%s'"), $start, $end, $site, $custdescrip)));
    // NOTE: ipaddr column aliased to baseaddr to make DisplayBlock work
    // get detail from ipaddr table - could be nothing!
-   $result=&$ds->ds->Execute("SELECT ipaddr.userinf, ipaddr.location, 
+   $result=$ds->ds->Execute("SELECT ipaddr.userinf, ipaddr.location, 
                              ipaddr.telno, ipaddr.descrip, $sqllastmod AS lastmod,
                              ipaddr.ipaddr AS baseaddr, ipaddr.baseindex,
                              ipaddr.hname, 

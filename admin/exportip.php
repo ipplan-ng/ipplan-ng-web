@@ -53,7 +53,7 @@ header("Expires: 0");
 $template=new IPplanIPTemplate("iptemplate", $cust);
 $err=$template->is_error();
 
-$result=&$ds->ds->Execute("SELECT ipaddr.userinf, ipaddr.location, ipaddr.telno, 
+$result=$ds->ds->Execute("SELECT ipaddr.userinf, ipaddr.location, ipaddr.telno, 
                           ipaddr.descrip, ipaddr.hname, ipaddr.ipaddr AS ip,
                           ipaddr.baseindex AS baseip, ipaddr.macaddr
                         FROM ipaddr, base
@@ -70,7 +70,7 @@ while($row = $result->FetchRow()) {
         $row["macaddr"];
 
     if (!$err) {
-        $restmp=&$ds->ds->Execute("SELECT info, infobin
+        $restmp=$ds->ds->Execute("SELECT info, infobin
                 FROM ipaddradd
                 WHERE ipaddr=".$row["ip"]." AND baseindex=".$row["baseip"]);
 

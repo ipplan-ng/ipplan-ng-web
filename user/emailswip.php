@@ -96,7 +96,7 @@ foreach($baseindex as $key => $value) {
        break;
    }
 
-   $result=&$ds->ds->Execute("UPDATE base
+   $result=$ds->ds->Execute("UPDATE base
                           SET swipmod=".$ds->ds->DBTimeStamp(time())."
                           WHERE baseindex=$value");
 

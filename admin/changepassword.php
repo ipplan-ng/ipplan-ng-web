@@ -65,7 +65,7 @@ if ($_POST) {
       $password=crypt($password1, 'xq');
 
       $ds->DbfTransactionStart();
-      $result=&$ds->ds->Execute("UPDATE users
+      $result=$ds->ds->Execute("UPDATE users
                               SET password=".$ds->ds->qstr($password)."
                               WHERE userid=".$ds->ds->qstr($userid));
       $ds->AuditLog(sprintf(my_("User %s changed password"), $userid));

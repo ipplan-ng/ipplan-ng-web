@@ -270,7 +270,7 @@ if ($action=="export") {
 
     if ($zoneid==0) {
         $sqlfn = $ds->ds->SQLDate('Ymd','ipaddr.lastmod');
-        $zoneid = &$ds->ds->GetCol("SELECT DISTINCT zones.id
+        $zoneid = $ds->ds->GetCol("SELECT DISTINCT zones.id
                 FROM zones, base, ipaddr
                 WHERE zones.customer=base.customer AND 
                 base.baseindex=ipaddr.baseindex AND 
@@ -347,7 +347,7 @@ $cust=myCustomerDropDown($ds, $f1, $cust, $grps) or myError($w,$p, my_("No custo
 $search=$ds->mySearchSql("zone", $expr, $descrip);
 $sqllastmod = $ds->ds->SQLDate("M d Y H:i:s", 'lastmod');
 $sqllastexp = $ds->ds->SQLDate("M d Y H:i:s", 'lastexp');
-$result = &$ds->ds->Execute("SELECT id, zoneip, zonesize, zone, error_message, serialdate, 
+$result = $ds->ds->Execute("SELECT id, zoneip, zonesize, zone, error_message, serialdate, 
                                 serialnum, ttl, refresh, retry, expire, minimum, zonefilepath1, 
                                 zonefilepath2, responsiblemail, customer, $sqllastmod AS lastmod, 
                                 $sqllastexp AS lastexp, userid, slaveonly
@@ -447,7 +447,7 @@ while($row = $result->FetchRow()) {
                 inet_ntoa($row["zoneip"])."/".inet_bits($row["zonesize"])));
     insert($c,block("</i></small>"));
 
-    $result1 = &$ds->ds->Execute("SELECT hname FROM zonedns
+    $result1 = $ds->ds->Execute("SELECT hname FROM zonedns
             WHERE id=".$row["id"]."
             ORDER BY horder");
 

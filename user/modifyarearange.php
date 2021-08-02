@@ -59,7 +59,7 @@ $custdescrip=$ds->GetCustomerDescrip($cust);
 
 insert($w,heading(3, sprintf(my_("Search for areas and ranges for customer '%s'"), $custdescrip)));
 
-$result=&$ds->ds->Execute("SELECT area.areaaddr, area.descrip AS adescrip, 
+$result=$ds->ds->Execute("SELECT area.areaaddr, area.descrip AS adescrip, 
                           netrange.rangeaddr,
                           netrange.rangesize, netrange.descrip AS rdescrip,
                           netrange.rangeindex, area.areaindex
@@ -191,7 +191,7 @@ insert($w,block("<p>"));
 insert($w,textb(sprintf(my_("Total records: %u"), $cnt)));
 $temp1 = $cnt;
 
-$result=&$ds->ds->Execute("SELECT area.areaaddr,
+$result=$ds->ds->Execute("SELECT area.areaaddr,
                              area.descrip AS adescrip, area.areaindex
                            FROM area
                            LEFT JOIN netrange

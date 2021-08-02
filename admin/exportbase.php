@@ -62,7 +62,7 @@ while($row = $result->FetchRow()) {
         inet_ntoa(inet_aton(ALLNETS)+1 - $row["subnetsize"]).FIELDS_TERMINATED_BY;
 
    if (!$err) {
-        $result_template=&$ds->ds->Execute("SELECT info, infobin
+        $result_template=$ds->ds->Execute("SELECT info, infobin
                 FROM baseadd
                 WHERE baseindex=".$row["baseindex"]);
 

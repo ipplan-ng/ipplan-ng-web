@@ -52,7 +52,7 @@ if (!$_GET) {
 $ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 $ds->DbfTransactionStart();
-$result=&$ds->ds->Execute("DELETE FROM bounds
+$result=$ds->ds->Execute("DELETE FROM bounds
                         WHERE grp=".$ds->ds->qstr($grp)." AND boundsaddr=$boundsaddr");
   
 if ($result) {

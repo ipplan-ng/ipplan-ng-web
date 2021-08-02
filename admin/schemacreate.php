@@ -545,20 +545,20 @@ function UpdateSchema($display) {
    if (DBF_TYPE=='mysqli') {
        // version upgrade before schema 18 using table called 'schema'
        if (in_array("schema", $ds->MetaTables())) {
-           $result=&$ds->Execute("SELECT version
+           $result=$ds->Execute("SELECT version
                    FROM `schema`");
        }
        else {
-           $result=&$ds->Execute("SELECT version
+           $result=$ds->Execute("SELECT version
                    FROM version");
        }
    }
    else if (DBF_TYPE=="mssql" or DBF_TYPE=="ado_mssql" or DBF_TYPE=="odbc_mssql") {
-      $result=&$ds->Execute("SELECT version
+      $result=$ds->Execute("SELECT version
                              FROM version");
    }
    else {
-      $result=&$ds->Execute("SELECT version
+      $result=$ds->Execute("SELECT version
                              FROM schema");
    }
    // could not read version number - probably hit upgrade button

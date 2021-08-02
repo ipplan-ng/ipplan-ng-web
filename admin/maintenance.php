@@ -58,31 +58,31 @@ if ($action=="deletecustomer") {
     }
 
     $ds->DbfTransactionStart();
-    $result=&$ds->ds->Execute("DELETE FROM customer
+    $result=$ds->ds->Execute("DELETE FROM customer
             WHERE customer=$cust") and
-        $result=&$ds->ds->Execute("DELETE FROM custinfo
+        $result=$ds->ds->Execute("DELETE FROM custinfo
                 WHERE customer=$cust") and
-        $result=&$ds->ds->Execute("DELETE FROM ipaddr 
+        $result=$ds->ds->Execute("DELETE FROM ipaddr 
                 WHERE baseindex IN (SELECT baseindex FROM base WHERE customer=$cust)") and
-        $result=&$ds->ds->Execute("DELETE FROM ipaddradd
+        $result=$ds->ds->Execute("DELETE FROM ipaddradd
                 WHERE baseindex IN (SELECT baseindex FROM base WHERE customer=$cust)") and
-        $result=&$ds->ds->Execute("DELETE FROM base
+        $result=$ds->ds->Execute("DELETE FROM base
                 WHERE customer=$cust") and
-        $result=&$ds->ds->Execute("DELETE FROM custadd
+        $result=$ds->ds->Execute("DELETE FROM custadd
                 WHERE customer=$cust") and
-        $result=&$ds->ds->Execute("DELETE FROM revdns
+        $result=$ds->ds->Execute("DELETE FROM revdns
                 WHERE customer=$cust") and
-        $result=&$ds->ds->Execute("DELETE FROM area
+        $result=$ds->ds->Execute("DELETE FROM area
                 WHERE customer=$cust") and
-        $result=&$ds->ds->Execute("DELETE FROM netrange
+        $result=$ds->ds->Execute("DELETE FROM netrange
                 WHERE customer=$cust") and
-        $result=&$ds->ds->Execute("DELETE FROM fwdzone
+        $result=$ds->ds->Execute("DELETE FROM fwdzone
                 WHERE customer=$cust") and
-        $result=&$ds->ds->Execute("DELETE FROM fwdzoneadd
+        $result=$ds->ds->Execute("DELETE FROM fwdzoneadd
                 WHERE customer=$cust") and
-        $result=&$ds->ds->Execute("DELETE FROM fwdzonerec
+        $result=$ds->ds->Execute("DELETE FROM fwdzonerec
                 WHERE customer=$cust") and
-        $result=&$ds->ds->Execute("DELETE FROM zones
+        $result=$ds->ds->Execute("DELETE FROM zones
                 WHERE customer=$cust") and
         $ds->AuditLog(array("event"=>182, "action"=>"delete customer", 
                     "user"=>getAuthUsername(), "cust"=>$cust));
@@ -98,7 +98,7 @@ if ($action=="deletecustomer") {
 
 if ($action=="deleterequest") {
     $ds->DbfTransactionStart();
-    $result=&$ds->ds->Execute("DELETE FROM requestip");
+    $result=$ds->ds->Execute("DELETE FROM requestip");
 
     $ds->AuditLog(my_("Requested IP addresses cleared"));
 
@@ -114,7 +114,7 @@ if ($action=="deleterequest") {
 // delete one requested ip address
 if ($action=="deleterequestidx") {
     $ds->DbfTransactionStart();
-    $result=&$ds->ds->Execute("DELETE FROM requestip 
+    $result=$ds->ds->Execute("DELETE FROM requestip 
                                WHERE requestindex=$requestindex");
 
     $ds->AuditLog(my_("Requested IP address deleted").": ".$requestdesc);
@@ -132,7 +132,7 @@ if ($action=="deleterequestidx") {
 
 if ($action=="deleteaudit") {
     $ds->DbfTransactionStart();
-    $result=&$ds->ds->Execute("DELETE FROM auditlog");
+    $result=$ds->ds->Execute("DELETE FROM auditlog");
 
     $ds->AuditLog(my_("Audit log cleared"));
 
@@ -234,7 +234,7 @@ if ($action=="custindex") {
 }
 
 if ($action=="reqindex") {
-    $result=&$ds->ds->Execute("SELECT requestip.requestindex, requestip.requestdesc, 
+    $result=$ds->ds->Execute("SELECT requestip.requestindex, requestip.requestdesc, 
                 requestip.lastmod, requestip.userinf, requestip.descrip, customer.custdescrip
             FROM requestip, customer
             WHERE customer.customer=requestip.customer

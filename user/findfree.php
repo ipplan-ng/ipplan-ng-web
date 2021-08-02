@@ -109,7 +109,7 @@ else {
 // do not count the network and broadcast addresses - they are always add later
 // NULL's are not counted by count()
 // if() is mysql specific! Need to use case as this is SQL99 compliant
-$result=&$ds->ds->Execute("SELECT base.baseindex, base.subnetsize, base.descrip, 
+$result=$ds->ds->Execute("SELECT base.baseindex, base.subnetsize, base.descrip, 
                           base.baseaddr, base.admingrp, base.customer,
                           count(CASE WHEN ipaddr.ipaddr=base.baseaddr 
                                        OR ipaddr.ipaddr=(base.baseaddr+base.subnetsize-1) 

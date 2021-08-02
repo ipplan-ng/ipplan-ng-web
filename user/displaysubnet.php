@@ -926,7 +926,7 @@ function DeleteDNS($ds, $w, $cust, $ip) {
 
     if (DNSAUTOCREATE === TRUE) {
         // check if there are A records for this customers domains?
-        $result = &$ds->ds->Execute("SELECT fwdzone.domain, fwdzone.data_id, fwdzonerec.host, 
+        $result = $ds->ds->Execute("SELECT fwdzone.domain, fwdzone.data_id, fwdzonerec.host, 
                 fwdzonerec.ip_hostname, fwdzonerec.recidx
                 FROM fwdzone, fwdzonerec 
                 WHERE fwdzone.data_id=fwdzonerec.data_id AND
@@ -948,7 +948,7 @@ function DeleteDNS($ds, $w, $cust, $ip) {
             $domain=$row["domain"];
             $hnametmp=$row["host"];
 
-            $result = &$ds->ds->Execute("DELETE FROM fwdzonerec 
+            $result = $ds->ds->Execute("DELETE FROM fwdzonerec 
                     WHERE customer=$cust AND recidx=$recidx") and
             $ds->ds->Execute("UPDATE fwdzone SET error_message=".$ds->ds->qstr("E").
                     " WHERE customer=$cust AND data_id=".$dom_id) and
@@ -980,7 +980,7 @@ function UpdateDNS($ds, $w, $cust, $hname, $ip) {
     }
     else if (DNSAUTOCREATE === TRUE) {
         // check if there are A records for this customers domains?
-        $result = &$ds->ds->Execute("SELECT fwdzone.data_id, fwdzone.domain, fwdzonerec.host, 
+        $result = $ds->ds->Execute("SELECT fwdzone.data_id, fwdzone.domain, fwdzonerec.host, 
                 fwdzonerec.ip_hostname 
                 FROM fwdzone, fwdzonerec 
                 WHERE fwdzone.data_id=fwdzonerec.data_id AND
@@ -1045,7 +1045,7 @@ function UpdateDNS($ds, $w, $cust, $hname, $ip) {
                 $regex = "~";
             }
 
-            $result = &$ds->ds->Execute("SELECT length(domain) AS domainlen, data_id, domain
+            $result = $ds->ds->Execute("SELECT length(domain) AS domainlen, data_id, domain
                     FROM fwdzone
                     WHERE customer=$cust AND
                     ".$ds->ds->qstr($hname."$")." $regex domain
@@ -1131,7 +1131,7 @@ function UpdateLnk($ds, $w, $cust, $baseindex, $lnk, $ip) {
 function RemoveAllFiles($ds, $baseindex, $iptemp) {
 
     // remove all attached files
-    $result=&$ds->ds->Execute("SELECT infobin
+    $result=$ds->ds->Execute("SELECT infobin
             FROM ipaddradd
             WHERE ipaddr=$iptemp AND baseindex=$baseindex");
 

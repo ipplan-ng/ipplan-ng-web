@@ -114,7 +114,7 @@ if ($action=="delete") {
                     insert($w,textbr(sprintf(my_("IP record %s updated in subnet '%s' due to deletion of auto created A record"), $row["ip_hostname"], $row1["descrip"])));
                 }
             }
-            $result = &$ds->ds->Execute("DELETE FROM fwdzonerec 
+            $result = $ds->ds->Execute("DELETE FROM fwdzonerec 
                     WHERE customer=$cust AND recidx=$value") and
             $ds->ds->Execute("UPDATE fwdzone 
                     SET error_message=".$ds->ds->qstr("E").",
@@ -157,7 +157,7 @@ else if ($action=="renumber") {
 
     // Log the Transaction.
     $ds->DbfTransactionStart();
-    $result = &$ds->ds->Execute("SELECT fwdzonerec.recidx, fwdzonerec.sortorder 
+    $result = $ds->ds->Execute("SELECT fwdzonerec.recidx, fwdzonerec.sortorder 
             FROM fwdzone, fwdzonerec
             WHERE fwdzone.customer=$cust AND 
             fwdzone.domain=".$ds->ds->qstr($domain)." AND
@@ -169,7 +169,7 @@ else if ($action=="renumber") {
         $i=5;
         while($row = $result->FetchRow()) {
             $recidx=$row["recidx"];
-            $result1 = &$ds->ds->Execute("UPDATE fwdzonerec
+            $result1 = $ds->ds->Execute("UPDATE fwdzonerec
                     SET sortorder=$i
                     WHERE recidx=$recidx");
             $i=$i+5;
@@ -293,7 +293,7 @@ if ($action=="add" or $action=="edit") {
     // cannot check much else as records could be outside of this zone
     // bind has no issues with CNAME's or MX records pointing to non-existent
     // records, so don't bother checking those either
-    $result = &$ds->ds->Execute("SELECT customer 
+    $result = $ds->ds->Execute("SELECT customer 
                                 FROM fwdzonerec 
                                 WHERE customer=$cust AND data_id=$zoneid AND
             host=".$ds->ds->qstr($host)." AND
@@ -313,7 +313,7 @@ if ($action=="add" or $action=="edit") {
     if ($recordtype=="A") {
         // cannot do a simple three way join on ipaddr, base and fwdzonerec as the
         // field types are different
-        $result = &$ds->ds->Execute("SELECT ip_hostname 
+        $result = $ds->ds->Execute("SELECT ip_hostname 
                 FROM fwdzonerec 
                 WHERE customer=$cust AND
                 recordtype=".$ds->ds->qstr("A")." AND 
@@ -355,7 +355,7 @@ if ($action=="add") {
         }
     }
 
-    $result = &$ds->ds->Execute("INSERT into fwdzonerec 
+    $result = $ds->ds->Execute("INSERT into fwdzonerec 
             (customer, data_id, sortorder, lastmod, host, 
              recordtype, userid, ip_hostname) ".
             "VALUES ($cust, $zoneid, ". $sortorder.",".
@@ -409,7 +409,7 @@ if ($action=="edit") {
         }
     }
 
-    $result = &$ds->ds->Execute("UPDATE fwdzonerec SET sortorder=".$sortorder.
+    $result = $ds->ds->Execute("UPDATE fwdzonerec SET sortorder=".$sortorder.
             ", host=".$ds->ds->qstr($host).
             ", lastmod=".$ds->ds->DBTimeStamp(time()).
             ", recordtype=".$ds->ds->qstr($recordtype).
@@ -455,7 +455,7 @@ $cust=myCustomerDropDown($ds, $f1, $cust, $grps) or myError($w,$p, my_("No custo
 // Get a List of Domains from the fwdzone table.
 //
 
-$result = &$ds->ds->Execute("SELECT domain, data_id FROM fwdzone 
+$result = $ds->ds->Execute("SELECT domain, data_id FROM fwdzone 
                             WHERE customer=$cust AND 
                             slaveonly=".$ds->ds->qstr("N")."
                             ORDER BY domain");
@@ -495,7 +495,7 @@ insert($f2,generic("br"));
 // get info from base table
 
 if ($domain) {
-    $result = &$ds->ds->Execute("SELECT data_id FROM fwdzone
+    $result = $ds->ds->Execute("SELECT data_id FROM fwdzone
     WHERE customer=$cust AND domain='$domain'");
     $row = $result->FetchRow();
     $zoneid=$row["data_id"];
@@ -503,7 +503,7 @@ if ($domain) {
     // what is the additional search SQL?
     $search=$ds->mySearchSql("host", $expr, $descrip);
     $sqllastmod = $ds->ds->SQLDate("M d Y H:i:s", 'lastmod');
-    $result = &$ds->ds->Execute("SELECT recidx, data_id, host, recordtype, ip_hostname, 
+    $result = $ds->ds->Execute("SELECT recidx, data_id, host, recordtype, ip_hostname, 
                 error_message, sortorder, customer, $sqllastmod AS lastmod, userid
             FROM fwdzonerec
             WHERE customer=$cust AND data_id=$zoneid

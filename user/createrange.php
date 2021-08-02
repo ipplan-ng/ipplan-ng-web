@@ -36,7 +36,7 @@ function TestDuplicateRange($ds, $rangeaddr, $rangesize, $cust) {
 
     // full test, no form of overlap allowed
     if (RANGETEST==0) {
-        $result=&$ds->ds->Execute("SELECT rangeaddr
+        $result=$ds->ds->Execute("SELECT rangeaddr
                 FROM netrange
                 WHERE (($rangeaddr BETWEEN rangeaddr AND 
                         rangeaddr + rangesize - 1) OR
@@ -47,7 +47,7 @@ function TestDuplicateRange($ds, $rangeaddr, $rangesize, $cust) {
     }
     // only exact duplicates are rejected - no UNIQUE index for all three conditions
     else if (RANGETEST==1) {
-        $result=&$ds->ds->Execute("SELECT rangeaddr
+        $result=$ds->ds->Execute("SELECT rangeaddr
                 FROM netrange
                 WHERE rangeaddr = $rangeaddr AND rangesize = $rangesize AND customer=$cust");
     }
@@ -164,7 +164,7 @@ if ($_POST) {
         // being added to more than one area!
         if ($action=="modify") {
 
-            $result=&$ds->ds->Execute("UPDATE netrange SET areaindex=$areaindex, 
+            $result=$ds->ds->Execute("UPDATE netrange SET areaindex=$areaindex, 
                     descrip=".$ds->ds->qstr($descrip).",
                     rangeaddr=$base, rangesize=$size
                     WHERE rangeindex=$rangeindex") and
@@ -173,7 +173,7 @@ if ($_POST) {
                             "baseaddr"=>$ipaddr, "size"=>$size, "cust"=>$cust));
         }
         else {
-            $result=&$ds->ds->Execute("INSERT INTO netrange
+            $result=$ds->ds->Execute("INSERT INTO netrange
                     (rangeaddr, rangesize, areaindex, descrip,
                      customer)
                     VALUES

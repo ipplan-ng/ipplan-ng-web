@@ -54,7 +54,7 @@ if (!$ds->TestCustomerCreate(getAuthUsername())) {
 }
 
 // check if customer has subnets assigned
-$result=&$ds->ds->SelectLimit("SELECT baseaddr, descrip
+$result=$ds->ds->SelectLimit("SELECT baseaddr, descrip
                            FROM base
                            WHERE customer=$cust
                            ORDER BY baseaddr", 100);
@@ -89,7 +89,7 @@ if ($row=$result->FetchRow()) {
 } 
 
 // check if customer has DNS information (forward zone)
-$result=&$ds->ds->SelectLimit("SELECT customer
+$result=$ds->ds->SelectLimit("SELECT customer
                            FROM fwdzone
                            WHERE customer=$cust", 1);
 if ($row=$result->FetchRow()) {
@@ -101,7 +101,7 @@ if ($row=$result->FetchRow()) {
 }
 
 // check if customer has DNS information (reverse zone)
-$result=&$ds->ds->SelectLimit("SELECT customer
+$result=$ds->ds->SelectLimit("SELECT customer
                            FROM zones
                            WHERE customer=$cust", 1);
 if ($row=$result->FetchRow()) {
@@ -114,25 +114,25 @@ if ($row=$result->FetchRow()) {
 
 $ds->DbfTransactionStart();
 // these deletes also appear in the admin/maintenance script!
-$result=&$ds->ds->Execute("DELETE FROM customer
+$result=$ds->ds->Execute("DELETE FROM customer
                         WHERE customer=$cust") and
-$result=&$ds->ds->Execute("DELETE FROM custinfo
+$result=$ds->ds->Execute("DELETE FROM custinfo
                         WHERE customer=$cust") and
-$result=&$ds->ds->Execute("DELETE FROM custadd
+$result=$ds->ds->Execute("DELETE FROM custadd
                         WHERE customer=$cust") and
-$result=&$ds->ds->Execute("DELETE FROM revdns
+$result=$ds->ds->Execute("DELETE FROM revdns
                         WHERE customer=$cust") and
-$result=&$ds->ds->Execute("DELETE FROM area
+$result=$ds->ds->Execute("DELETE FROM area
                         WHERE customer=$cust") and
-$result=&$ds->ds->Execute("DELETE FROM netrange
+$result=$ds->ds->Execute("DELETE FROM netrange
                         WHERE customer=$cust") and
-$result=&$ds->ds->Execute("DELETE FROM fwdzone
+$result=$ds->ds->Execute("DELETE FROM fwdzone
                         WHERE customer=$cust") and
-$result=&$ds->ds->Execute("DELETE FROM fwdzoneadd
+$result=$ds->ds->Execute("DELETE FROM fwdzoneadd
                         WHERE customer=$cust") and
-$result=&$ds->ds->Execute("DELETE FROM fwdzonerec
+$result=$ds->ds->Execute("DELETE FROM fwdzonerec
                         WHERE customer=$cust") and
-$result=&$ds->ds->Execute("DELETE FROM zones
+$result=$ds->ds->Execute("DELETE FROM zones
                         WHERE customer=$cust") and
 $ds->AuditLog(array("event"=>182, "action"=>"delete customer", 
                     "user"=>getAuthUsername(), "cust"=>$cust));

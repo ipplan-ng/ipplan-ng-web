@@ -82,14 +82,14 @@ if ($_POST) {
 
       $ds->DbfTransactionStart();
       if ($action=="modify") {
-          $result=&$ds->ds->Execute("UPDATE area SET areaaddr=$base, 
+          $result=$ds->ds->Execute("UPDATE area SET areaaddr=$base, 
                   descrip=".$ds->ds->qstr($descrip)." WHERE areaindex=$areaindex") and
           $ds->AuditLog(array("event"=>151, "action"=>"modify area", 
                     "descrip"=>$descrip, "user"=>getAuthUsername(), "area"=>$ipaddr,
                     "cust"=>$cust));
       }
       else {
-          $result=&$ds->ds->Execute("INSERT INTO area
+          $result=$ds->ds->Execute("INSERT INTO area
                   (areaaddr, descrip, customer)
                   VALUES
                   ($base, ".$ds->ds->qstr($descrip).", $cust)") and

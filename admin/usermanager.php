@@ -94,7 +94,7 @@ $MENU="";
 
 // This generates the results for the search bar.  
 if ($usersearch != "") {
-    $result=&$ds->ds->Execute("SELECT userid, userdescrip
+    $result=$ds->ds->Execute("SELECT userid, userdescrip
             FROM users
             WHERE userid LIKE ".$ds->ds->qstr("%".$usersearch."%")
             ." OR userdescrip LIKE ".$ds->ds->qstr("%".$usersearch."%"));
@@ -109,7 +109,7 @@ if ($usersearch != "") {
 }
 
 
-$result=&$ds->ds->Execute("SELECT userid, grp 
+$result=$ds->ds->Execute("SELECT userid, grp 
                            FROM usergrp 
                            ORDER BY grp");
 // Build a group mapper.
@@ -149,7 +149,7 @@ if ($cnt == 0) {
    $MENU .= ".|No groups have been created.\n";
 }
 
-$result=&$ds->ds->Execute("SELECT users.userdescrip, users.userid
+$result=$ds->ds->Execute("SELECT users.userdescrip, users.userid
                         FROM users
                         LEFT JOIN usergrp
                         ON users.userid = usergrp.userid
@@ -294,7 +294,7 @@ function insertEditUserForm($w,$ds) {
     list($ipaddr, $userid, $grp, $grpdescrip, $createcust, $grpview) = myRegister("S:ipaddr S:userid S:grp S:grpdescrip S:createcust S:grpview");
     $grp=trim($grp);
     $grpdescrip=trim($grpdescrip);
-    $result=&$ds->ds->Execute("SELECT * FROM users WHERE userid=".$ds->ds->qstr($userid));
+    $result=$ds->ds->Execute("SELECT * FROM users WHERE userid=".$ds->ds->qstr($userid));
     if ($result) {
         $row=$result->FetchRow();
     }
@@ -385,7 +385,7 @@ function insertEditUserForm($w,$ds) {
         // in a table and allow the user to delete them.
 
         insert($con, generic("br"));
-        $result=&$ds->ds->Execute("SELECT * FROM usergrp WHERE userid=".$ds->ds->qstr($userid));
+        $result=$ds->ds->Execute("SELECT * FROM usergrp WHERE userid=".$ds->ds->qstr($userid));
         $lst=array();
 
         while($row = $result->FetchRow()) {
@@ -422,7 +422,7 @@ function insertEditGroupForm($w,$ds) {
 
     list($ipaddr, $size, $grp) = myRegister("S:ipaddr S:size S:grp");
 
-    $result=&$ds->ds->Execute("SELECT * FROM grp WHERE grp=".$ds->ds->qstr($grp));
+    $result=$ds->ds->Execute("SELECT * FROM grp WHERE grp=".$ds->ds->qstr($grp));
     $row=$result->FetchRow();
     $grpdescrip=$row["grpdescrip"];
     $createcust=$row["createcust"];
@@ -472,7 +472,7 @@ function insertEditGroupForm($w,$ds) {
     insert($con,submit(array("value"=>my_("Update"))));
     insert($con,generic("br"));
     // START Add User Form
-    $result1=&$ds->ds->Execute("SELECT userid
+    $result1=$ds->ds->Execute("SELECT userid
             FROM users
             ORDER BY userid");
     $c=0;
@@ -500,7 +500,7 @@ function insertEditGroupForm($w,$ds) {
         insert($f2,submit(array("value"=>my_("Add User"))));
         // Edit users assigned to the group.
 
-        $result=&$ds->ds->Execute("SELECT * FROM usergrp WHERE grp=".$ds->ds->qstr($grp));
+        $result=$ds->ds->Execute("SELECT * FROM usergrp WHERE grp=".$ds->ds->qstr($grp));
 
         $lst=array();
         while($row = $result->FetchRow()) {
@@ -592,7 +592,7 @@ function insertEditGroupForm($w,$ds) {
     insert($f2,submit(array("value"=>my_("Read only group"))));
     insert($f2, generic("br"));
 
-    $result=&$ds->ds->Execute("SELECT boundsaddr, boundssize, grp
+    $result=$ds->ds->Execute("SELECT boundsaddr, boundssize, grp
             FROM bounds
             WHERE grp=".$ds->ds->qstr($grp)."
             ORDER BY boundsaddr");
@@ -731,9 +731,9 @@ function parseCreateUserForm($w,$ds) {
         $password=crypt($password1, 'xq');
         $ds->DbfTransactionStart();
         // emulates mysql REPLACE
-        $result=&$ds->ds->Execute("DELETE FROM users
+        $result=$ds->ds->Execute("DELETE FROM users
                 WHERE userid=".$ds->ds->qstr($userid));
-        $result=&$ds->ds->Execute("INSERT INTO users
+        $result=$ds->ds->Execute("INSERT INTO users
                 (userid, userdescrip, useremail, password)
                 VALUES
                 (".$ds->ds->qstr($userid).",
@@ -743,10 +743,10 @@ function parseCreateUserForm($w,$ds) {
 
         // add group if user selected a group other than "No group"
         if (!empty($grp)) {
-            $result=&$ds->ds->Execute("DELETE FROM usergrp
+            $result=$ds->ds->Execute("DELETE FROM usergrp
                     WHERE userid=".$ds->ds->qstr($userid)." AND
                     grp=".$ds->ds->qstr($grp));
-            $result=&$ds->ds->Execute("INSERT INTO usergrp
+            $result=$ds->ds->Execute("INSERT INTO usergrp
                     (userid, grp)
                     VALUES
                     (".$ds->ds->qstr($userid).",
@@ -802,7 +802,7 @@ function parseCreateGroupForm($w,$ds) {
             $grpbit=1;
         }
 
-        $result=&$ds->ds->Execute("INSERT INTO grp
+        $result=$ds->ds->Execute("INSERT INTO grp
                 (grp, createcust, grpdescrip, grpopt, resaddr)
                 VALUES
                 (".$ds->ds->qstr($grp).",
@@ -828,7 +828,7 @@ function parseDeleteUserFromGroup($w, $ds) {
     list($userid, $grp, $ref)=myRegister("S:userid S:grp S:refpage");
 
     $ds->DbfTransactionStart();
-    $result=&$ds->ds->Execute("DELETE FROM usergrp
+    $result=$ds->ds->Execute("DELETE FROM usergrp
             WHERE userid=".$ds->ds->qstr($userid)." AND
             grp=".$ds->ds->qstr($grp));
     if ($result) {
@@ -860,9 +860,9 @@ function parseDeleteForms($w, $ds) {
     // delete a user
     if ($userid) {
         $ds->DbfTransactionStart();
-        $result=&$ds->ds->Execute("DELETE FROM users
+        $result=$ds->ds->Execute("DELETE FROM users
                 WHERE userid=".$ds->ds->qstr($userid)) and
-            $result=&$ds->ds->Execute("DELETE FROM usergrp
+            $result=$ds->ds->Execute("DELETE FROM usergrp
                     WHERE userid=".$ds->ds->qstr($userid));
 
         if ($result) {
@@ -878,7 +878,7 @@ function parseDeleteForms($w, $ds) {
     else if ($usergrp) {
         $userid=$usergrp;
         $ds->DbfTransactionStart();
-        $result=&$ds->ds->Execute("DELETE FROM usergrp
+        $result=$ds->ds->Execute("DELETE FROM usergrp
                 WHERE userid=".$ds->ds->qstr($userid)." AND
                 grp=".$ds->ds->qstr($grp));
 
@@ -898,7 +898,7 @@ function parseDeleteForms($w, $ds) {
     // END DEPRECATION
     else if ($grp and !$usergrp) {
         // check if grp has customers
-        $result=&$ds->ds->Execute("SELECT custdescrip
+        $result=$ds->ds->Execute("SELECT custdescrip
                 FROM customer
                 WHERE admingrp=".$ds->ds->qstr($grp));
         if ($row=$result->FetchRow()) {
@@ -910,7 +910,7 @@ function parseDeleteForms($w, $ds) {
         }
 
         // check if grp has subnets
-        $result=&$ds->ds->Execute("SELECT baseaddr, descrip
+        $result=$ds->ds->Execute("SELECT baseaddr, descrip
                 FROM base
                 WHERE admingrp=".$ds->ds->qstr($grp)."
                 ORDER BY baseaddr");
@@ -923,11 +923,11 @@ function parseDeleteForms($w, $ds) {
         }
 
         $ds->DbfTransactionStart();
-        $result=&$ds->ds->Execute("DELETE FROM grp
+        $result=$ds->ds->Execute("DELETE FROM grp
                 WHERE grp=".$ds->ds->qstr($grp)) and
-            $result=&$ds->ds->Execute("DELETE FROM usergrp
+            $result=$ds->ds->Execute("DELETE FROM usergrp
                     WHERE grp=".$ds->ds->qstr($grp)) and
-            $result=&$ds->ds->Execute("DELETE FROM bounds
+            $result=$ds->ds->Execute("DELETE FROM bounds
                     WHERE grp=".$ds->ds->qstr($grp));
 
         if ($result) {
@@ -953,7 +953,7 @@ function parseModifyUserForm($w, $ds) {
 
     if ($formerror == "" ) {
         $ds->DbfTransactionStart();
-        $result=&$ds->ds->Execute("UPDATE users
+        $result=$ds->ds->Execute("UPDATE users
                 SET userdescrip=".$ds->ds->qstr($userdescrip).",
                 useremail=".$ds->ds->qstr($useremail)."
                 WHERE userid=".$ds->ds->qstr($userid));
@@ -989,7 +989,7 @@ function parseChangeUserPassword($w, $ds) {
         $password=crypt($password1, 'xq');
 
         $ds->DbfTransactionStart();
-        $result=&$ds->ds->Execute("UPDATE users
+        $result=$ds->ds->Execute("UPDATE users
                 SET password=".$ds->ds->qstr($password)."
                 WHERE userid=".$ds->ds->qstr($userid));
         $ds->AuditLog(sprintf(my_("User %s changed password"), $userid));
@@ -1016,10 +1016,10 @@ function parseAddUserToGroupForm($w, $ds) {
     // It lets us reprint the edit page after we parse.
     $ds->DbfTransactionStart();
     // emulate mysql REPLACE
-    $result=&$ds->ds->Execute("DELETE FROM usergrp
+    $result=$ds->ds->Execute("DELETE FROM usergrp
             WHERE userid=".$ds->ds->qstr($userid)." AND
             grp=".$ds->ds->qstr($grp));
-    $result=&$ds->ds->Execute("INSERT INTO usergrp
+    $result=$ds->ds->Execute("INSERT INTO usergrp
             (userid, grp)
             VALUES
             (".$ds->ds->qstr($userid).",
@@ -1062,7 +1062,7 @@ function parseModifyGroupForm($w, $ds) {
             $grpbit=1;
         }
 
-        $result=&$ds->ds->Execute("UPDATE grp
+        $result=$ds->ds->Execute("UPDATE grp
                 SET grpdescrip=".$ds->ds->qstr($grpdescrip).",
                 createcust=".$ds->ds->qstr($createcust).",
                 grpopt=".$grpbit.",
@@ -1118,7 +1118,7 @@ function parseAddGroupBoundaryForm($w, $ds) {
             $ds->DbfTransactionStart();
             // the fact that the range is unique prevents the range
             // being added to more than one area!
-            $result=&$ds->ds->Execute("INSERT INTO bounds
+            $result=$ds->ds->Execute("INSERT INTO bounds
                     (boundsaddr, boundssize, grp)
                     VALUES
                     ($base, $size, ".$ds->ds->qstr($grp).")");
@@ -1139,7 +1139,7 @@ function parseAddGroupBoundaryForm($w, $ds) {
 
 function TestDuplicateBounds($ds, $boundsaddr, $boundssize, $grp) {
 
-    $result=&$ds->ds->Execute("SELECT boundsaddr
+    $result=$ds->ds->Execute("SELECT boundsaddr
             FROM bounds
             WHERE (($boundsaddr BETWEEN boundsaddr AND
                     boundsaddr + boundssize - 1) OR
@@ -1156,7 +1156,7 @@ function parseDeleteBounds($w, $ds) {
 
     list($grp, $boundsaddr) = myRegister("S:grp S:boundsaddr");
 
-    $result=&$ds->ds->Execute("DELETE FROM bounds
+    $result=$ds->ds->Execute("DELETE FROM bounds
             WHERE grp=".$ds->ds->qstr($grp)." AND boundsaddr=$boundsaddr");
 
     if ($result) {

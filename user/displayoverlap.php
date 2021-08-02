@@ -37,7 +37,7 @@ function searchOverlap($ds, &$w, $cust1, $cust2) {
    // this query is not quick as indexes cannot be used!!!
    // must have first baseaddr called baseaddr else block pager
    // will not work - may break databases other than mysql
-   $result=&$ds->ds->Execute("SELECT t1.baseaddr AS baseaddr,
+   $result=$ds->ds->Execute("SELECT t1.baseaddr AS baseaddr,
                            t1.baseindex AS baseindex1,
                            t1.subnetsize AS subnetsize1,
                            t1.descrip AS descrip1,

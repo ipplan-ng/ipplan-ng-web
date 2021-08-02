@@ -159,12 +159,12 @@ if ($action=="add") {
                     "size"=>"30",
                     "maxlength"=>"30")));
 
-    $result2=&$ds->ds->Execute("SELECT hname 
+    $result2=$ds->ds->Execute("SELECT hname 
             FROM revdns
             WHERE customer=$cust");
 }
 else {
-    $result2=&$ds->ds->Execute("SELECT hname 
+    $result2=$ds->ds->Execute("SELECT hname 
             FROM zonedns
             WHERE id=$zoneid");
 }
