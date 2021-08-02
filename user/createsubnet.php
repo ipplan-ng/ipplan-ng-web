@@ -19,8 +19,7 @@
 //
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 require_once("../class.templib.php");
@@ -64,7 +63,7 @@ if ($num <1 or $num > 255) {
 // basic sequence is connect, search, interpret search
 // result, close connection
 
-$ds=new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
+$ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 // error checks
 if (!$ipaddr)

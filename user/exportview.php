@@ -18,8 +18,7 @@
 // Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 //
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 require_once("../class.templib.php");

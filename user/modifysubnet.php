@@ -19,8 +19,7 @@
 //
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 // Changed - Begin [FE]
@@ -58,7 +57,7 @@ list($userfld) = myRegister("A:userfld");  // for template fields
 
 $formerror="";
 
-$ds=new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
+$ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 // remember original customer
 if (!$origcust) {

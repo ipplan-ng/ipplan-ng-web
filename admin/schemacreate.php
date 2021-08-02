@@ -24,8 +24,7 @@ define("SCHEMA", 22);
 require_once('../classes/Version.php');
 require_once("../ipplanlib.php");
 //require_once('../adodb/adodb-errorhandler.inc.php');
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../auth.php");
 
 

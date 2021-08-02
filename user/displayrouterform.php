@@ -19,8 +19,7 @@
 //
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 
@@ -48,7 +47,7 @@ insert($w,heading(3, "$title."));
 
 insert($w,text(my_("Display subnet information obtained from a routing table will show the routing table information on the left of the screen and the corresponding entries in the database on the right. If there are entries on both sides of the table, the subnet exists in the routing table and the database. If there are only entries on the left, the subnet only exists in the routing table. The same is true for the right hand side. If you click on the left, you can add the subnet to the database. If you click on the right, you can view the existing database information.")));
 
-$ds=new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
+$ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 // start form
 insert($w, $f = form(array("method"=>"post",

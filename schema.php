@@ -21,7 +21,7 @@
 // when the database layout changes, bump up this value.
 define("SCHEMA", 22);
 
-require_once '/classes/DBLib.php';
+require_once dirname(__FILE__).'/classes/DBLib.php';
 
 // checks to see if user is using latest schema
 function CheckSchema() {

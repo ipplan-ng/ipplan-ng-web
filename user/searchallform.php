@@ -19,8 +19,7 @@
 //
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 
@@ -56,7 +55,7 @@ insert($w,heading(3, "$title."));
 
 insert($w,textbrbr(my_("Search for user info searches the individual IP address records.")));
 
-$ds=new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
+$ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 // start form
 insert($w, $f1 = form(array("name"=>"THISFORM",

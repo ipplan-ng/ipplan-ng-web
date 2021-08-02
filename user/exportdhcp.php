@@ -19,8 +19,7 @@
 //
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../auth.php");
 
 // Changed [FE] - Begin
@@ -54,7 +53,7 @@ setcookie("ipplanCustomer","$cust",time() + 10000000, "/");
 // explicitly cast variables as security measure against SQL injection
 list($cust) = myRegister("I:cust");
 
-$ds=new IPplanDbf() or die(my_("Could not connect to database"));
+$ds=new IPplan_NG\DBLib() or die(my_("Could not connect to database"));
 
 // check if user belongs to customer admin group
 $result=$ds->GetCustomerGrp($cust);

@@ -19,8 +19,7 @@
 //
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 
@@ -52,7 +51,7 @@ insert($w,block("<p>"));
 insert($w,text(my_("The user defined fields defined in the iptemplate.xml file will be appended as additional columns to the above in the order specified in the template.")));
 insert($w,block("<p>"));
 
-$ds=new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
+$ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 // start form
 insert($w, $f = form(array("method"=>"post",

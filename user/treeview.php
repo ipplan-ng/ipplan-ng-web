@@ -20,8 +20,7 @@
 // Bcracknell 03/11/2005 - Added tree menu display of Customers/Areas/Ranges & Subnets
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 require_once '../menus/lib/PHPLIB.php';
@@ -61,7 +60,7 @@ array(
 insert($t, $leftmenu   = cell());
 
 //read the database and create the strings containing the menus 
-$ds= new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
+$ds= new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 @set_time_limit(90);
 

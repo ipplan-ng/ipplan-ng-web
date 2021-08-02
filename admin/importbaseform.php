@@ -19,8 +19,7 @@
 //
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 
@@ -50,7 +49,7 @@ insert($w,text(my_("If the import file has more than three columns, each additio
 insert($w,block("<p>"));
 insert($w,textbr(my_("If an error occurs during the import, the process will stop. Records that have been successfully imported should be deleted from the import file, the error corrected and the import resumed.")));
 
-$ds=new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
+$ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 // start form
 insert($w, $f = form(array("method"=>"post",

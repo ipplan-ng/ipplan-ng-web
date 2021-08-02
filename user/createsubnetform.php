@@ -19,8 +19,7 @@
 //
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 require_once("../class.templib.php");
@@ -59,7 +58,7 @@ insert($w,text(my_("Unused subnets can be pre-allocated with a description of ei
 insert($w,block("<p>"));
 insert($w,textbr(my_("It may also be beneficial to give ASE (Autonomous System External, networks not local to yours) a special handle like EXTERNAL so that they can be searched for at a later stage. These networks often appear in routing tables as static routes to third parties (not via the Internet).")));
 
-$ds=new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
+$ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 // start form
 insert($w, $f = form(array("name"=>"ENTRY",

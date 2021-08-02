@@ -19,8 +19,7 @@
 //
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 
@@ -46,7 +45,7 @@ $w=myheading($p, $title);
 insert($w,heading(3, "$title."));
 insert($w,textbrbr(my_("Export network data to flat ascii files.  The file will contain three columns each delimited by TAB. The first column contains the IP base address, the second the description and the third the mask in dotted decimal format.")));
 
-$ds=new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
+$ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 // start form
 insert($w, $f = form(array("method"=>"post",

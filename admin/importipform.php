@@ -19,8 +19,7 @@
 //
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 
@@ -57,7 +56,7 @@ insert($w,text(my_("NOTE: Any number of IP address records for various subnets c
 insert($w,text(my_("Imported addresses will only be added to existing subnets.")." "));
 insert($w,textbr(my_("If the merge flag is set, any fields that are empty or contain NULL will not be overwritten.")));
 
-$ds=new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
+$ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 // start form
 insert($w, $f = form(array("method"=>"post",

@@ -22,7 +22,7 @@
 require_once(dirname(__FILE__)."/config.php");
 
 // common class functions for forward and reverse zones
-class DNSZone extends IPplanDbf {
+class DNSZone extends IPplan_NG\DBLib {
 
     // form variables
     var $hname;

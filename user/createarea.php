@@ -20,8 +20,7 @@
 // Modify capabilities added by Denes Magyar (fat@poison.hu) 22/02/05
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 
@@ -50,7 +49,7 @@ else {
 newhtml($p);
 $w=myheading($p, $title, true);
 
-$ds=new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
+$ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 if ($_POST) {
    // save the last customer used

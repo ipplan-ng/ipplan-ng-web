@@ -21,8 +21,7 @@
 //
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../class.dnslib.php");
 require_once("../layout/class.layout");
 require_once("../auth.php");

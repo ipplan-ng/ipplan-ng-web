@@ -20,8 +20,7 @@
 
 require_once("../ipplanlib.php");
 //include('../adodb/adodb-errorhandler.inc.php');
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 require_once("../class.xptlib.php");
@@ -76,7 +75,7 @@ if (!$_GET and !$_POST) {
    myError($w,$p, my_("You cannot reload or bookmark this page!"));
 }
 
-$ds=new IPplanDbf() or myError($w,$p, "Could not connect to database");
+$ds=new IPplan_NG\DBLib() or myError($w,$p, "Could not connect to database");
 
 // get info from base table - do this first as safety check and because 
 // we need this info later

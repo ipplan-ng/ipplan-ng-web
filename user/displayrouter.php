@@ -93,8 +93,7 @@ function GetRoutingTable($host, $community, $rtrtype) {
 }
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 
 // set language
@@ -121,7 +120,7 @@ $endnum=inet_aton(ALLNETS);
 // basic sequence is connect, search, interpret search
 // result, close connection
 
-$ds=new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
+$ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 if (testIP($ipaddr)) {
    myError($w,$p, my_("Invalid IP address"));

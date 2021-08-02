@@ -19,8 +19,7 @@
 //
 
 require_once("../ipplanlib.php");
-require_once("../adodb/adodb.inc.php");
-require_once("../class.dbflib.php");
+require_once dirname(__FILE__).'/../classes/DBLib.php';
 require_once("../layout/class.layout");
 require_once("../auth.php");
 
@@ -57,7 +56,7 @@ insert($w,span(my_("This function consumes large amounts of memory on the server
                         array("class"=>"textError")));
 
 
-$ds=new IPplanDbf() or myError($w,$p, my_("Could not connect to database"));
+$ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 // explicitly cast variables as security measure against SQL injection
 list($cust, $areaindex) = myRegister("I:cust I:areaindex");
