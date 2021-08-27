@@ -416,7 +416,7 @@ function CreateSchema($display) {
 
    global $taboptarray, $tables, $indexes;
 
-   $ds = &ADONewConnection(DBF_TYPE);
+   $ds = ADONewConnection(DBF_TYPE);
    if (!$ds) {
       echo "Invalid database driver selected<p>";
       echo "<b>".$ds->ErrorMsg()."</b>";
@@ -522,7 +522,7 @@ function UpdateSchema($display) {
 
    global $taboptarray, $tables, $indexes;
 
-   $ds = &ADONewConnection(DBF_TYPE);
+   $ds = ADONewConnection(DBF_TYPE);
    if (!$ds) {
       echo "Invalid database driver selected<p>";
       echo "<b>".$ds->ErrorMsg()."</b>";

@@ -321,7 +321,7 @@ function print_customers() {
 
 function open_dbf() {
 
-    $ds = &ADONewConnection(DBF_TYPE);
+    $ds = ADONewConnection(DBF_TYPE);
     $ds->debug = DBF_DEBUG;
     if ($ds-> Connect(DBF_HOST, DBF_USER, DBF_PASSWORD, DBF_NAME) != false) {
         $ds->SetFetchMode(ADODB_FETCH_ASSOC);

@@ -174,7 +174,7 @@ class SQLAuthenticator extends BasicAuthenticator {
 
     function validate($user, $passwd) {
 
-       $ds = &ADONewConnection(DBF_TYPE);    # create a connection
+       $ds = ADONewConnection(DBF_TYPE);    # create a connection
        if (DBF_PERSISTENT) {
           $ds->PConnect(DBF_HOST, DBF_USER, DBF_PASSWORD, DBF_NAME) or
               die("Could not connect to database");
