@@ -18,15 +18,15 @@
 // Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 //
 
-if (PHP_VERSION_ID  < 70400) {
-   die("You need php version 7.4.0 or later");
+if (PHP_VERSION_ID  < 70200) {
+   die("You need php version 7.2.0 or later");
 }
 
-require_once("../config.php");
-require_once('../classes/Version.php');
+require_once dirname(__FILE__).'/../config.php';
+require_once dirname(__FILE__).'/../classes/Version.php';
 //require_once("../schema.php");
-require_once("../ipplanlib.php");
-require_once("../layout/class.layout");
+require_once dirname(__FILE__).'/../ipplanlib.php';
+require_once dirname(__FILE__).'/../layout/class.layout';
 
 // check for latest variable added to config.php file, if not there
 // user did not upgrade properly
@@ -92,7 +92,7 @@ if(extension_loaded("gettext") and LANGCHOICE) {
 
 insert($w, $r=container("fieldset",array("class"=>"fieldset")));
 insert($r, $q=container("div",array("class"=>"textErrorBig")));
-insert($q,textbr(my_("IF YOU ARE UPGRADING IPPLAN, BACKUP YOUR DATABASE NOW")));
+insert($q,textbr(my_("IF YOU ARE UPGRADING IPPLAN-NG, BACKUP YOUR DATABASE NOW")));
 insert($q,textbr(my_("THERE IS NO WAY TO RECOVER YOUR DATA IF SOMETHING GOES WRONG.")));
 
 insert($q,generic("p"));
@@ -102,7 +102,7 @@ insert($w, $t=container("div", array("class"=>"MrMagooInstall")));
 insert($t, $s=container("ul"));
 
 insert($s, $l1=container("li"));
-insert($l1,textb(my_("For security purposes, it is highly recomended that IPPlan is installed on an SSL Webserver.")));
+insert($l1,textb(my_("For security purposes, it is highly recomended that IPPlan-NG is installed on an SSL Webserver.")));
 insert($s, generic("br"));
 insert($s, $l2=container("li"));
 insert($l2,textb(my_("Production systems need to use a transaction-aware database table. Do not use MYISAM (use INNODB) and enable it in config.php")));
@@ -111,8 +111,9 @@ insert($s, $l3=container("li"));
 insert($l3,textb(my_("Read all Instructions carefully before proceeding!")));
 
 insert($w, generic("br"));
-insert($w,block(my_("Have you read the <a href=\"http://iptrack.sourceforge.net/doku.php?id=faq\">FAQ</a>? How about the <a href=\"http://iptrack.sourceforge.net/documentation/\">User Manual</a>? ")));
-insert($w,text(my_("Have you read the UPGRADE document if upgrading?")));
+insert($w,block(my_("Have you read the <a href=\"/docs/IPplan-NG-manual.html\" target=\"_blank\">User Manual</a>?")));
+insert($w, generic("br"));
+insert($w,text(my_("Have you read the Upgrading section of the User Manual if upgrading?")));
 insert($w, generic("br"));
 insert($w, generic("br"));
 insert($w,textbrbr(my_("What would you like to do today?")));

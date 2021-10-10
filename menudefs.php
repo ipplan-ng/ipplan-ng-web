@@ -78,9 +78,8 @@ $ADMIN_MENU .="
 ..|".my_("Maintenance")."|$BASE_URL/admin/maintenance.php
 ..|".my_("Display Audit Log")."|$BASE_URL/admin/displayauditlog.php
 .|".my_("Help")."
-..|".my_("Online Manual")."|http://iptrack.sourceforge.net/ 
-..|".my_("Support Groups")."|http://sourceforge.net/forum/?group_id=32122
-..|".my_("Home Page")."|http://sourceforge.net/projects/iptrack/
+..|".my_("Online Manual")."|$BASE_URL/docs/IPplan-NG-manual.html 
+..|".my_("Home Page")."|https://github.com/ipplan-ng
 ..|".my_("License")."|$BASE_URL/license.php
 ";
 
