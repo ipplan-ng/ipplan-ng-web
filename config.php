@@ -30,7 +30,7 @@
 
 // the database user and password is NOT the same user and password
 // used to access IPplan as a regular user.
-define("DBF_TYPE", 'maxsql');
+define("DBF_TYPE", 'mysqli');
 define("DBF_HOST", 'localhost');
 define("DBF_USER", 'ipplan');
 define("DBF_NAME", 'ipplan');
