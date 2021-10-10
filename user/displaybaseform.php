@@ -103,7 +103,7 @@ insert($con,textbr());
 
 insert($con,span(my_("Enter a complete ip address in above field and select the above options to go to the address record or subnet record"), array("class"=>"textSmall")));
 
-if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql" or DBF_TYPE=="postgres7")
+if (DBF_TYPE=="mysqli" or DBF_TYPE=="postgres9")
    insert($con,textbrbr(my_("Description (only display networks matching the regular expression)")));
 else
    insert($con,textbrbr(my_("Description (only display networks containing)")));

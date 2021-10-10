@@ -88,7 +88,7 @@ if ($field=="macaddr") {
 $ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 $addtables="";
-if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql") {
+if (DBF_TYPE=="mysqli") {
    if (preg_ispreg($search)) {
       myError($w,$p, my_("Regular expression repetition-operator operand invalid"));
    }
@@ -124,7 +124,7 @@ if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql") {
                  ipaddradd.info RLIKE ".$ds->ds->qstr(".*\:\"".$tmplfield."\"\;.*\".*".$search.".*\"\;");
    }
 }
-else if (DBF_TYPE=="postgres7") {
+else if (DBF_TYPE=="postgres9") {
    if (preg_ispreg($search)) {
       myError($w,$p, my_("Regular expression repetition-operator operand invalid"));
    }

@@ -420,7 +420,7 @@ class DNSfwdZone extends DNSZone {
         // did not fail due to key error?
         // should not fail as we checked this already!
         if ($result) {
-            if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql") {
+            if (DBF_TYPE=="mysqli") {
                 $dataid=$this->ds->Insert_ID();
             }
             else {
@@ -915,7 +915,7 @@ class DNSrevZone extends DNSZone {
         // did not fail due to key error?
         // should not fail as we checked this already!
         if ($result) {
-            if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql") {
+            if (DBF_TYPE=="mysqli") {
                 $zoneid=$this->ds->Insert_ID();
             }
             else {

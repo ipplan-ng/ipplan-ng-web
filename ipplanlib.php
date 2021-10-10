@@ -727,11 +727,11 @@ class mySearch {
                     "LIKE"=>my_("Contains"),
                     "NLIKE"=>my_("Does not contain"),
                     "EXACT"=>my_("Equal to"));
-            if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql" or DBF_TYPE=="postgres7") {
+            if (DBF_TYPE=="mysqli" or DBF_TYPE=="postgres9") {
                 $lst["RLIKE"]=my_("Regex contains");
             }
             // only supported by mysql
-            if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql") {
+            if (DBF_TYPE=="mysqli") {
                 $lst["NRLIKE"]=my_("Does not regex contain");
             }
             insert($con,selectbox($lst, array("name"=>"expr"), $this->expr));

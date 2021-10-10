@@ -21,11 +21,11 @@
 // when the database layout changes, bump up this value.
 define("SCHEMA", 22);
 
-require_once('../classes/Version.php');
-require_once("../ipplanlib.php");
+require_once dirname(__FILE__).'/../classes/Version.php';
+require_once dirname(__FILE__).'/../ipplanlib.php';
 //require_once('../adodb/adodb-errorhandler.inc.php');
 require_once dirname(__FILE__).'/../classes/DBLib.php';
-require_once("../auth.php");
+require_once dirname(__FILE__).'/../auth.php';
 
 
 function get_table_options( object $db_object ) : array
@@ -50,9 +50,9 @@ function get_table_options( object $db_object ) : array
 
 	      $mysql_version_id = ( $version[1] * 10000 + $version[2] * 100 + $version[3] );
 
-		if ($mysql_version_id < 32315) {
-		die('You need mysql version 3.23.15 or later');
-		}
+        if ($mysql_version_id < 50167) {
+        die("You need mysql version 5.1.67 or later");
+        }
 
 		if ($mysql_version_id >= 50100) {   // database TYPE= changed to ENGINE= in 5.1
 		$_storage_option='ENGINE';
@@ -83,10 +83,10 @@ $auth->addUser(ADMINUSER, ADMINPASSWD);
 $auth->authenticate();
 
 $tables['area']=array(
-   array('areaaddr', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
+   array('areaaddr', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
    array('descrip', 'C', '80', 'DEFAULT' => '', 'NotNull'),
    array('areaindex',  'I8', 'AUTOINCREMENT', 'NotNull', 'PRIMARY'),
-   array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull')
+   array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull')
 );
 $indexes['area']=array(
    array('area_customer', 'customer,descrip', array('UNIQUE')),
@@ -103,16 +103,16 @@ $indexes['auditlog']=array(
 );
 
 $tables['base']=array(
-   array('baseaddr', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
-   array('subnetsize', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
+   array('baseaddr', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
+   array('subnetsize', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
    array('descrip', 'C', '80', 'DEFAULT' => '', 'NotNull'),
    array('baseindex',  'I8', 'AUTOINCREMENT', 'NotNull', 'PRIMARY'),
    array('admingrp', 'C', '40', 'DEFAULT' => '', 'NotNull'),
-   array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull'),
+   array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull'),
    array('lastmod', 'T', 'DEFTIMESTAMP', 'NotNull'),
    array('userid', 'C', '40', 'DEFAULT' => ''),
    // baseopt is a binary encoded field - bit 0 defines if the subnet is DHCP if set
-   array('baseopt', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0),
+   array('baseopt', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0),
    array('swipmod', 'T', 'Null')
 );
 $indexes['base']=array(
@@ -129,7 +129,7 @@ $tables['baseadd']=array(
 );
 
 $tables['custinfo']=array(
-   array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull', 'PRIMARY'),
+   array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull', 'PRIMARY'),
    array('org', 'C', '100', 'DEFAULT' => ''),
    array('street', 'C', '255', 'DEFAULT' => ''),
    array('city', 'C', '80', 'DEFAULT' => ''),
@@ -152,14 +152,14 @@ $tables['custinfo']=array(
 );
 
 $tables['custadd']=array(
-   array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull', 'PRIMARY'),
+   array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull', 'PRIMARY'),
    array('info', 'X', 'DEFAULT' => ''),
    array('infobinfn', 'C', '255', 'DEFAULT' => '', 'Null')
 );
 
 $tables['customer']=array(
    array('custdescrip', 'C', '80', 'DEFAULT' => '', 'NotNull'),
-   array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'AUTOINCREMENT', 'NotNull', 'PRIMARY'),
+   array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'AUTOINCREMENT', 'NotNull', 'PRIMARY'),
    array('crm', 'C', '20', 'DEFAULT' => ''),
    array('admingrp', 'C', '40', 'DEFAULT' => '', 'NotNull')
 );
@@ -173,8 +173,8 @@ $tables['grp']=array(
    array('grpdescrip', 'C', '80', 'DEFAULT' => '', 'NotNull'),
    array('grp', 'C', '40', 'DEFAULT' => '', 'NotNull', 'PRIMARY'),
    array('createcust', 'C', '1', 'DEFAULT' => 'N', 'NotNull'),
-   array('resaddr', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0),
-   array('grpopt', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull')
+   array('resaddr', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0),
+   array('grpopt', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull')
 );
 $indexes['grp']=array(
    array('grp_grpdescrip', 'grpdescrip', array('UNIQUE'))
@@ -182,7 +182,7 @@ $indexes['grp']=array(
 
 // order of columns for PRIMARY KEY is important!!
 $tables['ipaddr']=array(
-   array('ipaddr', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull', 'PRIMARY'),
+   array('ipaddr', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull', 'PRIMARY'),
    array('userinf', 'C', '80', 'DEFAULT' => ''),
    array('location', 'C', '80', 'DEFAULT' => ''),
    array('telno', 'C', '15', 'DEFAULT' => ''),
@@ -200,7 +200,7 @@ $indexes['ipaddr']=array(
 
 // order of columns for PRIMARY KEY is important!!
 $tables['ipaddradd']=array(
-   array('ipaddr', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull', 'PRIMARY'),
+   array('ipaddr', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull', 'PRIMARY'),
    array('baseindex', 'I8', 'DEFAULT' => 0, 'NotNull', 'PRIMARY'),
    array('info', 'X', 'DEFAULT' => ''),
    array('infobin', (DBF_TYPE=='oci8po') ? 'XL':'B', 'DEFAULT' => '', 'Null'),
@@ -211,11 +211,11 @@ $indexes['ipaddradd']=array(
 );
 
 $tables['ipaddrlnk']=array(
-   array('ipaddr', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
+   array('ipaddr', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
    array('baseindex', 'I8', 'DEFAULT' => 0, 'NotNull'),
-   array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull'),
-   array('dstipaddr', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
-   array('dstcustomer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull')
+   array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull'),
+   array('dstipaddr', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
+   array('dstcustomer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull')
 );
 $indexes['ipaddrlnk']=array(
    array('ipaddrlnk_uniq', 'baseindex, ipaddr, customer, dstipaddr, dstcustomer', array('UNIQUE')),
@@ -225,7 +225,7 @@ $indexes['ipaddrlnk']=array(
 
 $tables['requestip']=array(
    array('requestindex', 'I4', 'AUTOINCREMENT', 'NotNull', 'PRIMARY'),
-   array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull'),
+   array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull'),
    array('requestdesc', 'C', '80', 'DEFAULT' => ''),
    array('userinf', 'C', '80', 'DEFAULT' => ''),
    array('location', 'C', '80', 'DEFAULT' => ''),
@@ -241,12 +241,12 @@ $indexes['requestip']=array(
 );
 
 $tables['netrange']=array(
-   array('rangeaddr', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
-   array('rangesize', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
+   array('rangeaddr', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
+   array('rangesize', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
    array('descrip', 'C', '80', 'DEFAULT' => '', 'NotNull'),
    array('rangeindex',  'I8', 'AUTOINCREMENT', 'NotNull', 'PRIMARY'),
    array('areaindex',  'I8', 'DEFAULT' => 0, 'NotNull'),
-   array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull')
+   array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull')
 );
 $indexes['netrange']=array(
 
@@ -257,10 +257,10 @@ $indexes['netrange']=array(
 );
 
 $tables['revdns']=array(
-   array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull'),
+   array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull'),
    array('hname', 'C', '100', 'DEFAULT' => '', 'NotNull'),
    array('ipaddr', 'C', '15', 'DEFAULT' => '', 'NotNull'),
-   array('horder', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'TINYINT UNSIGNED':'I1', 'DEFAULT' => 0, 'NotNull')
+   array('horder', (DBF_TYPE=='mysqli') ? 'TINYINT UNSIGNED':'I1', 'DEFAULT' => 0, 'NotNull')
 );
 $indexes['revdns']=array(
    array('revdns_customer', 'customer')
@@ -295,8 +295,8 @@ $indexes['usergrp']=array(
 );
 
 $tables['bounds']=array(
-   array('boundsaddr', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
-   array('boundssize', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
+   array('boundsaddr', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
+   array('boundssize', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
    array('grp', 'C', '40', 'DEFAULT' => '', 'NotNull')
 );
 $indexes['bounds']=array(
@@ -326,7 +326,7 @@ $tables['fwdzone']=array(
    array('slaveonly', 'C', '1', 'DEFAULT' => 'N', 'NotNull'),
    array('zonefilepath1', 'C', '254', 'DEFAULT' => '', 'Null'),
    array('zonefilepath2', 'C', '254', 'DEFAULT' => '', 'Null'),
-   array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull'),
+   array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull'),
    array('admingrp', 'C', '40', 'DEFAULT' => '', 'Null')
 );
 $indexes['fwdzone']=array(
@@ -335,7 +335,7 @@ $indexes['fwdzone']=array(
 );
 
 $tables['fwdzoneadd']=array(
-   array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull'),
+   array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull'),
    array('data_id', 'I8', 'DEFAULT' => 0, 'NotNull'),
    array('info', 'X', 'DEFAULT' => ''),
    array('infobinfn', 'C', '255', 'DEFAULT' => '', 'Null')
@@ -354,7 +354,7 @@ $tables['fwdzonerec']=array(
    array('error_message', 'C', '254', 'DEFAULT' => '', 'Null'),
    array('sortorder', 'I4', 'DEFAULT' => 0, 'NotNull'),
    array('userid', 'C', '40', 'DEFAULT' => '', 'NotNull'),
-   array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull')
+   array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull')
 );
 $indexes['fwdzonerec']=array(
    array('fwdzonerec_data_id', 'data_id'),
@@ -365,7 +365,7 @@ $indexes['fwdzonerec']=array(
 $tables['fwddns']=array(
    array('id', 'I8', 'DEFAULT' => 0, 'NotNull'),
    array('hname', 'C', '100', 'DEFAULT' => '', 'NotNull'),
-   array('horder', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'TINYINT UNSIGNED':'I1', 'DEFAULT' => 0, 'NotNull')
+   array('horder', (DBF_TYPE=='mysqli') ? 'TINYINT UNSIGNED':'I1', 'DEFAULT' => 0, 'NotNull')
 );
 $indexes['fwddns']=array(
    array('fwddns_id', 'id')
@@ -373,8 +373,8 @@ $indexes['fwddns']=array(
 
 $tables['zones']=array(
    array('id', 'I8', 'AUTOINCREMENT', 'NotNull', 'PRIMARY'),
-   array('zoneip', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
-   array('zonesize', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
+   array('zoneip', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
+   array('zonesize', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0, 'NotNull'),
    array('zone', 'C', '254', 'DEFAULT' => '', 'NotNull'),
    array('error_message', 'C', '254', 'DEFAULT' => '', 'Null'),
    array('lastmod', 'T', 'DEFAULT' => '', 'Null'),
@@ -391,7 +391,7 @@ $tables['zones']=array(
    array('zonefilepath1', 'C', '254', 'DEFAULT' => '', 'Null'),
    array('zonefilepath2', 'C', '254', 'DEFAULT' => '', 'Null'),
    array('responsiblemail', 'C', '64', 'DEFAULT' => '', 'Null'),
-   array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull')
+   array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0, 'NotNull')
 );
 $indexes['zones']=array(
    array('zones_customer', 'customer'),
@@ -401,7 +401,7 @@ $indexes['zones']=array(
 $tables['zonedns']=array(
    array('id', 'I8', 'DEFAULT' => 0, 'NotNull'),
    array('hname', 'C', '100', 'DEFAULT' => '', 'NotNull'),
-   array('horder', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'TINYINT UNSIGNED':'I1', 'DEFAULT' => 0, 'NotNull')
+   array('horder', (DBF_TYPE=='mysqli') ? 'TINYINT UNSIGNED':'I1', 'DEFAULT' => 0, 'NotNull')
 );
 $indexes['zonedns']=array(
    array('zonedns_id', 'id')
@@ -618,7 +618,7 @@ function UpdateSchema($display) {
 
      case 2:
        $sqlarray = $dict->AlterColumnSQL("base", 
-           array(array('customer', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0)));
+           array(array('customer', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0)));
        foreach($sqlarray as $value) {
           if (!$display) {
              if (!$ds->Execute($value)) {
@@ -704,7 +704,7 @@ function UpdateSchema($display) {
 
      case 5:
        $sqlarray = $dict->AddColumnSQL("grp", 
-           array(array('grpopt', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0)));
+           array(array('grpopt', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0)));
        $sqlarray[] = 'UPDATE grp SET grpopt=1';
 
        foreach($sqlarray as $value) {
@@ -809,7 +809,7 @@ function UpdateSchema($display) {
        $sqlarray = $dict->AddColumnSQL("auditlog", 
                     array(array('userid', 'C', '40', 'DEFAULT' => '')));
        // postgres cannot change a column definition - not my problem!!!
-       if (DBF_TYPE=="postgres7") {
+       if (DBF_TYPE=="postgres9") {
            if ($display) {
                $sqlarray[] = "# Postgres cannot change a column definition - I suggest using a database that can";
                $sqlarray[] = "# I WILL NOW DROP AND ADD THE COLUMN AGAIN - THIS WILL CAUSE DATA TO BE LOST IN THE AUDITLOG";
@@ -900,7 +900,7 @@ function UpdateSchema($display) {
            array(array('macaddr', 'C', '12', 'DEFAULT' => '')));
        $sqlarray=array_merge($sqlarray, $sqlarrayt);
        $sqlarrayt = $dict->AddColumnSQL("base", 
-           array(array('baseopt', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0)));
+           array(array('baseopt', (DBF_TYPE=='mysqli') ? 'INT UNSIGNED':'I8', 'DEFAULT' => 0)));
        $sqlarray=array_merge($sqlarray, $sqlarrayt);
        foreach($sqlarray as $value) {
           if (!$display) {
@@ -919,7 +919,7 @@ function UpdateSchema($display) {
 
      case 17:
        $sqlarray = $dict->AddColumnSQL("grp", 
-           array(array('resaddr', (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0)));
+           array(array('resaddr', (DBF_TYPE=='mysqli') ? 'SMALLINT UNSIGNED':'I4', 'DEFAULT' => 0)));
        foreach($sqlarray as $value) {
           if (!$display) {
              if (!$ds->Execute($value)) {
@@ -935,7 +935,7 @@ function UpdateSchema($display) {
 
      case 18:
        // change table name from schema to version for mysql 5 compat
-       if (DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') {
+       if (DBF_TYPE=='mysqli') {
            $sqlarray = array("RENAME TABLE `schema` TO `version`");
            foreach($sqlarray as $value) {
                if (!$display) {
@@ -1047,7 +1047,7 @@ function UpdateSchema($display) {
    }
 
    if (DBF_TYPE=="mssql" or DBF_TYPE=="ado_mssql" or DBF_TYPE=="odbc_mssql" or
-       DBF_TYPE=='mysql' or DBF_TYPE=='maxsql') {
+       DBF_TYPE=='mysqli') {
       $sqlarray[] = 'UPDATE version SET version='.SCHEMA;
    }  
    else {
@@ -1100,8 +1100,8 @@ function PrintSQL($sqlarray) {
 //******************************************************************************
 
 // check php version
-if (PHP_VERSION_ID  < 70400) {
-   die("You need php version 7.4.0 or later");
+if (PHP_VERSION_ID  < 70200) {
+   die("You need php version 7.2.0 or later");
 }
 
 // check for regex support
@@ -1208,7 +1208,7 @@ if (strncmp(PHP_OS,'WIN',3) != 0) {
      case 'oci8':
         echo '<p>you must use the oci8po driver for Oracle - change driver in config.php</p>';
         exit;
-     case 'postgres7':
+     case 'postgres9':
         if(!extension_loaded('pgsql')) {
            echo '<p>pgsql driver not compiled into php - cannot complete install<br/>';
            echo 'this is a php issue and has nothing to do with IPplan-NG</p>';
@@ -1239,7 +1239,7 @@ if ($new) {
    }
 }
 else {
-    if (DBF_TYPE=="postgres7") {
+    if (DBF_TYPE=="postgres9") {
 //        echo "# YOU ARE USING POSTGRESS - YOU BETTER READ THE UPGRADE DOC AND THE ONSCREEN COMMENTS CAREFULLY AS UPGRADES DO NOT WORK TOO WELL USING POSTGRESS. YOU ARE BEING FORCED TO ISSUE THE SQL COMMANDS MANUALLY.\n";
  //       $display=1;
     }

@@ -139,7 +139,7 @@ if ($action=="add") {
             FROM revdns
             WHERE customer=$cust");
 
-    if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql") {
+    if (DBF_TYPE=="mysqli") {
         $version=$ds->ds->GetOne("SELECT version() AS version");
 
         if ($version >= "4.0.14") {

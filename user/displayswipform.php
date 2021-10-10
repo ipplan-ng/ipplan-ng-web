@@ -84,7 +84,7 @@ insert($con,input_text(array("name"=>"ipaddr",
                             "size"=>"15",
                             "maxlength"=>"15")));
 
-if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql" or DBF_TYPE=="postgres7")
+if (DBF_TYPE=="mysqli" or DBF_TYPE=="postgres9")
    insert($con,textbrbr(my_("Description (only display networks matching the regular expression)")));
 else
    insert($con,textbrbr(my_("Description (only display networks containing)")));

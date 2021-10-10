@@ -1037,11 +1037,11 @@ function UpdateDNS($ds, $w, $cust, $hname, $ip) {
         // no matching A records to update, now look for a zone to create a 
         // new A record in - only supported on MySQL and Postgres (databases that support
         // regex searches
-        else if ((DBF_TYPE=="mysql" or DBF_TYPE=="maxsql" or DBF_TYPE=="postgres7") and 
+        else if ((DBF_TYPE=="mysqli" or DBF_TYPE=="postgres9") and 
             $recs==0) {
             
             $regex = "RLIKE";
-            if (DBF_TYPE=="postgres7") {
+            if (DBF_TYPE=="postgres9") {
                 $regex = "~";
             }
 

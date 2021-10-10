@@ -131,7 +131,7 @@ if ($_POST) {
 
             // did not fail due to key error?
             if ($result) {
-                if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql") {
+                if (DBF_TYPE=="mysqli") {
                     $cust=$ds->ds->Insert_ID();
                 }
                 else {

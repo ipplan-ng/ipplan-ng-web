@@ -49,7 +49,7 @@ list($action, $cust, $block, $requestindex, $requestdesc) = myRegister("S:action
 $ds=new IPplan_NG\DBLib() or myError($w,$p, my_("Could not connect to database"));
 
 if ($action=="deletecustomer") {
-    if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql") {
+    if (DBF_TYPE=="mysqli") {
         $version=$ds->ds->GetOne("SELECT version() AS version");
 
         if ($version < "4.0.0") {

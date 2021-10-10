@@ -93,7 +93,7 @@ if ($template->is_error() == FALSE) {
     $tmpldef=$template->return_templ_name();
     if ($field == "template") {
         // Search for specific template fields only with regex support
-        if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql" or DBF_TYPE=="postgres7") {
+        if (DBF_TYPE=="mysqli" or DBF_TYPE=="postgres9") {
             if (empty($tmplfield)) {
                 $tmplfield="any";
             }
@@ -202,7 +202,7 @@ while ($i < date('Y')+15) $years[$i++] = $i;
 
 insert($con,selectbox($years, array("name"=>"year")));
 
-if (DBF_TYPE=="mysql" or DBF_TYPE=="maxsql" or DBF_TYPE=="postgres7")
+if (DBF_TYPE=="mysqli" or DBF_TYPE=="postgres9")
    insert($con,textbrbr(my_("Search criteria (only display records matching the regular expression)")));
 else
    insert($con,textbrbr(my_("Search criteria (only display records containing)")));
