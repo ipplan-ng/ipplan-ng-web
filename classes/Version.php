@@ -23,8 +23,8 @@ namespace IPplan_NG;
 class Version
 {
 
-const VERSION='0.0.1';
-const VERSION_NAME='v0.0.1-beta';
+const VERSION='<% :version %>';
+const VERSION_NAME='<% :version_name %>';
 
 }
 

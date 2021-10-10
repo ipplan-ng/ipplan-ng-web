@@ -443,7 +443,6 @@ function myLanguage($lang_v) {
         } else {
         trigger_error("$lang_v is not a valid language.\n");
         }
-		print "<b>LANG $lang, PATH $path</b>\n";
         // initialize gettext for Windows
         if (strpos(strtoupper(PHP_OS),'WIN') !== false) {
             putenv("LANG=$lang");
@@ -785,7 +784,7 @@ function myErrorHandler ($errno, $errstr, $errfile, $errline) {
 
     echo "<div class=errorbox>";
     if (!$beenhere) {
-        echo "If you see this message, submit a detailed bug report on Sourceforge including ";
+        echo "If you see this message, create a detailed issue in GitHub ( https://github.com/ipplan-ng/ipplan-ng-web/issues ) including ";
         echo "the message below, the database platform used and the steps to perform to recreate ";
         echo "the problem.<p>";
         echo "PHP ".PHP_VERSION." (".PHP_OS.")<br>\n";

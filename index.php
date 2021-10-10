@@ -48,7 +48,7 @@ $w=myheading($p,my_("Main Menu"));
 insert($w,block(my_("IPplan-NG is a free (GPL), web based, multilingual, IP address management and tracking tool written in PHP, ".
 	"simplifying the administration of your IP address space. IPplan-NG goes beyond IP address management including DNS administration, ".
 	"configuration file management, circuit management (customizable via templates) and storing of hardware information ".
-	"(customizable via templates). IPplan-NG can handle a single network or cater to users with multiple networks and customers that have overlapping address space"))); 
+	"(customizable via templates). IPplan-NG can handle a single network or cater to users with multiple networks and customers that have overlapping address space."))); 
 
 printhtml($p);
 ?> 
