@@ -3,20 +3,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
-#msgid ""
-#msgstr ""
+msgid ""
+msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2002-05-02 15:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: addboundstogroup.php:59
 msgid "Add authority boundary to a group"
-msgstr "Tilføy myndighetsgrense til en gruppe"
+msgstr "TilfÃ¸y myndighetsgrense til en gruppe"
 
 #: addboundstogroup.php:65 addboundstogroup.php:113 addusertogroup.php:47
 #: addusertogroup.php:76 changepassword.php:52 createarea.php:46
@@ -39,7 +39,7 @@ msgstr "Ikke kunne kunne kople til database"
 
 #: addboundstogroup.php:72
 msgid "Boundary address may not be blank"
-msgstr "Grenseadresse ikke kan kan være blank"
+msgstr "Grenseadresse ikke kan kan vÃ¦re blank"
 
 #: addboundstogroup.php:74
 msgid "Invalid boundary address"
@@ -47,11 +47,11 @@ msgstr "Ugyldig grenseadresse"
 
 #: addboundstogroup.php:76 createrange.php:83 createsubnet.php:71
 msgid "Size may not be zero"
-msgstr "Størrelse ikke kan kan være null"
+msgstr "StÃ¸rrelse ikke kan kan vÃ¦re null"
 
 #: addboundstogroup.php:78
 msgid "Boundary cannot be created - overlaps with existing boundary"
-msgstr "Grense ikke kan bli kan bli skaptoverlappinger med å finnes"
+msgstr "Grense ikke kan bli kan bli skaptoverlappinger med Ã¥ finnes"
 
 #: addboundstogroup.php:82 createrange.php:89
 msgid "Invalid base address"
@@ -71,7 +71,7 @@ msgid ""
 "address. The boundary will limit the members of the group to only be able to "
 "create new subnets in this range, thus preventing the user from creating "
 "networks outside their area of authority."
-msgstr "Skap en ny myndighetsgrensegrense ved å gå inn i basisennettverkadresse. Grensen skal skal begrense medlemene av gruppen bare å kunne å kunne skape ny subnets i denne rekkevidden av denfølgelig forhindring brukeren fra å skape nettverk utenfor deres område"
+msgstr "Skap en ny myndighetsgrensegrense ved Ã¥ gÃ¥ inn i basisennettverkadresse. Grensen skal skal begrense medlemene av gruppen bare Ã¥ kunne Ã¥ kunne skape ny subnets i denne rekkevidden av denfÃ¸lgelig forhindring brukeren fra Ã¥ skape nettverk utenfor deres omrÃ¥de"
 
 #: addboundstogroup.php:111
 msgid ""
@@ -82,7 +82,7 @@ msgstr "En gruppeuten grensegrenserstandardverdienkan kan skape nettverkuten beg
 #: addboundstogroup.php:127 addusertogroup.php:106 createsubnetform.php:67
 #: importbaseform.php:68 modifycustomer.php:208 modifysubnet.php:230
 msgid "You first need to create some groups!"
-msgstr "De først må må skape noen grupperer"
+msgstr "De fÃ¸rst mÃ¥ mÃ¥ skape noen grupperer"
 
 #: addboundstogroup.php:130 addusertogroup.php:109 modifysubnet.php:263
 msgid "Group"
@@ -94,7 +94,7 @@ msgstr "Myndighetsgrensestartadresse"
 
 #: addboundstogroup.php:141
 msgid "Authority size/mask"
-msgstr "Myndighetsstørrelse/maske"
+msgstr "MyndighetsstÃ¸rrelse/maske"
 
 #: addboundstogroup.php:163 addusertogroup.php:114 changepassword.php:120
 #: changesettings.php:73 createarea.php:122 creategroup.php:112
@@ -124,19 +124,19 @@ msgstr "Klar"
 
 #: addusertogroup.php:41 admin.php:41
 msgid "Add a user to a group"
-msgstr "Tilføy en bruker til en gruppe"
+msgstr "TilfÃ¸y en bruker til en gruppe"
 
 #: addusertogroup.php:63
 msgid "User added to group"
-msgstr "Bruker tilføyde å å gruppere"
+msgstr "Bruker tilfÃ¸yde Ã¥ Ã¥ gruppere"
 
 #: addusertogroup.php:66
 msgid "User could not be added to group"
-msgstr "Bruker ikke kunne bli kunne bli tilføyd"
+msgstr "Bruker ikke kunne bli kunne bli tilfÃ¸yd"
 
 #: addusertogroup.php:93
 msgid "You first need to create some users!"
-msgstr "De først må må skape noen brukere"
+msgstr "De fÃ¸rst mÃ¥ mÃ¥ skape noen brukere"
 
 #: addusertogroup.php:96 displayaccessform.php:96 displayaccessform.php:179
 msgid "User-id"
@@ -144,14 +144,14 @@ msgstr "Bruker-id"
 
 #: admin.php:14 admin.php:24
 msgid "IPplan - IP address management and tracking admin"
-msgstr "IPplanIP adresseledelse og forfølgende admin"
+msgstr "IPplanIP adresseledelse og forfÃ¸lgende admin"
 
 #: admin.php:32
 msgid ""
 "The admin functions below can only be performed by the admin user.  Any "
 "other functions not on this page need to be performed by a normal user and "
 "CANNOT be performed by the admin user."
-msgstr "Admin funksjoner under bare kan bli kan bli gjennomført ved admin. Noe som andre fungerer ikke på denne siden må bli må bli gjennomført ved en normal bruker og CANNOT bli bli gjennomført ved"
+msgstr "Admin funksjoner under bare kan bli kan bli gjennomfÃ¸rt ved admin. Noe som andre fungerer ikke pÃ¥ denne siden mÃ¥ bli mÃ¥ bli gjennomfÃ¸rt ved en normal bruker og CANNOT bli bli gjennomfÃ¸rt ved"
 
 #: admin.php:35
 msgid "Admin functions:"
@@ -167,7 +167,7 @@ msgstr "Skap en ny gruppe"
 
 #: admin.php:42
 msgid "Add authority boundaries to a group"
-msgstr "Tilføy myndighetsgrenser til en gruppe"
+msgstr "TilfÃ¸y myndighetsgrenser til en gruppe"
 
 #: admin.php:43
 msgid "Display/Delete authority boundary information"
@@ -223,11 +223,11 @@ msgstr "Forandr brukerpassord"
 
 #: changepassword.php:59 createuser.php:62
 msgid "The password entered must be at least five characters"
-msgstr "Passordet som blir blir gått inn i må må være minst fem"
+msgstr "Passordet som blir blir gÃ¥tt inn i mÃ¥ mÃ¥ vÃ¦re minst fem"
 
 #: changepassword.php:62 createuser.php:65
 msgid "The passwords entered do not match"
-msgstr "Passordene som blir blir gått inn i ikke passer"
+msgstr "Passordene som blir blir gÃ¥tt inn i ikke passer"
 
 #: changepassword.php:77
 #, c-format
@@ -283,42 +283,42 @@ msgstr "Ja"
 msgid ""
 "Setting poll forces a scan of the IP address before assigning it, and warns "
 "the user if the address is active. This slows down address assignment."
-msgstr "Innstille avstemning tvinger et avsøker av IP adresse før tildeling av detog advarer brukeren om adressen er aktiv. Dette saktner adressetildeling."
+msgstr "Innstille avstemning tvinger et avsÃ¸ker av IP adresse fÃ¸r tildeling av detog advarer brukeren om adressen er aktiv. Dette saktner adressetildeling."
 
 #: createarea.php:40 index.php:99
 msgid "Create a new network area"
-msgstr "Skap et nytt nettverksområde"
+msgstr "Skap et nytt nettverksomrÃ¥de"
 
 #: createarea.php:56
 msgid "You need to enter a description for the area"
-msgstr "De må må gå inn i en beskrivelse for området"
+msgstr "De mÃ¥ mÃ¥ gÃ¥ inn i en beskrivelse for omrÃ¥det"
 
 #: createarea.php:62
 msgid "Area address may not be blank"
-msgstr "Områdeadresse ikke kan kan være blank"
+msgstr "OmrÃ¥deadresse ikke kan kan vÃ¦re blank"
 
 #: createarea.php:64
 msgid "Invalid area address - it must be the same format as an IP address"
-msgstr "Ugyldig områdeadressedet må må være det samme formatet som en IP adresse"
+msgstr "Ugyldig omrÃ¥deadressedet mÃ¥ mÃ¥ vÃ¦re det samme formatet som en IP adresse"
 
 #: createarea.php:74
 msgid ""
 "You may not create an area for this customer as you are not a member of the "
 "customers admin group"
-msgstr "De ikke kan kan skape et område for denne kunden da De er ikke et medlem av kundene admin gruppe"
+msgstr "De ikke kan kan skape et omrÃ¥de for denne kunden da De er ikke et medlem av kundene admin gruppe"
 
 #: createarea.php:82
 #, c-format
 msgid "User %s created new area %s cust %u"
-msgstr "Brukers skapte nytt områdes custu"
+msgstr "Brukers skapte nytt omrÃ¥des custu"
 
 #: createarea.php:87
 msgid "Area created"
-msgstr "Område skapte"
+msgstr "OmrÃ¥de skapte"
 
 #: createarea.php:92
 msgid "Area could not be created - probably a duplicate name"
-msgstr "Område ikke kunne bli kunne bli skaptsannsynlig et dobbelt"
+msgstr "OmrÃ¥de ikke kunne bli kunne bli skaptsannsynlig et dobbelt"
 
 #: createarea.php:100
 msgid ""
@@ -328,7 +328,7 @@ msgid ""
 "administrative boundaries. Areas can also contain multiple ranges of address "
 "space, as in many cases the address space is not contiguous - there may be a "
 "mix of private or public address space used."
-msgstr "Skap et nytt nettverksområde ved å gå inn i en enestående gjennkjenneradresse for området. Gjennkjenneren har det samme formatet som IP adressermen ikke har noen forhold til å finnes IP adresseprotokoller. Områder vanligvisdefinert geografisk eller administrative grenser. Områder også kan kan inneholde flerfoldige rekkevidder av adresseskilleda i mange tilfeller adresseskille er ikke tilgrensendedet kan kan være en blanding av privat eller offentlig adresse skiller"
+msgstr "Skap et nytt nettverksomrÃ¥de ved Ã¥ gÃ¥ inn i en enestÃ¥ende gjennkjenneradresse for omrÃ¥det. Gjennkjenneren har det samme formatet som IP adressermen ikke har noen forhold til Ã¥ finnes IP adresseprotokoller. OmrÃ¥der vanligvisdefinert geografisk eller administrative grenser. OmrÃ¥der ogsÃ¥ kan kan inneholde flerfoldige rekkevidder av adresseskilleda i mange tilfeller adresseskille er ikke tilgrensendedet kan kan vÃ¦re en blanding av privat eller offentlig adresse skiller"
 
 #: createarea.php:106 createrange.php:141 createsubnetform.php:56
 #: displaybaseform.php:57 displayrouterform.php:54 displayswipform.php:57
@@ -340,7 +340,7 @@ msgstr "Ingen kunder"
 
 #: createarea.php:108 modifyarearange.php:79 modifyarearange.php:180
 msgid "Area address"
-msgstr "Områdeadresse"
+msgstr "OmrÃ¥deadresse"
 
 #: createarea.php:115 createrange.php:162 displaybase.php:136
 #: displayoverlap.php:115 displayoverlap.php:124 displayrouter.php:149
@@ -351,11 +351,11 @@ msgstr "Beskrivelse"
 
 #: creategroup.php:54
 msgid "The group name must be longer"
-msgstr "Gruppenavnet må må være lang"
+msgstr "Gruppenavnet mÃ¥ mÃ¥ vÃ¦re lang"
 
 #: creategroup.php:57 modifygroup.php:53
 msgid "The group description must be longer"
-msgstr "Gruppebeskrivelsen må må være lang"
+msgstr "Gruppebeskrivelsen mÃ¥ mÃ¥ vÃ¦re lang"
 
 #: creategroup.php:60
 msgid "Only numbers and digits are allowed in the group name"
@@ -387,11 +387,11 @@ msgstr "Skap en ny rekkevidde eller supernet/sammendrag"
 
 #: createrange.php:73
 msgid "You need to enter a description for the range"
-msgstr "De må må gå inn i en beskrivelse for rekkevidden"
+msgstr "De mÃ¥ mÃ¥ gÃ¥ inn i en beskrivelse for rekkevidden"
 
 #: createrange.php:79
 msgid "Range address may not be blank"
-msgstr "Rekkeviddeadresse ikke kan kan være blank"
+msgstr "Rekkeviddeadresse ikke kan kan vÃ¦re blank"
 
 #: createrange.php:81
 msgid "Invalid range address"
@@ -399,7 +399,7 @@ msgstr "Ugyldig rekkeviddeadresse"
 
 #: createrange.php:85
 msgid "Range cannot be created - overlaps with existing range"
-msgstr "Rekkevidde ikke kan bli kan bli skaptoverlappinger med å finnes"
+msgstr "Rekkevidde ikke kan bli kan bli skaptoverlappinger med Ã¥ finnes"
 
 #: createrange.php:100
 msgid ""
@@ -410,7 +410,7 @@ msgstr "De ikke kan kan skape en rekkevidde for denne kunden da De er ikke et me
 #: createrange.php:116
 #, c-format
 msgid "User %s created new range %s size %u in areaindex %u cust %u"
-msgstr "Brukers skapte ny rekkeviddes størrelseu i areaindexu custu"
+msgstr "Brukers skapte ny rekkeviddes stÃ¸rrelseu i areaindexu custu"
 
 #: createrange.php:121
 msgid "Range created"
@@ -427,7 +427,7 @@ msgid ""
 "ultimately be used to reduce the number of routing entries in routing "
 "tables. Ranges are essentially the same as a normal subnet, just bigger with "
 "a wider view."
-msgstr "Skap en ny rekkevidde eller supernet/sammendrag ved å gå inn i basisennettverkadresse. En rekkevidde er en aggregation av et antall subnets som til sluttkan bli kan bli brukt å å redusere antall føringseadgangene i. Rekkevidder er nødvendig akkurat som en normal subnetakkurat større med en videre sikt."
+msgstr "Skap en ny rekkevidde eller supernet/sammendrag ved Ã¥ gÃ¥ inn i basisennettverkadresse. En rekkevidde er en aggregation av et antall subnets som til sluttkan bli kan bli brukt Ã¥ Ã¥ redusere antall fÃ¸ringseadgangene i. Rekkevidder er nÃ¸dvendig akkurat som en normal subnetakkurat stÃ¸rre med en videre sikt."
 
 #: createrange.php:155 modifyarearange.php:85
 msgid "Range address"
@@ -435,7 +435,7 @@ msgstr "Strekk seg adresse"
 
 #: createrange.php:167
 msgid "Range size/mask"
-msgstr "Strekk seg størrelse/maske"
+msgstr "Strekk seg stÃ¸rrelse/maske"
 
 #: createsubnet.php:44
 msgid "Create subnet results"
@@ -443,11 +443,11 @@ msgstr "Skap subnet resultater"
 
 #: createsubnet.php:57
 msgid "Number of subnets to create is out of bounds."
-msgstr "Antall subnets å å skape er ut av grense"
+msgstr "Antall subnets Ã¥ Ã¥ skape er ut av grense"
 
 #: createsubnet.php:67 importbase.php:122
 msgid "IP address may not be blank"
-msgstr "IP adresse ikke kan kan være blank"
+msgstr "IP adresse ikke kan kan vÃ¦re blank"
 
 #: createsubnet.php:69 importbase.php:126 importip.php:126
 msgid "Invalid IP address"
@@ -478,7 +478,7 @@ msgid ""
 "Subnet %s overlaps with the following subnets from other customers.  This "
 "may not be a problem as the subnet may occur in both customers routing "
 "tables:"
-msgstr "Subnets overlapper med den følgende subnets fra andre kunder. Dette ikke kan kan være et problem da subnet kan kan forekomme i begge kunder føre tabeller"
+msgstr "Subnets overlapper med den fÃ¸lgende subnets fra andre kunder. Dette ikke kan kan vÃ¦re et problem da subnet kan kan forekomme i begge kunder fÃ¸re tabeller"
 
 #: createsubnet.php:122 deletecustomer.php:73 displaybase.php:130
 #: displayoverlap.php:109 displayoverlap.php:118 displayrouter.php:143
@@ -503,7 +503,7 @@ msgstr "De ikke kan kan skape en subnet for denne kunden da De er ikke et medlem
 #: createsubnet.php:157 importbase.php:167
 #, c-format
 msgid "User %s created new subnet %s size %u cust %u"
-msgstr "Brukers skapte ny subnets størrelseu custu"
+msgstr "Brukers skapte ny subnets stÃ¸rrelseu custu"
 
 #: createsubnet.php:160
 #, c-format
@@ -528,14 +528,14 @@ msgid ""
 "Create a new subnet by entering the base (network) address of the subnet. "
 "Subnets are the building blocks of all networks, and are all that is "
 "required for small networks."
-msgstr "Skap en ny subnet ved å gå inn i basisennettverkadresse av subnet. Subnets er byggeblokkene av alle nettverkog er all at blir blir krevd for små nettverk"
+msgstr "Skap en ny subnet ved Ã¥ gÃ¥ inn i basisennettverkadresse av subnet. Subnets er byggeblokkene av alle nettverkog er all at blir blir krevd for smÃ¥ nettverk"
 
 #: createsubnetform.php:47
 msgid ""
 "Unused subnets can be pre-allocated with a a description of either 'free' or "
 "'spare'. These can be searched for at a later stage using the 'Find Free' "
 "function."
-msgstr "Ubrukt subnets kan kan være pre-tildelt med en en beskrivelse av entenbefrirellerskåner. Disse kan bli kan bli lett etter på en senere trinnbruk det denFind Free"
+msgstr "Ubrukt subnets kan kan vÃ¦re pre-tildelt med en en beskrivelse av entenbefrirellerskÃ¥ner. Disse kan bli kan bli lett etter pÃ¥ en senere trinnbruk det denFind Free"
 
 #: createsubnetform.php:48
 msgid ""
@@ -543,7 +543,7 @@ msgid ""
 "not local to yours) a special handle like EXTERNAL so that they can be "
 "searched for at a later stage. These networks often appear in routing tables "
 "as static routes to third parties (not via the Internet)."
-msgstr "Det også kan kan være fordelaktig å å gi ASE denAutonomous System External som vÆrernettverk ikke lokal til Dereset spesielt håndtak som EXTERNAL slik at de kan bli kan bli lett etter på. Disse nettverkene ofte kommer fram ved føreav tabeller som statiske ruter til tredjepartsikke via Internet."
+msgstr "Det ogsÃ¥ kan kan vÃ¦re fordelaktig Ã¥ Ã¥ gi ASE denAutonomous System External som vÃ†rernettverk ikke lokal til Dereset spesielt hÃ¥ndtak som EXTERNAL slik at de kan bli kan bli lett etter pÃ¥. Disse nettverkene ofte kommer fram ved fÃ¸reav tabeller som statiske ruter til tredjepartsikke via Internet."
 
 #: createsubnetform.php:70 importbaseform.php:71
 msgid "Admin Group"
@@ -555,31 +555,31 @@ msgstr "Nettverksadresse"
 
 #: createsubnetform.php:81
 msgid "Number of contiguous networks to create"
-msgstr "Antall tilgrensendee nettverk å å skape"
+msgstr "Antall tilgrensendee nettverk Ã¥ Ã¥ skape"
 
 #: createsubnetform.php:88
 msgid "Description (leave blank to auto-describe)"
-msgstr "Beskrivelseforlate tomrom automatisk å å beskrive"
+msgstr "Beskrivelseforlate tomrom automatisk Ã¥ Ã¥ beskrive"
 
 #: createsubnetform.php:92
 msgid "Subnet size/mask"
-msgstr "Subnet størrelse/maske"
+msgstr "Subnet stÃ¸rrelse/maske"
 
 #: createsubnetform.php:122
 msgid "Add active hosts using NMAP"
-msgstr "Tilføy aktive vertbruk NMAP"
+msgstr "TilfÃ¸y aktive vertbruk NMAP"
 
 #: createsubnetform.php:130
 msgid "Add host names from DNS"
-msgstr "Tilføy vertnavn fra DNS"
+msgstr "TilfÃ¸y vertnavn fra DNS"
 
 #: createuser.php:56
 msgid "The user-id must be longer"
-msgstr "Bruker-id må må være lang"
+msgstr "Bruker-id mÃ¥ mÃ¥ vÃ¦re lang"
 
 #: createuser.php:59
 msgid "The user description must be longer"
-msgstr "Brukerbeskrivelsen må må være lang"
+msgstr "Brukerbeskrivelsen mÃ¥ mÃ¥ vÃ¦re lang"
 
 #: createuser.php:86
 msgid "Existing user overwritten"
@@ -620,7 +620,7 @@ msgstr "Stryk tilgangsstyringsresultater"
 
 #: deleteaccess.php:59
 msgid "User deleted"
-msgstr "Bruker strøk"
+msgstr "Bruker strÃ¸k"
 
 #: deleteaccess.php:62
 msgid "User could not be deleted"
@@ -628,26 +628,26 @@ msgstr "Bruker ikke kunne bli"
 
 #: deleteaccess.php:77
 msgid "User deleted from group"
-msgstr "Bruker strøk fra gruppe"
+msgstr "Bruker strÃ¸k fra gruppe"
 
 #: deleteaccess.php:80
 msgid "User could not be deleted from group"
-msgstr "Bruker ikke kunne bli kunne bli strøket fra"
+msgstr "Bruker ikke kunne bli kunne bli strÃ¸ket fra"
 
 #: deleteaccess.php:91
 msgid ""
 "Cannot delete group because the following customers are assigned to the "
 "group:"
-msgstr "Ikke kan kan stryke gruppe fordi de følgende kundene blir blir tildelt til gruppen"
+msgstr "Ikke kan kan stryke gruppe fordi de fÃ¸lgende kundene blir blir tildelt til gruppen"
 
 #: deleteaccess.php:108
 msgid ""
 "Cannot delete group because the following subnets are assigned to the group:"
-msgstr "Ikke kan kan stryke gruppe fordi den følgende subnets blir blir tildelt til gruppen"
+msgstr "Ikke kan kan stryke gruppe fordi den fÃ¸lgende subnets blir blir tildelt til gruppen"
 
 #: deleteaccess.php:130
 msgid "Group deleted"
-msgstr "Gruppe strøk"
+msgstr "Gruppe strÃ¸k"
 
 #: deleteaccess.php:133
 msgid "Group could not be deleted"
@@ -655,26 +655,26 @@ msgstr "Gruppe ikke kunne bli"
 
 #: deletearea.php:40
 msgid "Delete a network area"
-msgstr "Stryk et nettverksområde"
+msgstr "Stryk et nettverksomrÃ¥de"
 
 #: deletearea.php:60 deleterange.php:59
 msgid ""
 "You may not delete an area for this customer as you are not a member of the "
 "customers admin group"
-msgstr "De ikke kan kan stryke et område for denne kunden da De er ikke et medlem av kundene admin gruppe"
+msgstr "De ikke kan kan stryke et omrÃ¥de for denne kunden da De er ikke et medlem av kundene admin gruppe"
 
 #: deletearea.php:71
 #, c-format
 msgid "User %s deleted area %s customer cust %u"
-msgstr "Brukers strøk områdes kunde custu"
+msgstr "Brukers strÃ¸k omrÃ¥des kunde custu"
 
 #: deletearea.php:76
 msgid "Area deleted"
-msgstr "Område strøk"
+msgstr "OmrÃ¥de strÃ¸k"
 
 #: deletearea.php:79
 msgid "Area could not be deleted"
-msgstr "Område ikke kunne bli"
+msgstr "OmrÃ¥de ikke kunne bli"
 
 #: deletebounds.php:40
 msgid "Delete authority boundary results"
@@ -690,7 +690,7 @@ msgstr "De ikke kan kan gjenlade eller bookmark denne siden"
 
 #: deletebounds.php:61
 msgid "Boundary deleted"
-msgstr "Grense strøk"
+msgstr "Grense strÃ¸k"
 
 #: deletebounds.php:64
 msgid "Boundary could not be deleted"
@@ -710,16 +710,16 @@ msgstr "De ikke kan kan stryke kunder da De er ikke et medlem en gruppe som kan 
 msgid ""
 "Cannot delete customer because the following subnets are assigned to the "
 "customer (limited to first 100):"
-msgstr "Ikke kan kan stryke kunde fordi den følgende subnets blir blir tildelt til kundenblir blir begrenset til først 100som"
+msgstr "Ikke kan kan stryke kunde fordi den fÃ¸lgende subnets blir blir tildelt til kundenblir blir begrenset til fÃ¸rst 100som"
 
 #: deletecustomer.php:104
 #, c-format
 msgid "User %s deleted customer cust %u"
-msgstr "Brukers strøk kunde custu"
+msgstr "Brukers strÃ¸k kunde custu"
 
 #: deletecustomer.php:109
 msgid "Customer deleted"
-msgstr "Kunde strøk"
+msgstr "Kunde strÃ¸k"
 
 #: deletecustomer.php:112
 msgid "Customer could not be deleted"
@@ -732,11 +732,11 @@ msgstr "Stryk en rekkevidde eller supernet/sammendrag"
 #: deleterange.php:71
 #, c-format
 msgid "User %s deleted range %s size %u customer cust %u"
-msgstr "Brukers strøk rekkeviddes størrelseu kunde custu"
+msgstr "Brukers strÃ¸k rekkeviddes stÃ¸rrelseu kunde custu"
 
 #: deleterange.php:76
 msgid "Range deleted"
-msgstr "Rekkevidde strøk"
+msgstr "Rekkevidde strÃ¸k"
 
 #: deleterange.php:79
 msgid "Range could not be deleted"
@@ -822,7 +822,7 @@ msgstr "Brukere ikke tildelte til noe gruppe"
 #: displayaccessform.php:166
 msgid ""
 "These users will not be able to login as they do not have access anywhere."
-msgstr "Disse brukerne ikke skal skal være kyndig til login da de ikke har tilgang hvor som helst"
+msgstr "Disse brukerne ikke skal skal vÃ¦re kyndig til login da de ikke har tilgang hvor som helst"
 
 #: displayauditlog.php:41
 msgid "Display Audit Log"
@@ -883,7 +883,7 @@ msgstr "Beskrivelsesfilter"
 #: displaybase.php:132 displayoverlap.php:111 displayoverlap.php:120
 #: displayrouter.php:145 findfree.php:108 modifybase.php:165
 msgid "Subnet size"
-msgstr "Subnet størrelse"
+msgstr "Subnet stÃ¸rrelse"
 
 #: displaybase.php:134 displayoverlap.php:113 displayoverlap.php:122
 #: findfree.php:110 modifybase.php:167
@@ -930,7 +930,7 @@ msgstr "Delvis subnet adresser kan bli kan bli brukt. 172.20"
 
 #: displaybaseform.php:80 displayswipform.php:80 modifybaseform.php:78
 msgid "Description (only display networks matching the regular expression)"
-msgstr "Beskrivelsebare utstillingsnettverk passende det regulære uttrykket"
+msgstr "Beskrivelsebare utstillingsnettverk passende det regulÃ¦re uttrykket"
 
 #: displaybaseform.php:82 displayswipform.php:82 modifybaseform.php:80
 msgid "Description (only display networks containing)"
@@ -991,7 +991,7 @@ msgstr "Begge kunder som blir blir valgt ut er det sammeall subnets skal"
 
 #: displayoverlapform.php:41
 msgid "Display overlapping address space between customers/autonomous systems"
-msgstr "Utstilling å å overlappe adresseskille mellom kunder/autonome systemer"
+msgstr "Utstilling Ã¥ Ã¥ overlappe adresseskille mellom kunder/autonome systemer"
 
 #: displayoverlapform.php:56
 msgid "Customer/autonomous system 1"
@@ -1006,28 +1006,28 @@ msgid ""
 "Number of networks and masks do not match - try again.  This may occur when "
 "reading a large, constantly changing routing table as the network and host "
 "portions are read independently."
-msgstr "Antall nettverk ogmasker ikke passerforsøk igjen. Dette kan kan forekomme når lesning et stort sombestandig av forandringr av føringsetabell da nettverket og vertporsjoner er leser uavhengig"
+msgstr "Antall nettverk ogmasker ikke passerforsÃ¸k igjen. Dette kan kan forekomme nÃ¥r lesning et stort sombestandig av forandringr av fÃ¸ringsetabell da nettverket og vertporsjoner er leser uavhengig"
 
 #: displayrouter.php:74
 msgid "Display routing table results"
-msgstr "Utstilling å å føre tabellresultater"
+msgstr "Utstilling Ã¥ Ã¥ fÃ¸re tabellresultater"
 
 #: displayrouter.php:85
 msgid "You need at least php 4.0.1p1 to run this script"
-msgstr "De trenger minst php 4.0.1p1 å å kjøre denne skrifttypen"
+msgstr "De trenger minst php 4.0.1p1 Ã¥ Ã¥ kjÃ¸re denne skrifttypen"
 
 #: displayrouter.php:98
 msgid "Could not query router - no SNMP on router or firewall blocking access?"
-msgstr "Kan ikke f0respørsel routerINGEN SNMP på router eller firewall blokkeringseav tilgang?"
+msgstr "Kan ikke f0respÃ¸rsel routerINGEN SNMP pÃ¥ router eller firewall blokkeringseav tilgang?"
 
 #: displayrouter.php:103
 #, c-format
 msgid "Search for IP subnets from a routing table for customer '%s'"
-msgstr "Let etter IP subnets fra en føre tabell for kunde '%s"
+msgstr "Let etter IP subnets fra en fÃ¸re tabell for kunde '%s"
 
 #: displayrouter.php:131
 msgid "Routing Table"
-msgstr "Føre Table"
+msgstr "FÃ¸re Table"
 
 #: displayrouter.php:133
 msgid "IPplan information"
@@ -1035,15 +1035,15 @@ msgstr "IPplan informasjon"
 
 #: displayrouter.php:137
 msgid "Routing Table Base address"
-msgstr "Føre Table Base adresse"
+msgstr "FÃ¸re Table Base adresse"
 
 #: displayrouter.php:139
 msgid "Routing Table Subnet size"
-msgstr "Føre Table Subnet størrelse"
+msgstr "FÃ¸re Table Subnet stÃ¸rrelse"
 
 #: displayrouter.php:141
 msgid "Routing Table Subnet Mask"
-msgstr "Føre Table SubnetMask"
+msgstr "FÃ¸re Table SubnetMask"
 
 #: displayrouter.php:147
 msgid "Subnet Mask"
@@ -1051,7 +1051,7 @@ msgstr "SubnetMask"
 
 #: displayrouterform.php:39
 msgid "Display subnet information obtained from a routing table"
-msgstr "Vis subnet informasjon som blir blir fått fra en føre tabell"
+msgstr "Vis subnet informasjon som blir blir fÃ¥tt fra en fÃ¸re tabell"
 
 #: displayrouterform.php:46
 msgid ""
@@ -1063,11 +1063,11 @@ msgid ""
 "The same is true for the right hand side. If you click on the left, you can "
 "add the subnet to the database. If you click on the right, you can view the "
 "existing database information."
-msgstr "Utstilling subnet informasjon som blir blir fått fra en føre tabell skal skal vise den føree tabellinformasjon til venstre av skjermen og de korresponderee adgangene i databasen. Om det er adganger på begge sider av tabellensubnet finnes i den føree tabellen og den databasen. Om det er bare adganger til venstresubnet bare finnes i den føree tabellen. Det samme er sann for den riktige håndside. Om De klikker til venstreDe kan kan tilføye subnet til databasen. Om De klikker til høyreDe kan kan sikte som det finnes databaseinformasjon"
+msgstr "Utstilling subnet informasjon som blir blir fÃ¥tt fra en fÃ¸re tabell skal skal vise den fÃ¸ree tabellinformasjon til venstre av skjermen og de korresponderee adgangene i databasen. Om det er adganger pÃ¥ begge sider av tabellensubnet finnes i den fÃ¸ree tabellen og den databasen. Om det er bare adganger til venstresubnet bare finnes i den fÃ¸ree tabellen. Det samme er sann for den riktige hÃ¥ndside. Om De klikker til venstreDe kan kan tilfÃ¸ye subnet til databasen. Om De klikker til hÃ¸yreDe kan kan sikte som det finnes databaseinformasjon"
 
 #: displayrouterform.php:56
 msgid "IP address of device to query. (The device must be SNMP capable)"
-msgstr "IP adresse av innretning til f0respørsel. Innretningen må må være SNMP dyktig"
+msgstr "IP adresse av innretning til f0respÃ¸rsel. Innretningen mÃ¥ mÃ¥ vÃ¦re SNMP dyktig"
 
 #: displayrouterform.php:62
 msgid "Community string"
@@ -1075,7 +1075,7 @@ msgstr "Fellesskapsnor"
 
 #: displaysubnet.php:59
 msgid "Another user modified the information before you saved - restart"
-msgstr "Enda en bruker modifiserte informasjonen før som De sparteomstart"
+msgstr "Enda en bruker modifiserte informasjonen fÃ¸r som De sparteomstart"
 
 #: displaysubnet.php:65 importip.php:159
 msgid "IP address details modified"
@@ -1093,7 +1093,7 @@ msgstr "De er ikke eieren av subnet"
 msgid ""
 "Could not find the owner of the subnet - subnet possibly deleted by another "
 "user"
-msgstr "Ikke kunne kunne finne eieren av subnet densom subnet muligens blir blir strøket ved enda en"
+msgstr "Ikke kunne kunne finne eieren av subnet densom subnet muligens blir blir strÃ¸ket ved enda en"
 
 #: displaysubnet.php:90
 msgid ""
@@ -1121,15 +1121,15 @@ msgstr "Utstilling brukte adresser"
 msgid ""
 " This can take a while as each address is polled.  Green is active, Red is "
 "inactive"
-msgstr " Dette kan kan ta en stund da hver adresse blir. Grønn er aktivRed er uvirksom"
+msgstr " Dette kan kan ta en stund da hver adresse blir. GrÃ¸nn er aktivRed er uvirksom"
 
 #: displaysubnet.php:111
 msgid "Select multiple addresses to do a bulk change"
-msgstr "Utvalgte flerfoldige adresser å å gjøre en bulkforandring"
+msgstr "Utvalgte flerfoldige adresser Ã¥ Ã¥ gjÃ¸re en bulkforandring"
 
 #: displaysubnet.php:112
 msgid "Ideal for reserving DHCP ranges"
-msgstr "Ideal for å reservere DHCP strekker seg"
+msgstr "Ideal for Ã¥ reservere DHCP strekker seg"
 
 #: displaysubnet.php:154
 msgid "Use next available address"
@@ -1212,7 +1212,7 @@ msgstr "Skabelon"
 
 #: displayswipform.php:101
 msgid "Network name (ntname field on SWIP)"
-msgstr "Nettverksnavnntname felt på SWIP"
+msgstr "Nettverksnavnntname felt pÃ¥ SWIP"
 
 #: displayswipform.php:104
 msgid "Generate automatically"
@@ -1236,12 +1236,12 @@ msgstr "SWIP/registrar informasjon sendte"
 
 #: emailswip.php:56
 msgid "No SWIP's selected to send"
-msgstr "INGEN SWIPS valgte ut å å sende"
+msgstr "INGEN SWIPS valgte ut Ã¥ Ã¥ sende"
 
 #: emailswip.php:78
 #, c-format
 msgid "User %s sent SWIP %s template %s size %u cust %u"
-msgstr "Brukers sendte SWIPs skabelons størrelseu custu"
+msgstr "Brukers sendte SWIPs skabelons stÃ¸rrelseu custu"
 
 #: exportbaseform.php:41
 msgid "Export subnet data"
@@ -1253,7 +1253,7 @@ msgid ""
 "columns each delimited by TAB. The first column contains the IP base "
 "address, the second the description and the third the mask in dotted decimal "
 "format."
-msgstr "Eksporter nettverksdata til FLAT ASCII arkiver. Arkivet skal skal inneholde tre søyler hver avgrenset ved TAB. Først søylen inneholder IP basisadressedet andre den beskrivelsen og det tredje detmaske i prikket desimalformat."
+msgstr "Eksporter nettverksdata til FLAT ASCII arkiver. Arkivet skal skal inneholde tre sÃ¸yler hver avgrenset ved TAB. FÃ¸rst sÃ¸ylen inneholder IP basisadressedet andre den beskrivelsen og det tredje detmaske i prikket desimalformat."
 
 #: exportipform.php:41
 msgid "Export IP details data"
@@ -1265,13 +1265,13 @@ msgid ""
 "columns each delimited by TAB. The first column contains the IP address, the "
 "second the user, the third the location, the fourth the description and the "
 "fifth the telephone number."
-msgstr "Eksporter IP detaljdata til FLAT ASCII arkiver. Arkivet skal skal inneholde fem søyler hver avgrenset ved TAB. Først søylen inneholder IP adressedet andre den brukerendet tredje den plasseringendet fjerde den beskrivelsen og det femte den telefonnummeret."
+msgstr "Eksporter IP detaljdata til FLAT ASCII arkiver. Arkivet skal skal inneholde fem sÃ¸yler hver avgrenset ved TAB. FÃ¸rst sÃ¸ylen inneholder IP adressedet andre den brukerendet tredje den plasseringendet fjerde den beskrivelsen og det femte den telefonnummeret."
 
 #: findfree.php:71
 msgid ""
 "Invalid IP address! You must select a range or fill in the start and end IP "
 "address."
-msgstr "UGYLDIG IP adresse! De må må velge ut en rekkevidde eller fylle i starten og slutt IP adresse"
+msgstr "UGYLDIG IP adresse! De mÃ¥ mÃ¥ velge ut en rekkevidde eller fylle i starten og slutt IP adresse"
 
 #: findfree.php:78
 msgid "Your end ip address is smaller than your start!"
@@ -1310,7 +1310,7 @@ msgstr "Utstilling befrir adresseskilleutstillingsblokker eller huller som er ti
 
 #: findfreeform.php:49
 msgid "Subnets with a description of 'free' or 'spare' will also be shown."
-msgstr "Subnets med en beskrivelse avbefrirellerskånerogså vil vil bli vist bli"
+msgstr "Subnets med en beskrivelse avbefrirellerskÃ¥nerogsÃ¥ vil vil bli vist bli"
 
 #: findfreeform.php:72
 msgid "IP range start (leave blank if range selected)"
@@ -1322,7 +1322,7 @@ msgstr "IP rekkeviddesluttforlate tomrom om rekkevidde valgte ut"
 
 #: findfreeform.php:82
 msgid "Show used address space too"
-msgstr "Utstilling brukte adresseskille også"
+msgstr "Utstilling brukte adresseskille ogsÃ¥"
 
 #: importbase.php:74
 msgid "Import subnet results"
@@ -1357,7 +1357,7 @@ msgstr "Subnetmaske er ugyldig"
 msgid ""
 "Subnet could not be updated - start address and size do not EXACTLY match "
 "existing subnet"
-msgstr "Subnet ikke kunne bli kunne bli oppdatert denstartadresse og størrelse gjør ikke EXACTLY kampfinnesing"
+msgstr "Subnet ikke kunne bli kunne bli oppdatert denstartadresse og stÃ¸rrelse gjÃ¸r ikke EXACTLY kampfinnesing"
 
 #: importbase.php:142
 msgid "Row is duplicate - updating"
@@ -1366,7 +1366,7 @@ msgstr "Rekke er dobbeltoppdatering"
 #: importbase.php:152 modifysubnet.php:187
 #, c-format
 msgid "User %s modified subnet details %s size %u customer cust %u"
-msgstr "Brukers modifisert subnet spesifiserers størrelseu kunde custu"
+msgstr "Brukers modifisert subnet spesifiserers stÃ¸rrelseu kunde custu"
 
 #: importbase.php:172
 msgid "Subnet could not be created"
@@ -1382,14 +1382,14 @@ msgid ""
 "columns each delimited by TAB. The first column contains the IP base "
 "address, the second the description and the third the mask either in dotted "
 "decimal format or in bit format."
-msgstr "Importer nettverksdata fra FLAT ASCII arkiver. Arkivet burde burde inneholde tre søyler hver avgrenset ved TAB. Først søylen inneholder IP basisadressedet andre den beskrivelsen og det tredje detmaske enten i prikket desimalformat eller i bitformat."
+msgstr "Importer nettverksdata fra FLAT ASCII arkiver. Arkivet burde burde inneholde tre sÃ¸yler hver avgrenset ved TAB. FÃ¸rst sÃ¸ylen inneholder IP basisadressedet andre den beskrivelsen og det tredje detmaske enten i prikket desimalformat eller i bitformat."
 
 #: importbaseform.php:49 importipform.php:50
 msgid ""
 "If an error occurs during the import, the process will stop. Records that "
 "have been successfully imported should be deleted from the import file, the "
 "error corrected and the import resumed."
-msgstr "Om en feil forekommer i løpet av importenprosessen skal skal stanse. Protokoller at vellykket er blitt er blitt importert burde bli burde bli strøket importfra arkivet feilen denrettet"
+msgstr "Om en feil forekommer i lÃ¸pet av importenprosessen skal skal stanse. Protokoller at vellykket er blitt er blitt importert burde bli burde bli strÃ¸ket importfra arkivet feilen denrettet"
 
 #: importbaseform.php:75 importipform.php:62
 msgid "File name"
@@ -1429,7 +1429,7 @@ msgid ""
 "generated by <a HREF=\"http://www.insecure.org\">NMAP's</a> -oX parameter. "
 "This is useful to scan and obtain records for sites that have no previous "
 "information."
-msgstr "Importer IP detaljdata i XML format. Dataene er i det samme formatet som blir blir generert ved  NMAPS denoX parameter. Dette er nyttig å å avsøke og får protokoller for steder som ikke har noen forrige informasjon"
+msgstr "Importer IP detaljdata i XML format. Dataene er i det samme formatet som blir blir generert ved  NMAPS denoX parameter. Dette er nyttig Ã¥ Ã¥ avsÃ¸ke og fÃ¥r protokoller for steder som ikke har noen forrige informasjon"
 
 #: importipform.php:49
 msgid ""
@@ -1437,13 +1437,13 @@ msgid ""
 "columns each delimited by TAB. The first column contains the IP address, the "
 "second the user, the third the location, the fourth the description and the "
 "fifth the telephone number."
-msgstr "Importer IP detaljdata fra FLAT ASCII arkiver. Arkivet burde burde inneholde fem søyler hver avgrenset ved TAB. Først søylen inneholder IP adressedet andre den brukerendet tredje den plasseringendet fjerde den beskrivelsen og det femte den telefonnummeret."
+msgstr "Importer IP detaljdata fra FLAT ASCII arkiver. Arkivet burde burde inneholde fem sÃ¸yler hver avgrenset ved TAB. FÃ¸rst sÃ¸ylen inneholder IP adressedet andre den brukerendet tredje den plasseringendet fjerde den beskrivelsen og det femte den telefonnummeret."
 
 #: importipform.php:51
 msgid ""
 "NOTE: Any number of IP address records for various subnets can be in the "
 "file.  Any existing information will be overwritten."
-msgstr "NOTEAny antall IP adresseprotokoller for forskjellig subnets kan kan være i arkivet. Noe som finnes informasjon vil bli"
+msgstr "NOTEAny antall IP adresseprotokoller for forskjellig subnets kan kan vÃ¦re i arkivet. Noe som finnes informasjon vil bli"
 
 #: importipform.php:69
 msgid "Format"
@@ -1459,17 +1459,17 @@ msgstr "XML"
 
 #: index.php:24 index.php:36
 msgid "IPplan - IP address management and tracking"
-msgstr "IPplanIP adresseledelse og forfølgelse"
+msgstr "IPplanIP adresseledelse og forfÃ¸lgelse"
 
 #: index.php:67
 msgid ""
 "Your browser must be JavaScript capable to use this application. Please turn "
 "JavaScript on."
-msgstr "Deres browser må må være som vÆrer Javascript dyktig å å bruke denne. Behag skrur Javascript på."
+msgstr "Deres browser mÃ¥ mÃ¥ vÃ¦re som vÃ†rer Javascript dyktig Ã¥ Ã¥ bruke denne. Behag skrur Javascript pÃ¥."
 
 #: index.php:83
 msgid "This application administers and tracks IP address space."
-msgstr "Denne anvendelsen administrerer og forfølger IP adresseskille."
+msgstr "Denne anvendelsen administrerer og forfÃ¸lger IP adresseskille."
 
 #: index.php:88
 msgid "IPplan admin functions"
@@ -1493,11 +1493,11 @@ msgstr "Skap en ny nettverksrekkevidde eller supernet"
 
 #: index.php:101
 msgid "Display/Modify/Delete area and range information"
-msgstr "Utstillingmodifisererstryker område og strekker seg informasjon"
+msgstr "Utstillingmodifisererstryker omrÃ¥de og strekker seg informasjon"
 
 #: index.php:103
 msgid "Create a new subnet from a routing table"
-msgstr "Skap en ny subnet fra en føre tabell"
+msgstr "Skap en ny subnet fra en fÃ¸re tabell"
 
 #: index.php:104
 msgid "Modify/Copy/Move/Delete subnet information"
@@ -1509,7 +1509,7 @@ msgstr "Brukergruppe fungerer"
 
 #: index.php:120
 msgid "Search all subnets"
-msgstr "Gjennomsøk all subnets"
+msgstr "GjennomsÃ¸k all subnets"
 
 #: index.php:122
 msgid "Display subnets that overlap between customers/autonomous systems"
@@ -1521,11 +1521,11 @@ msgstr "Kunde/autonom system"
 
 #: ipplanlib.php:218
 msgid "Area (optional)"
-msgstr "Områdevalgfri"
+msgstr "OmrÃ¥devalgfri"
 
 #: ipplanlib.php:220
 msgid "No area selected"
-msgstr "Ingen område valgte ut"
+msgstr "Ingen omrÃ¥de valgte ut"
 
 #: ipplanlib.php:244
 msgid "Range (optional)"
@@ -1537,16 +1537,16 @@ msgstr "Ingen rekkevidde valgte ut"
 
 #: modifyarearange.php:43
 msgid "Results of your search for areas"
-msgstr "Resultater av Deres leter etter områder"
+msgstr "Resultater av Deres leter etter omrÃ¥der"
 
 #: modifyarearange.php:59
 #, c-format
 msgid "Search for areas and ranges for customer '%s'"
-msgstr "Let etter områder og rekkevidder for kunde '%s"
+msgstr "Let etter omrÃ¥der og rekkevidder for kunde '%s"
 
 #: modifyarearange.php:87
 msgid "Range size"
-msgstr "Strekk seg størrelse"
+msgstr "Strekk seg stÃ¸rrelse"
 
 #: modifyarearange.php:89
 msgid "Range mask"
@@ -1558,11 +1558,11 @@ msgstr "Stryk Area"
 
 #: modifyarearange.php:125
 msgid "No area"
-msgstr "Ingen område"
+msgstr "Ingen omrÃ¥de"
 
 #: modifyarearange.php:128
 msgid "Range not part of area"
-msgstr "Strekk seg ikke del av område"
+msgstr "Strekk seg ikke del av omrÃ¥de"
 
 #: modifyarearange.php:148
 msgid "Delete Range"
@@ -1570,19 +1570,19 @@ msgstr "Stryk Range"
 
 #: modifyarearange.php:169
 msgid "Areas that have no ranges defined"
-msgstr "Områder som ikke har noen definerte rekkevidder"
+msgstr "OmrÃ¥der som ikke har noen definerte rekkevidder"
 
 #: modifyarearangeform.php:39
 msgid "Display/Modify/Delete area information"
-msgstr "Utstillingmodifisererstryker områdeinformasjon"
+msgstr "Utstillingmodifisererstryker omrÃ¥deinformasjon"
 
 #: modifyarearangeform.php:46
 msgid "Display/Modify/Delete an area."
-msgstr "Utstillingmodifisererstryker et område."
+msgstr "Utstillingmodifisererstryker et omrÃ¥de."
 
 #: modifybase.php:43
 msgid "Results of your search for subnet to modify"
-msgstr "Resultater av Deres leter etter subnet å å modifisere"
+msgstr "Resultater av Deres leter etter subnet Ã¥ Ã¥ modifisere"
 
 #: modifybase.php:64
 msgid ""
@@ -1593,16 +1593,16 @@ msgstr "De ikke kan kan stryke en subnet for denne kunden da De er ikke et medle
 #: modifybase.php:85
 #, c-format
 msgid "Subnet %s not deleted - out of defined authority boundary"
-msgstr "Subnets ikke strøkut avdefinert myndighetsgrense"
+msgstr "Subnets ikke strÃ¸kut avdefinert myndighetsgrense"
 
 #: modifybase.php:90
 #, c-format
 msgid "User %s deleted subnet %s size %u customer cust %u"
-msgstr "Brukers strøk subnets størrelseu kunde custu"
+msgstr "Brukers strÃ¸k subnets stÃ¸rrelseu kunde custu"
 
 #: modifybase.php:94
 msgid "Subnet deleted"
-msgstr "Subnet strøk"
+msgstr "Subnet strÃ¸k"
 
 #: modifybase.php:97
 msgid "Subnet could not be deleted"
@@ -1634,7 +1634,7 @@ msgstr "Modifiser en kunde/autonom systemdetaljer"
 
 #: modifycustomer.php:55
 msgid "The customer description must be longer"
-msgstr "Kundebeskrivelsen må må være lang"
+msgstr "Kundebeskrivelsen mÃ¥ mÃ¥ vÃ¦re lang"
 
 #: modifycustomer.php:59
 msgid "Invalid zipcode"
@@ -1749,7 +1749,7 @@ msgstr "Teknisk kontaktinformasjonvalgfri"
 
 #: modifycustomer.php:630
 msgid "Nickname/handle:"
-msgstr "Økenavn/håndtak"
+msgstr "Ã˜kenavn/hÃ¥ndtak"
 
 #: modifycustomer.php:636
 msgid "Last name/surname:"
@@ -1793,11 +1793,11 @@ msgstr "Der ikke er noen tilgjengelige adresser"
 
 #: modifyipform.php:102
 msgid "IP Address to modify:"
-msgstr "IP Address å å modifisere"
+msgstr "IP Address Ã¥ Ã¥ modifisere"
 
 #: modifyipform.php:104
 msgid " (Address active on network) "
-msgstr " Adresser aktiv på nettverk"
+msgstr " Adresser aktiv pÃ¥ nettverk"
 
 #: modifyipform.php:108
 msgid "Whois"
@@ -1819,7 +1819,7 @@ msgstr "Stryk protokoll"
 msgid ""
 "WARNING: Deleting an entry does not preserve the last modified information "
 "as the record is completely removed from the database to conserve space."
-msgstr "WARNINGDeleting en adgang ikke bevarer lesten modifisert informasjon da protokollen komplett blir blir fjernet fra databasen å å konservere"
+msgstr "WARNINGDeleting en adgang ikke bevarer lesten modifisert informasjon da protokollen komplett blir blir fjernet fra databasen Ã¥ Ã¥ konservere"
 
 #: modifyipformmul.php:41
 msgid "Modify IP address details (range)"
@@ -1827,7 +1827,7 @@ msgstr "Modifiser IP adressedetaljerrekkevidde"
 
 #: modifyipformmul.php:60
 msgid "IP Addresses to modify: "
-msgstr "IP Addresses å å modifisere"
+msgstr "IP Addresses Ã¥ Ã¥ modifisere"
 
 #: modifyipformmul.php:128
 msgid "Delete records"
@@ -1841,7 +1841,7 @@ msgstr "De ikke kan kan modifisere denne subnet for denne kunden da De er ikke e
 
 #: modifysubnet.php:65
 msgid "You need to enter a description for the subnet"
-msgstr "De må må gå inn i en beskrivelse for subnet"
+msgstr "De mÃ¥ mÃ¥ gÃ¥ inn i en beskrivelse for subnet"
 
 #: modifysubnet.php:79
 msgid ""
@@ -1858,17 +1858,17 @@ msgstr "Subnets ikke modifiserteut avdefinert myndighetsgrense"
 msgid ""
 "Subnet could not be created - possibly overlaps with an existing subnet on "
 "new customers network"
-msgstr "Subnet ikke kunne bli den kunne bli skaptmuligens overlappinger med et finnes subnet på nye kunde"
+msgstr "Subnet ikke kunne bli den kunne bli skaptmuligens overlappinger med et finnes subnet pÃ¥ nye kunde"
 
 #: modifysubnet.php:117
 #, c-format
 msgid "User %s moved subnet %s size %u to customer cust %u"
-msgstr "Brukers flyttet subnets størrelseu til kunde custu"
+msgstr "Brukers flyttet subnets stÃ¸rrelseu til kunde custu"
 
 #: modifysubnet.php:153
 #, c-format
 msgid "User %s created new subnet %s size %u customer cust %u"
-msgstr "Brukers skapte ny subnets størrelseu kunde custu"
+msgstr "Brukers skapte ny subnets stÃ¸rrelseu kunde custu"
 
 #: modifysubnet.php:193
 msgid "Subnet modified"
@@ -1884,15 +1884,15 @@ msgstr "Flytt subnet til ny kunde"
 
 #: modifysubnet.php:243
 msgid "Duplicate subnet on new customer"
-msgstr "Dobbelt subnet på ny kunde"
+msgstr "Dobbelt subnet pÃ¥ ny kunde"
 
 #: modifysubnet.php:246
 msgid "Duplicate subnet on new customer without IP detail"
-msgstr "Dobbelt subnet på ny kunde uten IP detalj"
+msgstr "Dobbelt subnet pÃ¥ ny kunde uten IP detalj"
 
 #: schema.php:123
 msgid "You are trying to downgrade IPplan - impossible"
-msgstr "De prøver til downgrade IPplanumulig"
+msgstr "De prÃ¸ver til downgrade IPplanumulig"
 
 #: schema.php:127
 msgid "Schema version outdated"
@@ -1905,20 +1905,20 @@ msgid ""
 "this to happen, you require enough access rights on the %s database. If you "
 "get errors back from the upgrade process, you will need to temporarily grant "
 "more access rights to the %s database for the duration of the upgrade"
-msgstr "Databasesom strukturene må bli må bli oppgradert å å gi plass til. For dette å å skjeDe krever nok tilgang like på det dens database. Om De får feil tilbake fra stigningsprosessenDe foreløpig vil måtte vil måtte bevilge mere tilgang like til det dens database for varighet av"
+msgstr "Databasesom strukturene mÃ¥ bli mÃ¥ bli oppgradert Ã¥ Ã¥ gi plass til. For dette Ã¥ Ã¥ skjeDe krever nok tilgang like pÃ¥ det dens database. Om De fÃ¥r feil tilbake fra stigningsprosessenDe forelÃ¸pig vil mÃ¥tte vil mÃ¥tte bevilge mere tilgang like til det dens database for varighet av"
 
 #: schema.php:129
 msgid ""
 "Alternatively, the database administrator can manually issue the following "
 "SQL statements:"
-msgstr "Alternativtdatabaseforsterkningen manuelt kan kan utgi DEN FØLGENDE SQL uttalelser"
+msgstr "Alternativtdatabaseforsterkningen manuelt kan kan utgi DEN FÃ˜LGENDE SQL uttalelser"
 
 #: schema.php:130
 msgid ""
 "NOTE: Care should be taken when doing this to ensure that the correct table "
 "type is used if transaction safe tables like InnoDB are used. All CREATE "
 "TABLE statements should be appended with a TYPE=innodb"
-msgstr "NOTECare burde bli burde bli tatt av når gjøring dette å å sikre at den riktige tabelltype blir blir brukt om transaksjonssafetabeller. ALL CREATE TABLE uttalelser burde bli burde bli tilføyd med EN TYPE"
+msgstr "NOTECare burde bli burde bli tatt av nÃ¥r gjÃ¸ring dette Ã¥ Ã¥ sikre at den riktige tabelltype blir blir brukt om transaksjonssafetabeller. ALL CREATE TABLE uttalelser burde bli burde bli tilfÃ¸yd med EN TYPE"
 
 #: schema.php:149
 msgid "Schema upgrade failed with error:"
@@ -1930,12 +1930,12 @@ msgstr "Skjemastigning var vellykket"
 
 #: searchall.php:56
 msgid "You need to enter a longer search criteria."
-msgstr "De må må gå inn i et lengre letingskriterier"
+msgstr "De mÃ¥ mÃ¥ gÃ¥ inn i et lengre letingskriterier"
 
 #: searchall.php:144
 #, c-format
 msgid "Search filter on %s:"
-msgstr "Gjennomsøk filter pås"
+msgstr "GjennomsÃ¸k filter pÃ¥s"
 
 #: searchallform.php:41
 msgid "Search for user info"
@@ -1947,15 +1947,15 @@ msgstr "Let etter bruker info letinger den enkele IP adresseprotokoller."
 
 #: searchallform.php:73
 msgid "Field to search"
-msgstr "Felt å å gjennomsøke"
+msgstr "Felt Ã¥ Ã¥ gjennomsÃ¸ke"
 
 #: searchallform.php:84
 msgid "Search criteria (only display records matching the regular expression)"
-msgstr "Gjennomsøk kriterierbare utstilling lagrer passende det regulære uttrykket"
+msgstr "GjennomsÃ¸k kriterierbare utstilling lagrer passende det regulÃ¦re uttrykket"
 
 #: searchallform.php:86
 msgid "Search criteria (only display records containing)"
-msgstr "Gjennomsøk kriterierbare utstilling lagrer inneholdende"
+msgstr "GjennomsÃ¸k kriterierbare utstilling lagrer inneholdende"
 
 #: whois.php:31
 msgid "WHOIS results"
@@ -1963,4 +1963,4 @@ msgstr "WHOIS resulterer"
 
 #: whois.php:41
 msgid "Whois query failed - are you behind a firewall?"
-msgstr "Whois f0respørsel svikteter De bak en firewall?"
+msgstr "Whois f0respÃ¸rsel svikteter De bak en firewall?"
