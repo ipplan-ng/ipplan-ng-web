@@ -1,5 +1,5 @@
 <?php
-// IPplan-NG <% :version %>
+// IPplan-NG @version <@ :version @>
 //
 // Original IPplan source (c) 2001-2011 Richard Ellerbrock (ipplan at gmail.com)
 //
