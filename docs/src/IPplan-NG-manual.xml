@@ -327,7 +327,6 @@
       <para>A sample command is:</para>
       <para><command>xsltproc bind9_zone.xsl zone_</command></para>
       <para>For sample XML input of:</para>
-      <para>
       <programlisting>&lt;?xml version=&quot;1.0&quot; ?&gt;
 &lt;zone domain=&quot;test.com&quot;&gt;
 &lt;soa serialdate=&quot;20040626&quot; serialnum=&quot;04&quot; ttl=&quot;21600&quot; retry=&quot;3600&quot; refresh=&quot;86400&quot; expire=&quot;604800&quot; minimumttl=&quot;21600&quot; email=&quot;&quot; /&gt;
@@ -338,8 +337,8 @@
 &lt;record&gt;&lt;A&gt;&lt;host&gt;myhost&lt;/host&gt;&lt;iphostname&gt;10.10.10.1&lt;/iphostname&gt;&lt;/A&gt;&lt;/record&gt;
 &lt;record&gt;&lt;CNAME&gt;&lt;host&gt;myhost-alias&lt;/host&gt;&lt;iphostname&gt;myhost&lt;/iphostname&gt;&lt;/CNAME&gt;&lt;/record&gt;
 &lt;record&gt;&lt;MX&gt;&lt;host&gt;&lt;/host&gt;&lt;iphostname&gt;mailhost&lt;/iphostname&gt;&lt;/MX&gt;&lt;/record&gt;
-&lt;/zone&gt;</programlisting>
-      </para>
+&lt;/zone&gt;
+      </programlisting>
       <para>Generating output as follows:</para>
       <programlisting>$ORIGIN test.com.
 $TTL 86400
@@ -643,6 +642,51 @@ myhost-alias    IN      CNAME   myhost
     <warning>
     <para><emphasis>THE HTTP BASIC AUTHENTICATION SCHEME DOES NOT ENCRYPT USER-IDS AND PASSWORDS TRANSMITTED TO THE WEBSERVER - IT IS RECOMMENDED THAT IPPLAN-NG IS INSTALLED ON AN SSL PROTECTED WEBSERVER ON PRODUCTION SYSTEMS.</emphasis> </para>
     </warning>
+  </sect1>
+  <sect1>
+    <title>Development</title>
+    <sect2>
+    <title>Working with the source code</title>
+    <para>The IPplan-NG source code has template strings that get replaced with version numbers when building releases.</para>
+    <para><varname>&lt;@ :version @&gt;</varname></para>
+    <para>Version number in 3 digit format. Ex. 1.0.1</para>
+    <para><varname>&lt;@ :version_name @&gt;</varname></para>
+    <para>Version name. This includes the version number but can also have stage information ( alpha, beta rcX ). Ex. 1.0.1-rc2 This is the version that is shown in the lower left of the IPplan-NG web interface.</para>
+    <para>These template strings get replaced with values using <link xlink:show="new" xlink:href="https://www.phing.info/" >Phing</link>. The build.xml in the root of the Git repository is the Phing project file. It defines 'targets' that can be built using Phing.</para>
+    <command>phing build</command>
+    <para>Build the IPplan-NG source with the default version number of 0.0.1 and default version name 0.0.1-dev</para>
+    <para>Version number ane version name can be overriden with the <parameter class='command'>-D</parameter> parameter.</para>
+    <command>phing build -Dversion=0.1.3 -Dversion.name=0.1.3-rc2</command>
+    <para>By default this will create a ./build directory inside the Git repository directory. You can override the location with the <varname>build.dir</varname> property.</para>
+    <command>phing build -Dbuild.dir=/tmp/build</command>
+    <para>If you are working on translations, use the target 'buildlangs' to rebuild the gettext templates.</para>
+    <command>phing buildlangs</command>
+    <para>If you are working on documentation, use the target 'builddocs' to process the Docbook documents.</para>
+    <command>phing builddocs</command>
+    <para>To remove the build directory, use the 'clean' target.</para>
+    <command>phing clean</command>
+    <para>To create a tar.gz archive for release, use the 'dist' target.</para>
+    <command>phing dist</command>
+    </sect2>
+    <sect2>
+    <title>Setting up Phing</title>
+    <para>Phing is the build system that is used to build the IPplan-NG source code.</para>
+    <para>Phing requires command line PHP and libxml2 support for PHP.</para>
+    <para>On Debian / Ubuntu you would need the packages php-cli and php-xml.</para>
+    <note>
+    <para>This is just one example of how to setup Phing. You should choose the method that works best for you.</para>
+    </note>
+    <para>Download the Phar version of Phing from <link xlink:show="new" xlink:href="https://www.phing.info/" /></para>
+    <para>Phing version 3 is the planned supported version.</para>
+    <para>On Ubuntu, a user's .profile is already configured to look in a private bin directory ( $HOME/bin )</para>
+    <para>Create the diretory ~/bin</para>
+    <command>mkdir ~/bin</command>
+    <para>Move the downloaded Phing Phar archive to your ~/bin directory.</para>
+    <command>Ex. mv ~/Downloads/phing-&lt;phing_version&gt;.phar ~/bin</command>
+    <para>Create a symlink to the Phar archive for easy usage. The command will be 'phing' but the symlink will point to the Phar archive file named with the full version name. This makes it easier to see which version of Phing you are using and switch between different version.</para>
+    <command>ln -s phing-&lt;phing_version&gt;.phar phing</command>
+    <para>Now you should be able to run 'phing' like a standard system command.</para>
+    </sect2>
   </sect1>
   <sect1>
     <title>Problems</title>

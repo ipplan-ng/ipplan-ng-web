@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="IPplan-NG-web" default="build">
+
+<property name="package"  value="${phing.project.name}" override="true" />
+<property name="build.dir" value="./build" override="true" />
+<property name="version" value="0.0.1" override="true" />
+<property name="version.name" value="0.0.1-dev" override="true" />
+
+<property name="xsltproc" value="/usr/bin/xsltproc"/>
+<property name="xmllint" value="/usr/bin/xmllint"/>
+<property name="msgfmt" value="/usr/bin/msgfmt"/>
+
+<property name="docs.dir" value="./docs" override="false" />
+<property name="docs.src.dir" value="./docs/src" override="false" />
+<property name="ipplan-ng.manual.docbook" value="IPplan-NG-manual.xml" override="false" />
+<property name="ipplan-ng.manual.html" value="IPplan-NG-manual.html" override="false" />
+<property name="ipplan-ng.manual.stylesheet" value="html5_stylesheet.xsl" override="false" />
+
+<property name="languages" value="bg,de,es,fr,it,ja_JP,no,pt,pt_BR,ru" override="false" />
+<property name="lang.dir" value="${build.dir}/locale" override="false" />
+<property name="lang.locale.src" value="messages.po" override="false" />
+<property name="lang.locale.dst" value="messages.mo" override="false" />
+
+
+<fileset dir="." id="allfiles" defaultexcludes="true">
+        <include name="**" />
+        <exclude name="build.xml" />
+        <exclude name="README.md" />
+</fileset>
+
+<fileset dir="${build.dir}" id="phpfiles" >
+        <include name="**/*.php" />
+</fileset>
+
+<fileset dir="${build.dir}" id="cssfiles" >
+        <include name="**/*.css" />
+</fileset>
+
+
+    <target name="prepare">
+        <echo msg="Making directory ${build.dir}" />
+        <mkdir dir="${build.dir}" />
+    </target>
+
+    <target name="build" depends="prepare">
+        <echo msg="Copying files to build directory..." />
+
+        <echo msg="Copying files to ${build.dir}..." />
+        <copy todir="${build.dir}" includeemptydirs="true">
+            <fileset refid="allfiles" />
+        </copy>
+
+        <reflexive>
+            <fileset refid="phpfiles" />
+            <fileset refid="cssfiles" />
+            <filterchain>
+                <replaceregexp>
+                <regexp pattern="&lt;@ :version @&gt;" replace="${version}"/>
+                <regexp pattern="&lt;@ :version_name @&gt;" replace="${version.name}"/>
+                </replaceregexp>
+            </filterchain>
+        </reflexive>
+    </target>
+
+    <target name="buildall" depends="build,builddocs,buildlangs">
+        <echo msg="Built all sources." />
+    </target>
+
+    <target name="builddocs" depends="build" description="build documentation">
+        <exec executable="${xsltproc}" checkreturn="true" passthru="true" dir="${build.dir}">
+                    <arg line="-o '${docs.dir}/${ipplan-ng.manual.html}' '${docs.src.dir}/${ipplan-ng.manual.stylesheet}' '${docs.src.dir}/${ipplan-ng.manual.docbook}'"/>
+        </exec>
+    </target>
+
+    <target name="_gettext" description="build locale files">
+         <exec executable="${msgfmt}" checkreturn="true" passthru="true" dir="${lang.dir}">
+                    <arg line="${utf-8-lang}/LC_MESSAGES/${lang.locale.src} -o '${utf-8-lang}/LC_MESSAGES/${lang.locale.dst}'"/>
+        </exec> 
+    </target>
+
+    <target name="buildlangs" depends="build" description="build translations">
+        <foreach param="utf-8-lang" list="${languages}" target="_gettext"/>
+    </target>
+
+    <target name="clean" description="delete the build directory">
+        <echo msg="Deleting the build directory..." />
+        <delete dir="${build.dir}" />
+    </target>
+
+    <target name="dist" depends="build">
+        <echo msg="Creating archive..." />
+
+        <tar destfile="${build.dir}/${package}-${version.name}.tar.gz" compression="gzip">
+            <fileset dir="${build.dir}">
+                <include name="*" />
+            </fileset>
+        </tar>
+
+        <echo msg="Release archive created." />
+    </target>
+
+</project>
