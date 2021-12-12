@@ -51,7 +51,7 @@ Your browser must be JavaScript capable to use this application. Please turn Jav
 $w=myheading($p, my_("Install/Upgrade IPplan-NG"), false);
 insert($w, $t=container("div"));
 
-insert($t, heading(3, my_('IPplan-NG '.IPplan_NG\Version::VERSION_NAME.' Installation System')));
+insert($t, heading(3, sprintf(my_('IPplan-NG %s Installation System'), IPplan_NG\Version::VERSION_NAME)));
 
 // BEGIN INSTALLER LANGUAGE SUPPORT
 if(extension_loaded("gettext") and LANGCHOICE) {
