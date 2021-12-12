@@ -237,7 +237,7 @@ define("DHCPRESERVED", 'Reserved - DHCP pool');
 // translate ipplan into your own language. NOTE: English must always
 // be in the list and first
 $iso_codes = array (
-    'en_EN'=>'English',
+    'en_US'=>'English',
     'bg_BG'=>'Bulgarian',
     'fr_FR'=>'French',
     'ja_JP'=>'Japanese',

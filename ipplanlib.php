@@ -456,7 +456,7 @@ function myLanguage($lang_v) {
             // not required anymore
             //putenv("LANG=$lang");
             $locale=setlocale(LC_ALL, $lang);
-            if (!$locale and $lang!= "en_EN" and DEBUG) {
+            if (!$locale and $lang != "en_US" and DEBUG) {
                 echo "Setting locale failed - the language choosen is probably not installed correctly\n";
             }
             // Specify location of translation tables 
