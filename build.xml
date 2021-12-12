@@ -26,6 +26,7 @@
 <fileset dir="." id="allfiles" defaultexcludes="true">
         <include name="**" />
         <exclude name="build.xml" />
+        <exclude name="build/" />
         <exclude name="README.md" />
 </fileset>
 
@@ -38,12 +39,7 @@
 </fileset>
 
 
-    <target name="prepare">
-        <echo msg="Making directory ${build.dir}" />
-        <mkdir dir="${build.dir}" />
-    </target>
-
-    <target name="build" depends="prepare">
+    <target name="build">
         <echo msg="Copying files to build directory..." />
 
         <echo msg="Copying files to ${build.dir}..." />
