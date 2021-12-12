@@ -5,7 +5,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: IPplan-NG\n"
 "POT-Creation-Date: 2002-05-02 15:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -143,8 +143,8 @@ msgid "User-id"
 msgstr "Identificación del usuario"
 
 #: admin.php:14 admin.php:24
-msgid "IPplan - IP address management and tracking admin"
-msgstr "IPplan - gerencia del IP ADDRESS y admin el seguir"
+msgid "IPplan-NG - IP address management and tracking admin"
+msgstr "IPplan-NG - gerencia del IP ADDRESS y admin el seguir"
 
 #: admin.php:32
 msgid ""
@@ -210,8 +210,8 @@ msgid "Change display settings for this workstation"
 msgstr "Cambie los ajustes de la exhibición para este sitio de trabajo"
 
 #: admin.php:69
-msgid "IPplan home page:"
-msgstr "Home Page de IPplan:"
+msgid "IPplan-NG home page:"
+msgstr "Home Page de IPplan-NG:"
 
 #: admin.php:73 ipplanlib.php:306
 msgid "Home"
@@ -1030,8 +1030,8 @@ msgid "Routing Table"
 msgstr "Tabla De Encaminamiento"
 
 #: displayrouter.php:133
-msgid "IPplan information"
-msgstr "Información de IPplan"
+msgid "IPplan-NG information"
+msgstr "Información de IPplan-NG"
 
 #: displayrouter.php:137
 msgid "Routing Table Base address"
@@ -1458,8 +1458,8 @@ msgid "XML"
 msgstr "XML"
 
 #: index.php:24 index.php:36
-msgid "IPplan - IP address management and tracking"
-msgstr "IPplan - gerencia y el seguir del IP ADDRESS"
+msgid "IPplan-NG - IP address management and tracking"
+msgstr "IPplan-NG - gerencia y el seguir del IP ADDRESS"
 
 #: index.php:67
 msgid ""
@@ -1472,8 +1472,8 @@ msgid "This application administers and tracks IP address space."
 msgstr "Este uso administra y sigue el espacio del IP ADDRESS."
 
 #: index.php:88
-msgid "IPplan admin functions"
-msgstr "Funciones de IPplan admin"
+msgid "IPplan-NG admin functions"
+msgstr "Funciones de IPplan-NG admin"
 
 #: index.php:93
 msgid "Customer/autonomous system group functions"
@@ -1891,8 +1891,8 @@ msgid "Duplicate subnet on new customer without IP detail"
 msgstr "Duplique el subnet en nuevo cliente sin detalle del IP"
 
 #: schema.php:123
-msgid "You are trying to downgrade IPplan - impossible"
-msgstr "Usted está intentando retroceder IPplan - imposible"
+msgid "You are trying to downgrade IPplan-NG - impossible"
+msgstr "Usted está intentando retroceder IPplan-NG - imposible"
 
 #: schema.php:127
 msgid "Schema version outdated"

@@ -4,7 +4,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: ipplan-4.50\n"
+"Project-Id-Version: IPplan-NG\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-12-08 07:52-0300\n"
 "PO-Revision-Date: 2006-01-13 14:0-0300\n"
@@ -120,8 +120,8 @@ msgstr "Nenhuma range selecionada"
 
 #: ipplanlib.php:552
 #, fuzzy
-msgid "IPPlan - IP Address Management and Tracking"
-msgstr "IPplan - Gerência e Administração de Endereços IP"
+msgid "IPplan-NG - IP Address Management and Tracking"
+msgstr "IPplan-NG - Gerência e Administração de Endereços IP"
 
 #: ipplanlib.php:570
 #, php-format
@@ -416,8 +416,8 @@ msgid ""
 msgstr "Problema com permissões na base de dados ou em suas tabelas - as instruções de instalação foram seguidas?"
 
 #: schema.php:77
-msgid "You are trying to downgrade IPplan - impossible"
-msgstr "Você está tentando diminuir a versão do IPplan - impossível"
+msgid "You are trying to downgrade IPplan-NG - impossible"
+msgstr "Você está tentando diminuir a versão do IPplan-NG - impossível"
 
 #: schema.php:81
 msgid "Schema version outdated"
@@ -1187,8 +1187,8 @@ msgid "Routing Table"
 msgstr "Tabela De Roteamento"
 
 #: user/displayrouter.php:168
-msgid "IPplan information"
-msgstr "Informação do IPplan"
+msgid "IPplan-NG information"
+msgstr "Informação do IPplan-NG"
 
 #: user/displayrouter.php:173
 msgid "Routing Table Base address"
@@ -3394,12 +3394,12 @@ msgid "Subnet could not be found for IP address %s"
 msgstr "Não foi possível encontrar uma sub-rede para o endereço IP %s"
 
 #: admin/install.php:46
-msgid "Install/Upgrade IPPlan"
-msgstr "Instalar/Atualizar IPPlan"
+msgid "Install/Upgrade IPplan-NG"
+msgstr "Instalar/Atualizar IPplan-NG"
 
 #: admin/install.php:49
-msgid "IPplan v4.50 Installation System"
-msgstr "Sistema de Instalação do IPplan v4.50"
+msgid "IPplan-NG %s Installation System"
+msgstr "Sistema de Instalação do IPplan-NG %s"
 
 #: admin/install.php:70
 msgid "Language"
@@ -3424,9 +3424,9 @@ msgstr "NÃO HÁ COMO RECUPERAR SEUS DADOS SE ACONTECER ALGO ERRADO"
 
 #: admin/install.php:99
 msgid ""
-"For security purposes, it is highly recomended that IPPlan is installed on "
+"For security purposes, it is highly recomended that IPplan-NG is installed on "
 "an SSL Webserver."
-msgstr "Por questões de segurança, é altamente recomendado que o IPPlan seja instalado num servidor web com SSL"
+msgstr "Por questões de segurança, é altamente recomendado que o IPplan-NG seja instalado num servidor web com SSL"
 
 #: admin/install.php:102
 msgid ""
@@ -3485,8 +3485,8 @@ msgstr "Ir!"
 
 #: admin/maintenance.php:42
 #, fuzzy
-msgid "IPplan Maintenance"
-msgstr "Manutenção do IPplan"
+msgid "IPplan-NG Maintenance"
+msgstr "Manutenção do IPplan-NG"
 
 #: admin/maintenance.php:56
 msgid "Requested IP addresses cleared"
@@ -3519,8 +3519,8 @@ msgid "Customer index"
 msgstr "Índice de Clientes"
 
 #: admin/maintenance.php:117
-msgid "Perform the selected IPplan database maintenance."
-msgstr "Execute a manutenção da base de dados do IPplan selecionada."
+msgid "Perform the selected IPplan-NG database maintenance."
+msgstr "Execute a manutenção da base de dados do IPplan-NG selecionada."
 
 #: admin/maintenance.php:127
 msgid "Display list of customer indexes"
@@ -3885,8 +3885,8 @@ msgstr "Não foi possível criar o limite"
 #~ msgid "User-id"
 #~ msgstr "User-id"
 
-#~ msgid "IPplan - IP address management and tracking admin"
-#~ msgstr "IPplan - Gerência e Administração de Endereços IP"
+#~ msgid "IPplan-NG - IP address management and tracking admin"
+#~ msgstr "IPplan-NG - Gerência e Administração de Endereços IP"
 
 #~ msgid ""
 #~ "The admin functions below can only be performed by the admin user.  Any "
@@ -3918,8 +3918,8 @@ msgstr "Não foi possível criar o limite"
 #~ msgid "User functions:"
 #~ msgstr "Funções do usuário:"
 
-#~ msgid "IPplan home page:"
-#~ msgstr "Home Page do IPplan:"
+#~ msgid "IPplan-NG home page:"
+#~ msgstr "Home Page do IPplan-NG:"
 
 #~ msgid "User %s created new range %s size %u in areaindex %u cust %u"
 #~ msgstr ""
@@ -4025,8 +4025,8 @@ msgstr "Não foi possível criar o limite"
 #~ msgid "This application administers and tracks IP address space."
 #~ msgstr "Esta aplicação administra e gerencia o espaço do Endereçamento IP."
 
-#~ msgid "IPplan admin functions"
-#~ msgstr "Funções de administração do IPplan"
+#~ msgid "IPplan-NG admin functions"
+#~ msgstr "Funções de administração do IPplan-NG"
 
 #~ msgid "Customer/autonomous system group functions"
 #~ msgstr "Funções de grupo de Clientes/Sistemas autônomos"

@@ -5,7 +5,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: IPplan-NG\n"
 "POT-Creation-Date: 2002-05-02 15:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -143,8 +143,8 @@ msgid "User-id"
 msgstr "Bruker-id"
 
 #: admin.php:14 admin.php:24
-msgid "IPplan - IP address management and tracking admin"
-msgstr "IPplanIP adresseledelse og forfølgende admin"
+msgid "IPplan-NG - IP address management and tracking admin"
+msgstr "IPplan-NGIP adresseledelse og forfølgende admin"
 
 #: admin.php:32
 msgid ""
@@ -210,8 +210,8 @@ msgid "Change display settings for this workstation"
 msgstr "Forandr utstillingsinnstillinger for denne arbeidsstasjonen"
 
 #: admin.php:69
-msgid "IPplan home page:"
-msgstr "IPplan hjem side"
+msgid "IPplan-NG home page:"
+msgstr "IPplan-NG hjem side"
 
 #: admin.php:73 ipplanlib.php:306
 msgid "Home"
@@ -1030,8 +1030,8 @@ msgid "Routing Table"
 msgstr "Føre Table"
 
 #: displayrouter.php:133
-msgid "IPplan information"
-msgstr "IPplan informasjon"
+msgid "IPplan-NG information"
+msgstr "IPplan-NG informasjon"
 
 #: displayrouter.php:137
 msgid "Routing Table Base address"
@@ -1458,8 +1458,8 @@ msgid "XML"
 msgstr "XML"
 
 #: index.php:24 index.php:36
-msgid "IPplan - IP address management and tracking"
-msgstr "IPplanIP adresseledelse og forfølgelse"
+msgid "IPplan-NG - IP address management and tracking"
+msgstr "IPplan-NGIP adresseledelse og forfølgelse"
 
 #: index.php:67
 msgid ""
@@ -1472,8 +1472,8 @@ msgid "This application administers and tracks IP address space."
 msgstr "Denne anvendelsen administrerer og forfølger IP adresseskille."
 
 #: index.php:88
-msgid "IPplan admin functions"
-msgstr "IPplan admin fungerer"
+msgid "IPplan-NG admin functions"
+msgstr "IPplan-NG admin fungerer"
 
 #: index.php:93
 msgid "Customer/autonomous system group functions"
@@ -1891,8 +1891,8 @@ msgid "Duplicate subnet on new customer without IP detail"
 msgstr "Dobbelt subnet på ny kunde uten IP detalj"
 
 #: schema.php:123
-msgid "You are trying to downgrade IPplan - impossible"
-msgstr "De prøver til downgrade IPplanumulig"
+msgid "You are trying to downgrade IPplan-NG - impossible"
+msgstr "De prøver til downgrade IPplan-NGumulig"
 
 #: schema.php:127
 msgid "Schema version outdated"

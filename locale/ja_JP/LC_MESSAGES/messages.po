@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: IPplan-NG\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-05-29 10:51+1000\n"
 "PO-Revision-Date: 2006-06-23 14:01+0900\n"
@@ -123,8 +123,8 @@ msgid "No range selected"
 msgstr "範囲を選択していません。"
 
 #: ipplanlib.php:577
-msgid "IPPlan - IP Address Management and Tracking"
-msgstr "IPPlan - IP アドレス管理と追跡"
+msgid "IPplan-NG - IP Address Management and Tracking"
+msgstr "IPplan-NG - IP アドレス管理と追跡"
 
 #: ipplanlib.php:595
 #, php-format
@@ -389,7 +389,7 @@ msgid ""
 msgstr ""
 
 #: schema.php:77
-msgid "You are trying to downgrade IPplan - impossible"
+msgid "You are trying to downgrade IPplan-NG - impossible"
 msgstr ""
 
 #: schema.php:81
@@ -1073,8 +1073,8 @@ msgid "Routing Table"
 msgstr "ルーティングテーブル"
 
 #: user/displayrouter.php:168
-msgid "IPplan information"
-msgstr "IPplan 情報"
+msgid "IPplan-NG information"
+msgstr "IPplan-NG 情報"
 
 #: user/displayrouter.php:173
 msgid "Routing Table Base address"
@@ -3176,12 +3176,12 @@ msgid "Subnet could not be found for IP address %s"
 msgstr "IP アドレス %s のサブネットが見つかりませんでした。"
 
 #: admin/install.php:46
-msgid "Install/Upgrade IPPlan"
-msgstr "IPPlan のインストール/アップグレード"
+msgid "Install/Upgrade IPplan-NG"
+msgstr "IPplan-NG のインストール/アップグレード"
 
 #: admin/install.php:49
-msgid "IPplan v4.57 Installation System"
-msgstr "IPplan バージョン 4.57 インストールシステム"
+msgid "IPplan-NG %s Installation System"
+msgstr "IPplan-NG バージョン %s インストールシステム"
 
 #: admin/install.php:70
 msgid "Language"
@@ -3205,7 +3205,7 @@ msgstr ""
 
 #: admin/install.php:99
 msgid ""
-"For security purposes, it is highly recomended that IPPlan is installed on "
+"For security purposes, it is highly recomended that IPplan-NG is installed on "
 "an SSL Webserver."
 msgstr ""
 
@@ -3263,8 +3263,8 @@ msgid "Go!"
 msgstr ""
 
 #: admin/maintenance.php:42
-msgid "IPplan Maintenance"
-msgstr "IPplan メンテナンス"
+msgid "IPplan-NG Maintenance"
+msgstr "IPplan-NG メンテナンス"
 
 #: admin/maintenance.php:56
 msgid "You need MySQL v4.0.0 or higher for this function!"
@@ -3305,7 +3305,7 @@ msgid ""
 msgstr ""
 
 #: admin/maintenance.php:204
-msgid "Perform the selected IPplan database maintenance."
+msgid "Perform the selected IPplan-NG database maintenance."
 msgstr ""
 
 #: admin/maintenance.php:214
@@ -3637,8 +3637,8 @@ msgstr "バウンダリを作成できませんでした。"
 #~ msgid "User-id"
 #~ msgstr "ユーザー ID"
 
-#~ msgid "IPPlan User Administration"
-#~ msgstr "IPPlan ユーザー管理"
+#~ msgid "IPplan-NG User Administration"
+#~ msgstr "IPplan-NG ユーザー管理"
 
 #~ msgid "User deleted"
 #~ msgstr "ユーザーを削除しました。"

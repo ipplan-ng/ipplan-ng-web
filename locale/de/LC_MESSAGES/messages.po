@@ -1,15 +1,15 @@
-# German Locale for IPPlan.
+# German Locale for IPplan-NG.
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # Michael Weller <michael.weller@t-online.de>, 2009.
 #
 # Note this file is encoded in utf-8 while it says iso-8859-1
-# Apparently IPPlan does not remember the de_DE.utf-8 locale
+# Apparently IPplan-NG does not remember the de_DE.utf-8 locale
 # setting proper but does announce its output being utf-8.
 # Currently this file looking like iso-8859-1 but being
 # utf-8 seems the easiest workaround.
 #
 msgid ""
-msgstr "Project-Id-Version: IPplan v4.91a\n"
+msgstr "Project-Id-Version: IPplan-NG\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-19 07:45+1100\n"
 "PO-Revision-Date: 2009-03-22 17:16+CET\n"
@@ -146,8 +146,8 @@ msgid "No range selected"
 msgstr "Kein Adressbereich ausgewählt"
 
 #: ipplanlib.php:602
-msgid "IPPlan - IP Address Management and Tracking"
-msgstr "IPplan - IP Adressplanung und Verwaltung"
+msgid "IPplan-NG - IP Address Management and Tracking"
+msgstr "IPplan-NG - IP Adressplanung und Verwaltung"
 
 #: ipplanlib.php:620
 msgid "Logged in as %s"
@@ -411,8 +411,8 @@ msgid ""
 msgstr "Datenbank Probleme - Wurde die Installationsanleitung befolgt?"
 
 #: schema.php:77
-msgid "You are trying to downgrade IPplan - impossible"
-msgstr "Es ist nicht möglich die IPplan Datenbank downzugraden!"
+msgid "You are trying to downgrade IPplan-NG - impossible"
+msgstr "Es ist nicht möglich die IPplan-NG Datenbank downzugraden!"
 
 #: schema.php:81
 msgid "Schema version outdated"
@@ -1157,7 +1157,7 @@ msgid "Display subnet information obtained from a routing table will show the "
 "existing database information."
 msgstr "Die aus einer Routing Tabelle erzeugten Subnetzinformationen, zeigen die "
 "Netze aus der Routing Tabelle links und die entsprechenden Einträge der "
-"IPplan Datenbank rechts.  Wenn es in beiden Spalten Eintragungen gibt, ist "
+"IPplan-NG Datenbank rechts.  Wenn es in beiden Spalten Eintragungen gibt, ist "
 "das Netz auf dem Gerät und in der Datenbank bekannt.  Wenn es nur einen "
 "Eintrag linker Hand gibt, so ist das Subnetz nur als Route vorhanden,  "
 "umgekehrt gibt es nur rechts einen Eintrag wenn es keine explizite Route "
@@ -1204,8 +1204,8 @@ msgid "Routing Table"
 msgstr "Routing Tabelle"
 
 #: user/displayrouter.php:168
-msgid "IPplan information"
-msgstr "IPplan Datenbank"
+msgid "IPplan-NG information"
+msgstr "IPplan-NG Datenbank"
 
 #: user/displayrouter.php:173
 msgid "Routing Table Base address"
@@ -3392,12 +3392,12 @@ msgid "Subnet could not be found for IP address %s"
 msgstr "Für die IP Adresse %s konnte kein Subnetz gefunden werden"
 
 #: admin/install.php:46
-msgid "Install/Upgrade IPPlan"
-msgstr "IPplan installieren/aktualisieren"
+msgid "Install/Upgrade IPplan-NG"
+msgstr "IPplan-NG installieren/aktualisieren"
 
 #: admin/install.php:49
-msgid "IPplan v4.91a Installation System"
-msgstr "IPplan v4.91a Installations Werkzeug"
+msgid "IPplan-NG %s Installation System"
+msgstr "IPplan-NG %s Installations Werkzeug"
 
 #: admin/install.php:70
 msgid "Language"
@@ -3427,9 +3427,9 @@ msgstr "DIE FORMATBESCHREIBUNGSDATEIEN WURDEN IN EIN ANDERES VERZEICHNIS VERSCHO
 "- LESEN SIE DIE CHANGELOG UND UPGRADE HINWEISE"
 
 #: admin/install.php:102
-msgid "For security purposes, it is highly recomended that IPPlan is installed on "
+msgid "For security purposes, it is highly recomended that IPplan-NG is installed on "
 "an SSL Webserver."
-msgstr "Aus Sicherheitsgründen wird dringendst empfohlen, dass IPPlan auf einem "
+msgstr "Aus Sicherheitsgründen wird dringendst empfohlen, dass IPplan-NG auf einem "
 "https Webserver installiert wird"
 
 #: admin/install.php:105
@@ -3489,8 +3489,8 @@ msgid "Go!"
 msgstr "Ausführen!"
 
 #: admin/maintenance.php:43
-msgid "IPplan Maintenance"
-msgstr "IPplan Wartung"
+msgid "IPplan-NG Maintenance"
+msgstr "IPplan-NG Wartung"
 
 #: admin/maintenance.php:57
 msgid "You need MySQL v4.0.0 or higher for this function!"
@@ -3559,7 +3559,7 @@ msgid "Delete request"
 msgstr "Antrag löschen"
 
 #: admin/maintenance.php:341
-msgid "Perform the selected IPplan database maintenance."
+msgid "Perform the selected IPplan-NG database maintenance."
 msgstr "Wählen Sie eine der Wartungsfunktionen:"
 
 #: admin/maintenance.php:351
@@ -3903,14 +3903,14 @@ msgstr "Hauptmenü"
 msgid "Reset Search"
 msgstr "Suche zurücksetzen"
 
-msgid "IPplan is a free (GPL), web based, multilingual, IP address management and tracking tool written in php 4, "
-"simplifying the administration of your IP address space. IPplan goes beyond IP address management including DNS administration, "
+msgid "IPplan-NG is a free (GPL), web based, multilingual, IP address management and tracking tool written in php 4, "
+"simplifying the administration of your IP address space. IPplan-NG goes beyond IP address management including DNS administration, "
 "configuration file management, circuit management (customizable via templates) and storing of hardware information "
-"(customizable via templates). IPplan can handle a single network or cater for multiple networks and customers with overlapping address space."
-msgstr "IPplan is ein freies (GPL), web basiertes und mehrsprachiges IP Adressplanungs und Verwaltungswerkzeug geschrieben in PHP 4. "
-"Es vereinfacht die Verwaltung Ihres IP Adressraumes. IPplan beschränkt sich nicht nur auf die Adressverwaltung, sondern unterstützt "
+"(customizable via templates). IPplan-NG can handle a single network or cater for multiple networks and customers with overlapping address space."
+msgstr "IPplan-NG is ein freies (GPL), web basiertes und mehrsprachiges IP Adressplanungs und Verwaltungswerkzeug geschrieben in PHP 4. "
+"Es vereinfacht die Verwaltung Ihres IP Adressraumes. IPplan-NG beschränkt sich nicht nur auf die Adressverwaltung, sondern unterstützt "
 "auch die Template basierende DNS Administration, die Verwaltung von Konfigurationsdateien und das Circuit Management sowie das Speichern "
-"von Hardware Eigenschaften. IPplan kann ein einzelnes Netzwerk genauso gut wie viele Netze und Kunden mit überlappenden Adressbereichen verwalten."
+"von Hardware Eigenschaften. IPplan-NG kann ein einzelnes Netzwerk genauso gut wie viele Netze und Kunden mit überlappenden Adressbereichen verwalten."
 
 msgid "Click on customer/AS to display all associated subnets, click on the area to display all subnets in area and contained ranges, "
 "click on a range to display only subnets associated with that range. Subnets not within an area or range can be viewed by selecting the customer/AS."

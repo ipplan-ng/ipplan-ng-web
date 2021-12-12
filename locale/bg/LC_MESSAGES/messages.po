@@ -1,13 +1,13 @@
-# Bulgarian translation of IPPlan.
-# Copyright (C) 2005 THE IPPlan's COPYRIGHT HOLDER
-# This file is distributed under the same license as the IPPlan package.
+# Bulgarian translation of IPplan-NG.
+# Copyright (C) 2005 THE IPplan-NG's COPYRIGHT HOLDER
+# This file is distributed under the same license as the IPplan-NG package.
 # Nickola Kolev <n_kolev@yahoo.com>, 2005.
 # , fuzzy
 # 
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: IPPLAN 4.40Beta\n"
+"Project-Id-Version: IPplan-NG\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-08-17 19:00+1000\n"
 "PO-Revision-Date: 2005-08-17 10:06+0300\n"
@@ -118,8 +118,8 @@ msgid "No range selected"
 msgstr "Няма избран диапазон"
 
 #: ipplanlib.php:523
-msgid "IPPlan - IP Address Management and Tracking"
-msgstr "IPPlan - управление и следене на IP адресни пространства"
+msgid "IPplan-NG - IP Address Management and Tracking"
+msgstr "IPplan-NG - управление и следене на IP адресни пространства"
 
 #: ipplanlib.php:541
 #, php-format
@@ -382,8 +382,8 @@ msgstr ""
 "инструкциите за инсталация?"
 
 #: schema.php:76
-msgid "You are trying to downgrade IPplan - impossible"
-msgstr "Опитвате се да свалите версията на IPplan, което е невъзможно"
+msgid "You are trying to downgrade IPplan-NG - impossible"
+msgstr "Опитвате се да свалите версията на IPplan-NG, което е невъзможно"
 
 #: schema.php:80
 msgid "Schema version outdated"
@@ -1126,8 +1126,8 @@ msgid "Routing Table"
 msgstr "Маршрутна таблица"
 
 #: user/displayrouter.php:151
-msgid "IPplan information"
-msgstr "Информация за IPplan"
+msgid "IPplan-NG information"
+msgstr "Информация за IPplan-NG"
 
 #: user/displayrouter.php:156
 msgid "Routing Table Base address"
@@ -3204,12 +3204,12 @@ msgid "Subnet could not be found for IP address %s"
 msgstr "За IP адрес %s не бе открита подмрежа"
 
 #: admin/install.php:46
-msgid "Install/Upgrade IPPlan"
-msgstr "Инсталация/надграждане на IPPlan"
+msgid "Install/Upgrade IPplan-NG"
+msgstr "Инсталация/надграждане на IPplan-NG"
 
 #: admin/install.php:49
-msgid "IPplan v4.40-BETA Installation System"
-msgstr "Инсталационна система на IPplan v4.40-BETA"
+msgid "IPplan-NG %s Installation System"
+msgstr "Инсталационна система на IPplan-NG %s"
 
 #: admin/install.php:70
 msgid "Language"
@@ -3225,7 +3225,7 @@ msgstr "  Променено от  "
 
 #: admin/install.php:92
 msgid "IF YOU ARE UPGRADING IPPLAN, BACKUP YOUR DATABASE NOW"
-msgstr "Ако надграждате IPplan, ВЕДНАГА СИ АРХИВИРАЙТЕ БАЗАТА ДАННИ"
+msgstr "Ако надграждате IPplan-NG, ВЕДНАГА СИ АРХИВИРАЙТЕ БАЗАТА ДАННИ"
 
 #: admin/install.php:93
 msgid "THERE IS NO WAY TO RECOVER YOUR DATA IF SOMETHING GOES WRONG."
@@ -3233,10 +3233,10 @@ msgstr "Няма начин да се възстановят данните ви
 
 #: admin/install.php:99
 msgid ""
-"For security purposes, it is highly recomended that IPPlan is installed on "
+"For security purposes, it is highly recomended that IPplan-NG is installed on "
 "an SSL Webserver."
 msgstr ""
-"За по-сигурно е силно желателно IPPlan да бъде инсталиран върху SSL уеб "
+"За по-сигурно е силно желателно IPplan-NG да бъде инсталиран върху SSL уеб "
 "сървър."
 
 #: admin/install.php:102
@@ -3304,8 +3304,8 @@ msgid "Go!"
 msgstr "Давай!"
 
 #: admin/maintenance.php:42
-msgid "IPplan Maintenance"
-msgstr "Управление на IPplan"
+msgid "IPplan-NG Maintenance"
+msgstr "Управление на IPplan-NG"
 
 #: admin/maintenance.php:56
 msgid "Requested IP addresses cleared"
@@ -3336,8 +3336,8 @@ msgid "Customer index"
 msgstr "Клиентски индекс"
 
 #: admin/maintenance.php:117
-msgid "Perform the selected IPplan database maintenance."
-msgstr "Извършване на избраното действие върху базата данни на IPplan."
+msgid "Perform the selected IPplan-NG database maintenance."
+msgstr "Извършване на избраното действие върху базата данни на IPplan-NG."
 
 #: admin/maintenance.php:127
 msgid "Display list of customer indexes"
@@ -3667,8 +3667,8 @@ msgstr "Границата не можа да бъде създадена"
 #~ msgid "Create a new group"
 #~ msgstr "Създаване на нова група"
 
-#~ msgid "IPPlan User Administration"
-#~ msgstr "IPplan Администриране на потребители"
+#~ msgid "IPplan-NG User Administration"
+#~ msgstr "IPplan-NG Администриране на потребители"
 
 #~ msgid "Create New User"
 #~ msgstr "Създаване на нов потребител"

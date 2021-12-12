@@ -5,7 +5,7 @@
 # Gilles Mocellin <gilles.mocellin@free.fr>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: messages\n"
+"Project-Id-Version: IPplan-NG\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-04-25 11:20+1000\n"
 "PO-Revision-Date: 2007-07-25 16:03+0200\n"
@@ -130,8 +130,8 @@ msgid "No range selected"
 msgstr "Pas d'étendue sélectionnée"
 
 #: ipplanlib.php:595
-msgid "IPPlan - IP Address Management and Tracking"
-msgstr "IPPlan - gestion et suivi d'adresse IP"
+msgid "IPplan-NG - IP Address Management and Tracking"
+msgstr "IPplan-NG - gestion et suivi d'adresse IP"
 
 #: ipplanlib.php:613
 #, php-format
@@ -398,9 +398,9 @@ msgstr ""
 "instructions d'installation ?"
 
 #: schema.php:77
-msgid "You are trying to downgrade IPplan - impossible"
+msgid "You are trying to downgrade IPplan-NG - impossible"
 msgstr ""
-"Vous essayez de mettre à jour IPplan avec une version plus vieille - "
+"Vous essayez de mettre à jour IPplan-NG avec une version plus vieille - "
 "Impossible"
 
 #: schema.php:81
@@ -1221,8 +1221,8 @@ msgid "Routing Table"
 msgstr "Table de routage"
 
 #: user/displayrouter.php:168
-msgid "IPplan information"
-msgstr "Information sur IPplan"
+msgid "IPplan-NG information"
+msgstr "Information sur IPplan-NG"
 
 #: user/displayrouter.php:173
 msgid "Routing Table Base address"
@@ -3557,12 +3557,12 @@ msgid "Subnet could not be found for IP address %s"
 msgstr "Le sous-réseau n'a pas pu être trouvé pour l'adresse IP %s"
 
 #: admin/install.php:46
-msgid "Install/Upgrade IPPlan"
-msgstr "Installer/Mettre à jour IPplan"
+msgid "Install/Upgrade IPplan-NG"
+msgstr "Installer/Mettre à jour IPplan-NG"
 
 #: admin/install.php:49
-msgid "IPplan v4.82 Installation System"
-msgstr "Système d'installation Ipplan v4.82"
+msgid "IPplan-NG %s Installation System"
+msgstr "Système d'installation IPplan-NG %s"
 
 #: admin/install.php:70
 msgid "Language"
@@ -3596,10 +3596,10 @@ msgstr ""
 
 #: admin/install.php:102
 msgid ""
-"For security purposes, it is highly recomended that IPPlan is installed on "
+"For security purposes, it is highly recomended that IPplan-NG is installed on "
 "an SSL Webserver."
 msgstr ""
-"Pour des raisons de sécurité, il est vivement recommandé qu'IPplan soit "
+"Pour des raisons de sécurité, il est vivement recommandé qu'IPplan-NG soit "
 "installé sur un serveur SSL."
 
 #: admin/install.php:105
@@ -3666,8 +3666,8 @@ msgid "Go!"
 msgstr "Lancer !"
 
 #: admin/maintenance.php:42
-msgid "IPplan Maintenance"
-msgstr "Maintenance IPplan"
+msgid "IPplan-NG Maintenance"
+msgstr "Maintenance IPplan-NG"
 
 #: admin/maintenance.php:56
 msgid "You need MySQL v4.0.0 or higher for this function!"
@@ -3738,7 +3738,7 @@ msgid "Delete request"
 msgstr "Supprimer la demande"
 
 #: admin/maintenance.php:309
-msgid "Perform the selected IPplan database maintenance."
+msgid "Perform the selected IPplan-NG database maintenance."
 msgstr "Effectuer les opérations de maintenance de la base de données sélectionnées."
 
 #: admin/maintenance.php:319
